@@ -1,0 +1,13 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="s32module.controller.Main" displayBlock="true"><Page id="page" title="{i18n>titles}">
+        <content>
+            <GroupHeaderListItem id="item1"/><Image src="https://quicksted.com/wp-content/uploads/2018/05/qst_logo_450.png" id="image0" backgroundRepeat="repeat" width="50%"/>
+            <br> </br> 
+            <Text xmlns="sap.m" text="{i18n>appDescription}" id="AppBeschreibungstext"/>
+            <Link xmlns="sap.m" href="https://www.quicksted.com" text="Zur Quicksted Webseite gehts hier lang!" id="link2" textAlign="Center" emphasized="true" busyIndicatorSize="Auto" target="blank"/>
+            <DatePicker xmlns="sap.m" id="picker0"/>
+            <Button xmlns="sap.m" text="Speichern" id="button2" width="150px"/>
+        </content>
+    <headerContent>
+    </headerContent>
+    </Page>
+</mvc:View>

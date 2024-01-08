@@ -1,0 +1,127 @@
+.sapOvpBaseCard {
+    background-color: @sapUiTileBackground;
+    box-shadow: @sapUiShadowLevel0;
+    border-radius: @sapUiElementBorderCornerRadius;
+    border: 0.0625rem solid @sapTile_BorderColor;
+}
+
+.sapOvpCardHeader {
+    &:hover {
+        background: @sapUiTileHoverBackground;
+    }
+    &:active {
+        background: @sapUiTileActiveBackground;
+    }
+    .sapOvpCardTitle,
+    & > div:only-child .sapOvpCardSubtitle,
+    & > div:only-child .sapOvpCardCategory {
+        color: @sapUiTileTitleTextColor;
+    }
+    .sapOvpCardCategory,
+    .sapOvpCardSubtitle {
+        color: @sapUiTileTextColor;
+    }
+    color: @sapUiTileTitleTextColor;
+}
+
+.sapOvpCardContentContainer {
+    border-top-color: @sapUiGroupContentBorderColor;
+}
+
+.KpiTargetText,
+.KpiDeviationText {
+    color: @sapUiTileTextColor;
+}
+
+.sapOvpKPIHeaderTrendPercentStyle {
+    color: @sapUiTileTitleTextColor;
+}
+
+.UOMFlexbox {
+    color: @sapUiTileTextColor;
+}
+
+.ovpNonNavigableItem .sapOvpCardInsightDesignTime.sapOvpCardHeader {
+    background: @sapUiBaseBG;
+}
+
+// to remove the navigation effect from the line items when the navigation is not available
+.ovpNonNavigableItem {
+    .sapOvpCardHeader {
+        background: @sapUiTileBackground;
+    }
+    .sapOvpBaseCard tr.sapMLIBTypeInactive {
+        background: @sapUiTileBackground;
+    }
+}
+
+.sapOvpStackCardSize {
+    color: @sapUiHighlight;
+}
+
+.sapOvpStackCardIcon {
+    color: @sapUiHighlight;
+}
+
+.sapOvpCardContentContainer {
+    background-color: @sapUiTileBackground;
+    &.sapOvpCardNavigable {
+        background-color: @sapUiTileBackground;
+        &:hover {
+            background-color: @sapUiSegmentedButtonHoverBackground;
+            border-color: @sapUiSegmentedButtonHoverBackground;
+        }
+        &:active {
+            background-color: @sapUiSegmentedButtonActiveBackground;
+            border-color: @sapUiSegmentedButtonActiveBackground;
+        }
+        &:active .sapOvpStackCardIcon,
+        &:active label,
+        &:active .sapMText,
+        &:active .sapMLabel {
+            color: @sapUiSegmentedButtonActiveTextColor;
+        }
+    }
+}
+
+.sapOvpCardContentRightHeader {
+    &:hover {
+        background-color: fade(@sapUiShellHoverBackground, 4);
+    }
+}
+
+.sapOvpCardHeader .sapOvpCardTitle,
+.sapOvpCardHeader > div:only-child .sapOvpCardSubtitle,
+.sapOvpCardHeader > div:only-child .sapOvpCardCategory {
+    font-weight: bold;
+}
+
+.sapOvpCardNavigable .sapMList {
+    border: none !important;
+}
+
+.sapOvpCardContentContainer .sapMList {
+    border: none;
+}
+
+.sapUshellEasyScanLayout .easyScanLayoutItemWrapper:focus {
+    outline: @sapContent_FocusColor solid 0.125rem;
+    box-shadow: inset 0 0 0 @sapContent_FocusColor !important;
+    border-radius: @sapElement_BorderCornerRadius;
+}
+
+.sapOvpCardHeader:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 @sapContent_FocusWidth @sapContent_FocusColor !important;
+    border-top-left-radius: @sapElement_BorderCornerRadius;
+    border-top-right-radius: @sapElement_BorderCornerRadius;
+}
+
+.sapOvpBarStandardList {
+    .sapOvpObjectNumber {
+        .sapMObjectNumberText {
+            display: inline;
+            white-space: normal;
+        }
+    }
+}

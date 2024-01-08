@@ -1,0 +1,97 @@
+14:02:37 [INFO] - AppFolders: starting processing setAppFoldersContext()
+14:03:14 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 104
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+14:03:14 [INFO] - AppFolders: Function setContext() done in 36059.508ms
+14:05:36 [INFO] - AppFolders: Directory 'file:///home/user/projects/s331102' changed, updating app folders in context. 
+14:05:37 [INFO] - AppFolders: Directory 'file:///home/user/projects/s331102/webapp/view' changed, updating app folders in context. 
+14:05:44 [INFO] - AppFolders: Directory 'file:///home/user/projects/s331102/node_modules/yallist' changed, updating app folders in context. 
+14:05:52 [INFO] - AppFolders: Directory 'file:///home/user/projects/s331102/node_modules/.bin' changed, updating app folders in context. 
+14:05:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/projects/s331102/node_modules/fsevents'
+14:07:56 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/17aaa352' changed, updating app folders in context. 
+14:07:58 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:07:58 [INFO] - AppFolders: Function setContext() done in 140657.244ms
+14:07:58 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:07:58 [INFO] - AppFolders: Function setContext() done in 142225.817ms
+14:08:07 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:08:07 [INFO] - AppFolders: Function setContext() done in 142426.015ms
+14:08:09 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:08:09 [INFO] - AppFolders: Function setContext() done in 137359.291ms
+14:08:32 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:08:32 [INFO] - AppFolders: Function setContext() done in 36145.731ms

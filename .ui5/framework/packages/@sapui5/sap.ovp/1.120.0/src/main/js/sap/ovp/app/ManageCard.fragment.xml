@@ -1,0 +1,13 @@
+<core:FragmentDefinition 
+    xmlns:core="sap.ui.core"
+    xmlns:p13n="sap.m.p13n"
+    class="sapUiContentPadding">
+    <p13n:Popup close="onManageCardOkButtonPressed" warningText="{ovplibResourceBundle>MANAGE_CARDS_WARNING_TEXT}" reset=".onManageCardResetButtonPressed"
+        id="manageCardsDialog" 
+        class="sapOVPCardsVisibilityDialog" 
+        title="{ovplibResourceBundle>MANAGE_CARDS_TITLE}">
+        <p13n:panels>
+            <p13n:SelectionPanel id="manageCardsSelectionPanel" enableCount="true" enableReorder="false" showHeader="true" change="onCardVisibilityChange"/>
+        </p13n:panels>
+    </p13n:Popup>
+</core:FragmentDefinition>

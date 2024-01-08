@@ -1,0 +1,49 @@
+2024-01-04 08:27:09.148 [error] No bundle location found for extension vscode.typescript-language-features
+2024-01-04 08:27:09.384 [error] No bundle location found for extension vscode.emmet
+2024-01-04 08:27:09.813 [error] No bundle location found for extension SAPSE.fs-usage-popup-vscode-extensions
+2024-01-04 08:27:09.813 [error] No bundle location found for extension SAPOSS.code-snippet
+2024-01-04 08:27:09.813 [error] No bundle location found for extension SAP.vscode-watt-framework-extension
+2024-01-04 08:27:10.493 [error] No bundle location found for extension SAPOSS.app-studio-toolkit
+2024-01-04 08:27:10.493 [error] No bundle location found for extension SAPOSS.app-studio-toolkit-themes
+2024-01-04 08:27:10.493 [error] No bundle location found for extension vscode.git-base
+2024-01-04 08:27:10.493 [error] No bundle location found for extension eamodio.gitlens
+2024-01-04 08:27:10.493 [error] No bundle location found for extension SAPSE.npm-task-contrib
+2024-01-04 08:27:11.533 [error] No bundle location found for extension SAPSE.sap-ux-application-modeler-extension
+2024-01-04 08:27:11.533 [error] No bundle location found for extension SAPSE.sap-ux-help-extension
+2024-01-04 08:27:11.533 [error] No bundle location found for extension SAPSE.sap-ux-service-modeler-extension
+2024-01-04 08:27:11.533 [error] No bundle location found for extension SAP.vscode-bas-extension
+2024-01-04 08:27:11.533 [error] No bundle location found for extension SAPOSS.vscode-dependencies-validation
+2024-01-04 08:27:11.533 [error] No bundle location found for extension SAPOSS.vscode-deps-upgrade-tool
+2024-01-04 08:27:11.534 [error] No bundle location found for extension SAPSE.vscode-tasks-explorer-tasks-panel
+2024-01-04 08:27:11.534 [error] No bundle location found for extension SAPOSS.vscode-ui5-language-assistant
+2024-01-04 08:27:11.534 [error] No bundle location found for extension SAP.vscode-wing-cf-tools
+2024-01-04 08:27:11.534 [error] No bundle location found for extension SAPSE.vscode-wing-expose-router-ports
+2024-01-04 08:27:11.534 [error] No bundle location found for extension SAP.vscode-wing-gerrit
+2024-01-04 08:27:11.534 [error] No bundle location found for extension SAP.vscode-wing-run-config
+2024-01-04 08:27:17.724 [error] No bundle location found for extension SAP.mta-editor-vscode
+2024-01-04 08:27:17.724 [error] No bundle location found for extension SAP.sap-bas-vscode-w5g
+2024-01-04 08:27:17.724 [error] No bundle location found for extension SAP.vscode-bas-extensibility
+2024-01-04 08:27:18.265 [error] No bundle location found for extension SAPSE.lcap-task-contrib
+2024-01-04 08:27:18.489 [error] No bundle location found for extension SAPOS.yeoman-ui
+2024-01-04 08:27:18.489 [error] No bundle location found for extension SAPOSS.guided-development
+2024-01-04 08:27:18.489 [error] No bundle location found for extension SAPSE.vscode-wing-storyboard
+2024-01-04 08:27:20.679 [error] No bundle location found for extension SAP.vscode-wing-welcome-screen
+2024-01-04 08:27:20.679 [error] No bundle location found for extension SAPSE.vscode-bas-fiori-tools
+2024-01-04 08:27:20.679 [error] No bundle location found for extension vscode.git
+2024-01-04 08:27:21.777 [error] No bundle location found for extension SAPSE.vscode-wing-ui5-run
+2024-01-04 08:27:22.417 [error] No bundle location found for extension SAPSE.cicd-extension
+2024-01-04 08:27:22.458 [error] No bundle location found for extension SAP.adp-ve-bas-ext
+2024-01-04 08:27:23.136 [error] No bundle location found for extension vscode.debug-auto-launch
+2024-01-04 08:27:23.166 [error] No bundle location found for extension SAPSE.vscode-mta-tools
+2024-01-04 08:27:23.583 [error] No bundle location found for extension vscode.merge-conflict
+2024-01-04 08:33:03.143 [error] No bundle location found for extension SAPSE.sap-ux-annotation-modeler-extension
+2024-01-04 08:33:03.772 [error] No bundle location found for extension SAPOSS.xml-toolkit
+2024-01-04 08:33:09.676 [error] No bundle location found for extension vscode.json-language-features
+2024-01-04 08:33:10.741 [error] [SAPSE.sap-ux-annotation-modeler-extension] provider FAILED
+2024-01-04 08:33:10.741 [error] Error: Request textDocument/getHoverAppendTrusted failed with message: Cannot convert undefined or null to object
+	at Vt (/extbin/local/openvscode-server/extensions/sap-ux-annotation-modeler-extension-1.12.1/dist/extension.js:4:229)
+	at On (/extbin/local/openvscode-server/extensions/sap-ux-annotation-modeler-extension-1.12.1/dist/extension.js:3:6882)
+	at Immediate.<anonymous> (/extbin/local/openvscode-server/extensions/sap-ux-annotation-modeler-extension-1.12.1/dist/extension.js:3:6729)
+	at process.processImmediate (node:internal/timers:476:21)
+2024-01-04 08:40:03.264 [error] No bundle location found for extension vscode.npm
+2024-01-04 08:40:03.270 [error] No bundle location found for extension vscode.extension-editing

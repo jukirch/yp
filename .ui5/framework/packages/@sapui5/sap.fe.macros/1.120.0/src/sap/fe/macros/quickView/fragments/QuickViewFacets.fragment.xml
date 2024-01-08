@@ -1,0 +1,56 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:macros="sap.fe.macros"
+	template:require="{
+				CONTACT: 'sap/fe/macros/contact/ContactHelper',
+				MODEL: 'sap/ui/model/odata/v4/AnnotationHelper',
+				UI: 'sap/fe/core/templating/UIFormatters',
+				FieldTemplating: 'sap/fe/macros/field/FieldTemplating'
+				}"
+>
+	<template:if test="{entityType>./@com.sap.vocabularies.UI.v1.QuickViewFacets}">
+		<f:SimpleForm editable="false" layout="ResponsiveGridLayout" maxContainerCols="1" class="sapMQuickViewPage">
+			<template:repeat list="{entityType>./@com.sap.vocabularies.UI.v1.QuickViewFacets}" var="facet">
+				<template:if test="{= ${facet>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') > -1 }">
+					<template:then>
+						<template:with path="facet>Target/$AnnotationPath" var="contact">
+							<core:Title text="{sap.fe.i18n>POPOVER_CONTACT_SECTION_TITLE}" class="sapUiTinyMarginBottom" />
+							<macros:TeamContactOptions mail="{= CONTACT.getMsTeamsMail(${contact>@@UI.getDataModelObjectPath})}" />
+							<core:Fragment fragmentName="sap.fe.macros.contact.ContactQuickViewGroup" type="XML" />
+						</template:with>
+					</template:then>
+					<template:elseif test="{= (${facet>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.FieldGroup') > -1)}">
+						<template:with path="facet>Target/$AnnotationPath" var="fieldGroup">
+							<core:Title text="{facet>Label}" />
+							<template:repeat list="{fieldGroup>Data}" var="dataField">
+								<core:Fragment fragmentName="sap.fe.macros.quickView.fragments.QuickViewFormField" type="XML" />
+							</template:repeat>
+						</template:with>
+					</template:elseif>
+					<template:elseif
+						test="{= (${facet>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.Identification') > -1) }"
+					>
+						<template:with path="facet>Target/$AnnotationPath" var="identification">
+							<core:Title text="{facet>Label}" />
+							<template:repeat list="{identification>}" var="dataField">
+								<core:Fragment fragmentName="sap.fe.macros.quickView.fragments.QuickViewFormField" type="XML" />
+							</template:repeat>
+						</template:with>
+					</template:elseif>
+					<template:elseif test="{= (${facet>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.DataPoint') > -1) }">
+						<template:with path="facet>Target/$AnnotationPath" var="dataPoint">
+							<core:Title text="{facet>Label}" />
+							<Label text="{dataField>@@MODEL.label}" />
+							<Text
+								text="{= ${dataPoint>TargetValue@@MODEL.format} ? ${dataPoint>Value@@MODEL.format}+'/'+${dataPoint>TargetValue@@MODEL.format} : ${dataPoint>Value@@MODEL.format} }"
+							/>
+						</template:with>
+					</template:elseif>
+				</template:if>
+			</template:repeat>
+		</f:SimpleForm>
+	</template:if>
+</core:FragmentDefinition>

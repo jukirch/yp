@@ -1,0 +1,23 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    id="NavigationBarMenu"
+    controllerName="sap.ushell.components.shell.NavigationBarMenu.controller.NavigationBarMenu">
+    <Button
+        id="navigationBarMenuButton"
+        icon="sap-icon://menu2"
+        press=".openNavigationBarMenuPopover"
+        tooltip="{i18n>NavigationBarMenu.Button.OpenPopover}"
+        ariaHasPopup="Dialog">
+        <layoutData>
+            <OverflowToolbarLayoutData priority="NeverOverflow" />
+        </layoutData>
+        <customData>
+            <core:CustomData
+                key="help-id"
+                value="shell-navigationBarPersonalizationButton"
+                writeToDom="true" />
+        </customData>
+    </Button>
+</mvc:View>

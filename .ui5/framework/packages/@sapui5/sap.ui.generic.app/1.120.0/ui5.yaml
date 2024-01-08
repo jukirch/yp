@@ -1,0 +1,11 @@
+specVersion: '3.0'
+type: library
+metadata:
+  name: sap.ui.generic.app
+framework:
+  name: SAPUI5
+  libraries:
+    - name: sap.ui.core
+    - name: sap.ui.comp
+    - name: sap.m
+    - name: sap.fe.navigation

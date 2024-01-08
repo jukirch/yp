@@ -1,0 +1,622 @@
+09:20:55 [INFO] - Running activation sequence for Fiori tools - Application Modeler
+09:20:55 [INFO] - Configurations: 'sap.ux.applicationModeler.showJsonSchemas': false; isTheia(): false; isAppStudio(): true
+09:20:55 [INFO] - isBASVEExtInstalled(): true
+09:20:55 [INFO] - AppFolders: setAppFoldersContext() is processing, leaving
+09:20:55 [INFO] - Register Fiori tools file system for configurations...
+09:20:55 [INFO] - ...Fiori tools file system registered in 0.741ms
+09:20:55 [INFO] - Register views for configurations...
+09:20:55 [INFO] - ...views for configurations registered in 0.861ms
+09:20:55 [INFO] - Register commands...
+09:20:55 [INFO] - ...commands registered in 3.599ms
+09:20:55 [INFO] - Activating sync module...
+09:20:55 [INFO] - Virtual file system ftfs initialized in 0.100ms
+09:20:55 [INFO] - Searching for projects in these workspace folders: 
+[ '/home/user' ]
+09:21:10 [INFO] - SAP UX projects found and added in 15131.748ms
+09:21:10 [INFO] - Start watching **/package.json
+09:21:10 [INFO] - package.json watched in 0.924ms
+09:21:10 [INFO] - Start watching for workspace folder changes
+09:21:10 [INFO] - Workspace folders watched in 0.622ms
+09:21:10 [INFO] - Configs watched in 0.141ms
+09:21:10 [INFO] - ...sync module activated in 15135.833ms
+09:21:10 [INFO] - Register serializers...
+09:21:10 [INFO] - ...serializers registered in 0.732ms
+09:21:10 [INFO] - Activating launch config integration
+09:21:10 [INFO] - Handler for Fiori launch configuration registered
+09:21:10 [INFO] - ...launch config integration activated in 1.020ms
+09:21:10 [INFO] - Activating migration module...
+09:21:10 [INFO] - Migration start watching for workspace folder changes
+09:21:10 [INFO] - Workspace folders watched in 0.514ms
+09:21:10 [INFO] - Migration start watching **/package.json
+09:21:10 [INFO] - package.json watched in 0.438ms
+09:21:10 [INFO] - Migration start watching **/pom.xml
+09:21:10 [INFO] - pom.xml watched in 0.440ms
+09:21:10 [INFO] - Migration start watching **/neo-app.json
+09:21:10 [INFO] - neo-app.json watched in 0.433ms
+09:21:10 [INFO] - Migration start watching **/manifest.json
+09:21:10 [INFO] - manifest.json watched in 0.409ms
+09:21:10 [INFO] - ...migration module activated in 4.702ms
+09:21:10 [INFO] - Register uri handler...
+09:21:10 [INFO] - ...uri handler registered in 0.246ms
+09:21:10 [INFO] - activation sequence for Fiori tools - Application Modeler done in 15199.075ms
+09:23:21 [INFO] - Project added /home/user/projects/projekt_ui5
+09:23:41 [INFO] - Post application generation command received. New app root: /home/user/projects/projekt_ui5
+09:23:41 [INFO] - Starting application info for '/home/user/projects/projekt_ui5'
+09:23:52 [INFO] - Generating config content for project '/home/user/projects/projekt_ui5'
+09:23:55 [ERROR] - UI.LineItem annotation has not been defined
+09:23:55 [INFO] - Content generated for /home/user/projects/projekt_ui5 in 3298.492ms
+09:23:57 [INFO] - Application information collected in 6590.569ms
+09:23:57 [INFO] - App info for '/home/user/projects/projekt_ui5':
+ {
+  "appRoot": "/home/user/projects/projekt_ui5",
+  "backend": "EDMX Backend",
+  "commands": [
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "Fiori Adaptation"
+      ],
+      "commandLabel": "Preview Application",
+      "commandDescription": "Choose from start scripts to run the application preview.",
+      "commandIcon": "Preview",
+      "exec": {
+        "commandId": "sap.ux.pageEditor.previewExternal",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Validate Application",
+      "commandDescription": "Validate the application.",
+      "commandIcon": "Validate",
+      "exec": {
+        "commandId": "sap.ux.applicationModeler.validate",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Check Service",
+      "commandDescription": "Check service with annotation. You can copy annotations to local annotation file.",
+      "commandIcon": "Annotation",
+      "exec": {
+        "commandId": "sap.ux.serviceModeler.openFile",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Manage Service Models",
+      "commandDescription": "You can sync metadata.xml with backend.",
+      "commandIcon": "Association",
+      "exec": {
+        "commandId": "sap.ux.serviceModeler.openServiceMgr",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5/webapp/manifest.json"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Manage XML Annotations",
+      "commandDescription": "You can choose or create local XML annotation files.",
+      "commandIcon": "Annotation",
+      "exec": {
+        "commandId": "sap.ux.serviceModeler.openAnnotationFileMgr",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5/webapp/manifest.json"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Java",
+        "CAP Node.js"
+      ],
+      "commandLabel": "Open Guided Development",
+      "commandDescription": "Guided Development helps solve common tasks.",
+      "commandIcon": "GuidedDevelopment",
+      "exec": {
+        "commandId": "sap.ux.help.openGuidedDevelopmentFromExplorer",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5",
+          "arguments": {
+            "source": "application-info"
+          }
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Java",
+        "CAP Node.js"
+      ],
+      "commandLabel": "Open Page Map",
+      "commandDescription": "Open the page map that shows application pages and navigation paths.",
+      "commandIcon": "PageMap",
+      "exec": {
+        "commandId": "sap.ux.pageMap.showMap",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "Fiori Reuse"
+      ],
+      "commandLabel": "Add Deploy Config",
+      "commandDescription": "Add deploy configuration.",
+      "commandIcon": "Add",
+      "exec": {
+        "commandId": "sap.ux.appGenerator.launchDeployConfig",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5",
+          "arguments": {
+            "source": "application-info"
+          }
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "CAP Java"
+      ],
+      "commandLabel": "Add Fiori Launchpad Config",
+      "commandDescription": "Add Flp configuration to the application.",
+      "commandIcon": "Add",
+      "exec": {
+        "commandId": "sap.ux.appGenerator.launchFlpConfig",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5",
+          "arguments": {
+            "source": "application-info"
+          }
+        },
+        "onDone": {
+          "watchPath": "/home/user/projects/projekt_ui5/package.json",
+          "activities": [
+            "REFRESH"
+          ]
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "Fiori Reuse"
+      ],
+      "commandLabel": "Deploy",
+      "commandDescription": "Deploy according to the configuration by default stored in 'ui5-deploy.yaml'.",
+      "commandIcon": "World",
+      "exec": {
+        "commandId": "sap.ux.appGenerator.launchDeploy",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5",
+          "arguments": {
+            "source": "application-info"
+          }
+        },
+        "onDone": {
+          "watchPath": "/home/user/projects/projekt_ui5/package.json",
+          "activities": [
+            "REFRESH"
+          ]
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "CAP Java",
+        "Fiori Adaptation"
+      ],
+      "commandLabel": "Check Node Modules",
+      "commandDescription": "Execute command that checks all node module dependencies for newer versions.",
+      "commandIcon": "Cleanup",
+      "exec": {
+        "cwd": "/home/user/projects/projekt_ui5",
+        "arguments": [
+          "npm",
+          "outdated"
+        ]
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Add Variants Config",
+      "commandDescription": "Add Configuration for Variants Creation.",
+      "commandIcon": "Edit",
+      "exec": {
+        "commandId": "sap.ux.applicationModeler.addVariantsConfig",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Add Mockserver Config",
+      "commandDescription": "Add configuration for mockserver middleware",
+      "commandIcon": "Add",
+      "exec": {
+        "cwd": "/home/user/projects/projekt_ui5",
+        "arguments": [
+          "npx",
+          "--yes",
+          "@sap-ux/create@latest",
+          "add",
+          "mockserver-config"
+        ]
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "v2",
+        "v4",
+        "EDMX Backend"
+      ],
+      "commandLabel": "Maintain Mockdata",
+      "commandDescription": "Start editor for maintaining mock data.",
+      "commandIcon": "Data",
+      "exec": {
+        "commandId": "sap.ux.dataEditor.open",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "CAP Java"
+      ],
+      "commandLabel": "Create Archive",
+      "commandDescription": "Zip the project excluding the node_modules for sharing (e.g. support cases)",
+      "commandIcon": "FolderOpened",
+      "exec": {
+        "commandId": "sap.ux.environmentcheck.archiveProject",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Java",
+        "CAP Node.js"
+      ],
+      "commandLabel": "Show Documentation",
+      "commandDescription": "Show documentation of available manifest and UI5 flexibility properties.",
+      "commandIcon": "File",
+      "exec": {
+        "commandId": "sap.ux.applicationModeler.showDocu",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    },
+    {
+      "tags": [
+        "SAP Fiori elements",
+        "SAPUI5 freestyle",
+        "SAPUI5 Extension",
+        "v2",
+        "v4",
+        "EDMX Backend",
+        "CAP Node.js",
+        "CAP Java"
+      ],
+      "commandLabel": "Change minUI5Version",
+      "commandDescription": "Change the minimum version of SAPUI5 that this application requires.",
+      "commandIcon": "Ui5",
+      "exec": {
+        "commandId": "sap.ux.applicationModeler.changeMinUI5Version",
+        "argument": {
+          "fsPath": "/home/user/projects/projekt_ui5"
+        }
+      }
+    }
+  ],
+  "description": "Eine Einkaufsapplikation für YP",
+  "documentationLinks": [
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4"
+      ],
+      "text": "Developing apps with SAP Fiori elements",
+      "url": "https://ui5.sap.com/#/topic/03265b0408e2432c9571d6b3feb6b1fd"
+    },
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4"
+      ],
+      "text": "SAP Fiori elements Community",
+      "url": "https://answers.sap.com/tags/ed5c1ef6-932f-4c19-b2ba-1be375109ff5"
+    },
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4",
+        "SAPUI5 freestyle",
+        "Fiori Reuse"
+      ],
+      "text": "SAP Fiori tools Community",
+      "url": "https://answers.sap.com/tags/73555000100800002345"
+    },
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4",
+        "SAPUI5 freestyle",
+        "Fiori Reuse",
+        "Fiori Adaptation"
+      ],
+      "text": "SAPUI5 Help",
+      "url": "https://ui5.sap.com/#/topic"
+    },
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4",
+        "SAPUI5 freestyle",
+        "Fiori Reuse"
+      ],
+      "text": "SAP Fiori tools Help",
+      "url": "https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US"
+    },
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4",
+        "SAPUI5 freestyle",
+        "Fiori Reuse",
+        "Fiori Adaptation"
+      ],
+      "text": "SAP Fiori Design Guidelines",
+      "url": "https://experience.sap.com/fiori-design-web/"
+    },
+    {
+      "tags": [
+        "EDMX Backendv2",
+        "EDMX Backendv4",
+        "CAP Node.jsv4",
+        "CAP Javav4",
+        "SAPUI5 freestyle",
+        "Fiori Reuse",
+        "Fiori Adaptation"
+      ],
+      "text": "Contact Support",
+      "url": "https://help.sap.com/viewer/1bb01966b27a429ebf62fa2e45354fea/Latest/en-US"
+    }
+  ],
+  "fileLinks": [
+    {
+      "commandLabel": "package.json",
+      "commandDescription": "Show file package.json in text editor.",
+      "commandIcon": "Edit",
+      "exec": {
+        "commandId": "sap.ux.applicationModeler.configExplorer.showFile",
+        "argument": {
+          "uri": {
+            "$mid": 1,
+            "path": "/home/user/projects/projekt_ui5/package.json",
+            "scheme": "file"
+          }
+        }
+      }
+    },
+    {
+      "commandLabel": "manifest.json",
+      "commandDescription": "Show file manifest.json in text editor.",
+      "commandIcon": "Edit",
+      "exec": {
+        "commandId": "sap.ux.applicationModeler.configExplorer.showFile",
+        "argument": {
+          "uri": {
+            "$mid": 1,
+            "path": "/home/user/projects/projekt_ui5/webapp/manifest.json",
+            "scheme": "file"
+          }
+        }
+      }
+    }
+  ],
+  "location": "/home/user/projects/projekt_ui5",
+  "minui5version": "1.120.4",
+  "name": "projektui5",
+  "namespace": "",
+  "odataversion": "v2",
+  "pages": [
+    {
+      "name": "Products",
+      "type": "ListReport",
+      "icon": "ListReportPage",
+      "level": 0,
+      "command": {
+        "commandLabel": "Page editor",
+        "commandDescription": "Open page editor for 'ListReport_Products'",
+        "commandIcon": "",
+        "exec": {
+          "commandId": "sap.ux.pageMap.showPageEditor",
+          "argument": {
+            "fsPath": "/home/user/projects/projekt_ui5/src/pages/ListReport_Products.json"
+          }
+        }
+      }
+    },
+    {
+      "name": "Products",
+      "type": "ObjectPage",
+      "icon": "ObjectPage",
+      "level": 1,
+      "command": {
+        "commandLabel": "Page editor",
+        "commandDescription": "Open page editor for 'ObjectPage_Products'",
+        "commandIcon": "",
+        "exec": {
+          "commandId": "sap.ux.pageMap.showPageEditor",
+          "argument": {
+            "fsPath": "/home/user/projects/projekt_ui5/src/pages/ObjectPage_Products.json"
+          }
+        }
+      }
+    }
+  ],
+  "projectRoot": "/home/user/projects/projekt_ui5",
+  "serviceLinks": [
+    {
+      "text": "OData.svc (V2.0)",
+      "tooltip": "Destination https://services.odata.org\nService /V2/(S(hdnziyx5hpbgigb4533lifhl))/OData/OData.svc/\nOData Version 2.0",
+      "url": ""
+    }
+  ],
+  "status": [],
+  "title": "YP Shopping",
+  "reference": "",
+  "type": "SAP Fiori elements",
+  "artifactType": "SAP Fiori elements",
+  "capProjectType": "",
+  "cdsUi5PluginStatus": "not applicable"
+}
+09:23:59 [INFO] - App status for '/home/user/projects/projekt_ui5':
+ [
+  {
+    "statusIcon": "Success",
+    "description": "Latest version of node module '@sap/ux-specification@1.120.1' installed."
+  },
+  {
+    "statusIcon": "Success",
+    "description": "Latest version of node module '@sap/ux-ui5-tooling@1.12.1' installed."
+  },
+  {
+    "statusIcon": "Success",
+    "description": "Latest version of node module '@sap-ux/ui5-middleware-fe-mockserver@2.2.14' installed."
+  }
+]
+09:28:29 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/package.json'
+09:28:30 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/package.json'
+09:28:30 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/package.json'
+09:28:30 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/package.json'
+09:28:30 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/package.json'
+09:28:30 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.json'
+09:28:33 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/package.json'
+09:28:52 [INFO] - An error occurred while processing changes of file '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/package.json': Error: ENOENT: no such file or directory, open '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/package.json'
+09:31:44 [INFO] - Generating config content for project '/home/user/projects/projekt_ui5'
+09:31:44 [ERROR] - Error getting config for project '/home/user/projects/projekt_ui5'.
+[SyntaxError: Unexpected token } in JSON at position 778
+	at JSON.parse (<anonymous>)
+	at readJSON (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:34:15117)
+	at async lTr.fillServiceSpecificationForApp (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:1126:15677)
+	at async lTr.init (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:1126:9458)
+	at async createProjectProvider (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:1160:5890)
+	at async generateConfig (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:3055:33939)
+	at async onWebappChanged (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:3055:35106)]
+09:31:44 [ERROR] - Error writing config to manifest and changes for /home/user/projects/projekt_ui5. Error was: 
+'SyntaxError: Unexpected token } in JSON at position 778'

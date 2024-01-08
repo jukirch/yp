@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<VBox id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ContactAddress"
+		  visible="{path: 'headerFacet>', formatter: 'AH.getBindingForHiddenPath'}"
+		  displayInline="true" binding="{parts: [{path: 'headerFacet>Target'}, {path: 'entitySet>'}], formatter: 'AH.getNavigationPathWithExpand'}"
+		  class="sapSmartTemplatesObjectPageHeaderAddress sapMShowEmpty-CTX">
+		<template:if test="{headerFacet>Label}">
+			<Title id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::Label"
+				   text="{path: 'headerFacet>Label', formatter: 'AHModel.format'}:"
+				   class="sapSmartTemplatesObjectPageHeaderAddressLabel" />
+		</template:if>
+		<Text id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::Address"
+			  class="sapSmartTemplatesObjectPageHeaderAddressValue"
+			  text="{path: 'contact>label', formatter: 'AHModel.format'}"></Text>
+	</VBox>
+</core:FragmentDefinition>

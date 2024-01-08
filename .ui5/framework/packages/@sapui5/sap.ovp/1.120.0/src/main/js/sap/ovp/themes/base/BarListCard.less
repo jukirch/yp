@@ -1,0 +1,138 @@
+.sapOvpBarListDataField {
+    font-family: @sapUiFontFamily;
+    font-weight: normal;
+}
+
+.sapOvpBarListHBox {
+    & > .sapOvpBarListVBoxLeft {
+        min-width: 60% !important;
+        flex: 0;
+    }
+
+    & > .sapOvpBarListVBoxRight {
+        min-width: 35%;
+        padding-left: 1rem;
+    }
+}
+
+.sapOvpOverflowEllipsisDataField {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.sapOvpListEmptyField {
+    display: none;
+}
+//Common for both extended and condensed bar list card
+.sapOvpBarListComparisonMicroChartAlignment {
+    .sapSuiteCpMCChartItem {
+        //Needs to be important because SAP UI5 has given height as 23px on element level
+        height: 1rem !important;
+        min-height: 1rem !important;
+        & > .sapSuiteCpMCChartItemHeader {
+            display: none;
+        }
+        & > .sapSuiteCpMCChartBar {
+            margin: 0;
+            height: 0.625rem;
+            top: 50%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+    }
+}
+//Condensed bar list
+.sapOvpBarList.sapOvpBarCondensedList {
+    padding: 0.65rem 1rem 0.75rem;
+    .sapOvpBarListTitle {
+        line-height: 1.125rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    .sapOvpBarListHBox {
+        & > .sapMFlexItem {
+            &:first-child {
+                flex-grow: 1 !important;
+                //Width:auto gets applied in IE at element level for this element hence to override it.
+                width: 30% !important;
+            }
+            &:not(:first-child) {
+                padding-left: 1rem;
+                //Width:auto gets applied in IE at element level for this element hence to override it.
+                width: ~"-moz-calc(35% - 1rem)" !important;
+                width: ~"-webkit-calc(35% - 1rem)" !important;
+                width: ~"calc(35% - 1rem)" !important;
+            }
+        }
+    }
+}
+
+//CSS changes for Resizable card layout list cards for relative width of the content upon resizing
+.easyScanLayoutItemWrapper {
+    &.sapOvpDashboardLayoutItem {
+        .sapOvpBarListHBox {
+            .sapMFlexItem {
+                &.sapMVBox {
+                    width: 29%;
+                }
+            }
+        }
+        .sapOvpBarListHBox {
+            &.sapOvpBarStandardList {
+                .sapMFlexItem {
+                    /* width: 27%;*/
+
+                    text-align: right;
+                }
+            }
+        }
+        .sapOvpBarListObjectNumber {
+            width: auto;
+        }
+    }
+}
+
+//To all the Data point Numbers in extended and condensed Bar list
+.sapOvpBarListObjectNumber {
+    font-family: @sapUiFontFamily;
+    font-weight: normal;
+    .sapMObjectNumberUnit:empty {
+        display: none; // Empty 'Inline-Block' Span was taking Vertical Height Hence made it 'none'
+    }
+    & > .sapMObjectNumberText {
+        vertical-align: baseline;
+    }
+    & > .sapMObjectNumberUnit {
+        vertical-align: baseline;
+    }
+}
+
+//Extended bar list css
+.sapOvpExtendedBarListHBox {
+    &.sapOvpBarListHBox {
+        padding: 0.875rem 1rem 1rem;
+    }
+    .sapOvpBarListVBoxLeft,
+    .sapOvpBarListVBoxRight {
+        & > .sapMFlexItem {
+            height: 1rem;
+        }
+        & > .sapMFlexItem:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+    .sapOvpExtendedBarListBlock {
+        display: block;
+    }
+}
+
+.sapOvpExtendedBarListFirstDataField {
+    font-family: @sapUiFontFamily;
+    font-weight: normal;
+    vertical-align: baseline;
+    font-size: @sapMFontHeader5Size;
+}

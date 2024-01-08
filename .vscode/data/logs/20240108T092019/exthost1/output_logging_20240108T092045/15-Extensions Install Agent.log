@@ -1,0 +1,149 @@
+
+registry=https://registry.npmjs.org
+@sapdmz:registry=https://common.repositories.cloud.sap/artifactory/api/npm/build.releases.npm/
+//common.repositories.cloud.sap/artifactory/api/npm/build.releases.npm/:_authToken=<REDACTED>
+//common.repositories.cloud.sap/artifactory/api/npm/build.releases.npm/:always-auth=true
+@bas-dev:registry=https://common.repositories.cloud.sap/artifactory/api/npm/devx-npm-live/
+//common.repositories.cloud.sap/artifactory/api/npm/devx-npm-live/:_authToken=<REDACTED>
+//common.repositories.cloud.sap/artifactory/api/npm/devx-npm-live/:always-auth=true
+@adaptation-project:registry=https://registry.npmjs.org/
+@sap-lcnc:registry=https://common.repositories.cloud.sap/artifactory/api/npm/deploy.releases.npm/
+//common.repositories.cloud.sap/artifactory/api/npm/deploy.releases.npm/:_authToken=<REDACTED>
+//common.repositories.cloud.sap/artifactory/api/npm/deploy.releases.npm/:always-auth=true
+@ext-dptvsc-npm-vscode:registry=https://common.repositories.cloud.sap/artifactory/api/npm/deploy.releases.npm/
+@ext-dptvsc-npm-dev:registry=https://common.repositories.cloud.sap/artifactory/api/npm/deploy.releases.npm/
+@artifact-management:registry=https://npmjs.com/package/artifact-management/
+@sap-ux-rel:registry=https://common.repositories.cloud.sap/artifactory/api/npm/deploy.milestones.npm/
+//common.repositories.cloud.sap/artifactory/api/npm/deploy.milestones.npm/:_authToken=<REDACTED>
+//common.repositories.cloud.sap/artifactory/api/npm/deploy.milestones.npm/:always-auth=true
+
+Total <npm configuration> time: 0.01 seconds
+pnpm add -g --prefer-offline --global-dir /managed-content/globals/pnpm --global-bin-dir /managed-content/globals/pnpm/bin --config.updateNotifier=false --loglevel=info --cache-dir /managed-content/pnpm/cache --store-dir /managed-content/pnpm/store --registry https://registry.npmjs.org @bas-dev/generator-extensibility-sub@1.0.16
+Total <install CLI modules> time: 0.00 seconds
+VSCode cache - Excludes(skipped): 0
+VSCode cache - Includes: 19
+VSCode cache - hits: 19
+VSCode cache - misses: 0
+vsix cache: @bas-dev/vscode-w5g soft-link copied: /managed-content/vscode/soft-links/0__bas-dev___vscode-w5g@0.3.0-20231129105608 -> /extbin/local/openvscode-server/extensions/0__bas-dev___vscode-w5g@0.3.0-20231129105608
+vsix cache: @bas-dev/vscode-mta-editor soft-link copied: /managed-content/vscode/soft-links/9__bas-dev___vscode-mta-editor@2.0.2-20230815075906 -> /extbin/local/openvscode-server/extensions/9__bas-dev___vscode-mta-editor@2.0.2-20230815075906
+vsix cache: @sap_oss/vscode-mta-tools soft-link copied: /managed-content/vscode/soft-links/10__sap_oss___vscode-mta-tools@1.4.10 -> /extbin/local/openvscode-server/extensions/10__sap_oss___vscode-mta-tools@1.4.10
+vsix cache: @sapdmz/vscode-wing-ui5-run soft-link copied: /managed-content/vscode/soft-links/8__sapdmz___vscode-wing-ui5-run@2.4.4 -> /extbin/local/openvscode-server/extensions/8__sapdmz___vscode-wing-ui5-run@2.4.4
+vsix cache: @sap/adp-ve-bas-ext soft-link copied: /managed-content/vscode/soft-links/7__sap___adp-ve-bas-ext@1.1.51 -> /extbin/local/openvscode-server/extensions/7__sap___adp-ve-bas-ext@1.1.51
+vsix cache: @sap-lcnc/run-config soft-link copied: /managed-content/vscode/soft-links/11__sap-lcnc___run-config@6.1.13 -> /extbin/local/openvscode-server/extensions/11__sap-lcnc___run-config@6.1.13
+vsix cache: @sap-lcnc/guided-development soft-link copied: /managed-content/vscode/soft-links/12__sap-lcnc___guided-development@0.2.8 -> /extbin/local/openvscode-server/extensions/12__sap-lcnc___guided-development@0.2.8
+vsix cache: @ext-dptvsc-npm-vscode/lcap-task-contrib soft-link copied: /managed-content/vscode/soft-links/13__ext-dptvsc-npm-vscode___lcap-task-contrib@1.21.0-2 -> /extbin/local/openvscode-server/extensions/13__ext-dptvsc-npm-vscode___lcap-task-contrib@1.21.0-2
+vsix cache: @ext-dptvsc-npm-vscode/cicd-extension soft-link copied: /managed-content/vscode/soft-links/14__ext-dptvsc-npm-vscode___cicd-extension@1.21.0-1 -> /extbin/local/openvscode-server/extensions/14__ext-dptvsc-npm-vscode___cicd-extension@1.21.0-1
+vsix cache: @sap-lcnc/csdl-modeler soft-link copied: /managed-content/vscode/soft-links/15__sap-lcnc___csdl-modeler@1.0.19 -> /extbin/local/openvscode-server/extensions/15__sap-lcnc___csdl-modeler@1.0.19
+vsix cache: @bas-dev/vscode-wing-storyboard soft-link copied: /managed-content/vscode/soft-links/18__bas-dev___vscode-wing-storyboard@1.16.15 -> /extbin/local/openvscode-server/extensions/18__bas-dev___vscode-wing-storyboard@1.16.15
+vsix cache: @sap-lcnc/simplified-git soft-link copied: /managed-content/vscode/soft-links/16__sap-lcnc___simplified-git@1.0.5 -> /extbin/local/openvscode-server/extensions/16__sap-lcnc___simplified-git@1.0.5
+vsix cache: @bas-dev/vscode-wing-service-center soft-link copied: /managed-content/vscode/soft-links/17__bas-dev___vscode-wing-service-center@0.16.44 -> /extbin/local/openvscode-server/extensions/17__bas-dev___vscode-wing-service-center@0.16.44
+vsix cache: @sap-ux-rel/sap-ux-service-modeler-extension soft-link copied: /managed-content/vscode/soft-links/2__sap-ux-rel___sap-ux-service-modeler-extension@1.0.10214 -> /extbin/local/openvscode-server/extensions/2__sap-ux-rel___sap-ux-service-modeler-extension@1.0.10214
+vsix cache: @sap-ux-rel/sap-ux-annotation-modeler-extension soft-link copied: /managed-content/vscode/soft-links/5__sap-ux-rel___sap-ux-annotation-modeler-extension@1.0.10214 -> /extbin/local/openvscode-server/extensions/5__sap-ux-rel___sap-ux-annotation-modeler-extension@1.0.10214
+vsix cache: @sap-ux-rel/sap-ux-help-extension soft-link copied: /managed-content/vscode/soft-links/3__sap-ux-rel___sap-ux-help-extension@1.0.10214 -> /extbin/local/openvscode-server/extensions/3__sap-ux-rel___sap-ux-help-extension@1.0.10214
+vsix cache: @sap-ux-rel/sap-ux-application-modeler-extension soft-link copied: /managed-content/vscode/soft-links/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214 -> /extbin/local/openvscode-server/extensions/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214
+vsix cache: @bas-dev/vscode-bas-extensibility soft-link copied: /managed-content/vscode/soft-links/1__bas-dev___vscode-bas-extensibility@1.0.24 -> /extbin/local/openvscode-server/extensions/1__bas-dev___vscode-bas-extensibility@1.0.24
+vsix cache: @ui5-language-assistant/vscode-ui5-language-assistant-bas-ext soft-link copied: /managed-content/vscode/soft-links/6__ui5-language-assistant___vscode-ui5-language-assistant-bas-ext@4.0.48 -> /extbin/local/openvscode-server/extensions/6__ui5-language-assistant___vscode-ui5-language-assistant-bas-ext@4.0.48
+Total <install VSCode extension - cache> time: 0.38 seconds
+Total <install VSCode extension - download> time: 0.00 seconds
+Total <install VSCode extensions - total> time: 0.40 seconds
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1
++
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: /managed-content/pnpm/store/v3
+  Virtual store is at:             .pnpm
+ WARN  @bas-dev/generator-extensibility-sub has no binaries
+
+/managed-content/globals/pnpm/5:
++ @bas-dev/generator-extensibility-sub 1.0.16
+
+Done in 810ms
+Progress: resolved 1, reused 1, downloaded 0, added 1, done
+Total <install global npm modules> time: 1.78 seconds
+pnpm add -g --prefer-offline --global-dir /managed-content/globals/pnpm --global-bin-dir /managed-content/globals/pnpm/bin --config.updateNotifier=false --loglevel=info --cache-dir /managed-content/pnpm/cache --store-dir /managed-content/pnpm/store --registry https://registry.npmjs.org @bas-dev/generator-basic-multitarget-application@1.1.8-20230619082239 @sap/adp-abap@1.1.51 @sap/adp-cf@1.1.51 @sap/adp-common@1.1.51 @sap/adp-cli@1.1.51 @sap/generator-adaptation-project@1.1.51 @ext-dptvsc-npm-dev/generator-cicd@1.23.0-2 @sap/generator-fiori@1.12.1
+Progress: resolved 1, reused 0, downloaded 0, added 0
+ WARN  deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+Progress: resolved 184, reused 15, downloaded 0, added 0
+Packages: +269
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 270, reused 121, downloaded 0, added 109
+ WARN  @bas-dev/generator-basic-multitarget-application has no binaries
+ WARN  @sap/adp-abap has no binaries
+ WARN  @sap/adp-cf has no binaries
+ WARN  @sap/adp-common has no binaries
+ WARN  @sap/generator-adaptation-project has no binaries
+ WARN  @ext-dptvsc-npm-dev/generator-cicd has no binaries
+ WARN  @sap/generator-fiori has no binaries
+Progress: resolved 270, reused 270, downloaded 0, added 269, done
+
+/managed-content/globals/pnpm/5:
++ @bas-dev/generator-basic-multitarget-application 1.1.8-20230619082239
++ @ext-dptvsc-npm-dev/generator-cicd 1.23.0-2 (1.24.0-1 is available)
++ @sap/adp-abap 1.1.51
++ @sap/adp-cf 1.1.51
++ @sap/adp-cli 1.1.51
++ @sap/adp-common 1.1.51
++ @sap/generator-adaptation-project 1.1.51
++ @sap/generator-fiori 1.12.1
+
+ WARN  Issues with peer dependencies found
+.
+└─┬ @sap/generator-fiori 1.12.1
+  └─┬ @sap/cds 7.4.1
+    └─┬ @sap/cds-fiori 1.2.2
+      └── ✕ missing peer express@>=4
+Peer dependencies that should be installed:
+  express@>=4
+
+Done in 3.6s
+Total <install generators> time: 3.75 seconds
+Installation summary of Yeoman generators, global npm packages, VS Code extensions, and CLIs:
+Installation summary of the "w5g-wing/w5g-wing" extension:
+    The @bas-dev/vscode-w5g VS Code extension was installed successfully (from cache).
+    The @bas-dev/vscode-bas-extensibility VS Code extension was installed successfully (from cache).
+    The @bas-dev/generator-extensibility-sub node module was installed successfully.
+Installation summary of the " html5-runner/html5-runner" extension:
+    The @sapdmz/vscode-wing-ui5-run VS Code extension was installed successfully (from cache).
+Installation summary of the "mta-tools/mta-tools" extension:
+    The @sap_oss/vscode-mta-tools VS Code extension was installed successfully (from cache).
+    The @bas-dev/vscode-mta-editor VS Code extension was installed successfully (from cache).
+    The @bas-dev/generator-basic-multitarget-application node module was installed successfully.
+Installation summary of the "ext-mckbj-trial/development-productivity-tools" extension (created by "SAP(MOB-MDE-MDK)"):
+    The @sap-lcnc/guided-development VS Code extension was installed successfully (from cache).
+    The @sap-lcnc/run-config VS Code extension was installed successfully (from cache).
+    The @ext-dptvsc-npm-vscode/cicd-extension VS Code extension was installed successfully (from cache).
+    The @ext-dptvsc-npm-vscode/lcap-task-contrib VS Code extension was installed successfully (from cache).
+    The @sap-lcnc/csdl-modeler VS Code extension was installed successfully (from cache).
+    The @sap-lcnc/simplified-git VS Code extension was installed successfully (from cache).
+    The @ext-dptvsc-npm-dev/generator-cicd node module was installed successfully.
+Installation summary of the "storyboard/storyboard" extension:
+    The @bas-dev/vscode-wing-storyboard VS Code extension was installed successfully (from cache).
+Installation summary of the "ext-adaptation-project-trial/adaptation-project" extension (created by "SAP(CA-UI5-FL-ADP-BAS)"):
+    The @sap/adp-ve-bas-ext VS Code extension was installed successfully (from cache).
+    The @sap/adp-abap node module was installed successfully.
+    The @sap/adp-cf node module was installed successfully.
+    The @sap/adp-common node module was installed successfully.
+    The @sap/adp-cli node module was installed successfully.
+    The @sap/generator-adaptation-project node module was installed successfully.
+Installation summary of the "vscode-service-center/vscode-service-center" extension:
+    The @bas-dev/vscode-wing-service-center VS Code extension was installed successfully (from cache).
+Installation summary of the "ext-sap-ux-trial/sap-ux-all-extensions" extension (created by "SAP(CA-UX-IDE)"):
+    The @sap-ux-rel/sap-ux-annotation-modeler-extension VS Code extension was installed successfully (from cache).
+    The @sap-ux-rel/sap-ux-service-modeler-extension VS Code extension was installed successfully (from cache).
+    The @sap-ux-rel/sap-ux-help-extension VS Code extension was installed successfully (from cache).
+    The @sap-ux-rel/sap-ux-application-modeler-extension VS Code extension was installed successfully (from cache).
+    The @ui5-language-assistant/vscode-ui5-language-assistant-bas-ext VS Code extension was installed successfully (from cache).
+    The @sap/generator-fiori node module was installed successfully.
+Finished installing App Studio simple extensions components!
+Total install time: 5835 milliseconds
+
+
+START INSTALLATION OF NON SAP EXTENSIONS
+
+registry=https://registry.npmjs.org
+
+Total <npm configuration> time: 0.04 seconds
+Total <install CLI modules> time: 0.00 seconds
+Total <install global npm modules> time: 0.00 seconds
+Total <download *.vsix> time: 0.01 seconds
+Total <install generators> time: 0.00 seconds

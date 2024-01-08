@@ -1,0 +1,12 @@
+{
+	"name": "@sapui5/sap.fe.navigation",
+	"version": "1.120.0",
+	"description": "SAPUI5 Library sap.fe.navigation",
+	"keywords": [
+		"sapui5",
+		"ui5"
+	],
+	"homepage": "https://sap.github.io/ui5-tooling/pages/SAPUI5/",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"author": "SAP SE (https://www.sap.com)"
+}

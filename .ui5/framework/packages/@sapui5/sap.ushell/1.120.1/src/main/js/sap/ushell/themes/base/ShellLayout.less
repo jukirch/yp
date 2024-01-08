@@ -1,0 +1,168 @@
+/* =================================== */
+/* CSS for the layout of the ShellView */
+/* =================================== */
+
+// ==================================================== Generic Styles ==================================================================
+
+.sapUshellFlexGrowShrink {
+    flex: 1 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+.sapUshellFlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.sapUshellFlexRow > * {
+    height: 100%;
+}
+
+.sapUshellFlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.sapUshellFlexColumn > * {
+    width: 100%;
+}
+
+.sapUshellPositionRelative {
+    position: relative;
+}
+
+.sapUshellPositionStatic {
+    position: static;
+}
+
+.sapUshellOverflowHidden {
+    overflow: hidden;
+}
+
+.sapUshellShellHidden {
+    display: none !important;
+}
+
+// ==================================================== UI Areas ==================================================================
+
+body {
+    // todo legacy overwrite check if still necessary (I776cdd3db089739d6b8aa7f8f775c7fbd2053efe)
+    .sapMBar.sapMPageHeader:before, .sapMShellBrandingBar {
+        display: none;
+    }
+}
+
+#shellLayout {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.sapUshellRenderer {
+    display: flex;
+    flex-direction: column;
+}
+
+.sapUshellShellBG {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#header-shellArea {
+    position: relative;
+}
+
+#shapes-shellArea, #backgroundImage-shellArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#rightFloatingContainer-shellArea {
+    position: absolute;
+    height: unset;
+    top: 0;
+    right: 0;
+}
+
+#floatingActions-shellArea {
+    position: absolute;
+    height: unset;
+    bottom: 0;
+    right: 0;
+}
+
+.sapUshellFloatingContainerDock {
+    flex: 0 0;
+    z-index: 2; // border of left dock has to be on top of center elements and helpContent
+}
+
+.sapUshellFloatingContainerDock > .sapUshellFloatingContainerWrapper {
+    position: static !important; // overwrite element styles
+    .sapUshellFloatingContainer  {
+    position: relative;
+    }
+}
+
+#helpContent-shellArea {
+    flex: 0 0;
+    position: relative;
+    z-index: 1; // border of left dock has to be on top of center elements, but below the FloatingContainer
+}
+
+// ==================================================== Search Overlay ==================================================================
+
+.sapUshellShellShowSearchOverlay #header-shellArea {
+    z-index: 10;
+}
+
+body.sapUshellShellShowSearchOverlay:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: fade(@sapUiBlockLayerBackground, 40);
+    opacity: 0.4;
+    z-index: 9;
+}
+
+// ==================================================== LogonFrameProvider ==================================================================
+
+.sapUshellSamlDialogHidden {
+    visibility: hidden !important;
+}
+
+#SAMLDialog #SAMLDialog-scrollCont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#SAMLDialogFrame {
+    min-height:100%;
+    width:100%;
+    position: absolute;
+}
+
+// ==================================================== Unused Styles ? ==================================================================
+
+#ContentPage{
+    background: white;
+}

@@ -1,0 +1,1012 @@
+{
+  "libraries": {
+    "sap.ui.core": {
+      "npmPackageName": "@openui5/sap.ui.core",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:core:1.120.1:jar",
+      "dependencies": [],
+      "optionalDependencies": []
+    },
+    "sap.apf": {
+      "npmPackageName": "@sapui5/sap.apf",
+      "version": "1.120.0",
+      "gav": "com.sap.apf:apf-lib:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.table",
+        "sap.ui.export",
+        "sap.ui.comp",
+        "sap.viz",
+        "sap.ushell",
+        "sap.ui.layout",
+        "sap.m",
+        "sap.suite.ui.commons",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ca.scfld.md": {
+      "npmPackageName": "@sapui5/sap.ca.scfld.md",
+      "version": "1.120.0",
+      "gav": "com.sap.ca:scfld.md:1.120.0:jar",
+      "dependencies": [
+        "sap.ca.ui",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal"
+      ]
+    },
+    "sap.ca.ui": {
+      "npmPackageName": "@sapui5/sap.ca.ui",
+      "version": "1.120.0",
+      "gav": "com.sap.ca:ui:1.120.0:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.chart": {
+      "npmPackageName": "@sapui5/sap.chart",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:chart:1.120.1:jar",
+      "dependencies": [
+        "sap.viz",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.collaboration": {
+      "npmPackageName": "@sapui5/sap.collaboration",
+      "version": "1.120.0",
+      "gav": "com.sap.collaboration:collaboration-commons:1.120.0:jar",
+      "dependencies": [
+        "sap.suite.ui.commons",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.esh.search.ui": {
+      "npmPackageName": "@sapui5/sap.esh.search.ui",
+      "version": "1.120.0",
+      "gav": "com.sap.esh:sap.esh.search.ui:1.120.0:jar",
+      "dependencies": [
+        "sap.suite.ui.microchart",
+        "sap.ui.export",
+        "sap.ui.vk",
+        "sap.ui.vbm",
+        "sap.ui.layout",
+        "sap.ui.core",
+        "sap.f",
+        "sap.m"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_horizon",
+        "themelib_sap_fiori_3",
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize"
+      ]
+    },
+    "sap.f": {
+      "npmPackageName": "@openui5/sap.f",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:fiori:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core",
+        "sap.ui.layout"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.fe.core": {
+      "npmPackageName": "@sapui5/sap.fe.core",
+      "version": "1.120.0",
+      "gav": "com.sap.uxeng:sap.fe.core:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.ui.layout",
+        "sap.ui.core",
+        "sap.m",
+        "sap.fe.placeholder",
+        "sap.fe.navigation",
+        "sap.f"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_fiori_3"
+      ]
+    },
+    "sap.fe.macros": {
+      "npmPackageName": "@sapui5/sap.fe.macros",
+      "version": "1.120.0",
+      "gav": "com.sap.uxeng:sap.fe.macros:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.richtexteditor",
+        "sap.suite.ui.microchart",
+        "sap.ui.unified",
+        "sap.ui.layout",
+        "sap.ui.mdc",
+        "sap.m",
+        "sap.fe.navigation",
+        "sap.fe.core",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.fe.navigation": {
+      "npmPackageName": "@sapui5/sap.fe.navigation",
+      "version": "1.120.0",
+      "gav": "com.sap.uxeng:sap.fe.navigation:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.fe.placeholder": {
+      "npmPackageName": "@sapui5/sap.fe.placeholder",
+      "version": "1.120.0",
+      "gav": "com.sap.uxeng:sap.fe.placeholder:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.fe.templates": {
+      "npmPackageName": "@sapui5/sap.fe.templates",
+      "version": "1.120.0",
+      "gav": "com.sap.uxeng:sap.fe.templates:1.120.0:jar",
+      "dependencies": [
+        "sap.collaboration",
+        "sap.uxap",
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.ui.layout",
+        "sap.ui.core",
+        "sap.suite.ui.microchart",
+        "sap.m",
+        "sap.fe.macros",
+        "sap.fe.core",
+        "sap.f"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_fiori_3"
+      ]
+    },
+    "sap.fe.test": {
+      "npmPackageName": "@sapui5/sap.fe.test",
+      "version": "1.120.0",
+      "gav": "com.sap.uxeng:sap.fe.test:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.feedback.ui": {
+      "npmPackageName": "@sapui5/sap.feedback.ui",
+      "version": "1.120.0",
+      "gav": "com.sap.feedback:sap.feedback.ui:1.120.0:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ushell",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_horizon",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3"
+      ]
+    },
+    "sap.gantt": {
+      "npmPackageName": "@sapui5/sap.gantt",
+      "version": "1.120.0",
+      "gav": "com.sap.gantt:gantt.lib:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.comp",
+        "sap.ui.dt",
+        "sap.ui.fl",
+        "sap.ui.export",
+        "sap.m",
+        "sap.ui.table",
+        "sap.ui.layout",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.insights": {
+      "npmPackageName": "@sapui5/sap.insights",
+      "version": "1.120.0",
+      "gav": "com.sap.suite:insights-lib:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.layout",
+        "sap.f",
+        "sap.ui.integration",
+        "sap.m",
+        "sap.viz",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.m": {
+      "npmPackageName": "@openui5/sap.m",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:mobile:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core",
+        "sap.ui.layout",
+        "sap.ui.unified"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.makit": {
+      "npmPackageName": "@sapui5/sap.makit",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:makit:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.me": {
+      "npmPackageName": "@sapui5/sap.me",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:mobile-ext:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ndc": {
+      "npmPackageName": "@sapui5/sap.ndc",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:ndc:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ovp": {
+      "npmPackageName": "@sapui5/sap.ovp",
+      "version": "1.120.0",
+      "gav": "com.sap.ovp:ovp-lib:1.120.0:jar",
+      "dependencies": [
+        "sap.suite.ui.commons",
+        "sap.insights",
+        "sap.fe.macros",
+        "sap.fe.placeholder",
+        "sap.ui.rta",
+        "sap.suite.ui.microchart",
+        "sap.viz",
+        "sap.ui.comp",
+        "sap.f",
+        "sap.m",
+        "sap.ui.layout",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_horizon",
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3"
+      ]
+    },
+    "sap.rules.ui": {
+      "npmPackageName": "@sapui5/sap.rules.ui",
+      "version": "1.120.0",
+      "gav": "com.sap.rules:sap.rules.ui:1.120.0:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.sac.df": {
+      "npmPackageName": "@sapui5/sap.sac.df",
+      "version": "1.120.0",
+      "gav": "com.sap.sac:com.sap.sac.df:1.120.0:jar",
+      "dependencies": [
+        "sap.tnt",
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.f",
+        "sap.ui.table",
+        "sap.ui.layout",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.suite.ui.commons": {
+      "npmPackageName": "@sapui5/sap.suite.ui.commons",
+      "version": "1.120.0",
+      "gav": "com.sap.suite:suite-ui-commons:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.commons",
+        "sap.viz",
+        "sap.ui.comp",
+        "sap.ui.ux3",
+        "sap.suite.ui.microchart",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.suite.ui.generic.template": {
+      "npmPackageName": "@sapui5/sap.suite.ui.generic.template",
+      "version": "1.120.0",
+      "gav": "com.sap.suite.ui.generic.template:sap.suite.ui.generic.template:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.rta",
+        "sap.fe.placeholder",
+        "sap.insights",
+        "sap.f",
+        "sap.m",
+        "sap.ushell",
+        "sap.ui.generic.app",
+        "sap.ui.fl",
+        "sap.viz",
+        "sap.ovp",
+        "sap.suite.ui.microchart",
+        "sap.ui.layout",
+        "sap.uxap",
+        "sap.ui.comp",
+        "sap.ui.table",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.suite.ui.microchart": {
+      "npmPackageName": "@sapui5/sap.suite.ui.microchart",
+      "version": "1.120.1",
+      "gav": "com.sap.suite:suite-ui-microchart:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.tnt": {
+      "npmPackageName": "@openui5/sap.tnt",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:tnt:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.codeeditor": {
+      "npmPackageName": "@openui5/sap.ui.codeeditor",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:codeeditor:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.commons": {
+      "npmPackageName": "@openui5/sap.ui.commons",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:commons:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core",
+        "sap.ui.layout",
+        "sap.ui.unified"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.comp": {
+      "npmPackageName": "@sapui5/sap.ui.comp",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:comp:1.120.1:jar",
+      "dependencies": [
+        "sap.suite.ui.microchart",
+        "sap.ui.layout",
+        "sap.chart",
+        "sap.ui.table",
+        "sap.ui.mdc",
+        "sap.ui.fl",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ui.documentation": {
+      "npmPackageName": "@openui5/sap.ui.documentation",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:documentation-uilib:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core",
+        "sap.ui.layout",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.dt": {
+      "npmPackageName": "@openui5/sap.ui.dt",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:dt:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.export": {
+      "npmPackageName": "@sapui5/sap.ui.export",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:export:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ui.fl": {
+      "npmPackageName": "@openui5/sap.ui.fl",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:fl:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.generic.app": {
+      "npmPackageName": "@sapui5/sap.ui.generic.app",
+      "version": "1.120.0",
+      "gav": "com.sap.ui5:generic-app:1.120.0:jar",
+      "dependencies": [
+        "sap.fe.navigation",
+        "sap.m",
+        "sap.ui.comp",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.generic.template": {
+      "npmPackageName": "@sapui5/sap.ui.generic.template",
+      "version": "1.120.0",
+      "gav": "com.sap.ui5:generic-template:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.comp",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal"
+      ]
+    },
+    "sap.ui.integration": {
+      "npmPackageName": "@openui5/sap.ui.integration",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:integration:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core",
+        "sap.f",
+        "sap.m",
+        "sap.ui.unified",
+        "sap.ui.layout"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.layout": {
+      "npmPackageName": "@openui5/sap.ui.layout",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:layout:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.mdc": {
+      "npmPackageName": "@openui5/sap.ui.mdc",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:mdc:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core",
+        "sap.ui.layout"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.richtexteditor": {
+      "npmPackageName": "@sapui5/sap.ui.richtexteditor",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:richtexteditor:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ui.rta": {
+      "npmPackageName": "@openui5/sap.ui.rta",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:rta:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.core",
+        "sap.ui.dt",
+        "sap.ui.fl",
+        "sap.ui.layout"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.suite": {
+      "npmPackageName": "@openui5/sap.ui.suite",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:suite:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.support": {
+      "npmPackageName": "@openui5/sap.ui.support",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:support:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.codeeditor",
+        "sap.ui.core",
+        "sap.ui.fl",
+        "sap.ui.layout"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.table": {
+      "npmPackageName": "@openui5/sap.ui.table",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:table:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core",
+        "sap.ui.unified"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.testrecorder": {
+      "npmPackageName": "@openui5/sap.ui.testrecorder",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:testrecorder:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.codeeditor",
+        "sap.ui.core",
+        "sap.ui.layout",
+        "sap.ui.support"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.unified": {
+      "npmPackageName": "@openui5/sap.ui.unified",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:unified:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.ux3": {
+      "npmPackageName": "@openui5/sap.ui.ux3",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:ux3:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.commons",
+        "sap.ui.core",
+        "sap.ui.unified"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.vbm": {
+      "npmPackageName": "@sapui5/sap.ui.vbm",
+      "version": "1.120.0",
+      "gav": "com.sap.ui5:vbm:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.unified",
+        "sap.ui.commons",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ui.vk": {
+      "npmPackageName": "@sapui5/sap.ui.vk",
+      "version": "1.120.0",
+      "gav": "com.sap.ui5.vizkit:sap.ui.vk:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.richtexteditor",
+        "sap.ui.vbm",
+        "sap.ui.layout",
+        "sap.m",
+        "sap.ui.unified",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ui.vtm": {
+      "npmPackageName": "@sapui5/sap.ui.vtm",
+      "version": "1.120.0",
+      "gav": "com.sap.ui5.vtm:sap.ui.vtm:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.layout",
+        "sap.m",
+        "sap.ui.unified",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ui.webc.common": {
+      "npmPackageName": "@openui5/sap.ui.webc.common",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:webc.common:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.webc.fiori": {
+      "npmPackageName": "@openui5/sap.ui.webc.fiori",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:webc.fiori:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core",
+        "sap.ui.webc.main",
+        "sap.ui.webc.common"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.ui.webc.main": {
+      "npmPackageName": "@openui5/sap.ui.webc.main",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:webc.main:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.core",
+        "sap.ui.webc.common"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.uiext.inbox": {
+      "npmPackageName": "@sapui5/sap.uiext.inbox",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:inbox:1.120.1:jar",
+      "dependencies": [
+        "sap.m",
+        "sap.ui.ux3",
+        "sap.ui.commons",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ushell": {
+      "npmPackageName": "@sapui5/sap.ushell",
+      "version": "1.120.1",
+      "gav": "com.sap.ushell:ushell-lib:1.120.1:jar",
+      "dependencies": [
+        "sap.esh.search.ui",
+        "sap.ui.generic.app",
+        "sap.ui.integration",
+        "sap.ui.table",
+        "sap.collaboration",
+        "sap.ui.export",
+        "sap.ui.comp",
+        "sap.suite.ui.microchart",
+        "sap.suite.ui.commons",
+        "sap.ui.layout",
+        "sap.ui.core",
+        "sap.m",
+        "sap.f"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.ushell_abap": {
+      "npmPackageName": "@sapui5/sap.ushell_abap",
+      "version": "1.120.1",
+      "gav": "com.sap.ushell:ushell_abap:1.120.1:jar",
+      "dependencies": [
+        "sap.f",
+        "sap.ushell",
+        "sap.ui.fl",
+        "sap.ui.layout",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.uxap": {
+      "npmPackageName": "@openui5/sap.uxap",
+      "version": "1.120.1",
+      "gav": "com.sap.uxap:uxap-uilib:1.120.1:jar",
+      "dependencies": [
+        "sap.f",
+        "sap.m",
+        "sap.ui.core",
+        "sap.ui.layout"
+      ],
+      "optionalDependencies": []
+    },
+    "sap.viz": {
+      "npmPackageName": "@sapui5/sap.viz",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:viz:1.120.1:jar",
+      "dependencies": [
+        "sap.ui.layout",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.webanalytics.core": {
+      "npmPackageName": "@sapui5/sap.webanalytics.core",
+      "version": "1.120.0",
+      "gav": "com.sap.webanalytics:sap.webanalytics.core:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_fiori_3"
+      ]
+    },
+    "sap.zen.commons": {
+      "npmPackageName": "@sapui5/sap.zen.commons",
+      "version": "1.120.0",
+      "gav": "com.sap.ip.bi.zen.rt.phx:com.sap.ip.bi.zen.rt.zencopy.phx:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.layout",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.zen.crosstab": {
+      "npmPackageName": "@sapui5/sap.zen.crosstab",
+      "version": "1.120.0",
+      "gav": "com.sap.ip.bi.zen.rt.phx:com.sap.ip.bi.zen.rt.components.crosstab.phx:1.120.0:jar",
+      "dependencies": [
+        "sap.ui.unified",
+        "sap.ui.commons",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "sap.zen.dsh": {
+      "npmPackageName": "@sapui5/sap.zen.dsh",
+      "version": "1.120.0",
+      "gav": "com.sap.ip.bi.zen.rt:com.sap.ip.bi.zen.rt.dsh.phx:1.120.0:jar",
+      "dependencies": [
+        "sap.sac.df",
+        "sap.ui.vbm",
+        "sap.ovp",
+        "sap.ui.generic.app",
+        "sap.suite.ui.commons",
+        "sap.ui.comp",
+        "sap.zen.crosstab",
+        "sap.zen.commons",
+        "sap.viz",
+        "sap.ui.layout",
+        "sap.ui.table",
+        "sap.m",
+        "sap.ui.core"
+      ],
+      "optionalDependencies": [
+        "themelib_sap_bluecrystal",
+        "themelib_sap_belize",
+        "themelib_sap_fiori_3",
+        "themelib_sap_horizon"
+      ]
+    },
+    "themelib_sap_belize": {
+      "npmPackageName": "@openui5/themelib_sap_belize",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:themelib_sap_belize:1.120.1:jar",
+      "dependencies": [],
+      "optionalDependencies": [
+        "sap.f",
+        "sap.m",
+        "sap.tnt",
+        "sap.ui.codeeditor",
+        "sap.ui.commons",
+        "sap.ui.core",
+        "sap.ui.dt",
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.ui.integration",
+        "sap.ui.layout",
+        "sap.ui.rta",
+        "sap.ui.suite",
+        "sap.ui.table",
+        "sap.ui.unified",
+        "sap.ui.ux3",
+        "sap.uxap"
+      ]
+    },
+    "themelib_sap_bluecrystal": {
+      "npmPackageName": "@openui5/themelib_sap_bluecrystal",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:themelib_sap_bluecrystal:1.120.1:jar",
+      "dependencies": [],
+      "optionalDependencies": [
+        "sap.f",
+        "sap.m",
+        "sap.tnt",
+        "sap.ui.codeeditor",
+        "sap.ui.commons",
+        "sap.ui.core",
+        "sap.ui.dt",
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.ui.integration",
+        "sap.ui.layout",
+        "sap.ui.rta",
+        "sap.ui.suite",
+        "sap.ui.table",
+        "sap.ui.unified",
+        "sap.ui.ux3",
+        "sap.uxap"
+      ]
+    },
+    "themelib_sap_fiori_3": {
+      "npmPackageName": "@openui5/themelib_sap_fiori_3",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:themelib_sap_fiori_3:1.120.1:jar",
+      "dependencies": [],
+      "optionalDependencies": [
+        "sap.f",
+        "sap.m",
+        "sap.tnt",
+        "sap.ui.codeeditor",
+        "sap.ui.commons",
+        "sap.ui.core",
+        "sap.ui.dt",
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.ui.integration",
+        "sap.ui.layout",
+        "sap.ui.rta",
+        "sap.ui.suite",
+        "sap.ui.table",
+        "sap.ui.unified",
+        "sap.ui.ux3",
+        "sap.uxap"
+      ]
+    },
+    "themelib_sap_horizon": {
+      "npmPackageName": "@openui5/themelib_sap_horizon",
+      "version": "1.120.1",
+      "gav": "com.sap.ui5:themelib_sap_horizon:1.120.1:jar",
+      "dependencies": [],
+      "optionalDependencies": [
+        "sap.f",
+        "sap.m",
+        "sap.tnt",
+        "sap.ui.codeeditor",
+        "sap.ui.commons",
+        "sap.ui.core",
+        "sap.ui.dt",
+        "sap.ui.fl",
+        "sap.ui.mdc",
+        "sap.ui.integration",
+        "sap.ui.layout",
+        "sap.ui.rta",
+        "sap.ui.suite",
+        "sap.ui.table",
+        "sap.ui.unified",
+        "sap.ui.ux3",
+        "sap.uxap"
+      ]
+    }
+  }
+}

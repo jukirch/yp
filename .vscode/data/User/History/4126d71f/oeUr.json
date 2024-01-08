@@ -1,0 +1,52 @@
+{
+    "oscar": [
+        {
+            "movYear": "2022",
+            "movName": "Everything Everywhere All at Once",
+            "movDirector": "Daniel Kwan, Daniel Scheinert",
+            "movMaleLead": "Ke Huy Quan",
+            "movFemaleLead": "Michelle Yeoh",
+            "oscarWon": true
+        },
+        {
+            "movYear": "2022",
+            "movName": "Die Aussprache",
+            "movDirector": "Sarah Polley",
+            "movMaleLead": "",
+            "movFemaleLead": "Rooney Mara",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2022",
+            "movName": "Avatar: The Way of Water",
+            "movDirector": "James Cameron",
+            "movMaleLead": "Sam Worthington",
+            "movFemaleLead": "Zoe Saldana",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2022",
+            "movName": "The Banshees of Inisherin",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2022",
+            "movName": "Elvis",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2023",
+            "movName": "Die Fabelmans",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        }
+    ]
+}

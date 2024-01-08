@@ -1,0 +1,364 @@
+09:20:48 [INFO] - AppFolders: starting processing setAppFoldersContext()
+09:22:02 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+09:22:02 [INFO] - AppFolders: Function setContext() done in 73553.955ms
+09:23:20 [INFO] - AppFolders: Directory 'file:///home/user/projects/projekt_ui5' changed, updating app folders in context. 
+09:23:21 [INFO] - AppFolders: Directory 'file:///home/user/projects/projekt_ui5/webapp/test' changed, updating app folders in context. 
+09:23:30 [INFO] - AppFolders: Directory 'file:///home/user/projects/projekt_ui5/node_modules/yaml' changed, updating app folders in context. 
+09:23:41 [INFO] - AppFolders: Directory 'file:///home/user/projects/projekt_ui5/node_modules/.bin' changed, updating app folders in context. 
+09:23:44 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/projects/projekt_ui5/node_modules/fsevents'
+09:26:29 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:26:29 [INFO] - AppFolders: Function setContext() done in 188326.101ms
+09:26:29 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:26:29 [INFO] - AppFolders: Function setContext() done in 189144.493ms
+09:26:30 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:26:30 [INFO] - AppFolders: Function setContext() done in 180048.567ms
+09:26:31 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:26:31 [INFO] - AppFolders: Function setContext() done in 169971.245ms
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.f6e48ae5-c47e-44fd-a58d-580148cff864'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.f6e48ae5-c47e-44fd-a58d-580148cff864'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/.vsixmanifest'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/CHANGELOG.md'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/LICENSE.txt'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/README.md'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/dist'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/dist/extension.js'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/gitignore.configuration.json'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/icon.png'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/package.json'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/syntaxes'
+09:28:29 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/syntaxes/gitignore.json'
+09:28:29 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/extensions/codezombiech.gitignore-0.9.0-universal' changed, updating app folders in context. 
+09:28:29 [INFO] - AppFolders:
+	projectRoots: 0
+	appRoots: 0
+	webappRoots: 0
+	subWebappRoots: 0
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 0
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+09:28:29 [INFO] - AppFolders: Function setContext() done in 98.287ms
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/.vsixmanifest'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/CHANGELOG.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/README.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/LICENSE.txt'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/images'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/images/git_icon.png'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/out'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/out/src'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/out/src/index.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/package.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/rome.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/CHANGELOG.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/LICENSE.txt'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/README.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/docs'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/docs/schemas'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled/0c55c71f.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled/cme-editor-page.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/docs/schemas/config-v1.schema.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/icon.png'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled/cme-settings-page.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/node_modules'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/node_modules/vscode-codicons'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/out'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/out/extension.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/package.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/LICENSE.txt'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/README.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/icon.png'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/package.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/CHANGELOG.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src/colors.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src/index.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src/theme.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-default.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-dimmed.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-high-contrast.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light-colorblind.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light-high-contrast.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light-default.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/README.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/licenses'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/licenses/LICENSE_OCTICONS'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/media'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/media/out.min.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/media/out.min.css'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/node_modules'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/node_modules/safer-buffer'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/commands.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/avatarManager.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/config.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/dataSource.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/diffDocProvider.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/extensionState.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/extension.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/gitGraphView.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle/utils.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle/uninstall.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/repoFileWatcher.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/logger.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/repoManager.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/types.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/statusBarItem.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils/disposable.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/package.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils/event.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/cmd-icon-light.svg'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/icon.png'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/webview-icon-dark.svg'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/webview-icon-light.svg'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/webview-icon.svg'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/CHANGELOG.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/LICENSE.txt'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/README.md'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets/icon.png'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets/menu-icon-dark.svg'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets/menu-icon-light.svg'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/dist'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/prepare.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.nls.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.nls.zh-cn.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/.vsixmanifest'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/.vsixmanifest'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/licenses/LICENSE_MICROSOFT'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-colorblind.json'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle/startup.js'
+09:28:30 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/dist/extension.js'
+09:28:30 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/extensions/waderyan.gitblame-10.6.0-universal' changed, updating app folders in context. 
+09:28:31 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.76151f0a-8ce5-4b8e-beeb-04ee7ca3da82'
+09:28:31 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.76151f0a-8ce5-4b8e-beeb-04ee7ca3da82'
+09:28:31 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.76151f0a-8ce5-4b8e-beeb-04ee7ca3da82'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/CHANGELOG.md'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/LICENSE.txt'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/README.md'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/icon.png'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/package.json'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/.vsixmanifest'
+09:28:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedProfilesData/__default__profile__/extensions.user.cache'
+09:28:33 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/extensions/sugatoray.vscode-git-extension-pack-1.1.1-universal' changed, updating app folders in context. 
+09:28:35 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/globalStorage/mhutchie.git-graph/avatars' changed, updating app folders in context. 
+09:28:51 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.f27046d7-8213-4a3c-b675-c6c98a5d6d93'
+09:28:51 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/CachedExtensionVSIXs/.f27046d7-8213-4a3c-b675-c6c98a5d6d93'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/ISSUE_TEMPLATE'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/ISSUE_TEMPLATE/feature_request.md'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/workflows'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/workflows/codesee-arch-diagram.yml'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/workflows/deploy.yml'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.vsixmanifest'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/CHANGELOG.md'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/LICENSE'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/README.md'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/img'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/img/icon.png'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/img/openProject.gif'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules/makeerror'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules/tmpl'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules/walker'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/extension.js'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/gitProjectLocator.js'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/gitProjectManager.js'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/recentItems.js'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/package.json'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/typings.json'
+09:28:52 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/ISSUE_TEMPLATE/bug_report.md'
+09:28:52 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/extensions/felipecaputo.git-project-manager-1.8.2-universal' changed, updating app folders in context. 
+09:31:22 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:31:22 [INFO] - AppFolders: Function setContext() done in 166503.171ms
+09:31:22 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:31:22 [INFO] - AppFolders: Function setContext() done in 169049.870ms
+09:31:22 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:31:22 [INFO] - AppFolders: Function setContext() done in 171453.278ms
+09:31:22 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:31:22 [INFO] - AppFolders: Function setContext() done in 149962.835ms
+09:31:44 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-641791ac' changed, updating app folders in context. 
+09:32:27 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+09:32:27 [INFO] - AppFolders: Function setContext() done in 43014.511ms
+09:37:36 [INFO] - AppFolders: Directory 'file:///home/user/.git' changed, updating app folders in context. 
+09:37:36 [INFO] - AppFolders: Directory 'file:///home/user/.git/refs' changed, updating app folders in context. 
+09:37:38 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.git/index.lock'
+09:37:43 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.git/index.lock'
+09:37:50 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.git/index.lock'
+09:37:51 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.git/index.lock'
+09:39:09 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:39:09 [INFO] - AppFolders: Function setContext() done in 93050.799ms
+09:39:09 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+09:39:09 [INFO] - AppFolders: Function setContext() done in 93190.307ms

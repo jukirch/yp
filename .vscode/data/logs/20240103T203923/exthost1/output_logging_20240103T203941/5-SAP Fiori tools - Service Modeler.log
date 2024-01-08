@@ -1,0 +1,82 @@
+20:39:46 [INFO] - AppFolders: starting processing setAppFoldersContext()
+20:41:06 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+20:41:06 [INFO] - AppFolders: Function setContext() done in 78818.485ms
+20:49:51 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/m42V.xml'
+20:55:32 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/47ee60b9' changed, updating app folders in context. 
+20:56:25 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+20:56:25 [INFO] - AppFolders: Function setContext() done in 52845.588ms
+21:03:34 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/DPGL.xml'
+21:42:49 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-52e1f7bf' changed, updating app folders in context. 
+21:43:43 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+21:43:43 [INFO] - AppFolders: Function setContext() done in 53210.260ms
+21:53:26 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-2f03a58c' changed, updating app folders in context. 
+21:54:02 [INFO] - AppFolders: Directory 'file:///home/user/projects/s330601/webapp/carriers' changed, updating app folders in context. 
+21:54:29 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 104
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+21:54:29 [INFO] - AppFolders: Function setContext() done in 63567.866ms
+21:55:00 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 104
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+21:55:00 [INFO] - AppFolders: Function setContext() done in 57950.468ms

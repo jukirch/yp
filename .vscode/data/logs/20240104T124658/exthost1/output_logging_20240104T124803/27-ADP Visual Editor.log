@@ -1,0 +1,42 @@
+AppFolders: starting processing setAppFoldersContext()
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1621.382ms
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240104T124658/exthost2/vscode.typescript-language-features' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1165.562ms
+AppFolders: Directory 'file:///home/user/projects/s331102/node_modules/.bin' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1359.146ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/17aaa352' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1102.708ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-50a84752' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1426.614ms
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240104T124658/exthost4/vscode.typescript-language-features' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2620.365ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/260766e4' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2156.534ms

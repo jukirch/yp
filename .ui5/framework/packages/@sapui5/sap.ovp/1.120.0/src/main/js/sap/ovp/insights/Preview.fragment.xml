@@ -1,0 +1,76 @@
+<Dialog
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:w="sap.ui.integration.widgets"
+    xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+    title="{ovpResourceModel>INT_ADD_CARD_TO_REPOSITORY_DT}"
+    resizable="true"
+    contentWidth= "352px"
+    contentHeight = "712px"
+    draggable="true">
+    <content>
+        <NavContainer id="navCon">
+		    <Page id="previewPage" showHeader="false" backgroundDesign="Transparent">
+			    <FlexBox
+                    direction="Column" 
+                    id="flexBoxNew" 
+                    justifyContent="Center" 
+                    class="sapUiNoMargin sapMPageBgSolid" >
+                    <Title 
+                        id="previewTitle" 
+                        text="{ovpResourceModel>INT_Preview_Title}" 
+                        class="sapUiSmallMarginBegin sapUiTinyMarginTop"
+                        visible="false"/>
+                    <FlexBox 
+                        justifyContent="Center" 
+                        id="subFlexBoxNew"  
+                        class="sapUiTinyMargin sapUiSmallMarginTopBottom"/>
+                    <HBox id="ovpIntPreviewOverflowLayer" class="sapMFlexBoxJustifyCenter" height="0" visible="false">
+                        <HBox class="ovpIntPreviewOverflowLayer"/>
+                    </HBox>
+                </FlexBox>
+                <VBox class="sapUiSmallMargin">
+                    <FlexBox direction="Column">
+                        <items>
+                            <Label 
+                                id="labelTitle" 
+                                text="{ovpResourceModel>INT_Preview_TitleField_Label}"
+                                required="true"
+                                visible="true" 
+                                labelFor="titleTextInput"/>
+                            <Input 
+                                id="titleTextInput" 
+                                visible="true"
+                                liveChange=".handleTitleLiveChange" 
+                                value="{/dialogSettings/cardTitle}" 
+                                valueState="{/dialogSettings/valueState}" 
+                                valueStateText="{/dialogSettings/valueStateText}"/>
+                            <Label 
+                                id="labelSubTitle" 
+                                text="{ovpResourceModel>INT_Preview_SubTitleTitleField_Label}"
+                                required="false" 
+                                class="sapUiTinyMarginTop"
+                                visible="true" 
+                                labelFor="subTitleTextInput"/>
+                           <Input  
+                                id="subTitleTextInput"
+                                visible="true" 
+                                value="{/dialogSettings/cardSubTitle}"
+                                liveChange=".handleSubTitleLiveChange"/>
+                        </items>
+                    </FlexBox>
+    	        </VBox>
+		    </Page>
+            <Page id="filterDetailPage">
+                <FlexBox direction="Column" class="sapUiContentPadding" id="flexBoxFilterPage" justifyContent="Center">
+                </FlexBox>
+            </Page>
+        </NavContainer>
+    </content>
+	<buttons>
+        <!-- <Button text="{ovpResourceModel>INT_DIALOG_Download}" type="Emphasized" press=".downloadCardManifestHandler" /> -->
+        <Button text="{ovpResourceModel>INT_DIALOG_Ok}" type="Emphasized" press=".confirmActionHandler"/>
+		<Button text="{ovpResourceModel>INT_DIALOG_CANCEL}" press=".handleCancel" />
+	</buttons>
+</Dialog>

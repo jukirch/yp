@@ -1,0 +1,111 @@
+<core:FragmentDefinition
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:build="sap.build"
+    xmlns:ovp="sap.ovp.ui"
+    xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+    <customData>
+        <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>quickViewCard}" writeToDom="true" />
+    </customData>
+    <template:with 
+        path="entityType>@com.sap.vocabularies.UI.v1.HeaderInfo" 
+        var="header">
+        <template:with 
+            path="entityType>@com.sap.vocabularies.UI.v1.Facets" 
+            var="facets">
+            <QuickViewPage
+                header="{= ${header>TypeNamePlural} ? ${header>TypeNamePlural@@sap.ui.model.odata.v4.AnnotationHelper.format} :  '{ovplibResourceBundle>LineItem_Detail_Text}' }"
+                icon="{= ${header>ImageUrl} ? ${header>ImageUrl@@sap.ui.model.odata.v4.AnnotationHelper.format} : (${header>TypeImageUrl} ? ${header>TypeImageUrl@@sap.ui.model.odata.v4.AnnotationHelper.format} : '') }"
+                title="{= ${header>Title/Value} ? ${path: 'header>Title/Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format} :  '' }"
+                description="{= ${header>Description/Value} ? ${header>Description/Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format} :  '' }">
+                <template:repeat 
+                    list="{path:'facets>'}" 
+                    var="referenceFacet">
+                    <template:if test="{referenceFacet>com.sap.vocabularies.UI.v1.IsSummary}">
+                        <template:with 
+                            path="referenceFacet>Target/$AnnotationPath"
+                            helper="sap.ui.model.odata.v4.AnnotationHelper.resolve$Path"
+                            var="target">
+                            <QuickViewGroup heading="{target>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}">
+                                <template:repeat 
+                                    list="{path:'target>Data'}" 
+                                    var="dataField">
+                                    <template:if test="{dataField>Url}">
+                                        <template:then>
+                                            <template:if test="{dataField>Url/UrlRef}">
+                                                <template:then>
+                                                    <QuickViewGroupElement
+                                                        label="{dataField>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                        value="{dataField>Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                        url="{dataField>Url/UrlRef@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                        type="link">
+                                                    </QuickViewGroupElement>
+                                                </template:then>
+                                                <template:else>
+                                                    <QuickViewGroupElement
+                                                        label="{dataField>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                        value="{dataField>Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                        url="{dataField>Url@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                        type="link">
+                                                    </QuickViewGroupElement>
+                                                </template:else>
+                                            </template:if>
+                                        </template:then>
+                                        <template:else>
+                                            <template:if test="{dataField>Value}">
+                                                <template:with 
+                                                    path="dataField>Value/$AnnotationPath"
+                                                    helper="sap.ui.model.odata.v4.AnnotationHelper.resolve$Path"
+                                                    var="fValue">
+                                                    <template:if test="{= ${fValue>sap:semantics} === 'url'}">
+                                                        <template:then>
+                                                            <QuickViewGroupElement
+                                                                label="{dataField>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                value="{dataField>Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                url="{dataField>Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                type="url">
+                                                            </QuickViewGroupElement>
+                                                        </template:then>
+                                                        <template:else>
+                                                            <template:if test="{= ${fValue>sap:semantics} === 'email'}">
+                                                                <template:then>
+                                                                    <QuickViewGroupElement
+                                                                        label="{dataField>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                        value="{dataField>Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                        type="email">
+                                                                    </QuickViewGroupElement>
+                                                                </template:then>
+                                                                <template:else>
+                                                                    <template:if test="{= ${fValue>sap:semantics} === 'tel'}">
+                                                                        <template:then>
+                                                                            <QuickViewGroupElement
+                                                                                label="{dataFie\ld>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                                value="{dataField>Value@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                                type="phone">
+                                                                            </QuickViewGroupElement>
+                                                                        </template:then>
+                                                                        <template:else>
+                                                                            <QuickViewGroupElement
+                                                                                label="{dataField>Label@@sap.ui.model.odata.odata.v4.AnnotationHelper.format}"
+                                                                                value="{path: 'dataField>', formatter: 'sap.ovp.cards.v4.AnnotationHelper.formatField'}">
+                                                                            </QuickViewGroupElement>
+                                                                        </template:else>
+                                                                    </template:if>
+                                                                </template:else>
+                                                            </template:if>
+                                                        </template:else>
+                                                    </template:if>
+                                                </template:with>
+                                            </template:if>
+                                        </template:else>
+                                    </template:if>
+                                </template:repeat>
+                            </QuickViewGroup>
+                        </template:with>
+                    </template:if>
+                </template:repeat>
+            </QuickViewPage>
+        </template:with>
+    </template:with>
+</core:FragmentDefinition>

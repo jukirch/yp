@@ -1,0 +1,33 @@
+specVersion: '1.0'
+type: library
+metadata:
+  name: sap.ovp
+resources:
+  configuration:
+    paths:
+      src: src/main/js
+      test: src/test/js
+framework:
+  name: SAPUI5
+  libraries:
+    - name: sap.ui.core
+    - name: sap.ui.layout
+    - name: sap.m
+    - name: sap.f
+    - name: sap.ui.comp
+    - name: sap.viz
+    - name: sap.suite.ui.microchart
+    - name: sap.ui.rta
+    - name: sap.fe.placeholder
+    - name: sap.fe.macros
+    - name: sap.insights
+    - name: sap.suite.ui.commons
+    - name: themelib_sap_fiori_3
+      optional: true
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_bluecrystal
+      optional: true
+    - name: themelib_sap_horizon
+      optional: true
+      

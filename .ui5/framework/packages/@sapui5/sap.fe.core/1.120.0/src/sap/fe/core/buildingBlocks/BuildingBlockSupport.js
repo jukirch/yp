@@ -1,0 +1,6 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define([],function(){"use strict";var e={};function t(e){return function(t,n,i){var a;const r=t.constructor.metadata;e.defaultValue=(a=i.initializer)===null||a===void 0?void 0:a.call(i);delete i.initializer;if(r.properties[n.toString()]===undefined){r.properties[n.toString()]=e}return i}}e.blockAttribute=t;function n(){return t({type:"function"})}e.blockEvent=n;function i(e){return function(t,n,i){const a=t.constructor.metadata;delete i.initializer;if(a.aggregations[n]===undefined){a.aggregations[n]=e}if(e.isDefault===true){a.defaultAggregation=n}return i}}e.blockAggregation=i;function a(e){return function(t){const n=t.metadata;n.namespace=e.namespace;n.publicNamespace=e.publicNamespace;n.name=e.name;n.xmlTag=e.xmlTag;n.fragment=e.fragment;n.designtime=e.designtime;n.isOpen=e.isOpen;n.libraries=e.libraries}}e.defineBuildingBlock=a;return e},false);
+//# sourceMappingURL=BuildingBlockSupport.js.map

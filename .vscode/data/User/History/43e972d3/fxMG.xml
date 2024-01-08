@@ -1,0 +1,16 @@
+<mvc:View controllerName="s330601.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:cust="s330601.containers"
+    xmlns:c="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <cust:FlightConnections width="50%" height= "50%">
+                <cust:content>
+                    <cust:Icon src="sap-icon://flight" />
+                    <Text text="LH0400" />
+                </cust:content>
+            </cust:FlightConnections> 
+        </content>
+    </Page>
+</mvc:View>

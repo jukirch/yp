@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+    xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" >
+
+	<template:with path="parameter>/" helper="sap.suite.ui.generic.template.js.StableIdHelper.preparePathForStableId" var="contextMenuId">
+		<template:if test="{= ${contextMenuId>}.buildStableId({type: 'SmartControl', subType: 'ContextMenu', sSmartTableId: ${smartControlId>id}})}" />
+		<Menu id="{contextMenuId>id}" items="{= '{_templPriv>/generic/controlProperties/' + ${smartControlId>id} + '/contextMenu/items}' }">
+			<MenuItem text="{_templPriv>text}" enabled="{_templPriv>enabled}" icon="{_templPriv>icon}" key="{_templPriv>key}" startsSection="{_templPriv>startsSection}" press="._templateEventHandlers.onContextMenu($event, '{smartControlId>id}')" />
+		</Menu>
+	</template:with>
+</core:FragmentDefinition>

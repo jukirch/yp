@@ -1,0 +1,13 @@
+specVersion: "3.1"
+type: library
+metadata:
+    sapInternal: true
+    name: sap.fe.navigation
+builder:
+    libraryPreload:
+        excludes:
+            - "sap/fe/navigation/**/**-dbg.js"
+framework:
+    name: SAPUI5
+    libraries:
+        - name: sap.ui.core

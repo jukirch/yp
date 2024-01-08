@@ -1,0 +1,6 @@
+{
+  "label": "Application Wizard.AbstractWebviewPanel.@sap/fiori:app.@sap/generator-fiori",
+  "level": "error",
+  "message": "An error occurred: Request failed with status code 404",
+  "time": "2024-01-08T09:22:08.534Z"
+}

@@ -1,0 +1,58 @@
+.workPage {
+  width: 100%;
+  padding-bottom: 2rem;
+
+  &.workPageEditMode {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    .workPageTitle {
+      padding-top: 0;
+    }
+  }
+
+  .workPageTitle {
+    padding-top: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+[data-wp-breakpoint="lt-lp-4"],
+[data-wp-breakpoint="lt-sp-4"],
+[data-wp-breakpoint="st-lp-4"],
+[data-wp-breakpoint="st-sp-4"] {
+  .workPageTitle {
+    margin-left: 2.375rem;
+    margin-right: 2.375rem;
+  }
+}
+[data-wp-breakpoint="lt-lp-3"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="st-sp-3"],
+[data-wp-breakpoint="lt-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="st-sp-2"] {
+  .workPageTitle {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+[data-wp-breakpoint="lt-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="st-sp-1"] {
+  .workPageTitle {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+}
+
+[data-wp-breakpoint="st-sp-0"] {
+  .workPageTitle {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}

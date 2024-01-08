@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" 
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<QuickViewPage icon="{= ${contact>photo} ? ${path: 'contact>photo', formatter: 'AHModel.format'} : 'sap-icon://person-placeholder'}"
+				   title="{path: 'contact>fn', formatter: 'AHModel.format'}"
+				   description="{path: 'contact>role', formatter: 'AHModel.format'}">
+		<QuickViewGroup>
+
+			<QuickViewGroupElement label="{i18n>CONTACT_JOB_TITLE}" type="text"
+								   value="{path: 'contact>title', formatter: 'AHModel.format'}"
+								   visible="{= !!${contact>title}}"/>
+
+			<QuickViewGroupElement label="{i18n>CONTACT_DEPARTMENT}" type="text"
+								   value="{path: 'contact>org', formatter: 'AHModel.format'}"
+								   visible="{= !!${contact>org}}"/>
+
+			<QuickViewGroupElement label="{i18n>CONTACT_EMAIL}" type="email"
+								   value="{path: 'contact>email/[${type/EnumMember}.indexOf(\'ContactInformationType/work\')>=0]/address', formatter: 'AHModel.format'}"
+								   visible="{= !!${path: 'contact>email/[${type/EnumMember}.indexOf(\'ContactInformationType/work\')>=0]/address', formatter: 'AHModel.format'} }"/>
+
+			<QuickViewGroupElement label="{i18n>CONTACT_PHONE}" type="phone"
+								   value="{= ${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/work\')>=0]/uri', formatter: 'AHModel.format'}.replace('tel:','') }"
+								   visible="{= !!${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/work\')>=0]/uri'} }"/>
+
+			<QuickViewGroupElement  label="{i18n>CONTACT_MOBILE}" type="{= (${device>/system/phone} || ${device>/system/tablet})  ? 'mobile'  : 'phone' }"
+									value="{= ${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/cell\')>=0]/uri', formatter: 'AHModel.format'}.replace('tel:','') }"
+									visible="{= !!${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/cell\')>=0]/uri'} }"/>
+
+			<QuickViewGroupElement label="{i18n>CONTACT_FAX}" type="text"
+								   value="{= ${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/fax\')>=0]/uri', formatter: 'AHModel.format'}.replace('tel:','') }"
+								   visible="{= !!${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/fax\')>=0]/uri'} }"/>
+
+		</QuickViewGroup>
+	</QuickViewPage>
+</core:FragmentDefinition>

@@ -1,0 +1,32 @@
+specVersion: "2.6"
+type: library
+metadata:
+  name: sap.esh.search.ui
+resources:
+  configuration:
+    paths:
+      src: build/resources
+      test: build/test-resources
+framework:
+  name: SAPUI5
+  libraries:
+    - name: sap.m
+    - name: sap.f
+    - name: sap.ui.core
+    - name: sap.ui.layout
+    - name: sap.ui.vbm
+    - name: sap.ui.vk
+    - name: sap.ui.export
+    - name: sap.suite.ui.microchart
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_bluecrystal
+      optional: true
+    - name: themelib_sap_fiori_3
+      optional: true
+    - name: themelib_sap_horizon
+      optional: true
+builder:
+  minification:
+    excludes:
+      - "sap/esh/search/ui/container/Component-preload.js" # File exists in source. No -dbg variant should be created.

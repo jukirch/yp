@@ -1,0 +1,199 @@
+<mvc:View
+    controllerName="s330401.controller.Main"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:t="sap.ui.table"
+    xmlns="sap.m"
+    xmlns:micro="sap.suite.ui.microchart"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <App>
+        <pages>
+            <Page title="{i18n>title}">
+                <content>
+                    <Table
+                        id="table0"
+                        items="{/artRoot}"
+                        mode="SingleSelectMaster"
+                        selectionChange="onSelectionChange"
+                    >
+                        <items>
+                            <ColumnListItem
+                                type="Active"
+                                id="item0"
+                            >
+                                <cells>
+                                    <Text
+                                        text="{artName}"
+                                        id="text0"
+                                    />
+                                    <Text
+                                        text="{path: 'artDatBirth', formatter: '.globFormatAttr.globalFormatter'}"
+                                        id="text1"
+                                    />
+                                    <Text
+                                        text="{path: 'artDatDeath', formatter: '.globFormatAttr.globalFormatter'}"
+                                        id="text2"
+                                    />
+                                    <FlexBox height="70px" width="150px" renderType="Bare">
+										<items>
+										<micro:HarveyBallMicroChart total="100" totalScale="yrs" showTotal="true" showFractions="true" app:name="harvey ball"
+										>
+											<micro:items>
+												<micro:HarveyBallMicroChartItem 
+													fractionScale = "%" 
+													fraction="{parts: [{path: 'artDatBirth'}, {path: 'artDatDeath'}], formatter: '.localCalcHarvey'}" 
+													color="{parts: [{path: 'artDatBirth'}, {path: 'artDatDeath'}], formatter: '.localColorHarvey'}"  />
+											</micro:items>
+										</micro:HarveyBallMicroChart>
+										</items>
+									</FlexBox>
+                                    <Image
+                                        src="{artPortrait}"
+                                        id="img1"
+                                        width="100px"
+                                    />
+                                    <Button
+                                        text="{artName}"
+                                        id="btnWiki"
+                                        press="onPressWiki"
+                                    />
+                                    <Button
+                                        text="{artName}"
+                                        id="btnMail"
+                                        press="onPressMail"
+                                    />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                        <columns>
+                            <Column id="column0">
+                                <header>
+                                    <Label
+                                        text="Name"
+                                        id="label0"
+                                    />
+                                </header>
+                            </Column>
+                            <Column id="column1">
+                                <header>
+                                    <Label
+                                        text="Geburtsdatum"
+                                        id="label1"
+                                    />
+                                </header>
+                            </Column>
+                            
+                            <Column id="column2">
+                                <header>
+                                    <Label
+                                        text="Todesdatum"
+                                        id="label2"
+                                    />
+                                </header>
+                            </Column>
+
+                            <Column id="column6">
+                                <header>
+                                    <Label
+                                        text="Geschaffte Lebenszeit von 100 Jahren"
+                                        id="label6"
+                                    />
+                                </header>
+                            </Column>
+                            <Column id="column3">
+                                <header>
+                                    <Label
+                                        text="Porträt"
+                                        id="label3"
+                                    />
+                                </header>
+                            </Column>
+                            <Column id="column4">
+                                <header>
+                                    <Label
+                                        text="Wikipedia"
+                                        id="label4"
+                                    />
+                                </header>
+                            </Column>
+                            <Column id="column5">
+                                <header>
+                                    <Label
+                                        text="InfoMail"
+                                        id="label5"
+                                    />
+                                </header>
+                            </Column>
+                        </columns>
+                    </Table>
+                    <t:Table
+                        id="table1"
+                        rows="{artMovies}"
+                    >
+                        <t:columns>
+                            <t:Column>
+                                <t:label>
+                                    <Label
+                                        text="Titel"
+                                        id="label10"
+                                    />
+                                </t:label>
+                                <t:template>
+                                    <Text
+                                        text="{movName}"
+                                        id="text10"
+                                    />
+                                </t:template>
+                            </t:Column>
+                            <t:Column>
+                                <t:label>
+                                    <Label
+                                        text="Releasedatum"
+                                        id="label11"
+                                    />
+                                </t:label>
+                                <t:template>
+                                    <Text
+                                        text="{path: 'movRelDat', formatter: '.globFormatAttr.globalFormatter'}"
+                                        id="text11"
+                                    />
+                                    <!--<Text text="{movRelDat}" id="text11"/>-->
+                                </t:template>
+                            </t:Column>
+                            <t:Column>
+                                <t:label>
+                                    <Label
+                                        text="Regisseur"
+                                        id="label12"
+                                    />
+                                </t:label>
+                                <t:template>
+                                    <Text
+                                        text="{movDirector}"
+                                        id="text12"
+                                    />
+                                </t:template>
+                            </t:Column>
+                            <t:Column>
+                                <t:label>
+                                    <Label
+                                        text="Distributor"
+                                        id="label13"
+                                    />
+                                </t:label>
+                                <t:template>
+                                    <Text
+                                        text="{movDistributor}"
+                                        id="text13"
+                                    />
+                                </t:template>
+                            </t:Column>
+                        </t:columns>
+                    </t:Table>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

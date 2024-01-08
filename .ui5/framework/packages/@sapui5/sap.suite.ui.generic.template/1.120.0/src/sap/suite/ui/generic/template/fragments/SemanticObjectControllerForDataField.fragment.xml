@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:navpopover="sap.ui.comp.navpopover"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH:'sap/suite/ui/generic/template/js/AnnotationHelper'}">
+	
+<navpopover:SemanticObjectController replaceSmartLinkNavigationTargetsObtained="true"
+	beforePopoverOpens="._templateEventHandlers.onBeforeSemanticObjectLinkPopoverOpens"
+	navigationTargetsObtained="._templateEventHandlers.onSemanticObjectLinkNavigationTargetObtained"
+	beforeNavigationCallback="._templateEventHandlers.onBeforeSemanticObjectLinkNavigationCallback"
+	forceLinkRendering="{parts: [{path: 'entitySet>'},{path: 'parameter>/templateSpecific/targetEntities'}], formatter: 'AH.hasQuickViewFacet'}"/>
+</core:FragmentDefinition>

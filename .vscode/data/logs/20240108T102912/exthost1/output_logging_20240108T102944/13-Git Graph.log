@@ -1,0 +1,28 @@
+[2024-01-08 10:29:53.381] Starting Git Graph ...
+[2024-01-08 10:29:53.567] Using git (version: 2.39.2)
+[2024-01-08 10:29:53.597] > git rev-parse --show-toplevel
+[2024-01-08 10:29:53.598] Showing "Git Graph" Status Bar Item
+[2024-01-08 10:29:53.600] Started Git Graph - Ready to use!
+[2024-01-08 10:29:53.659] Searching workspace for new repos ...
+[2024-01-08 10:29:53.659] Completed searching workspace for new repos
+[2024-01-08 10:29:54.267] Successfully set Visual Studio Code Context "git-graph:codiconsSupported" to "true"
+[2024-01-08 10:33:26.614] Created Git Graph View
+[2024-01-08 10:33:29.082] > git branch -a --no-color
+[2024-01-08 10:33:29.105] > git remote
+[2024-01-08 10:33:29.122] > git reflog --format=... refs/stash --
+[2024-01-08 10:33:29.124] Started watching repo: /home/user
+[2024-01-08 10:33:29.282] > git -c log.showSignature=false log --max-count=301 --format=... --date-order --branches --tags --remotes HEAD --
+[2024-01-08 10:33:29.301] > git show-ref -d --head
+[2024-01-08 10:33:33.925] > git branch -a --no-color
+[2024-01-08 10:33:33.946] > git remote
+[2024-01-08 10:33:33.964] > git reflog --format=... refs/stash --
+[2024-01-08 10:33:34.295] > git -c log.showSignature=false log --max-count=301 --format=... --date-order --branches --tags --remotes HEAD --
+[2024-01-08 10:33:34.310] > git show-ref -d --head
+[2024-01-08 10:33:34.428] Stopped watching repo: /home/user
+[2024-01-08 10:33:36.244] > git branch -a --no-color
+[2024-01-08 10:33:36.264] > git remote
+[2024-01-08 10:33:36.283] > git reflog --format=... refs/stash --
+[2024-01-08 10:33:36.285] Started watching repo: /home/user
+[2024-01-08 10:33:36.855] > git -c log.showSignature=false log --max-count=301 --format=... --date-order --branches --tags --remotes HEAD --
+[2024-01-08 10:33:36.874] > git show-ref -d --head
+[2024-01-08 10:33:36.887] Stopped watching repo: /home/user

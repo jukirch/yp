@@ -1,0 +1,52 @@
+{
+    "oscar": [
+        {
+            "movYear": "2023",
+            "movName": "Everything Everywhere All at Once",
+            "movDirector": "Daniel Kwan, Daniel Scheinert",
+            "movMaleLead": "Ke Huy Quan",
+            "movFemaleLead": "Michelle Yeoh",
+            "oscarWon": true
+        },
+        {
+            "movYear": "2023",
+            "movName": "Die Aussprache",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2023",
+            "movName": "Avatar: The Way of Water",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2023",
+            "movName": "The Banshees of Inisherin",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2023",
+            "movName": "Elvis",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        },
+        {
+            "movYear": "2023",
+            "movName": "Die Fabelmans",
+            "movDirector": "",
+            "movMaleLead": "",
+            "movFemaleLead": "",
+            "oscarWon": false
+        }
+    ]
+}

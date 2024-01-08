@@ -1,0 +1,207 @@
+2024-01-08 09:20:46.573 [error] No bundle location found for extension SAPOSS.xml-toolkit
+2024-01-08 09:20:46.573 [error] No bundle location found for extension SAPSE.sap-ux-annotation-modeler-extension
+2024-01-08 09:20:46.574 [error] No bundle location found for extension vscode.emmet
+2024-01-08 09:20:47.538 [error] No bundle location found for extension SAPSE.sap-ux-service-modeler-extension
+2024-01-08 09:20:48.930 [error] No bundle location found for extension SAP.vscode-watt-framework-extension
+2024-01-08 09:20:49.114 [error] No bundle location found for extension SAPSE.sap-ux-help-extension
+2024-01-08 09:20:51.445 [error] No bundle location found for extension SAPOSS.app-studio-toolkit
+2024-01-08 09:20:52.161 [error] No bundle location found for extension SAPOSS.vscode-ui5-language-assistant
+2024-01-08 09:20:52.948 [error] No bundle location found for extension SAPSE.sap-ux-application-modeler-extension
+2024-01-08 09:20:52.948 [error] No bundle location found for extension SAP.vscode-wing-run-config
+2024-01-08 09:20:55.676 [error] No bundle location found for extension SAPOSS.app-studio-toolkit-themes
+2024-01-08 09:20:55.851 [error] No bundle location found for extension SAPSE.fs-usage-popup-vscode-extensions
+2024-01-08 09:20:56.253 [error] No bundle location found for extension vscode.git-base
+2024-01-08 09:20:56.650 [error] No bundle location found for extension SAPOSS.code-snippet
+2024-01-08 09:20:57.156 [error] No bundle location found for extension eamodio.gitlens
+2024-01-08 09:20:57.494 [error] No bundle location found for extension SAPSE.vscode-tasks-explorer-tasks-panel
+2024-01-08 09:20:57.712 [error] No bundle location found for extension SAP.vscode-bas-extension
+2024-01-08 09:20:57.712 [error] No bundle location found for extension SAPOSS.vscode-deps-upgrade-tool
+2024-01-08 09:20:58.185 [error] No bundle location found for extension SAPSE.vscode-wing-expose-router-ports
+2024-01-08 09:20:58.361 [error] No bundle location found for extension SAP.vscode-wing-cf-tools
+2024-01-08 09:20:58.361 [error] No bundle location found for extension SAPSE.npm-task-contrib
+2024-01-08 09:20:58.361 [error] No bundle location found for extension SAPOSS.vscode-dependencies-validation
+2024-01-08 09:20:58.762 [error] No bundle location found for extension SAP.vscode-wing-gerrit
+2024-01-08 09:20:59.137 [error] No bundle location found for extension SAP.vscode-bas-extensibility
+2024-01-08 09:20:59.238 [error] No bundle location found for extension SAP.mta-editor-vscode
+2024-01-08 09:20:59.318 [error] No bundle location found for extension SAP.sap-bas-vscode-w5g
+2024-01-08 09:20:59.409 [error] No bundle location found for extension SAPSE.lcap-task-contrib
+2024-01-08 09:20:59.409 [error] No bundle location found for extension SAPOSS.guided-development
+2024-01-08 09:20:59.409 [error] No bundle location found for extension SAP.vscode-wing-welcome-screen
+2024-01-08 09:20:59.603 [error] No bundle location found for extension SAPOS.yeoman-ui
+2024-01-08 09:21:01.259 [error] No bundle location found for extension SAPSE.vscode-wing-storyboard
+2024-01-08 09:21:01.551 [error] No bundle location found for extension SAPSE.vscode-wing-ui5-run
+2024-01-08 09:21:01.690 [error] No bundle location found for extension vscode.git
+2024-01-08 09:21:01.978 [error] No bundle location found for extension SAPSE.vscode-bas-fiori-tools
+2024-01-08 09:21:02.376 [error] No bundle location found for extension vscode.debug-auto-launch
+2024-01-08 09:21:02.417 [error] No bundle location found for extension vscode.merge-conflict
+2024-01-08 09:21:03.128 [error] No bundle location found for extension vscode.typescript-language-features
+2024-01-08 09:21:03.278 [error] No bundle location found for extension vscode.json-language-features
+2024-01-08 09:21:03.466 [error] No bundle location found for extension SAPSE.cicd-extension
+2024-01-08 09:21:03.610 [error] No bundle location found for extension SAPSE.vscode-mta-tools
+2024-01-08 09:21:03.610 [error] No bundle location found for extension SAP.adp-ve-bas-ext
+2024-01-08 09:23:45.473 [error] Error: ENOENT: no such file or directory, stat '/home/user/projects/projekt_ui5/node_modules/fsevents'
+2024-01-08 09:28:30.407 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.f6e48ae5-c47e-44fd-a58d-580148cff864'
+2024-01-08 09:28:30.490 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.f6e48ae5-c47e-44fd-a58d-580148cff864'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/.vsixmanifest'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/CHANGELOG.md'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/LICENSE.txt'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/README.md'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/dist'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/dist/extension.js'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/gitignore.configuration.json'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/icon.png'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/package.json'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/syntaxes'
+2024-01-08 09:28:30.675 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d6c9b8e1-73ee-4154-9c37-9235584c6064/syntaxes/gitignore.json'
+2024-01-08 09:28:31.664 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/.vsixmanifest'
+2024-01-08 09:28:31.664 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/LICENSE.txt'
+2024-01-08 09:28:31.664 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/README.md'
+2024-01-08 09:28:31.664 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/CHANGELOG.md'
+2024-01-08 09:28:31.664 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/images'
+2024-01-08 09:28:31.664 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/out/src'
+2024-01-08 09:28:31.665 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/out'
+2024-01-08 09:28:31.667 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/out/src/index.js'
+2024-01-08 09:28:31.667 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/images/git_icon.png'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/rome.json'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.2257d477-0539-48d1-aa87-4cc308d3a509/package.json'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/CHANGELOG.md'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/LICENSE.txt'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/README.md'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/docs'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/docs/schemas'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/docs/schemas/config-v1.schema.json'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled/cme-editor-page.js'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled/0c55c71f.js'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/frontend/dist/_bundled/cme-settings-page.js'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/icon.png'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/node_modules'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/node_modules/vscode-codicons'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/out'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/out/extension.js'
+2024-01-08 09:28:31.668 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/package.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/CHANGELOG.md'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/LICENSE.txt'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/README.md'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/icon.png'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/package.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src/colors.js'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src/index.js'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-default.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/src/theme.js'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-dimmed.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-high-contrast.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light-colorblind.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light-default.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light-high-contrast.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/light.json'
+2024-01-08 09:28:31.669 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/README.md'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/licenses'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/licenses/LICENSE_OCTICONS'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/media/out.min.css'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/media'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/media/out.min.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/node_modules'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/node_modules/safer-buffer'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/avatarManager.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/commands.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/config.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/diffDocProvider.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/extension.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/dataSource.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/extensionState.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/gitGraphView.js'
+2024-01-08 09:28:31.670 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle/uninstall.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle/utils.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/logger.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/repoManager.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/statusBarItem.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/types.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/repoFileWatcher.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils/disposable.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/utils/event.js'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/package.json'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/icon.png'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/cmd-icon-light.svg'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/webview-icon-dark.svg'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/webview-icon-light.svg'
+2024-01-08 09:28:31.671 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/CHANGELOG.md'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/resources/webview-icon.svg'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/LICENSE.txt'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/README.md'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets/menu-icon-dark.svg'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets/icon.png'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets/menu-icon-light.svg'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/dist'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.nls.json'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.nls.zh-cn.json'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/package.json'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/prepare.js'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.b3e75d81-58bb-4751-b6c1-06416ea56fd3/.vsixmanifest'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/.vsixmanifest'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d1a73205-d48d-4a46-99d3-b753887919a7/themes/dark-colorblind.json'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/licenses/LICENSE_MICROSOFT'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d629071b-1abd-4648-8be3-e554a4390f2a/out/life-cycle/startup.js'
+2024-01-08 09:28:31.672 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/dist/extension.js'
+2024-01-08 09:28:32.734 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.76151f0a-8ce5-4b8e-beeb-04ee7ca3da82'
+2024-01-08 09:28:32.874 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.76151f0a-8ce5-4b8e-beeb-04ee7ca3da82'
+2024-01-08 09:28:32.969 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.76151f0a-8ce5-4b8e-beeb-04ee7ca3da82'
+2024-01-08 09:28:34.084 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/CHANGELOG.md'
+2024-01-08 09:28:34.085 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/LICENSE.txt'
+2024-01-08 09:28:34.085 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/README.md'
+2024-01-08 09:28:34.085 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/icon.png'
+2024-01-08 09:28:34.085 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/package.json'
+2024-01-08 09:28:34.085 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.478cb615-ffdb-4361-9650-13ee8b77ea46/.vsixmanifest'
+2024-01-08 09:28:34.085 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedProfilesData/__default__profile__/extensions.user.cache'
+2024-01-08 09:28:52.839 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.f27046d7-8213-4a3c-b675-c6c98a5d6d93'
+2024-01-08 09:28:53.072 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/data/CachedExtensionVSIXs/.f27046d7-8213-4a3c-b675-c6c98a5d6d93'
+2024-01-08 09:28:53.600 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github'
+2024-01-08 09:28:53.600 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/ISSUE_TEMPLATE'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/ISSUE_TEMPLATE/feature_request.md'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/workflows'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/workflows/codesee-arch-diagram.yml'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/workflows/deploy.yml'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.vsixmanifest'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/CHANGELOG.md'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/LICENSE'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/README.md'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/img'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/img/icon.png'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/img/openProject.gif'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules/makeerror'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules/tmpl'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/node_modules/walker'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/extension.js'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/gitProjectLocator.js'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/gitProjectManager.js'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/out/recentItems.js'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/package.json'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/typings.json'
+2024-01-08 09:28:53.601 [error] Error: ENOENT: no such file or directory, stat '/home/user/.vscode/extensions/.e8844ac1-f82f-49ef-b9d8-88ddf810c1e1/.github/ISSUE_TEMPLATE/bug_report.md'
+2024-01-08 09:31:36.920 [error] No bundle location found for extension vscode.npm
+2024-01-08 09:31:36.923 [error] No bundle location found for extension vscode.extension-editing
+2024-01-08 09:31:45.330 [error] SyntaxError: Unexpected token } in JSON at position 778
+	at JSON.parse (<anonymous>)
+	at readJSON (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:34:15117)
+	at async lTr.fillServiceSpecificationForApp (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:1126:15677)
+	at async lTr.listAnnotationFiles (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:1126:10610)
+	at async onManifestChange (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:3055:26737)
+	at async l.value (/managed-content/vscode/unzipped/4__sap-ux-rel___sap-ux-application-modeler-extension@1.0.10214/extension/dist/extension-min.js:3055:23710)
+2024-01-08 09:36:36.436 [error] No bundle location found for extension SAPSE.simplified-git
+2024-01-08 09:37:39.307 [error] Error: ENOENT: no such file or directory, stat '/home/user/.git/index.lock'
+2024-01-08 09:37:44.267 [error] Error: ENOENT: no such file or directory, stat '/home/user/.git/index.lock'
+2024-01-08 09:37:51.989 [error] Error: ENOENT: no such file or directory, stat '/home/user/.git/index.lock'
+2024-01-08 09:37:52.031 [error] Error: ENOENT: no such file or directory, stat '/home/user/.git/index.lock'

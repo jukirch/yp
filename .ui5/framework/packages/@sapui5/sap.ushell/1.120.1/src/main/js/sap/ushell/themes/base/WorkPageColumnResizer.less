@@ -1,0 +1,128 @@
+.workPageDivider {
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  left: 0;
+  padding: 4px;
+
+  &:hover {
+    cursor: col-resize;
+  }
+
+  .workPageDividerInner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    border-right: 2px dashed @sapUiNeutralBorder;
+    transform: translateX(-2px);
+  }
+}
+
+html[dir=rtl] .workPageDivider {
+  transform: translateX(50%);
+
+  .workPageDividerInner {
+    transform: translateX(2px);
+  }
+}
+
+.workPageDividerButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  &.workPageColumnButtonRight {
+    left: auto;
+    right: 0;
+    transform: translateX(calc(~"0.5rem + 6.5px"));
+  }
+
+  &.workPageColumnButtonLeft {
+    transform: translateX(calc(~"-0.5rem - 6.5px"));
+  }
+}
+
+
+html[dir=rtl] .workPageDividerButton {
+  &.workPageColumnButtonRight {
+    left: auto;
+    right: 0;
+    transform: translateX(calc(~"-0.5rem - 6.5px"));
+  }
+
+  &.workPageColumnButtonLeft {
+    transform: translateX(calc(~"0.5rem + 6.5px"));
+  }
+}
+
+[data-wp-breakpoint="lt-lp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-sp-0"] {
+
+  // max. 1 column -> no divider
+  .workPageDivider {
+    display: none;
+  }
+}
+
+[data-wp-breakpoint="lt-lp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="st-sp-2"] {
+
+  // max. 2 columns -> no resizing possible for >= 3 columns
+  .workPageColumn[data-count="4"] .workPageDivider,
+  .workPageColumn[data-count="5"] .workPageDivider,
+  .workPageColumn[data-count="6"] .workPageDivider {
+    pointer-events: none;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  // max. 2 columns -> no divider for 3rd columns
+  .workPageColumn[data-index="3"][data-count="3"] .workPageDivider,
+  .workPageColumn[data-index="3"][data-count="4"] .workPageDivider,
+  .workPageColumn[data-index="3"][data-count="5"] .workPageDivider,
+  .workPageColumn[data-index="3"][data-count="6"] .workPageDivider,
+  .workPageColumn[data-index="5"][data-count="5"] .workPageDivider,
+  .workPageColumn[data-index="5"][data-count="6"] .workPageDivider {
+    display: none;
+  }
+}
+
+
+[data-wp-breakpoint="lt-lp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="st-sp-3"] {
+
+  // max. 3 columns -> no resizing possible for >= 4 columns
+  .workPageColumn[data-count="4"] .workPageDivider,
+  .workPageColumn[data-count="5"] .workPageDivider,
+  .workPageColumn[data-count="6"] .workPageDivider {
+    pointer-events: none;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  // max. 3 columns -> no divider for 4th column
+  .workPageColumn[data-index="4"][data-count="4"] .workPageDivider,
+  .workPageColumn[data-index="4"][data-count="5"] .workPageDivider,
+  .workPageColumn[data-index="4"][data-count="6"] .workPageDivider {
+    display: none;
+  }
+}

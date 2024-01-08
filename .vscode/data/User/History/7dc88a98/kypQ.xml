@@ -1,0 +1,97 @@
+<mvc:View
+    controllerName="calculator.controller.Calculator"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <VBox class="calculator-container">
+                <HBox
+                    alignItems="Center"
+                    justifyContent="Center"
+                    width="100%"
+                    class="calculator-container"
+                >
+                    <VBox class="calculator-row">
+                        <VBox class="calculator-cell-label">
+                            <Label
+                                id="textnr1"
+                                text="Operand 1: "
+                            />
+                        </VBox>
+                        <VBox class="calculator-cell-label">
+                            <Label
+                                id="operator"
+                                text="Rechen-Operator: "
+                            />
+                        </VBox>
+                        <VBox class="calculator-cell-label">
+                            <Label
+                                id="textnr2"
+                                text="Operand 2: "
+                            />
+                        </VBox>
+                    </VBox>
+                    <VBox class="calculator-row">
+                        <VBox class="calculator-cell-input">
+                            <Input
+                                id="inputOperand1"
+                                type="Number"
+                                width="100px"
+                            />
+                        </VBox>
+                        <VBox class="calculator-cell-input">
+                            <Select
+                                id="operatorSelect"
+                                xmlns:core="sap.ui.core"
+                                width="100px"
+                            >
+                                <core:Item
+                                    key="+"
+                                    text="+"
+                                />
+                                <core:Item
+                                    key="-"
+                                    text="-"
+                                />
+                                <core:Item
+                                    key="*"
+                                    text="*"
+                                />
+                                <core:Item
+                                    key="/"
+                                    text="/"
+                                />
+                                <core:Item
+                                    key="sqrt"
+                                    text="Wurzel"
+                                />
+                                <core:Item
+                                    key="pow"
+                                    text="^"
+                                />
+                            </Select>
+                        </VBox>
+                        <VBox class="calculator-cell-input">
+                            <Input
+                                id="inputOperand2"
+                                type="Number"
+                                width="100px"
+                            />
+                        </VBox>
+                    </VBox>
+                </HBox>
+                <VBox class="calculator-button">
+                <Button
+                    id="calbutton"
+                    text="Berechnen !"
+                    press="onCalculatePress"
+                /></VBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

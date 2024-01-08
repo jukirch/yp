@@ -1,0 +1,10 @@
+{   
+    "oscarJSON": {
+        "movYear" :"2023", 
+        "movName":"For Whom the Bell Tolls", 
+        "movDirector":"Sam Woods", 
+        "movMaleLead":"Gary Cooper", 
+        "movFemaleLead":"Ingrid Bergmann", 
+        "movOscarWone": false
+    }
+}

@@ -1,0 +1,32 @@
+<core:FragmentDefinition
+    height="100%"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Popover
+        initialFocus="CEPSearchField"
+        id="searchFieldPopover"
+        class="searchFieldPopover"
+        placement="Bottom"
+        showArrow="false"
+        showHeader="false"
+        offsetX="-13"
+        beforeOpen=".onBeforeOpen"
+        afterOpen=".onAfterOpen"
+        afterClose=".onAfterClose"
+        horizontalScrolling="false"
+        ariaLabelledBy="popoverTitle">
+        <content>
+            <SearchField
+                id="CEPSearchField"
+                width="99%"
+                placeholder="{i18n>search}"
+                tooltip="{i18n>search}"
+                enableSuggestions="true"
+                search=".onSearch"
+                suggest=".onSuggest"
+                class="sapUshellCEPListCenter"
+            />
+            <VBox id="Lists"></VBox>
+        </content>
+    </Popover>
+</core:FragmentDefinition>

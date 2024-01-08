@@ -1,0 +1,49 @@
+specVersion: '2.4'
+type: library
+metadata:
+  name: sap.suite.ui.generic.template
+framework:
+  name: SAPUI5
+  libraries:
+    - name: sap.ui.core
+    - name: sap.ui.table # lazy
+    - name: sap.ui.comp
+    - name: sap.uxap # lazy
+    - name: sap.ui.layout # lazy
+    - name: sap.suite.ui.microchart
+    - name: sap.ovp # lazy
+    - name: sap.viz # lazy
+    - name: sap.ui.fl
+    - name: sap.ui.generic.app
+    - name: sap.ushell
+    - name: sap.m
+    - name: sap.f
+    - name: sap.insights
+    - name: sap.fe.placeholder
+    - name: sap.ui.rta
+    - name: themelib_sap_horizon
+      optional: true
+    - name: themelib_sap_fiori_3
+      optional: true
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_bluecrystal
+      optional: true
+builder:
+  bundles:
+    - bundleDefinition:
+        name: sap/suite/ui/generic/template/library-preload-lazy.js
+        sections:
+          - mode: bundleInfo
+            name: sap/suite/ui/generic/template/library-preload.js
+            filters:
+              - sap/suite/ui/generic/template/
+              - sap/suite/ui/generic/template/manifest.json
+              - '!sap/suite/ui/generic/template/*-preload.js'
+              - '!sap/suite/ui/generic/template/**/*.designtime.js'
+              - '!sap/suite/ui/generic/template/**/designtime/'
+              - '!sap/suite/ui/generic/template/**/*.support.js'
+            resolve: false
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: true

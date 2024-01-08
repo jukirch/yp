@@ -1,0 +1,49 @@
+<mvc:View 
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="s321301.controller.Main"
+    displayBlock="true"
+>
+    <pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+					<f:Form editable="true" id="form0">
+						<f:layout>
+							<f:ResponsiveGridLayout id="layout0"/>
+						</f:layout>
+						<f:formContainers>
+							<f:FormContainer title="Bester Film" id="cont0">
+								<f:formElements>
+									<f:FormElement id="elem0">
+										<f:fields>
+											<Label text="1942" id="lbl0"/>
+											<Input value="Casablanca" width="200px" id="inp0"/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+							<f:FormContainer title="Schauspieler" id="cont1">
+								<f:formElements>
+									<f:FormElement id="elem1">
+										<f:fields>
+											<Label text="MaleLead" id="lbl1"/>
+											<Input value="Humphrey Bogart" width="200px" id="inp1"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement id="elem2">
+										<f:fields>
+											<Label text="FemaleLead" id="lbl2"/>
+											<Input value="Ingrid Bergman" width="200px" id="inp2"/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+						</f:formContainers>
+					</f:Form>
+				</content>
+            </Page>
+    </pages>
+    
+</mvc:View>

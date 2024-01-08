@@ -1,0 +1,66 @@
+{
+	"name": "vscode-git-extension-pack",
+	"displayName": "Git Extension Pack ⭐",
+	"description": "Popular Visual Studio Code extensions for Git",
+	"version": "1.1.1",
+	"publisher": "sugatoray",
+	"author": {
+		"name": "Sugato Ray",
+		"email": "sugatoray.dev@gmail.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sugatoray/vscode-git-extension-pack"
+	},
+	"bugs": {
+		"url": "https://github.com/sugatoray/vscode-git-extension-pack/issues"
+	},
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#916fdc",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"keywords": [
+		"git",
+		"git-commit",
+		"git-history",
+		"git-blame",
+		"gitignore"
+	],
+	"categories": [
+		"Extension Packs"
+	],
+	"extensionPack": [
+		"eamodio.gitlens",
+		"donjayamanne.githistory",
+		"mhutchie.git-graph",
+		"pomber.git-file-history",
+		"codezombiech.gitignore",
+		"waderyan.gitblame",
+		"huizhou.githd",
+		"adam-bender.commit-message-editor",
+		"vivaxy.vscode-conventional-commits",
+		"GitHub.github-vscode-theme",
+		"dzhavat.git-cheatsheet"
+	],
+	"scripts": {
+		"deploy": "vsce publish --yarn"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.60.0"
+	},
+	"__metadata": {
+		"id": "2f9ed788-0c0f-408d-9572-693812449b4c",
+		"publisherId": "66e4f8a8-8bb6-42eb-b528-cf641e3b9640",
+		"publisherDisplayName": "sugatoray",
+		"targetPlatform": "universal",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1704706110035,
+		"preRelease": false
+	}
+}

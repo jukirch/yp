@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper'}">
+
+	<f:heading persistencyKey="{= ${path: 'parameter>/settings/routeConfig/', formatter: 'AH.getPersistencyKeyForDynamicPageTitle'} }">
+		<template:if test="{= ${parameter>/settings/subTitleIfVariantMgmtHidden} }">
+			<template:then>
+				<Title id="{:= ${parameter>/stableId}.getStableId({type: 'ListReportPage', subType: 'PageTitle'})}" class="sapUiTinyMarginTop"
+					text="{parameter>/settings/subTitleIfVariantMgmtHidden}" level="H2"></Title>
+			</template:then>
+			<template:else>
+				<Title id="{:= ${parameter>/stableId}.getStableId({type: 'ListReportPage', subType: 'PageTitle'})}" class="sapUiTinyMarginTop"
+					text="{parameter>/manifest/sap.app/title}" level ="H2"></Title>
+			</template:else>
+		</template:if>
+	</f:heading>
+	<f:actions>
+		<ToolbarSpacer/>
+		<!-- global breakout actions-->
+		<template:repeat list="{parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions/sap.suite.ui.generic.template.ListReport.view.ListReport/sap.ui.generic.app}" var="tmpEntitySet">
+			<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.GlobalActions" type="XML"/>
+		</template:repeat>
+		<MenuButton id="{:= ${parameter>/stableId}.getStableId({type: 'ListReportAction', subType: 'Share'}) }"
+				icon="sap-icon://action"
+				type="Transparent"
+				visible="{path: 'appSettings>/flexibleColumnLayout', formatter: 'AH.getShareOptionVisibility'}"
+				tooltip="{i18n>SHARE} (Shift+Ctrl+S)"
+				ariaDescribedBy="{:= ${parameter>/stableId}.getStableId({type: 'ListReportPage', subType: 'PageTitle'})}"
+				text="">
+		</MenuButton>
+	</f:actions>
+	<f:snappedContent>
+		<Text id="template::FilterText" class="sapSmartTemplatesListReportFilterSummary" visible="{= !${parameter>/settings/isWorklist} }"></Text>
+	</f:snappedContent>
+</core:FragmentDefinition>

@@ -1,0 +1,154 @@
+14:10:39 [INFO] - Running activation sequence for Fiori tools - Application Modeler
+14:10:40 [INFO] - Configurations: 'sap.ux.applicationModeler.showJsonSchemas': false; isTheia(): false; isAppStudio(): true
+14:10:40 [INFO] - isBASVEExtInstalled(): true
+14:10:40 [INFO] - AppFolders: starting processing setAppFoldersContext()
+14:10:40 [INFO] - Register Fiori tools file system for configurations...
+14:10:40 [INFO] - ...Fiori tools file system registered in 0.975ms
+14:10:40 [INFO] - Register views for configurations...
+14:10:40 [INFO] - ...views for configurations registered in 1.567ms
+14:10:40 [INFO] - Register commands...
+14:10:40 [INFO] - ...commands registered in 56.381ms
+14:10:40 [INFO] - Activating sync module...
+14:10:40 [INFO] - Virtual file system ftfs initialized in 0.133ms
+14:10:40 [INFO] - Searching for projects in these workspace folders: 
+[ '/home/user' ]
+14:10:50 [INFO] - SAP UX projects found and added in 10099.850ms
+14:10:50 [INFO] - Start watching **/package.json
+14:10:50 [INFO] - package.json watched in 0.996ms
+14:10:50 [INFO] - Start watching for workspace folder changes
+14:10:50 [INFO] - Workspace folders watched in 0.572ms
+14:10:50 [INFO] - Configs watched in 0.126ms
+14:10:50 [INFO] - ...sync module activated in 10103.960ms
+14:10:50 [INFO] - Register serializers...
+14:10:50 [INFO] - ...serializers registered in 0.714ms
+14:10:50 [INFO] - Activating launch config integration
+14:10:50 [INFO] - Handler for Fiori launch configuration registered
+14:10:50 [INFO] - ...launch config integration activated in 1.132ms
+14:10:50 [INFO] - Activating migration module...
+14:10:50 [INFO] - Migration start watching for workspace folder changes
+14:10:50 [INFO] - Workspace folders watched in 0.465ms
+14:10:50 [INFO] - Migration start watching **/package.json
+14:10:50 [INFO] - package.json watched in 0.433ms
+14:10:50 [INFO] - Migration start watching **/pom.xml
+14:10:50 [INFO] - pom.xml watched in 0.427ms
+14:10:50 [INFO] - Migration start watching **/neo-app.json
+14:10:50 [INFO] - neo-app.json watched in 0.374ms
+14:10:50 [INFO] - Migration start watching **/manifest.json
+14:10:50 [INFO] - manifest.json watched in 0.490ms
+14:10:50 [INFO] - ...migration module activated in 4.833ms
+14:10:50 [INFO] - Register uri handler...
+14:10:50 [INFO] - ...uri handler registered in 0.237ms
+14:10:50 [INFO] - activation sequence for Fiori tools - Application Modeler done in 10212.178ms
+14:10:52 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/globalStorage/saposs.vscode-ui5-language-assistant/ui5-resources-cache/SAPUI5/1.120.4' changed, updating app folders in context. 
+14:11:02 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-50a84752' changed, updating app folders in context. 
+14:12:27 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:12:27 [INFO] - AppFolders: Function setContext() done in 107616.939ms
+14:12:33 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:12:33 [INFO] - AppFolders: Function setContext() done in 100446.834ms
+14:12:33 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:12:33 [INFO] - AppFolders: Function setContext() done in 91064.305ms
+14:18:45 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/260766e4' changed, updating app folders in context. 
+14:19:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:19:16 [INFO] - AppFolders: Function setContext() done in 31001.933ms
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+14:57:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'

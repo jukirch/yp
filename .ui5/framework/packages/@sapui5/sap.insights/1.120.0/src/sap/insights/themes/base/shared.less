@@ -1,0 +1,31 @@
+/* ============================================= */
+/* CSS for library sap.insights */
+/* ============================================= */
+
+.editInsightsCardsListHBox .sapMTextMaxWidth {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.editInsightsCardsListHBox>.sapMFlexItem:first-child:not(:only-child) {
+    min-width: 0 !important;
+}
+
+.dialogScrollPadding .sapMDialogScroll {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+
+@media screen and (max-width:1024px) {
+    .insightsDragIcon {
+        top: 32%;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .insightsDragIcon {
+        top: 25%;
+    }
+}

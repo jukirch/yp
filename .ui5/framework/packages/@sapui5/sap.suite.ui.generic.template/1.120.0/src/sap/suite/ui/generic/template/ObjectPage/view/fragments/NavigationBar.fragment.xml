@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+    template:require="{AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<!-- The navigationBar is only shown when the shell service is not available -->
+	<uxap:navigationBar>
+		<Bar id="template::NavigationBar" visible="{_templPrivGlobal>/generic/shellServiceUnavailable}">
+			<contentLeft>
+				<Button id="back" icon="sap-icon://nav-back" press="._templateEventHandlers.onBack" customData:popoverBelow="true" tooltip="{i18n>BACK}"/>
+			</contentLeft>
+			<contentMiddle>
+				<Title id="objectTypeName" text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/TypeName', formatter: 'AHModel.format'}"/>
+			</contentMiddle>
+		</Bar>
+	</uxap:navigationBar>
+</core:FragmentDefinition>

@@ -1,0 +1,113 @@
+/* ========================================================================== */
+/* CSS for control "sap.ushell.components.shell.Settings.UserSettings" (base) */
+/* ========================================================================== */
+
+.sapMBar .sapMText {
+  font-size: 1rem;
+}
+
+.sapUshellUserSettingMaster {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.sapUshellUserSettingMaster .sapMLIBContent .sapMSLIImg {
+  border-radius: 100%;
+}
+
+.sapUshellUserSettingMaster .sapMSF {
+  padding: 0.25rem;
+}
+
+.sapUiSizeCompact .sapUshellUserSettingMaster .sapMSF {
+  padding: 0.1875rem;
+}
+
+.sapUshellUserSettingDetailHeader .sapMImg {
+  border-radius: 100%
+}
+
+.sapUshellUserSettingDetailContent {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+
+  @media (min-width: 600px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+#defaultParametersSelector .sapUiRGLContainerCont {
+  padding-bottom: 2rem;
+}
+
+#defaultParametersSelector .sapUiRespGridBreak {
+  display: none;
+}
+
+#defaultParametersSelector {
+  overflow-y: auto;
+
+  .sapUshellExtendedDefaultParamsButton {
+    margin-left: 0.5rem;
+  }
+
+  .sapUiFormResGrid.sapUiFormBackgrTranslucent > div {
+    background: none;
+  }
+
+  /* fix form behavior with groups in two columns */
+  .sapUshellShellDefaultValuesForm > .sapUiForm > .sapUiFormResGrid .sapUiRespGrid > div {
+    width: 100%;
+  }
+
+  .sapUshellDefaultValuesSmartField {
+    width: 12rem !important;
+  }
+
+  .sapUshellDefaultValuesDirtyState {
+    font-style: italic;
+  }
+
+  .sapUshellSystemContextsSelection,
+  .sapUshellSmartVariantManagement,
+  .sapUshellDefaultValuesDirtyState {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media (min-width: 600px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+#detailuserPrefThemeSelector .sapUshellUserSettingDetailHeader {
+  border-bottom: none !important;
+}
+
+.sapUshellUserSettingMaster .sapUshellUserSettingMasterListItem {
+  height: 4rem;
+}
+
+.sapUshellUserSettingDetailHeader .sapMOHIcon {
+  margin-top: 0rem;
+}
+
+.sapUshellSettingsPage section {
+  background-color: lighten(@sapUiListBackground, 2);
+  box-sizing: border-box;
+}
+
+.sapUshellSettingsPage > section {
+  padding-bottom: 2.5rem;
+}
+
+.sapUshellUserAccountLabel {
+  padding-top: 0.25rem;
+  margin-right: 0.25rem;
+}
+.sapUshellCalendarWeek > .sapMRb {
+  overflow: inherit;
+}

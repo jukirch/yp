@@ -1,0 +1,7 @@
+[credential]
+	helper = /home/user/.bas-git/bas-git-helper-init.sh
+[user]
+	email = j.kirch@affinis.de
+	name = Julian Kirch
+[init]
+	defaultBranch = main

@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Menu>
+		<MenuItem
+			visible="{= ${ovpCardProperties>/showRefresh} }"
+			icon="sap-icon://refresh"
+			id = "ovpRefreshCardButton"
+			press="refreshCardContent"
+			text="{ovplibResourceBundle>OVP_REFRESH_CARD}"
+			class="sapMFlexBox"/>
+		<MenuItem
+			visible="{= ${ovpCardProperties>/bInsightEnabled} &amp;&amp; ${ovpCardProperties>/enableAddToInsights} }"
+			id = "ovpAddToInsightButton"
+			icon="sap-icon://add-folder"
+			press="onShowInsightCardPreview"
+			text="{= ${ovpCardProperties>/bInsightRTEnabled} ? ${ovplibResourceBundle>INT_PREVIEW_POPOVER_BUTTON_TITLE_RT} : ${ovplibResourceBundle>INT_ADD_CARD_TO_REPOSITORY_DT} }"
+			class="sapMFlexBox"
+			enabled="false"
+			/>
+		<MenuItem
+			icon="sap-icon://dimension"
+			id = "ovpManageCardsButton"
+			press="onCardManage"
+			text="{ovplibResourceBundle>MANAGE_CARDS_TITLE}"
+			visible="{= ${ovpCardProperties>/enableAdditionalActionsManageCards} }"
+			class="sapMFlexBox"/>
+	</Menu>
+</core:FragmentDefinition>

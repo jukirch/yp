@@ -1,0 +1,143 @@
+<mvc:View
+    controllerName="sap.ovp.app.Main"
+    xmlns="sap.m"
+    xmlns:variants="sap.ui.comp.smartvariants"
+    xmlns:core="sap.ui.core"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:ovp="sap.ovp.ui"
+    xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+    xmlns:build="sap.build"
+    xmlns:f="sap.f"
+    xmlns:v="sap.ui.fl.variants"
+    xmlns:macros="sap.fe.macros">
+    <IllustratedMessage
+        id="ovpErrorPage" 
+        illustrationType="sapIllus-UnableToLoad" 
+        title="{ovplibResourceBundle>LOAD_DATA_ERROR_HEADER}"
+        description="{ovplibResourceBundle>LOAD_DATA_ERROR_CONTENT}"
+        enableDefaultTitleAndDescription="false"
+        visible="false">
+    </IllustratedMessage>
+    <ovp:OVPWrapper id="ovpWrapper">
+        <f:DynamicPage 
+            id="ovpMain" 
+            class="ovpApplication" 
+            preserveHeaderStateOnScroll="false" 
+            headerExpanded="{ui>/bHeaderExpanded}">
+            <f:dependents>
+                <core:Fragment fragmentName="sap.ovp.app.HeaderCommands" type="XML"/>
+            </f:dependents>
+            <template:if test="{= !${ui>/globalFilterEntityType} &amp;&amp; !${ui>/subTitleIfVariantMgmtHidden} &amp;&amp; !${ui>/description} ? false : true}">
+                <f:title>
+                    <f:DynamicPageTitle id="ovpMainPageTitle" areaShrinkRatio="0:1.6:1.6">
+                        <!-- Header definition -->
+                        <f:heading>
+                            <HBox class="ovpDescription">
+                                <template:if test="{= ${ui>/useMacroFilterBar} === false &amp;&amp; !${ui>/smartVariantRequired}}">
+                                    <template:then>
+                                        <Title text="{parts: [{path:'ui>/subTitleIfVariantMgmtHidden'}, {path:'ui>/description'}, {path:'ui>/title'}], formatter: '.setTitle'}"/>
+                                    </template:then>
+                                </template:if>
+                                <template:if test="{= ${ui>/useMacroFilterBar} === false &amp;&amp; ${ui>/smartVariantRequired} === true || (!${ui>/subTitleIfVariantMgmtHidden} &amp;&amp; !${ui>/description} &amp;&amp; !${ui>/title})}">
+                                    <variants:SmartVariantManagement 
+                                        id="ovpPageVariant"
+                                        persistencyKey="ovpGlobalFilter"
+                                        visible="{= ${ui>/globalFilterEntityType} ? true : false}" 
+                                        showShare="true" 
+                                        showExecuteOnSelection="true"
+                                        displayTextForExecuteOnSelectionForStandardVariant="{= (${ui>/dataLoadSettings/loadDataOnAppLaunch} === 'ifAnyFilterExist' || ${ui>/dataLoadSettings/loadDataOnAppLaunch} === undefined) ? '{ovplibResourceBundle>ST_LIST_DISPLAY_TEXT_FOR_EXECUTE_ON_SELECTION}' : undefined}"/>
+                                </template:if>
+                                <template:if test="{= ${ui>/useMacroFilterBar} === true &amp;&amp; !${ui>/smartVariantRequired}}">
+                                    <template:then>
+                                        <Title text="{parts: [{path:'ui>/subTitleIfVariantMgmtHidden'}, {path:'ui>/description'}, {path:'ui>/title'}], formatter: '.setTitle'}"/>
+                                    </template:then>
+                                </template:if>
+                                <template:if test="{= ${ui>/useMacroFilterBar} === true &amp;&amp; ${ui>/smartVariantRequired} === true &amp;&amp; ${ui>/globalFilterEntityType} || (!${ui>/subTitleIfVariantMgmtHidden} &amp;&amp; !${ui>/description} &amp;&amp; !${ui>/title} &amp;&amp; ${ui>/globalFilterEntityType})}">
+                                    <v:VariantManagement
+                                        id="ovpGlobalMacroFilterVariantMGMT"
+                                        for="ovpGlobalMacroFilter"
+                                        headerLevel="H2"
+                                        displayTextForExecuteOnSelectionForStandardVariant="{= (${ui>/dataLoadSettings/loadDataOnAppLaunch} === 'ifAnyFilterExist' || ${ui>/dataLoadSettings/loadDataOnAppLaunch} === undefined) ? '{ovplibResourceBundle>ST_LIST_DISPLAY_TEXT_FOR_EXECUTE_ON_SELECTION}' : undefined}"
+                                    />
+                                </template:if>
+                            </HBox>
+
+                        </f:heading>
+                        <f:actions>
+                            <ToolbarSpacer />
+                            <!--extension point provided for global custom action -->
+                            <core:ExtensionPoint name="SmartFilterBarGlobalActionExtension"/>
+                            <MenuButton 
+                                id="sapOvpShareButton"
+                                icon="sap-icon://action"
+                                tooltip="{ovplibResourceBundle>shareBtn} (Shift+Ctrl+S)"
+                                text=""
+                                visible="{= (${ui>/globalFilterEntityType} &amp;&amp; ${ui>/smartVariantRequired} &amp;&amp; !${ui>/isTeamsModeActive})}"
+                                type="Transparent">
+                                <layoutData>
+                                    <OverflowToolbarLayoutData closeOverflowOnInteraction="false"/>
+                                </layoutData>
+                            </MenuButton>
+                        </f:actions>
+                        <f:snappedContent>
+                            <Text id="ovpFilterText"></Text>
+                        </f:snappedContent>
+                    </f:DynamicPageTitle>
+                </f:title>
+            </template:if>
+            <template:if test="{ui>/globalFilterEntityType}">
+                <f:header>
+                    <f:DynamicPageHeader id="ovpPageHeader" pinnable="true">
+                        <template:if test="{= ${ui>/useMacroFilterBar} === false }">
+                            <template:then>
+                                <f:content>
+                                    <template:if test="{= ${ui>/smartVariantRequired} === true || !${ui>/description}}">
+                                        <template:then>
+                                            <core:Fragment fragmentName="sap.ovp.app.SmartFilterBarWithVariant" type="XML"/>
+                                        </template:then>
+
+                                        <template:else>
+                                            <core:Fragment fragmentName="sap.ovp.app.SmarFilterBarWithoutVariant" type="XML"/>
+                                        </template:else>
+                                    </template:if>
+                                </f:content>
+                            </template:then>
+                        </template:if>
+                        <template:if test="{= ${ui>/useMacroFilterBar} === true }">
+                            <f:content>
+                            <!-- variantBackreference is API used for Apply automatically and it is yet to be made public -->
+                                  <macros:FilterBar
+                                    id="ovpGlobalMacroFilter"
+                                    metaPath="@com.sap.vocabularies.UI.v1.SelectionFields"
+                                    variantBackreference="{= !${ui>/enableLiveFilter} ? 'ovpGlobalMacroFilterVariantMGMT': undefined }"
+                                    liveMode="{ui>/enableLiveFilter}"
+                                    search=".onMacroFilterBarSearch"
+                                    showSetAsDefault="true"
+                                />
+                            </f:content>
+                        </template:if>
+                    </f:DynamicPageHeader>
+            </f:header>
+            </template:if>
+            <f:content>
+                <!-- Add the content here -->
+                <VBox height="inherit">
+                    <VBox 
+                        id="ovpFilterNotFulfilledPage" 
+                        visible="false" 
+                        fitContainer="true" 
+                        alignItems="Center" 
+                        justifyContent="Center" 
+                        height="300px">
+                        <Text text="{ovplibResourceBundle>FILTER_NOT_FULFILLED_CONTENT}" />
+                    </VBox>
+                    <!-- Add the content here -->
+                    <VBox id="ovpCardPage" visible="true" height="inherit">
+                        <core:Fragment fragmentName="{ui>/cardContainerFragment}" type="XML"/>
+                    </VBox>
+                </VBox>
+            </f:content>
+        </f:DynamicPage>
+    </ovp:OVPWrapper>
+</mvc:View>

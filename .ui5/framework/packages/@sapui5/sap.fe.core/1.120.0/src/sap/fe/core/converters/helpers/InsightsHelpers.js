@@ -1,0 +1,6 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define(["../../helpers/BindingToolkit","../ManifestSettings"],function(t,e){"use strict";var n={};var i=e.TemplateType;var a=t.pathInModel;var s=t.equal;var l=t.constant;var o=t.and;function r(t,e,n,r){var u;let d,g;const p=e.getManifestWrapper().hasMultipleEntitySets();const v=e.getManifestWrapper().hasMultipleVisualizations();const f=e.getManifestWrapper().getViewConfiguration();const c=f!==undefined&&f.paths.length>1?true:false;const h=e.getTemplateType()===i.ListReport;const b=e.getManifestControlConfiguration(n);const T=t==="Analytical"?(b===null||b===void 0?void 0:b.enableAddCardToInsights)??true:(b===null||b===void 0?void 0:(u=b.tableSettings)===null||u===void 0?void 0:u.enableAddCardToInsights)??true;if(t==="Table"){var M;d=r===null||r===void 0?void 0:r.tableManifestConfiguration;g=((M=d)===null||M===void 0?void 0:M.type)==="ResponsiveTable"}return o(l(T),l(h),l(!p),l(!c),l(t==="Table"?(g??false)&&!v:true),s(a("isInsightsSupported","pageInternal"),true))}n.getInsightsVisibility=r;function u(){return s(a("isInsightsEnabled","internal"),true)}n.getInsightsEnablement=u;return n},false);
+//# sourceMappingURL=InsightsHelpers.js.map

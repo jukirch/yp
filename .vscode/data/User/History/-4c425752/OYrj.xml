@@ -1,0 +1,15 @@
+<mvc:View 
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="s321301.controller.Main"
+    displayBlock="true"
+>
+<pages>
+<Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+</pages>
+    
+</mvc:View>

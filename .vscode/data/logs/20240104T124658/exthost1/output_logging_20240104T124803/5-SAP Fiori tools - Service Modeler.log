@@ -1,0 +1,148 @@
+12:48:09 [INFO] - AppFolders: starting processing setAppFoldersContext()
+12:49:03 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 104
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+12:49:03 [INFO] - AppFolders: Function setContext() done in 53124.243ms
+14:03:33 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240104T124658/exthost2/vscode.typescript-language-features' changed, updating app folders in context. 
+14:04:12 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 104
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+14:04:12 [INFO] - AppFolders: Function setContext() done in 39275.766ms
+14:06:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/projects/s331102/node_modules/fsevents'
+14:06:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/projects/s331102/node_modules/fsevents'
+14:06:33 [INFO] - AppFolders: Directory 'file:///home/user/projects/s331102/node_modules/.bin' changed, updating app folders in context. 
+14:07:12 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:07:12 [INFO] - AppFolders: Function setContext() done in 39381.077ms
+14:08:33 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/17aaa352' changed, updating app folders in context. 
+14:09:00 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:09:00 [INFO] - AppFolders: Function setContext() done in 26586.099ms
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:10:33 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+14:11:34 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-50a84752' changed, updating app folders in context. 
+14:12:24 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:12:24 [INFO] - AppFolders: Function setContext() done in 49551.940ms
+14:18:36 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240104T124658/exthost4/vscode.typescript-language-features' changed, updating app folders in context. 
+14:18:45 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/260766e4' changed, updating app folders in context. 
+14:19:38 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:19:38 [INFO] - AppFolders: Function setContext() done in 61752.746ms
+14:19:44 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+14:19:44 [INFO] - AppFolders: Function setContext() done in 58884.036ms

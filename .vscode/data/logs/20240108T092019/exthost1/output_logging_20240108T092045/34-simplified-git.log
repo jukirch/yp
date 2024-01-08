@@ -1,0 +1,414 @@
+{
+  "label": "simplified-git",
+  "level": "info",
+  "message": "Logger initialized for simplified-git",
+  "time": "2024-01-08T09:36:36.552Z"
+}
+{
+  "label": "simplified-git",
+  "level": "info",
+  "message": "Start logging with log level: debug",
+  "time": "2024-01-08T09:36:36.553Z"
+}
+{
+  "label": "simplified-git",
+  "level": "info",
+  "message": "Full logs can be found in the folder: /home/user/.vscode/data/logs/20240108T092019/exthost1/SAPSE.simplified-git",
+  "time": "2024-01-08T09:36:36.553Z"
+}
+{
+  "label": "simplified-git",
+  "level": "info",
+  "message": "simplified-git extension activated",
+  "time": "2024-01-08T09:36:36.553Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler ys ...",
+  "time": "2024-01-08T09:36:36.667Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered ys successfully",
+  "time": "2024-01-08T09:36:36.667Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler fs ...",
+  "time": "2024-01-08T09:36:36.668Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered fs successfully",
+  "time": "2024-01-08T09:36:36.668Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler ls ...",
+  "time": "2024-01-08T09:36:36.668Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered ls successfully",
+  "time": "2024-01-08T09:36:36.668Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler ps ...",
+  "time": "2024-01-08T09:36:36.668Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered ps successfully",
+  "time": "2024-01-08T09:36:36.669Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler gs ...",
+  "time": "2024-01-08T09:36:36.669Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered gs successfully",
+  "time": "2024-01-08T09:36:36.669Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler ms ...",
+  "time": "2024-01-08T09:36:36.669Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered ms successfully",
+  "time": "2024-01-08T09:36:36.669Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler hs ...",
+  "time": "2024-01-08T09:36:36.670Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered hs successfully",
+  "time": "2024-01-08T09:36:36.670Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler _s ...",
+  "time": "2024-01-08T09:36:36.670Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered _s successfully",
+  "time": "2024-01-08T09:36:36.670Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler os ...",
+  "time": "2024-01-08T09:36:36.670Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered os successfully",
+  "time": "2024-01-08T09:36:36.671Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler cs ...",
+  "time": "2024-01-08T09:36:36.671Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered cs successfully",
+  "time": "2024-01-08T09:36:36.671Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler ds ...",
+  "time": "2024-01-08T09:36:36.671Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered ds successfully",
+  "time": "2024-01-08T09:36:36.671Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler us ...",
+  "time": "2024-01-08T09:36:36.671Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered us successfully",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler Dn ...",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered Dn successfully",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler vs ...",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered vs successfully",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler Ss ...",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered Ss successfully",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler qn ...",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered qn successfully",
+  "time": "2024-01-08T09:36:36.672Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler ws ...",
+  "time": "2024-01-08T09:36:36.673Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered ws successfully",
+  "time": "2024-01-08T09:36:36.673Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler bs ...",
+  "time": "2024-01-08T09:36:36.673Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered bs successfully",
+  "time": "2024-01-08T09:36:36.673Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registering action handler as ...",
+  "time": "2024-01-08T09:36:36.673Z"
+}
+{
+  "label": "simplified-git.ActionProxy",
+  "level": "info",
+  "message": "Registered as successfully",
+  "time": "2024-01-08T09:36:36.673Z"
+}
+{
+  "label": "simplified-git.InitActionHandler",
+  "level": "debug",
+  "message": "Processing Init Action...",
+  "time": "2024-01-08T09:36:38.720Z"
+}
+{
+  "label": "simplified-git.InitActionHandler",
+  "level": "debug",
+  "message": "Repository: /home/user/.asdf-inst/repository - new",
+  "time": "2024-01-08T09:36:43.559Z"
+}
+{
+  "label": "simplified-git.InitRepositoryActionHandler",
+  "level": "debug",
+  "message": "Initiating Git repository...",
+  "time": "2024-01-08T09:36:55.798Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Reloading repository /home/user...",
+  "time": "2024-01-08T09:37:36.147Z"
+}
+{
+  "label": "simplified-git.ReloadRepositoryActionHandler",
+  "level": "debug",
+  "message": "Reloading repository...",
+  "time": "2024-01-08T09:37:36.148Z"
+}
+{
+  "label": "simplified-git.GitServiceImpl",
+  "level": "warn",
+  "message": "Failed to get remote: Error: error: No such remote 'origin'\n",
+  "time": "2024-01-08T09:37:36.208Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:42.996Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.185Z"
+}
+{
+  "label": "simplified-git",
+  "level": "debug",
+  "message": "Workspace configuration changed, we don't have any subscribers yet!",
+  "time": "2024-01-08T09:37:43.331Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.461Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.497Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.533Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.701Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.943Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:43.943Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:44.803Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:45.759Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:46.732Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:47.875Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Done and removed it from the waitlist!",
+  "time": "2024-01-08T09:37:48.304Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Reloading repository /home/user...",
+  "time": "2024-01-08T09:37:48.841Z"
+}
+{
+  "label": "simplified-git.ReloadRepositoryActionHandler",
+  "level": "debug",
+  "message": "Reloading repository...",
+  "time": "2024-01-08T09:37:48.841Z"
+}
+{
+  "label": "simplified-git.GitServiceImpl",
+  "level": "warn",
+  "message": "Failed to get remote: Error: error: No such remote 'origin'\n",
+  "time": "2024-01-08T09:37:48.901Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:50.951Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:51.003Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:51.279Z"
+}
+{
+  "label": "simplified-git.BufferedWorkspaceEventHandler",
+  "level": "debug",
+  "message": "Repository '/home/user' already in the waitlist.",
+  "time": "2024-01-08T09:37:52.281Z"
+}

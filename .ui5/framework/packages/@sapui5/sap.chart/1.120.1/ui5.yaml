@@ -1,0 +1,12 @@
+specVersion: '3.0'
+type: library
+metadata:
+  name: sap.chart
+resources:
+  configuration:
+    propertiesFileSourceEncoding: ISO-8859-1
+framework:
+  name: SAPUI5
+  libraries:
+    - name: sap.ui.core
+    - name: sap.viz

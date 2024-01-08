@@ -1,0 +1,141 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:launchpad="sap.ushell.ui.launchpad">
+    <CustomListItem
+        id="searchResult"
+        class="contentFinderAppBox"
+        highlight="{= ${added} ? 'Information' : 'None'}"
+        selected="{selected}"
+        accDescription="{= ${parts: ['title', 'subtitle', 'added'], formatter: '.formatAppBoxAccDescription'}}">
+        <customData>
+            <launchpad:AccessibilityCustomData
+                writeToDom="true"
+                key="help-id"
+                value="{:= ${dataHelpId}}" />
+        </customData>
+        <VBox
+            id="content"
+            justifyContent="SpaceBetween"
+            fitContainer="true">
+            <HBox
+                alignItems="Stretch"
+                id="contentHeader">
+                <layoutData>
+                    <FlexItemData
+                        shrinkFactor="0"
+                        growFactor="0" />
+                </layoutData>
+                <VBox
+                    id="avatar"
+                    class="sapUiTinyMarginEnd">
+                    <Avatar
+                        id="appAvatar"
+                        src="{:= icon}"
+                        backgroundColor="Transparent"
+                        showBorder="true"
+                        displaySize="XS" />
+                </VBox>
+                <VBox
+                    id="title"
+                    justifyContent="Center">
+                    <Text
+                        id="appTitle"
+                        wrapping="true"
+                        maxLines="2"
+                        text="{:= ${title}}"
+                        class="contentFinderAppBoxTitle"
+                        visible="{:= !!${title}}"
+                        tooltip="{:= ${title}}" />
+                    <Text
+                        id="appSubTitle"
+                        wrapping="false"
+                        text="{:= ${subtitle}}"
+                        width="13rem"
+                        class="contentFinderAppBoxSubtitle"
+                        visible="{:= !!${subtitle}}"
+                        tooltip="{:= ${subtitle}}" />
+                </VBox>
+            </HBox>
+
+            <VBox id="shrinkableVBox">
+                <layoutData>
+                    <FlexItemData
+                        shrinkFactor="1"
+                        growFactor="1" />
+                </layoutData>
+            </VBox>
+
+            <HBox
+                id="appInformation"
+                height="64px"
+                alignItems="Stretch"
+                class="sapUiTinyMarginBottom">
+                <layoutData>
+                    <FlexItemData
+                        shrinkFactor="0"
+                        growFactor="0" />
+                </layoutData>
+                <VBox
+                    id="labels"
+                    class="sapUiTinyMarginEnd contentFinderAppBoxLabel"
+                    justifyContent="Start">
+                    <Label
+                        id="fioriIdLabel"
+                        showColon="true"
+                        text="{:= ${i18n>ContentFinder.AppSearch.Label.FioriId}}"
+                        class="sapUiTinyMarginEnd" />
+                    <Label
+                        id="informationLabel"
+                        showColon="true"
+                        text="{:= ${i18n>ContentFinder.AppSearch.Label.Information}}"
+                        class="sapUiTinyMarginEnd" />
+                </VBox>
+                <VBox
+                    id="texts"
+                    width="0px"
+                    justifyContent="Start"
+                    class="contentFinderAppBoxValue">
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                    <Text
+                        id="fioriId"
+                        wrapping="false"
+                        text="{:= ${appId} || ${i18n>ContentFinder.AppSearch.Text.FieldEmpty}}"
+                        tooltip="{:= ${appId} || ${i18n>ContentFinder.AppSearch.Text.FieldEmpty}}" />
+                    <Text
+                        id="information"
+                        wrapping="false"
+                        text="{:= ${info} || ${i18n>ContentFinder.AppSearch.Text.FieldEmpty}}"
+                        tooltip="{:= ${info} || ${i18n>ContentFinder.AppSearch.Text.FieldEmpty}}" />
+                </VBox>
+            </HBox>
+
+            <HBox
+                id="actions"
+                justifyContent="SpaceBetween"
+                alignItems="Center"
+                height="2rem">
+                <layoutData>
+                    <FlexItemData
+                        shrinkFactor="0"
+                        growFactor="0" />
+                </layoutData>
+                <Button
+                    id="launchApplication"
+                    icon="sap-icon://action"
+                    type="Transparent"
+                    visible="false"
+                    tooltip="{:= ${i18n>ContentFinder.AppSearch.Button.Tooltip.LaunchApplication}}" />
+                <Button
+                    id="previewApplication"
+                    text="{:= ${i18n>ContentFinder.AppSearch.Button.Preview}}"
+                    iconFirst="false"
+                    icon="sap-icon://navigation-down-arrow"
+                    visible="false"
+                    type="Transparent" />
+            </HBox>
+        </VBox>
+    </CustomListItem>
+</core:FragmentDefinition>

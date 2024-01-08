@@ -1,0 +1,214 @@
+{
+    "defaultRenderer": "fiori2",
+    "ushell": {
+        "spaces": {
+            "enabled": true
+        },
+        "home": {
+            "tilesWrappingType": "Hyphenated"
+        },
+        "customPreload": {
+            "enabled": true,
+            "coreResources": [
+                "sap/ushell/bootstrap/core-min-0.js",
+                "sap/ushell/bootstrap/core-min-1.js",
+                "sap/ushell/bootstrap/core-min-2.js",
+                "sap/ushell/bootstrap/core-min-3.js"
+            ],
+            "coreResourcesComplement": [
+                "sap/ushell/preload-bundles/core-ext-light-0.js",
+                "sap/ushell/preload-bundles/core-ext-light-1.js",
+                "sap/ushell/preload-bundles/core-ext-light-2.js",
+                "sap/ushell/preload-bundles/core-ext-light-3.js"
+            ]
+        }
+    },
+    "renderers": {
+        "fiori2": {
+            "componentData": {
+                "config": {
+                    "sessionTimeoutReminderInMinutes": 5,
+                    "sessionTimeoutIntervalInMinutes": -1,
+                    "sessionTimeoutTileStopRefreshIntervalInMinutes": 15,
+                    "enableAutomaticSignout": true,
+                    "enableHideGroups": true,
+                    "enablePersonalization": true,
+                    "enableAbout": true,
+                    "enableTagFiltering": false,
+                    "enableSearch": false,
+                    "searchBusinessObjects": false,
+                    "enableSetTheme": true,
+                    "enableAccessibility": true,
+                    "enableHelp": false,
+                    "enableUserDefaultParameters": true,
+                    "enableRecentActivity": false,
+                    "enableRecentActivityLogging": false,
+                    "preloadLibrariesForRootIntent": false,
+                    "applications": {
+                        "Shell-home": {
+                            "enableEasyAccess": false,
+                            "enableTileActionsIcon": false,
+                            "enableHideGroups": false
+                        }
+                    },
+                    "rootIntent": "Shell-home",
+                    "sizeBehaviorConfigurable": true
+                }
+            }
+        }
+    },
+    "services": {
+        "PluginManager": {
+            "config": {
+                "loadPluginsFromSite": true
+            }
+        },
+        "Container": {
+            "adapter": {
+                "config": {
+                    "systemProperties": {},
+                    "userProfile": {
+                        "metadata": {
+                            "editablePropterties": [
+                                "accessibility",
+                                "contentDensity",
+                                "theme"
+                            ],
+                            "ranges": {
+                                "theme": {
+                                    "sap_belize": {
+                                        "displayName": "SAP Belize",
+                                        "themeRoot": ""
+                                    },
+                                    "sap_fiori_3": {
+                                        "displayName": "SAP Quartz",
+                                        "themeRoot": ""
+                                    },
+                                    "sap_horizon": {
+                                        "displayName": "SAP Morning Horizon",
+                                        "themeRoot": ""
+                                    },
+                                    "sap_horizon_dark": {
+                                        "displayName": "SAP Evening Horizon",
+                                        "themeRoot": ""
+                                    },
+                                    "sap_horizon_hcb": {
+                                        "displayName": "SAP HCB (SAP Horizon)",
+                                        "themeRoot": ""
+                                    },
+                                    "sap_horizon_hcw": {
+                                        "displayName": "SAP HCW (SAP Horizon)",
+                                        "themeRoot": ""
+                                    }
+                                }
+                            }
+                        },
+                        "defaults": {
+                            "email": "john.doe@sap.com",
+                            "firstName": "John",
+                            "lastName": "Doe",
+                            "fullName": "John Doe",
+                            "id": "DOEJ",
+                            "language": "EN",
+                            "languageBcp47": "en",
+                            "sapDateFormat": "1",
+                            "tislcal": [],
+                            "numberFormat": "",
+                            "rtl": false,
+                            "sapTimeFormat": "0",
+                            "timeZone": "CET"
+                        }
+                    },
+                    "userProfilePersonalization": {
+                        "sapDateFormat": "1",
+                        "theme": "sap_horizon",
+                        "sapTimeFormat": "0",
+                        "timeZone": "CET",
+                        "contentDensity": "cozy"
+                    }
+                }
+            }
+        },
+        "Ui5ComponentLoader": {
+            "config": {
+                "loadDefaultDependencies": false
+            }
+        },
+        "Personalization": {
+            "adapter": {
+                "module": "sap.ushell.adapters.local.PersonalizationAdapter"
+            }
+        },
+        "AppState": {
+            "adapter": {
+                "module": "sap.ushell.adapters.local.AppStateAdapter"
+            },
+            "config": {
+                "transient": true
+            }
+        },
+        "NavTargetResolution": {
+            "config": {
+                "allowTestUrlComponentConfig": false,
+                "enableClientSideTargetResolution": true
+            },
+            "adapter": {
+                "module": "sap.ushell.adapters.local.NavTargetResolutionAdapter"
+            }
+        },
+        "SupportTicket": {
+            "config": {
+                "enabled": false
+            },
+            "adapter": {
+                "module": "sap.ushell.adapters.local.SupportTicketAdapter"
+            }
+        },
+        "UserInfo": {
+            "adapter": {
+                "module": "sap.ushell.adapters.local.UserInfoAdapter"
+            }
+        },
+        "UserDefaultParameterPersistence": {
+            "adapter": {
+                "module": "sap.ushell.adapters.local.UserDefaultParameterPersistenceAdapter"
+            }
+        },
+        "NavigationDataProvider": {
+            "adapter": {
+                "module": "sap.ushell.adapters.cdm.ClientSideTargetResolutionAdapter"
+            }
+        },
+        "VisualizationDataProvider": {
+            "adapter": {
+                "module": "sap.ushell.adapters.cdm.v3.LaunchPageAdapter"
+            }
+        },
+        "CommonDataModel": {
+            "adapter": {
+                "config": {
+                    "ignoreSiteDataPersonalization": true,
+                    "siteDataUrl": "../../cdmSiteData/3.1/SandboxSiteData.json",
+                    "allowSiteSourceFromURLParameter": true
+                }
+            }
+        },
+        "LaunchPage": {
+            "adapter": {
+                "module": "sap.ushell.adapters.cdm.v3.LaunchPageAdapter"
+            }
+        },
+        "Search": {
+            "adapter": {
+                "module": "sap.ushell.adapters.local.SearchAdapter"
+            }
+        }
+    },
+    "ui5": {
+        "libs": {
+            "sap.ui.core": true,
+            "sap.m": true,
+            "sap.ushell": true
+        }
+    }
+}

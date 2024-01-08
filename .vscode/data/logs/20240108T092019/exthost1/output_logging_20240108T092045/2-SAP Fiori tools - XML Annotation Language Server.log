@@ -1,0 +1,10 @@
+[Error: EISDIR: illegal operation on a directory, read] {
+  errno: -21,
+  code: 'EISDIR',
+  syscall: 'read'
+}
+[Error: EISDIR: illegal operation on a directory, read] {
+  errno: -21,
+  code: 'EISDIR',
+  syscall: 'read'
+}

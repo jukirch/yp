@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <CustomTreeItem tooltip="{spaces>title}">
+        <content>
+            <HBox
+                alignItems="Center"
+                width="100%">
+                <Text
+                    id="spaceTitle"
+                    text="{spaces>title}"
+                    tooltip="{spaces>title}">
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </Text>
+                <Button
+                    type="Transparent"
+                    class="sapUiTinyMarginEnd"
+                    icon="{= ${spaces>pinned} ? 'sap-icon://pushpin-on' : 'sap-icon://pushpin-off' }"
+                    press=".handlePinButtonPress"
+                    tooltip="{= ${spaces>pinned} ? ${i18n>NavigationBarMenu.Button.UnpinSpace} : ${i18n>NavigationBarMenu.Button.PinSpace} }"
+                    visible="{= ${spaces>pinned} === undefined ? false : true }"
+                    ariaDescribedBy="spaceTitle" />
+            </HBox>
+        </content>
+    </CustomTreeItem>
+</core:FragmentDefinition>

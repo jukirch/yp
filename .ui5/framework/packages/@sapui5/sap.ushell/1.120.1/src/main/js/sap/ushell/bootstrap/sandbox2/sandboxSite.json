@@ -1,0 +1,511 @@
+{
+    "_version": "3.1.0",
+    "site": {
+        "identification": {
+            "id": "c9dcc1f3-dec0-4db4-91d3-639bf38d91ce",
+            "namespace": "",
+            "title": "Sandbox site",
+            "description": "FLP sandbox"
+        },
+        "payload": {
+            "groupsOrder": [
+                "SAMPLES"
+            ],
+            "config": {
+                "ushellConfig": {
+                    "renderers": {
+                        "fiori2": {
+                            "componentData": {
+                                "config": {
+                                    "enableSearch": false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "catalogs": {
+        "SampleCatalog": {
+            "identification": {
+                "id": "SampleCatalog",
+                "title": "Sample Applications"
+            },
+            "payload": {
+                "viz": [
+                    "sap.ushell.demo.AppNavSample",
+                    "sap.ushell.example.startURL",
+                    "sap.ushell.example.startURL1",
+                    "sap.ushell.demo.bookmark",
+                    "AppStateSampleIcon",
+                    "navigationSample"
+                ]
+            }
+        }
+    },
+    "applications": {
+        "sap.ushell.demo.AppNavSample": {
+            "sap.app": {
+                "id": "sap.ushell.demo.AppNavSample",
+                "title": "Application Navigation Sample",
+                "subTitle": "demo application",
+                "ach": "CA-FLP-FE-COR",
+                "applicationVersion": {
+                    "version": "1.0.0"
+                },
+                "crossNavigation": {
+                    "inbounds": {
+                        "target": {
+                            "semanticObject": "Action",
+                            "action": "toappnavsample",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            }
+                        }
+                    }
+                },
+                "tags": {
+                    "keywords": [
+                        "keyword1"
+                    ]
+                }
+            },
+            "sap.flp": {
+                "type": "application"
+            },
+            "sap.ui": {
+                "technology": "UI5",
+                "icons": {
+                    "icon": "sap-icon://Fiori2/F0018"
+                },
+                "deviceTypes": {
+                    "desktop": true,
+                    "tablet": false,
+                    "phone": false
+                }
+            },
+            "sap.ui5": {
+                "componentName": "sap.ushell.demo.AppNavSample"
+            },
+            "sap.platform.runtime": {
+                "componentProperties": {
+                    "url": "../../demoapps/AppNavSample/?A=URL"
+                }
+            }
+        },
+        "sap.ushell.demo.bookmark": {
+            "sap.app": {
+                "id": "sap.ushell.demo.bookmark",
+                "title": "Bookmark Sample",
+                "subTitle": "Add a bookmark demo",
+                "ach": "CA-FLP-FE-COR",
+                "applicationVersion": {
+                    "version": "1.0.0"
+                },
+                "crossNavigation": {
+                    "inbounds": {
+                        "target": {
+                            "semanticObject": "Action",
+                            "action": "toBookmark",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            }
+                        }
+                    }
+                }
+            },
+            "sap.flp": {
+                "type": "application"
+            },
+            "sap.ui": {
+                "technology": "UI5",
+                "icons": {
+                    "icon": "sap-icon://favorite"
+                },
+                "deviceTypes": {
+                    "desktop": true,
+                    "tablet": true,
+                    "phone": true
+                }
+            },
+            "sap.ui5": {
+                "componentName": "sap.ushell.demo.bookmark"
+            },
+            "sap.platform.runtime": {
+                "componentProperties": {
+                    "url": "../../demoapps/BookmarkSample"
+                }
+            }
+        },
+        "sap.ushell.demo.NavigationSample": {
+            "sap.app": {
+                "id": "sap.ushell.demo.NavigationSample",
+                "title": "Navigation Sample",
+                "subTitle": "for testing navigation",
+                "applicationVersion": {
+                    "version": "1.0.0"
+                },
+                "crossNavigation": {
+                    "inbounds": {
+                        "target": {
+                            "semanticObject": "Action",
+                            "action": "toNavigation",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            }
+                        }
+                    }
+                }
+            },
+            "sap.flp": {
+                "type": "application"
+            },
+            "sap.ui": {
+                "technology": "UI5",
+                "icons": {
+                    "icon": "sap-icon://favorite"
+                },
+                "deviceTypes": {
+                    "desktop": true,
+                    "tablet": true,
+                    "phone": true
+                }
+            },
+            "sap.ui5": {
+                "componentName": "sap.ushell.demo.NavigationSample"
+            },
+            "sap.platform.runtime": {
+                "componentProperties": {
+                    "url": "../../demoapps/NavigationSample"
+                }
+            }
+        },
+        "AppStateSampleIcon": {
+            "sap.app": {
+                "id": "AppStateSampleIcon",
+                "applicationVersion": {
+                    "version": "1.0.0"
+                },
+                "title": "App State - Icons",
+                "shortTitle": "icons",
+                "subTitle": "icons with categories",
+                "ach": "CA-FLP-FE-COR",
+                "crossNavigation": {
+                    "inbounds": {
+                        "Action-toappstatesample": {
+                            "semanticObject": "Action",
+                            "action": "toappstatesample",
+                            "signature": {
+                                "additionalParameters": "allowed",
+                                "parameters": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "sap.ui": {
+                "technology": "UI5",
+                "icons": {
+                    "icon": "../../../../../resources/sap/ushell/themes/base/img/SAPLogo.svg"
+                },
+                "deviceTypes": {
+                    "desktop": true,
+                    "tablet": true,
+                    "phone": true
+                }
+            },
+            "sap.ui5": {
+                "componentName": "sap.ushell.demo.AppStateSample"
+            },
+            "sap.platform.runtime": {
+                "componentProperties": {
+                    "url": "../../demoapps/AppStateSample"
+                }
+            }
+        },
+        "appNavSampleWithDataSource": {
+            "sap.app": {
+                "id": "appNavSampleWithDataSource",
+                "applicationVersion": {
+                    "version": "1.0.0"
+                },
+                "dataSources": {
+                    "dataSource001": {
+                        "uri": "../../test/counts/"
+                    }
+                },
+                "title": "AppNav Sample with Data Source",
+                "crossNavigation": {
+                    "inbounds": {
+                        "Action-toappnavsample": {
+                            "semanticObject": "Action",
+                            "action": "toappnavsample"
+                        }
+                    }
+                }
+            },
+            "sap.ui": {
+                "technology": "UI5",
+                "deviceTypes": {
+                    "desktop": true,
+                    "tablet": true,
+                    "phone": true
+                }
+            },
+            "sap.ui5": {
+                "componentName": "sap.ushell.demo.AppNavSample"
+            },
+            "sap.flp": {
+                "type": "application"
+            },
+            "sap.platform.runtime": {
+                "componentProperties": {
+                    "url": "../../demoapps/AppNavSample"
+                }
+            }
+        },
+        "userdefaultplugin": {
+            "sap.app": {
+                "id": "userdefaultplugin",
+                "applicationVersion": {
+                    "version": "1.0.0"
+                },
+                "title": "Dynamic Nr..",
+                "subTitle": "An App with a dynamic tile",
+                "crossNavigation": {
+                    "inbounds": {
+                        "Shell-plugin": {
+                            "semanticObject": "Shell",
+                            "action": "plugin",
+                            "signature": {
+                                "parameters": {
+                                    "localMode": {
+                                        "defaultValue": {
+                                            "value": "true"
+                                        }
+                                    }
+                                },
+                                "additionalParameters": "ignored"
+                            }
+                        }
+                    }
+                }
+            },
+            "sap.ui": {
+                "technology": "UI5",
+                "deviceTypes": {
+                    "desktop": true,
+                    "tablet": true,
+                    "phone": true
+                }
+            },
+            "sap.ui5": {
+                "componentName": "sap.ushell.demo.UserDefaultPluginSample"
+            },
+            "sap.flp": {
+                "type": "plugin"
+            },
+            "sap.platform.runtime": {
+                "componentProperties": {
+                    "url": "../../demoapps/UserDefaultPluginSample",
+                    "config": {
+                        "sap-ushell-plugin-type": "UserDefaults"
+                    }
+                }
+            }
+        }
+    },
+    "systemAliases": {
+    },
+    "visualizations": {
+        "navigationSample": {
+            "vizType": "sap.ushell.StaticAppLauncher",
+            "vizConfig": {
+                "sap.flp": {
+                    "target": {
+                        "appId": "sap.ushell.demo.NavigationSample",
+                        "inboundId": "target"
+                    }
+                }
+            }
+        },
+        "sap.ushell.demo.AppNavSample": {
+            "vizType": "sap.ushell.StaticAppLauncher",
+            "businessApp": "sap.ushell.demo.AppNavSample.BusinessApp",
+            "vizConfig": {
+                "sap.flp": {
+                    "target": {
+                        "appId": "sap.ushell.demo.AppNavSample",
+                        "inboundId": "target"
+                    }
+                }
+            }
+        },
+        "AppStateSampleIcon": {
+            "vizType": "sap.ushell.StaticAppLauncher",
+            "businessApp": "AppStateSampleIcon.BusinessApp",
+            "vizConfig": {
+                "sap.flp": {
+                    "target": {
+                        "appId": "AppStateSampleIcon",
+                        "inboundId": "Action-toappstatesample"
+                    }
+                }
+            }
+        },
+        "sap.ushell.demo.bookmark": {
+            "vizType": "sap.ushell.StaticAppLauncher",
+            "businessApp": "sap.ushell.demo.bookmark.BusinessApp",
+            "vizConfig": {
+                "sap.flp": {
+                    "target": {
+                        "appId": "sap.ushell.demo.bookmark",
+                        "inboundId": "target"
+                    }
+                }
+            }
+        },
+        "sap.ushell.example.startURL": {
+            "vizType": "sap.ushell.StaticAppLauncher",
+            "businessApp": "sap.ushell.example.startURL.BusinessApp",
+            "vizConfig": {
+                "sap.app": {
+                    "title": "Example Page",
+                    "subTitle": "External link"
+                },
+                "sap.ui": {
+                    "icons": {
+                        "icon": "sap-icon://world"
+                    },
+                    "deviceTypes": {
+                        "desktop": true,
+                        "tablet": true,
+                        "phone": true
+                    }
+                },
+                "sap.flp": {
+                    "target": {
+                        "type": "URL",
+                        "url": "https://www.example.com"
+                    }
+                }
+            }
+        },
+        "sap.ushell.example.startURL1": {
+            "vizType": "sap.ushell.StaticAppLauncher",
+            "businessApp": "sap.ushell.example.startURL1.BusinessApp",
+            "vizConfig": {
+                "sap.app": {
+                    "title": "UI5 Demokit",
+                    "subTitle": "External link"
+                },
+                "sap.ui": {
+                    "icons": {
+                        "icon": "sap-icon://sap-ui5"
+                    },
+                    "deviceTypes": {
+                        "desktop": true,
+                        "tablet": true,
+                        "phone": true
+                    }
+                },
+                "sap.flp": {
+                    "target": {
+                        "type": "URL",
+                        "url": "https://ui5.sap.com"
+                    }
+                }
+            }
+        }
+    },
+    "pages": {
+        "page1": {
+            "identification": {
+                "id": "page1",
+                "title": "Sample Page"
+            },
+            "payload": {
+                "layout": {
+                    "sectionOrder": [
+                        "APPS",
+                        "SAMPLES"
+                    ]
+                },
+                "sections": {
+                    "APPS": {
+                        "id": "APPS",
+                        "title": "My Home",
+                        "layout": {
+                            "vizOrder": [
+                            ]
+                        },
+                        "viz": {
+                        }
+                    },
+                    "SAMPLES": {
+                        "id": "SAMPLES",
+                        "title": "Sample Applications",
+                        "layout": {
+                            "vizOrder": [
+                                "vizAppNavSample",
+                                "vizNavigationSample",
+                                "vizAppIcons"
+                            ]
+                        },
+                        "viz": {
+                            "vizNavigationSample": {
+                                "id": "vizNavigationSample",
+                                "vizId": "navigationSample"
+                            },
+                            "vizAppNavSample": {
+                                "id": "vizAppNavSample",
+                                "vizId": "sap.ushell.demo.AppNavSample"
+                            },
+                            "vizAppIcons": {
+                                "id": "vizAppIcons",
+                                "vizId": "AppStateSampleIcon"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "menus": {
+        "main": {
+            "identification": {
+                "id": "main"
+            },
+            "payload": {
+                "menuEntries": [
+                    {
+                        "id": "space01",
+                        "help-id": "Space-space01",
+                        "title": "Sample Space",
+                        "description": "Example applications",
+                        "icon": "sap-icon://syringe",
+                        "type": "IBN",
+                        "target": {
+                            "semanticObject": "Launchpad",
+                            "action": "openFLPPage",
+                            "parameters": [
+                                {
+                                    "name": "pageId",
+                                    "value": "page1"
+                                },
+                                {
+                                    "name": "spaceId",
+                                    "value": "space01"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

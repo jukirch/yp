@@ -1,0 +1,32 @@
+.sapOvpOSEdgeLeft,
+.sapOvpOSEdgeRight {
+    & > span {
+        background-color: @sapUiButtonBackground;
+        color: @sapUiButtonTextColor;
+    }
+    &:hover > span {
+        background-color: @sapUiButtonHoverBackground;
+    }
+}
+
+.sapOvpStackedCardPopup {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    .sapMDialogSection {
+        background-color: transparent;
+    }
+
+    .sapOvpObjectStreamClose {
+        color: @sapUiContentContrastIconColor;
+        &:hover {
+            .sapUiIcon {
+                background-color: @sapUiBrand;
+                border-color: @sapUiContentContrastIconColor;
+                box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+.sapOvpBaseCard .sapOvpCardContentContainer .sapMQuickViewCard {
+    box-shadow: 0 0 0 0rem;
+}

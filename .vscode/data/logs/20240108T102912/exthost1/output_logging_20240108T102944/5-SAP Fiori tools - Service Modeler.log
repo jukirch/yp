@@ -1,0 +1,32 @@
+10:29:53 [INFO] - AppFolders: starting processing setAppFoldersContext()
+10:30:08 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/6baceeb8' changed, updating app folders in context. 
+10:31:15 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+10:31:15 [INFO] - AppFolders: Function setContext() done in 67146.383ms
+10:31:15 [INFO] - AppFolders:
+	projectRoots: 11
+	appRoots: 11
+	webappRoots: 11
+	subWebappRoots: 119
+	localServiceRoots: 2
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 1
+	EDMXWithServiceRoots: 6
+	EDMXLocalServiceRoots: 2
+10:31:15 [INFO] - AppFolders: Function setContext() done in 82556.223ms

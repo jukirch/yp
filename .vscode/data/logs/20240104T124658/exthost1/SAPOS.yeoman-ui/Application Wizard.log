@@ -1,0 +1,6 @@
+{
+  "label": "Application Wizard.AbstractWebviewPanel",
+  "level": "error",
+  "message": "@sap/fiori:app generator failed - Request timed out",
+  "time": "2024-01-04T13:49:11.632Z"
+}

@@ -1,0 +1,32 @@
+{   
+    "oscar": 
+    [ 
+        {
+        "movYear":"2023", 
+        "movName":"Everything Everywhere All at Once", 
+        "movDirector":"Daniel Kwan, Daniel Scheinert", 
+        "movMaleLead":"Brendan Fraser", 
+        "movFemaleLead":"Michelle Yeoh",
+        "oscarWon": true           
+        },
+
+        {
+        "movYear":"2022", 
+        "movName":"Coda", 
+        "movDirector":"Jane Campion", 
+        "movMaleLead":"Will Smith", 
+        "movFemaleLead":"Jessica Chastain",
+        "oscarWon": true
+        },
+
+        {
+            "movYear":"2022", 
+            "movName":"Coda", 
+            "movDirector":"Jane Campion", 
+            "movMaleLead":"Will Smith", 
+            "movFemaleLead":"Jessica Chastain",
+            "oscarWon": true
+
+        }
+    ]
+}

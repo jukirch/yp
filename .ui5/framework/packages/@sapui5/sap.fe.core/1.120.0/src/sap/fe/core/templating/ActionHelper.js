@@ -1,0 +1,6 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define(["sap/fe/core/helpers/BindingToolkit","../converters/MetaModelConverter","../helpers/BindingHelper","./FieldControlHelper"],function(e,t,n,r){"use strict";var o={};var i=r.isActionParameterRequiredExpression;var s=n.bindingContextPathVisitor;var a=t.convertTypes;var c=e.getExpressionFromAnnotation;var l=e.equal;var u=e.compileExpression;function d(e,t){var n,r;const o=e.isBound?(n=e.parameters[0])===null||n===void 0?void 0:n.fullyQualifiedName:undefined;const i=c((r=e.annotations.Common)===null||r===void 0?void 0:r.IsActionCritical,[],undefined,e=>s(e,t,o));return l(i,true)}o.getIsActionCriticalExpression=d;const v=function(e){const t=e.getInterface(0).getPath();const n=e.getInterface(1).getPath();const r=e.getInterface(0).getModel();if(t&&n&&r){const e=a(r);const o=e.resolvePath(t);const s=o.target;const c=e.resolvePath(n);const l=c.target;if(s&&l){return u(i(s,l,e))}}};v.requiresIContext=true;o.isActionParameterRequired=v;return o},false);
+//# sourceMappingURL=ActionHelper.js.map

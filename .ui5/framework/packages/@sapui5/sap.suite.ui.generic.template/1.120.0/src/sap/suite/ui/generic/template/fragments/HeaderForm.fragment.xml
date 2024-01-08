@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:sfo="sap.ui.comp.smartform" xmlns:sfi="sap.ui.comp.smartfield" xmlns:l="sap.ui.layout"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<VBox id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::Form"
+		  displayInline="true" class="sapSmartTemplatesObjectPageHeaderForm sapSmartTemplatesObjectPageHeaderFormBox sapMShowEmpty-CTX"
+		  visible="{path: 'headerFacet>', formatter: 'AH.getBindingForHiddenPath'}">
+		<template:with path="parameter>/" helper="sap.suite.ui.generic.template.js.StableIdHelper.preparePathForStableId" var="facetId">
+			<template:if test="{= ${facetId>}.buildStableId({type: 'ObjectPage', subType: 'Facet', sRecordType: ${headerFacet>RecordType}, sAnnotationPath: ${headerFacet>Target/AnnotationPath}, sAnnotationId: ${headerFacet>ID/String}, bIsHeaderFacet: ${isHeaderFacet>value}})}"/>
+				<template:if test="{headerFacet>Label}">
+					<Title id="{:= ${parameter>/stableId}.getStableId({type: 'ObjectPageHeader', subType: 'HeaderTitle', sFacet: ${facetId>id}})}" text="{path: 'headerFacet>Label', formatter: 'AHModel.format'}" class="sapSmartTemplatesObjectPageHeaderFormTitle"/>
+				</template:if>	
+			<template:if test="{form>Data}">
+				<template:then>
+					<!-- Fieldgroup -->
+					<template:repeat list="{form>Data}" var="dataField">
+						<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.HeaderFormDataField" type="XML"/>
+					</template:repeat>
+				</template:then>
+				<template:else>
+					<!-- Identification -->
+					<template:repeat list="{form>}" var="dataField">
+						<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.HeaderFormDataField" type="XML"/>
+					</template:repeat>
+				</template:else>
+			</template:if>
+		</template:with>
+	</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,6 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define(["sap/fe/macros/ina/AbstractContextMenuHandler","sap/ui/model/FilterOperator"],function(t,e){"use strict";var r={};var n=t.AbstractContextMenuHandler;function i(t,e){t.prototype=Object.create(e.prototype);t.prototype.constructor=t;o(t,e)}function o(t,e){o=Object.setPrototypeOf?Object.setPrototypeOf.bind():function t(e,r){e.__proto__=r;return e};return o(t,e)}let s=function(t){i(n,t);function n(e,r,n){var i;i=t.call(this,r,n)||this;i.filterBar=e;return i}r=n;var o=n.prototype;o.isActionVisible=async function t(e){var r;return Promise.resolve(!!((r=e.dimensionMapping)!==null&&r!==void 0&&r.filterProperty))};o.isActionEnabled=async function t(){return Promise.resolve(true)};o.triggerAction=async function t(r){const{cell:n,dimensionMapping:i}=r;if(!n||!(i!==null&&i!==void 0&&i.filterProperty)){return}await this.filterBar.setFilterValues(i.filterProperty,e.EQ,n.Member)};return n}(n);r=s;return r},false);
+//# sourceMappingURL=FilteringContextMenuHandler.js.map

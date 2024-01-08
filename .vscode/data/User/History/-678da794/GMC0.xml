@@ -1,0 +1,14 @@
+<Dialog xmlns:layout="sap.ui.layout" 
+    xmlns:c = "sap.ui.core"
+    xmlns = "sap.m"
+    xmlns:l ="sap.ui.layout"
+>
+
+    <buttons>
+        <Button text="Button 1"></Button>
+        <Button text="Button 2"></Button>
+        <Button text="Button 3"></Button>
+    </buttons>
+
+
+</Dialog>

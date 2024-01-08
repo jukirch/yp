@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:mdcTable="sap.ui.mdc.table"
+	xmlns:core="sap.ui.core"
+	xmlns:fpm="sap.fe.macros.fpm"
+	template:require="{
+		TABLE: 'sap/fe/macros/table/TableHelper',
+		ID: 'sap/fe/core/helpers/StableIdHelper'
+	}"
+>
+	<mdcTable:Column
+		id="{= ID.generate([${this>id}, 'C', ${column>id}]) }"
+		dataProperty="{column>name}"
+		width="{column>width}"
+		importance="{column>importance}"
+		header="{column>header}"
+		hAlign="{column>horizontalAlign}"
+		tooltip="{column>tooltip}"
+		required="{column>required}"
+	>
+		<mdcTable:template>
+			<fpm:CustomFragment id="{column>key}" fragmentName="{column>template}" contextPath="{collection>}">
+				<fpm:childCustomData>
+					<core:CustomData key="AssociatedProperties" value="{= TABLE.createBindingToLoadProperties(${column>properties})}" />
+				</fpm:childCustomData>
+			</fpm:CustomFragment>
+		</mdcTable:template>
+	</mdcTable:Column>
+</core:FragmentDefinition>

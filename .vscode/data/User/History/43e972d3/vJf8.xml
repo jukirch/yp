@@ -1,0 +1,25 @@
+<mvc:View 
+    controllerName="s330601.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    displayBlock="true"
+    xmlns:cust="s330601.containers"
+    xmlns:c="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <cust:FlightConnections width="50%" height= "15%" >
+                <cust:content>
+                    <c:Icon src="sap-icon://flight" press="onIconPress"/>
+                    <Text text="LH0400" />
+                </cust:content>
+            </cust:FlightConnections> 
+
+            <cust:FlightConnElement width="50%" height= "15%" text="In der View Definiert!">
+            </cust:FlightConnElement> 
+
+            <c:Fragment fragmentName="s330601.view.DemoFragment" type="XML"/>
+        
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper'}">
+
+	<table:plugins>
+		<table:plugins.MultiSelectionPlugin limit="{= ${tableSettings>selectAll} === true ? 0 : ${tableSettings>selectionLimit} }"
+			enableNotification="true"
+			selectionChange="._templateEventHandlers.onMultiSelectionChange"
+			selectionMode="{tableSettings>mode}" />
+	</table:plugins>
+	<table:rowSettingsTemplate>
+		<table:RowSettings 
+			highlight="{= ${parameter>/templateSpecific/rowHighligths} || ${parts: [{path: 'entityType>'}, {path: 'parameter>/treeNode'}, {path: 'entitySet>name'}, {path: 'parameter>/checkIsDraftEnabled'}], formatter: 'AH.setRowHighlight'} }"
+			navigated="{parts: [{path: '_templPriv>/generic/currentActiveChildContext'}, {path: ''}], formatter: 'sap.suite.ui.generic.template.js.RuntimeFormatters.setRowNavigated'}" />
+	</table:rowSettingsTemplate>
+	<!-- <table:contextMenu>
+		<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.SmartControlContextMenu" type="XML"/>
+	</table:contextMenu>	 -->
+</core:FragmentDefinition>

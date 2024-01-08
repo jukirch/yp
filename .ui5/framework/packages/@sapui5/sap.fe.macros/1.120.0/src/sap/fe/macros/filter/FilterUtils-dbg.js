@@ -1,0 +1,549 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define(["sap/base/Log", "sap/base/util/merge", "sap/fe/core/CommonUtils", "sap/fe/core/converters/ConverterContext", "sap/fe/core/converters/MetaModelConverter", "sap/fe/core/converters/controls/ListReport/FilterBar", "sap/fe/core/helpers/MetaModelFunction", "sap/fe/core/helpers/ModelHelper", "sap/fe/core/helpers/SemanticDateOperators", "sap/fe/core/templating/DisplayModeFormatter", "sap/fe/macros/CommonHelper", "sap/fe/macros/DelegateUtil", "sap/ui/core/Core", "sap/ui/mdc/condition/Condition", "sap/ui/mdc/condition/ConditionConverter", "sap/ui/mdc/enums/ConditionValidated", "sap/ui/mdc/odata/v4/TypeMap", "sap/ui/mdc/p13n/StateUtil", "sap/ui/mdc/util/FilterUtil", "sap/ui/model/Filter", "sap/ui/model/FilterOperator", "sap/ui/model/odata/v4/ODataUtils"], function (Log, merge, CommonUtils, ConverterContext, MetaModelConverter, FilterBarConverter, MetaModelFunction, ModelHelper, SemanticDateOperators, DisplayModeFormatter, CommonHelper, DelegateUtil, Core, Condition, ConditionConverter, ConditionValidated, TypeMap, StateUtil, FilterUtil, Filter, FilterOperator, ODataUtils) {
+  "use strict";
+
+  var ODATA_TYPE_MAPPING = DisplayModeFormatter.ODATA_TYPE_MAPPING;
+  var getAllCustomAggregates = MetaModelFunction.getAllCustomAggregates;
+  const oFilterUtils = {
+    getFilter: function (vIFilter) {
+      const aFilters = oFilterUtils.getFilterInfo(vIFilter).filters;
+      return aFilters.length ? new Filter(oFilterUtils.getFilterInfo(vIFilter).filters, false) : undefined;
+    },
+    getFilterField: function (propertyPath, converterContext, entityType) {
+      return FilterBarConverter.getFilterField(propertyPath, converterContext, entityType);
+    },
+    buildProperyInfo: function (propertyInfoField, converterContext) {
+      let oPropertyInfo;
+      const aTypeConfig = {};
+      const propertyConvertyContext = converterContext.getConverterContextFor(propertyInfoField.annotationPath);
+      const propertyTargetObject = propertyConvertyContext.getDataModelObjectPath().targetObject;
+      const oTypeConfig = FilterBarConverter.fetchTypeConfig(propertyTargetObject);
+      oPropertyInfo = FilterBarConverter.fetchPropertyInfo(converterContext, propertyInfoField, oTypeConfig);
+      aTypeConfig[propertyInfoField.key] = oTypeConfig;
+      oPropertyInfo = FilterBarConverter.assignDataTypeToPropertyInfo(oPropertyInfo, converterContext, [], aTypeConfig);
+      return oPropertyInfo;
+    },
+    createConverterContext: function (oFilterControl, sEntityTypePath, metaModel, appComponent) {
+      const sFilterEntityTypePath = DelegateUtil.getCustomData(oFilterControl, "entityType"),
+        contextPath = sEntityTypePath || sFilterEntityTypePath;
+      const oView = oFilterControl.isA ? CommonUtils.getTargetView(oFilterControl) : null;
+      const oMetaModel = metaModel || oFilterControl.getModel().getMetaModel();
+      const oAppComponent = appComponent || oView && CommonUtils.getAppComponent(oView);
+      const oVisualizationObjectPath = MetaModelConverter.getInvolvedDataModelObjects(oMetaModel.createBindingContext(contextPath));
+      let manifestSettings;
+      if (oFilterControl.isA && !oFilterControl.isA("sap.ui.mdc.filterbar.vh.FilterBar")) {
+        manifestSettings = oView && oView.getViewData() || {};
+      }
+      return ConverterContext.createConverterContextForMacro(oVisualizationObjectPath.startingEntitySet.name, oMetaModel, oAppComponent === null || oAppComponent === void 0 ? void 0 : oAppComponent.getDiagnostics(), merge, oVisualizationObjectPath.contextLocation, manifestSettings);
+    },
+    getConvertedFilterFields: function (oFilterControl, sEntityTypePath, includeHidden, metaModel, appComponent, oModifier, lineItemTerm) {
+      const oMetaModel = this._getFilterMetaModel(oFilterControl, metaModel);
+      const sFilterEntityTypePath = DelegateUtil.getCustomData(oFilterControl, "entityType"),
+        contextPath = sEntityTypePath || sFilterEntityTypePath;
+      const lrTables = this._getFieldsForTable(oFilterControl, sEntityTypePath);
+      const oConverterContext = this.createConverterContext(oFilterControl, sEntityTypePath, metaModel, appComponent);
+
+      //aSelectionFields = FilterBarConverter.getSelectionFields(oConverterContext);
+      return this._getSelectionFields(oFilterControl, sEntityTypePath, sFilterEntityTypePath, contextPath, lrTables, oMetaModel, oConverterContext, includeHidden, oModifier, lineItemTerm);
+    },
+    getBindingPathForParameters: function (oIFilter, mConditions, aFilterPropertiesMetadata, aParameters) {
+      const aParams = [];
+      aFilterPropertiesMetadata = oFilterUtils.setTypeConfigToProperties(aFilterPropertiesMetadata);
+      // Collecting all parameter values from conditions
+      for (let i = 0; i < aParameters.length; i++) {
+        const sFieldPath = aParameters[i];
+        if (mConditions[sFieldPath] && mConditions[sFieldPath].length > 0) {
+          // We would be using only the first condition for parameter value.
+          const oConditionInternal = merge({}, mConditions[sFieldPath][0]);
+          const oProperty = FilterUtil.getPropertyByKey(aFilterPropertiesMetadata, sFieldPath);
+          const oTypeConfig = oProperty.typeConfig || TypeMap.getTypeConfig(oProperty.dataType, oProperty.formatOptions, oProperty.constraints);
+          const mInternalParameterCondition = ConditionConverter.toType(oConditionInternal, oTypeConfig, oIFilter.getTypeMap());
+          const sEdmType = ODATA_TYPE_MAPPING[oTypeConfig.className];
+          aParams.push(`${sFieldPath}=${encodeURIComponent(ODataUtils.formatLiteral(mInternalParameterCondition.values[0], sEdmType))}`);
+        }
+      }
+
+      // Binding path from EntityType
+      const sEntityTypePath = oIFilter.data("entityType");
+      const sEntitySetPath = sEntityTypePath.substring(0, sEntityTypePath.length - 1);
+      const sParameterEntitySet = sEntitySetPath.slice(0, sEntitySetPath.lastIndexOf("/"));
+      const sTargetNavigation = sEntitySetPath.substring(sEntitySetPath.lastIndexOf("/") + 1);
+      // create parameter context
+      return `${sParameterEntitySet}(${aParams.toString()})/${sTargetNavigation}`;
+    },
+    getEditStateIsHideDraft: function (mConditions) {
+      let bIsHideDraft = false;
+      if (mConditions && mConditions.$editState) {
+        const oCondition = mConditions.$editState.find(function (condition) {
+          return condition.operator === "DRAFT_EDIT_STATE";
+        });
+        if (oCondition && (oCondition.values.includes("ALL_HIDING_DRAFTS") || oCondition.values.includes("SAVED_ONLY"))) {
+          bIsHideDraft = true;
+        }
+      }
+      return bIsHideDraft;
+    },
+    /**
+     * Gets all filters that originate from the MDC FilterBar.
+     *
+     * @param vIFilter String or object instance related to
+     *  - MDC_FilterBar/Table/Chart
+     * @param mProperties Properties on filters that are to be retrieved. Available parameters:
+     * 	 - ignoredProperties: Array of property names which should be not considered for filtering
+     *	 - propertiesMetadata: Array with all the property metadata. If not provided, properties will be retrieved from vIFilter.
+     *	 - targetControl: MDC_table or chart. If provided, property names which are not relevant for the target control entitySet are not considered.
+     * @param mFilterConditions Map with externalized filter conditions.
+     * @returns FilterBar filters and basic search
+     * @private
+     * @ui5-restricted
+     */
+    getFilterInfo: function (vIFilter, mProperties, mFilterConditions) {
+      let aIgnoreProperties = mProperties && mProperties.ignoredProperties || [];
+      const oTargetControl = mProperties && mProperties.targetControl,
+        sTargetEntityPath = oTargetControl ? oTargetControl.data("entityType") : undefined;
+      const mParameters = {};
+      let oIFilter = vIFilter,
+        sSearch,
+        aFilters = [],
+        sBindingPath,
+        aPropertiesMetadata = mProperties && mProperties.propertiesMetadata;
+      if (typeof vIFilter === "string") {
+        oIFilter = Core.byId(vIFilter);
+      }
+      if (oIFilter) {
+        sSearch = this._getSearchField(oIFilter, aIgnoreProperties);
+        const mConditions = this._getFilterConditions(mProperties, mFilterConditions, oIFilter);
+        let aFilterPropertiesMetadata = oIFilter.getPropertyInfoSet ? oIFilter.getPropertyInfoSet() : null;
+        aFilterPropertiesMetadata = this._getFilterPropertiesMetadata(aFilterPropertiesMetadata, oIFilter);
+        if (mProperties && mProperties.targetControl && mProperties.targetControl.isA("sap.ui.mdc.Chart")) {
+          Object.keys(mConditions).forEach(function (sKey) {
+            if (sKey === "$editState") {
+              delete mConditions["$editState"];
+            }
+          });
+        }
+        let aParameters = oIFilter.data("parameters") || [];
+        aParameters = typeof aParameters === "string" ? JSON.parse(aParameters) : aParameters;
+        if (aParameters && aParameters.length > 0) {
+          // Binding path changes in case of parameters.
+          sBindingPath = oFilterUtils.getBindingPathForParameters(oIFilter, mConditions, aFilterPropertiesMetadata, aParameters);
+          if (Object.keys(mConditions).length) {
+            Object.keys(mConditions).forEach(param => {
+              aParameters.forEach(requiredParam => {
+                if (param === requiredParam) {
+                  const mParametersValue = mConditions[param][0].values;
+                  mParameters[requiredParam] = mParametersValue[0];
+                }
+              });
+            });
+          }
+        }
+        if (mConditions) {
+          //Exclude Interface Filter properties that are not relevant for the Target control entitySet
+          if (sTargetEntityPath && oIFilter.data("entityType") && oIFilter.data("entityType") !== sTargetEntityPath) {
+            const oMetaModel = oIFilter.getModel().getMetaModel();
+            const aTargetPropertiesMetadata = oIFilter.getControlDelegate().fetchPropertiesForEntity(sTargetEntityPath, oMetaModel, oIFilter);
+            aPropertiesMetadata = aTargetPropertiesMetadata;
+            const _aIgnoreProperties = this._getIgnoredProperties(aFilterPropertiesMetadata, aTargetPropertiesMetadata);
+            if (_aIgnoreProperties.length > 0) {
+              aIgnoreProperties = aIgnoreProperties.concat(_aIgnoreProperties);
+            }
+          } else if (!aPropertiesMetadata) {
+            aPropertiesMetadata = aFilterPropertiesMetadata;
+          }
+          // var aParamKeys = [];
+          // aParameters.forEach(function (oParam) {
+          // 	aParamKeys.push(oParam.key);
+          // });
+          const oFilter = FilterUtil.getFilterInfo(oIFilter, mConditions, oFilterUtils.setTypeConfigToProperties(aPropertiesMetadata), aIgnoreProperties.concat(aParameters)).filters;
+          aFilters = oFilter ? [oFilter] : [];
+        }
+      }
+      return {
+        parameters: mParameters,
+        filters: aFilters,
+        search: sSearch || undefined,
+        bindingPath: sBindingPath
+      };
+    },
+    setTypeConfigToProperties: function (aProperties) {
+      if (aProperties && aProperties.length) {
+        aProperties.forEach(function (oIFilterProperty) {
+          if (oIFilterProperty.typeConfig && oIFilterProperty.typeConfig.typeInstance && oIFilterProperty.typeConfig.typeInstance.getConstraints instanceof Function) {
+            return;
+          }
+          if (oIFilterProperty.path === "$editState") {
+            oIFilterProperty.typeConfig = TypeMap.getTypeConfig("sap.ui.model.odata.type.String", {}, {});
+          } else if (oIFilterProperty.path === "$search") {
+            oIFilterProperty.typeConfig = TypeMap.getTypeConfig("sap.ui.model.odata.type.String", {}, {});
+          } else if (oIFilterProperty.dataType || oIFilterProperty.typeConfig && oIFilterProperty.typeConfig.className) {
+            oIFilterProperty.typeConfig = TypeMap.getTypeConfig(oIFilterProperty.dataType || oIFilterProperty.typeConfig.className, oIFilterProperty.formatOptions, oIFilterProperty.constraints);
+          }
+        });
+      }
+      return aProperties;
+    },
+    getNotApplicableFilters: function (oFilterBar, oControl) {
+      var _oControl$control;
+      const sTargetEntityTypePath = oControl.data("entityType"),
+        oFilterBarEntityPath = oFilterBar.data("entityType"),
+        oMetaModel = oFilterBar.getModel().getMetaModel(),
+        oFilterBarEntitySetAnnotations = oMetaModel.getObject(oFilterBarEntityPath),
+        aNotApplicable = [],
+        mConditions = oFilterBar.getConditions(),
+        bIsFilterBarEntityType = sTargetEntityTypePath === oFilterBarEntityPath,
+        bIsChart = oControl.isA("sap.ui.mdc.Chart"),
+        bIsAnalyticalTable = !bIsChart && oControl.getParent().getTableDefinition().enableAnalytics,
+        bIsTreeTable = !bIsChart && ((_oControl$control = oControl.control) === null || _oControl$control === void 0 ? void 0 : _oControl$control.type) === "TreeTable",
+        bEnableSearch = bIsChart ? CommonHelper.parseCustomData(DelegateUtil.getCustomData(oControl, "applySupported")).enableSearch : !(bIsAnalyticalTable || bIsTreeTable) || oControl.getParent().getTableDefinition().enableBasicSearch;
+      if (mConditions && (!bIsFilterBarEntityType || bIsAnalyticalTable || bIsChart)) {
+        // We don't need to calculate the difference on property Level if entity sets are identical
+        const aTargetProperties = bIsFilterBarEntityType ? [] : oFilterBar.getControlDelegate().fetchPropertiesForEntity(sTargetEntityTypePath, oMetaModel, oFilterBar),
+          mTargetProperties = aTargetProperties.reduce(function (mProp, oProp) {
+            mProp[oProp.name] = oProp;
+            return mProp;
+          }, {}),
+          mTableAggregates = !bIsChart && oControl.getParent().getTableDefinition().aggregates || {},
+          mAggregatedProperties = {};
+        Object.keys(mTableAggregates).forEach(function (sAggregateName) {
+          const oAggregate = mTableAggregates[sAggregateName];
+          mAggregatedProperties[oAggregate.relativePath] = oAggregate;
+        });
+        const chartEntityTypeAnnotations = oControl.getModel().getMetaModel().getObject(oControl.data("targetCollectionPath") + "/");
+        if (oControl.isA("sap.ui.mdc.Chart")) {
+          const oEntitySetAnnotations = oControl.getModel().getMetaModel().getObject(`${oControl.data("targetCollectionPath")}@`),
+            mChartCustomAggregates = getAllCustomAggregates(oEntitySetAnnotations);
+          Object.keys(mChartCustomAggregates).forEach(function (sAggregateName) {
+            if (!mAggregatedProperties[sAggregateName]) {
+              const oAggregate = mChartCustomAggregates[sAggregateName];
+              mAggregatedProperties[sAggregateName] = oAggregate;
+            }
+          });
+        }
+        for (const sProperty in mConditions) {
+          // Need to check the length of mConditions[sProperty] since previous filtered properties are kept into mConditions with empty array as definition
+          const aConditionProperty = mConditions[sProperty];
+          let typeCheck = true;
+          if (chartEntityTypeAnnotations[sProperty] && oFilterBarEntitySetAnnotations[sProperty]) {
+            typeCheck = chartEntityTypeAnnotations[sProperty]["$Type"] === oFilterBarEntitySetAnnotations[sProperty]["$Type"];
+          }
+          if (Array.isArray(aConditionProperty) && aConditionProperty.length > 0 && (
+          //has a filter value
+          (!mTargetProperties[sProperty] ||
+          // no target property found by property name
+          mTargetProperties[sProperty].isCustomFilter && mTargetProperties[sProperty].annotationPath == undefined ||
+          // custom filter that is not part of the current entitySet
+          mTargetProperties[sProperty] && !typeCheck) && (!bIsFilterBarEntityType || sProperty === "$editState" && bIsChart) ||
+          //type does not match OR $editState on secondary entity set
+          mAggregatedProperties[sProperty])) {
+            aNotApplicable.push(sProperty.replace(/\+|\*/g, ""));
+          }
+        }
+      }
+      if (!bEnableSearch && oFilterBar.getSearch()) {
+        aNotApplicable.push("$search");
+      }
+      return aNotApplicable;
+    },
+    /**
+     * Gets the value list information of a property as defined for a given filter bar.
+     *
+     * @param filterBar The filter bar to get the value list information for
+     * @param propertyName The property to get the value list information for
+     * @returns The value list information
+     */
+    async _getValueListInfo(filterBar, propertyName) {
+      var _filterBar$getModel;
+      const metaModel = (_filterBar$getModel = filterBar.getModel()) === null || _filterBar$getModel === void 0 ? void 0 : _filterBar$getModel.getMetaModel();
+      if (!metaModel) {
+        return undefined;
+      }
+      const entityType = filterBar.data("entityType") ?? "";
+      const valueListInfos = await metaModel.requestValueListInfo(entityType + propertyName, true).catch(() => null);
+      return valueListInfos === null || valueListInfos === void 0 ? void 0 : valueListInfos[""];
+    },
+    /**
+     * Gets the {@link ConditionValidated} state for a single value. This decides whether the value is treated as a selected value
+     * in a value help, meaning that its description is loaded and displayed if existing, or whether it is displayed as a
+     * condition (e.g. "=1").
+     *
+     * Values for properties without value list info are always treated as {@link ConditionValidated.NotValidated}.
+     *
+     * @param valueListInfo The value list info from the {@link MetaModel}
+     * @param conditionPath Path to the property to set the value as condition for
+     * @param value The single value to get the state for
+     */
+    _getConditionValidated: async function (valueListInfo, conditionPath, value) {
+      if (!valueListInfo) {
+        return ConditionValidated.NotValidated;
+      }
+      try {
+        const valueListProperties = valueListInfo.Parameters.filter(parameter => ["com.sap.vocabularies.Common.v1.ValueListParameterInOut".valueOf(), "com.sap.vocabularies.Common.v1.ValueListParameterOut".valueOf()].includes(parameter.$Type)).filter(parameter => {
+          var _parameter$LocalDataP;
+          return ((_parameter$LocalDataP = parameter.LocalDataProperty) === null || _parameter$LocalDataP === void 0 ? void 0 : _parameter$LocalDataP.$PropertyPath) === conditionPath;
+        }).map(parameter => parameter.ValueListProperty);
+        const valueListPropertyPath = valueListProperties[0] ?? conditionPath;
+        const filter = new Filter({
+          path: valueListPropertyPath,
+          operator: FilterOperator.EQ,
+          value1: value
+        });
+        const listBinding = valueListInfo.$model.bindList(`/${valueListInfo.CollectionPath}`, undefined, undefined, filter, {
+          $select: valueListPropertyPath
+        });
+        const valueExists = (await listBinding.requestContexts()).length > 0;
+        if (valueExists) {
+          return ConditionValidated.Validated;
+        } else {
+          return ConditionValidated.NotValidated;
+        }
+      } catch (error) {
+        Log.error("FilterUtils: Error while retrieving ConditionValidated", error);
+        return ConditionValidated.NotValidated;
+      }
+    },
+    /**
+     * Clear the filter value for a specific property in the filter bar.
+     * This is a prerequisite before new values can be set cleanly.
+     *
+     * @param filterBar The filter bar that contains the filter field
+     * @param conditionPath The path to the property as a condition path
+     */
+    async _clearFilterValue(filterBar, conditionPath) {
+      const oState = await StateUtil.retrieveExternalState(filterBar);
+      if (oState.filter[conditionPath]) {
+        oState.filter[conditionPath].forEach(oCondition => {
+          oCondition.filtered = false;
+        });
+        await StateUtil.applyExternalState(filterBar, {
+          filter: {
+            [conditionPath]: oState.filter[conditionPath]
+          }
+        });
+      }
+    },
+    /**
+     * Set the filter values for the given property in the filter bar.
+     * The filter values can be either a single value or an array of values.
+     * Each filter value must be represented as a primitive value.
+     *
+     * @param oFilterBar The filter bar that contains the filter field
+     * @param sConditionPath The path to the property as a condition path
+     * @param args List of optional parameters
+     *  [sOperator] The operator to be used - if not set, the default operator (EQ) will be used
+     *  [vValues] The values to be applied - if sOperator is missing, vValues is used as 3rd parameter
+     */
+    setFilterValues: async function (oFilterBar, sConditionPath) {
+      for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+        args[_key - 2] = arguments[_key];
+      }
+      let sOperator = args === null || args === void 0 ? void 0 : args[0];
+      let vValues = args === null || args === void 0 ? void 0 : args[1];
+
+      // Do nothing when the filter bar is hidden
+      if (!oFilterBar) {
+        return;
+      }
+
+      // common filter Operators need a value. Do nothing if this value is undefined
+      // BCP: 2270135274
+      if (args.length === 2 && (vValues === undefined || vValues === null || vValues === "") && sOperator && Object.keys(FilterOperator).includes(sOperator)) {
+        Log.warning(`An empty filter value cannot be applied with the ${sOperator} operator`);
+        return;
+      }
+
+      // The 4th parameter is optional; if sOperator is missing, vValues is used as 3rd parameter
+      // This does not apply for semantic dates, as these do not require vValues (exception: "LASTDAYS", 3)
+      if (vValues === undefined && !SemanticDateOperators.getSemanticDateOperations().includes(sOperator || "")) {
+        vValues = sOperator ?? [];
+        sOperator = undefined;
+      }
+
+      // If sOperator is not set, use EQ as default
+      if (!sOperator) {
+        sOperator = FilterOperator.EQ;
+      }
+
+      // Supported array types:
+      //  - Single Values:	"2" | ["2"]
+      //  - Multiple Values:	["2", "3"]
+      //  - Ranges:			["2","3"]
+      // Unsupported array types:
+      //  - Multiple Ranges:	[["2","3"]] | [["2","3"],["4","5"]]
+      const supportedValueTypes = ["string", "number", "boolean"];
+      if (vValues !== undefined && (!Array.isArray(vValues) && !supportedValueTypes.includes(typeof vValues) || Array.isArray(vValues) && vValues.length > 0 && !supportedValueTypes.includes(typeof vValues[0]))) {
+        throw new Error("FilterUtils.js#_setFilterValues: Filter value not supported; only primitive values or an array thereof can be used.");
+      }
+      let values;
+      if (vValues !== undefined) {
+        values = Array.isArray(vValues) ? vValues : [vValues];
+      }
+
+      // Get the value list info of the property to later check whether the values exist
+      const valueListInfo = await this._getValueListInfo(oFilterBar, sConditionPath);
+      const filter = {};
+      if (sConditionPath) {
+        if (values && values.length) {
+          if (sOperator === FilterOperator.BT) {
+            // The operator BT requires one condition with both thresholds
+            filter[sConditionPath] = [Condition.createCondition(sOperator, values, null, null, ConditionValidated.NotValidated)];
+          } else {
+            // Regular single and multi value conditions, if there are no values, we do not want any conditions
+            filter[sConditionPath] = await Promise.all(values.map(async value => {
+              // For the EQ case, tell MDC to validate the value (e.g. display the description), if it exists in the associated entity, otherwise never validate
+              const conditionValidatedStatus = sOperator === FilterOperator.EQ ? await this._getConditionValidated(valueListInfo, sConditionPath, value) : ConditionValidated.NotValidated;
+              return Condition.createCondition(sOperator, [value], null, null, conditionValidatedStatus);
+            }));
+          }
+        } else if (SemanticDateOperators.getSemanticDateOperations().includes(sOperator || "")) {
+          // vValues is undefined, so the operator is a semantic date that does not need values (see above)
+          filter[sConditionPath] = [Condition.createCondition(sOperator, [], null, null, ConditionValidated.NotValidated)];
+        }
+      }
+
+      // Always clear the current value as we do not want to add filter values but replace them
+      await this._clearFilterValue(oFilterBar, sConditionPath);
+      if (filter[sConditionPath]) {
+        // This is not called in the reset case, i.e. setFilterValue("Property")
+        await StateUtil.applyExternalState(oFilterBar, {
+          filter
+        });
+      }
+    },
+    conditionToModelPath: function (sConditionPath) {
+      // make the path usable as model property, therefore slashes become backslashes
+      return sConditionPath.replace(/\//g, "\\");
+    },
+    _getFilterMetaModel: function (oFilterControl, metaModel) {
+      return metaModel || oFilterControl.getModel().getMetaModel();
+    },
+    _getEntitySetPath: function (sEntityTypePath) {
+      return sEntityTypePath && ModelHelper.getEntitySetPath(sEntityTypePath);
+    },
+    _getFieldsForTable: function (oFilterControl, sEntityTypePath) {
+      const lrTables = [];
+      /**
+       * Gets fields from
+       * 	- direct entity properties,
+       * 	- navigateProperties key in the manifest if these properties are known by the entity
+       *  - annotation "SelectionFields"
+       */
+      if (sEntityTypePath) {
+        const oView = CommonUtils.getTargetView(oFilterControl);
+        const tableControls = oView && oView.getController() && oView.getController()._getControls && oView.getController()._getControls("table"); //[0].getParent().getTableDefinition();
+        if (tableControls) {
+          tableControls.forEach(function (oTable) {
+            lrTables.push(oTable.getParent().getTableDefinition());
+          });
+        }
+        return lrTables;
+      }
+      return [];
+    },
+    _getSelectionFields: function (oFilterControl, sEntityTypePath, sFilterEntityTypePath, contextPath, lrTables, oMetaModel, oConverterContext, includeHidden, oModifier, lineItemTerm) {
+      let aSelectionFields = FilterBarConverter.getSelectionFields(oConverterContext, lrTables, undefined, includeHidden, lineItemTerm).selectionFields;
+      if ((oModifier ? oModifier.getControlType(oFilterControl) === "sap.ui.mdc.FilterBar" : oFilterControl.isA("sap.ui.mdc.FilterBar")) && sEntityTypePath !== sFilterEntityTypePath) {
+        /**
+         * We are on multi entity sets scenario so we add annotation "SelectionFields"
+         * from FilterBar entity if these properties are known by the entity
+         */
+        const oVisualizationObjectPath = MetaModelConverter.getInvolvedDataModelObjects(oMetaModel.createBindingContext(contextPath));
+        const oPageContext = oConverterContext.getConverterContextFor(sFilterEntityTypePath);
+        const aFilterBarSelectionFieldsAnnotation = oPageContext.getEntityTypeAnnotation("@com.sap.vocabularies.UI.v1.SelectionFields").annotation || [];
+        const mapSelectionFields = {};
+        aSelectionFields.forEach(function (oSelectionField) {
+          mapSelectionFields[oSelectionField.conditionPath] = true;
+        });
+        aFilterBarSelectionFieldsAnnotation.forEach(function (oFilterBarSelectionFieldAnnotation) {
+          const sPath = oFilterBarSelectionFieldAnnotation.value;
+          if (!mapSelectionFields[sPath]) {
+            const oFilterField = FilterBarConverter.getFilterField(sPath, oConverterContext, oVisualizationObjectPath.startingEntitySet.entityType);
+            if (oFilterField) {
+              aSelectionFields.push(oFilterField);
+            }
+          }
+        });
+      }
+      if (aSelectionFields) {
+        const fieldNames = [];
+        aSelectionFields.forEach(function (oField) {
+          fieldNames.push(oField.key);
+        });
+        aSelectionFields = this._getSelectionFieldsFromPropertyInfos(oFilterControl, fieldNames, aSelectionFields);
+      }
+      return aSelectionFields;
+    },
+    _getSelectionFieldsFromPropertyInfos: function (oFilterControl, fieldNames, aSelectionFields) {
+      const propertyInfoFields = oFilterControl.getPropertyInfo && oFilterControl.getPropertyInfo() || [];
+      propertyInfoFields.forEach(function (oProp) {
+        if (oProp.name === "$search" || oProp.name === "$editState") {
+          return;
+        }
+        const selField = aSelectionFields[fieldNames.indexOf(oProp.key)];
+        if (fieldNames.indexOf(oProp.key) !== -1 && selField.annotationPath) {
+          oProp.group = selField.group;
+          oProp.groupLabel = selField.groupLabel;
+          oProp.settings = selField.settings;
+          oProp.visualFilter = selField.visualFilter;
+          oProp.label = selField.label;
+          aSelectionFields[fieldNames.indexOf(oProp.key)] = oProp;
+        }
+        if (fieldNames.indexOf(oProp.key) === -1 && !oProp.annotationPath) {
+          aSelectionFields.push(oProp);
+        }
+      });
+      return aSelectionFields;
+    },
+    _getSearchField: function (oIFilter, aIgnoreProperties) {
+      return oIFilter.getSearch && aIgnoreProperties.indexOf("search") === -1 ? oIFilter.getSearch() : null;
+    },
+    _getFilterConditions: function (mProperties, mFilterConditions, oIFilter) {
+      const mConditions = mFilterConditions || oIFilter.getConditions();
+      if (mProperties && mProperties.targetControl && mProperties.targetControl.isA("sap.ui.mdc.Chart")) {
+        Object.keys(mConditions).forEach(function (sKey) {
+          if (sKey === "$editState") {
+            delete mConditions["$editState"];
+          }
+        });
+      }
+      return mConditions;
+    },
+    _getFilterPropertiesMetadata: function (aFilterPropertiesMetadata, oIFilter) {
+      if (!(aFilterPropertiesMetadata && aFilterPropertiesMetadata.length)) {
+        if (oIFilter.getPropertyInfo) {
+          aFilterPropertiesMetadata = oIFilter.getPropertyInfo();
+        } else {
+          aFilterPropertiesMetadata = null;
+        }
+      }
+      return aFilterPropertiesMetadata;
+    },
+    _getIgnoredProperties: function (filterPropertiesMetadata, entityProperties) {
+      const ignoreProperties = [];
+      filterPropertiesMetadata.forEach(function (filterProperty) {
+        const filterPropertyName = filterProperty.name;
+        const entityPropertiesCurrent = entityProperties.find(entity => entity.name === filterPropertyName);
+        if (entityPropertiesCurrent && (!filterProperty.isCustomFilter && filterProperty.dataType !== entityPropertiesCurrent.dataType || filterProperty.isCustomFilter && !entityProperties.find(property => !property.isCustomFilter && property.annotationPath == filterProperty.annotationPath))) {
+          ignoreProperties.push(filterPropertyName);
+        }
+      });
+      return ignoreProperties;
+    },
+    getFilters: function (filterBar) {
+      const {
+        parameters,
+        filters,
+        search
+      } = this.getFilterInfo(filterBar);
+      return {
+        parameters,
+        filters,
+        search
+      };
+    }
+  };
+  return oFilterUtils;
+}, false);

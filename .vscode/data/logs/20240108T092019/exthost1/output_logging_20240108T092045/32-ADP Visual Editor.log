@@ -1,0 +1,75 @@
+AppFolders: starting processing setAppFoldersContext()
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1366.414ms
+AppFolders: Directory 'file:///home/user/projects/projekt_ui5' changed, updating app folders in context. 
+AppFolders: Directory 'file:///home/user/projects/projekt_ui5/webapp/test' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1778.494ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2254.802ms
+AppFolders: Directory 'file:///home/user/projects/projekt_ui5/node_modules/yaml' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2132.011ms
+AppFolders: Directory 'file:///home/user/projects/projekt_ui5/node_modules/.bin' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1751.919ms
+AppFolders: Directory 'file:///home/user/.vscode/extensions/codezombiech.gitignore-0.9.0-universal' changed, updating app folders in context. 
+AppFolders: Error executing setAppFoldersContext(): ENOENT: no such file or directory, scandir '/home/user/.vscode/extensions/.d7308f9f-7a4a-4314-923c-68f7b7509046/assets'
+AppFolders: Function setContext() done in 102.803ms
+AppFolders: Directory 'file:///home/user/.vscode/extensions/vivaxy.vscode-conventional-commits-1.25.0-universal' changed, updating app folders in context. 
+AppFolders: Directory 'file:///home/user/.vscode/extensions/sugatoray.vscode-git-extension-pack-1.1.1-universal' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2705.780ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1619.328ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/globalStorage/mhutchie.git-graph/avatars' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2296.021ms
+AppFolders: Directory 'file:///home/user/.vscode/extensions/felipecaputo.git-project-manager-1.8.2-universal' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1445.898ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-641791ac' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1571.895ms
+AppFolders: Directory 'file:///home/user/.git' changed, updating app folders in context. 
+AppFolders: Directory 'file:///home/user/.git/refs' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 7094.676ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 6970.849ms

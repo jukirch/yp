@@ -1,0 +1,21 @@
+{
+  "name": "@sapui5/sap.suite.ui.generic.template",
+  "version": "1.120.0",
+  "description": "SAPUI5 Library sap.suite.ui.generic.template",
+  "keywords": [
+    "sapui5",
+    "ui5"
+  ],
+  "homepage": "https://sap.github.io/ui5-tooling/pages/SAPUI5/",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "author": "SAP SE (https://www.sap.com)",
+  "scripts": {
+    "sonar": "sonar-scanner",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "ui5 serve  --config ./ui5-local.yaml --open \"/test-resources/sap/suite/ui/generic/template/demokit/flpSandbox.html?sap-ui-theme=sap_horizon#Shell-home\"",
+    "testsuite-qunit" : "ui5 serve  --config ./ui5-local.yaml --open \"/test-resources/sap/suite/ui/generic/template/qunit/testsuite.qunit.html\""
+  },
+  "devDependencies": {
+    "sonarqube-scanner": "^2.8.1"
+  }
+}

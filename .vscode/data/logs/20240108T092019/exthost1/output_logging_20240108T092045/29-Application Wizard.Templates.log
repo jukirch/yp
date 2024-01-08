@@ -1,0 +1,19 @@
+          [2024-01-08 09:22:08] ERROR: An error occurred: Request failed with status code 404
+   create ../../../home/user/projects/projekt_ui5/.gitignore
+   create ../../../home/user/projects/projekt_ui5/package.json
+   create ../../../home/user/projects/projekt_ui5/ui5-local.yaml
+   create ../../../home/user/projects/projekt_ui5/ui5.yaml
+   create ../../../home/user/projects/projekt_ui5/webapp/Component.js
+   create ../../../home/user/projects/projekt_ui5/webapp/index.html
+   create ../../../home/user/projects/projekt_ui5/webapp/manifest.json
+   create ../../../home/user/projects/projekt_ui5/webapp/i18n/i18n.properties
+   create ../../../home/user/projects/projekt_ui5/webapp/test/locate-reuse-libs.js
+   create ../../../home/user/projects/projekt_ui5/ui5-mock.yaml
+   create ../../../home/user/projects/projekt_ui5/webapp/localService/metadata.xml
+   create ../../../home/user/projects/projekt_ui5/webapp/annotations/annotation.xml
+   create ../../../home/user/projects/projekt_ui5/webapp/test/flpSandbox.html
+   create ../../../home/user/projects/projekt_ui5/webapp/test/changes_loader.js
+   create ../../../home/user/projects/projekt_ui5/webapp/test/changes_preview.js
+   create ../../../home/user/projects/projekt_ui5/README.md
+          
+No change to package.json was detected. No package manager install will be executed.

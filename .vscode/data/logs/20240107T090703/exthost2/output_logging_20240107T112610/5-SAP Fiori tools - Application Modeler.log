@@ -1,0 +1,296 @@
+11:26:14 [INFO] - Running activation sequence for Fiori tools - Application Modeler
+11:26:14 [INFO] - Configurations: 'sap.ux.applicationModeler.showJsonSchemas': false; isTheia(): false; isAppStudio(): true
+11:26:14 [INFO] - isBASVEExtInstalled(): true
+11:26:14 [INFO] - AppFolders: starting processing setAppFoldersContext()
+11:26:14 [INFO] - Register Fiori tools file system for configurations...
+11:26:14 [INFO] - ...Fiori tools file system registered in 0.552ms
+11:26:15 [INFO] - Register views for configurations...
+11:26:15 [INFO] - ...views for configurations registered in 1.416ms
+11:26:15 [INFO] - Register commands...
+11:26:15 [INFO] - ...commands registered in 4.395ms
+11:26:15 [INFO] - Activating sync module...
+11:26:15 [INFO] - Virtual file system ftfs initialized in 0.153ms
+11:26:15 [INFO] - Searching for projects in these workspace folders: 
+[ '/home/user' ]
+11:26:19 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPOSS.app-studio-toolkit' changed, updating app folders in context. 
+11:26:22 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.fs-usage-popup-vscode-extensions' changed, updating app folders in context. 
+11:26:23 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPOSS.vscode-deps-upgrade-tool' changed, updating app folders in context. 
+11:26:23 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-tasks-explorer-tasks-panel' changed, updating app folders in context. 
+11:26:25 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAP.vscode-wing-gerrit' changed, updating app folders in context. 
+11:26:25 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/output_logging_20240107T112610' changed, updating app folders in context. 
+11:26:25 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPOS.yeoman-ui' changed, updating app folders in context. 
+11:26:28 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAP.vscode-wing-welcome-screen' changed, updating app folders in context. 
+11:26:29 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPOSS.guided-development' changed, updating app folders in context. 
+11:26:34 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-wing-storyboard' changed, updating app folders in context. 
+11:26:37 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-wing-ui5-run' changed, updating app folders in context. 
+11:26:40 [INFO] - SAP UX projects found and added in 25925.262ms
+11:26:40 [INFO] - Start watching **/package.json
+11:26:40 [INFO] - package.json watched in 0.648ms
+11:26:40 [INFO] - Start watching for workspace folder changes
+11:26:40 [INFO] - Workspace folders watched in 0.327ms
+11:26:40 [INFO] - Configs watched in 0.178ms
+11:26:40 [INFO] - ...sync module activated in 25928.853ms
+11:26:40 [INFO] - Register serializers...
+11:26:40 [INFO] - ...serializers registered in 0.460ms
+11:26:40 [INFO] - Activating launch config integration
+11:26:40 [INFO] - Handler for Fiori launch configuration registered
+11:26:40 [INFO] - ...launch config integration activated in 0.730ms
+11:26:40 [INFO] - Activating migration module...
+11:26:40 [INFO] - Migration start watching for workspace folder changes
+11:26:40 [INFO] - Workspace folders watched in 0.344ms
+11:26:40 [INFO] - Migration start watching **/package.json
+11:26:40 [INFO] - package.json watched in 0.351ms
+11:26:40 [INFO] - Migration start watching **/pom.xml
+11:26:40 [INFO] - pom.xml watched in 0.355ms
+11:26:40 [INFO] - Migration start watching **/neo-app.json
+11:26:40 [INFO] - neo-app.json watched in 0.254ms
+11:26:40 [INFO] - Migration start watching **/manifest.json
+11:26:40 [INFO] - manifest.json watched in 0.260ms
+11:26:40 [INFO] - ...migration module activated in 3.030ms
+11:26:40 [INFO] - Register uri handler...
+11:26:40 [INFO] - ...uri handler registered in 0.190ms
+11:26:40 [INFO] - activation sequence for Fiori tools - Application Modeler done in 26000.198ms
+11:26:41 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-mta-tools' changed, updating app folders in context. 
+11:26:48 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.cicd-extension' changed, updating app folders in context. 
+11:26:51 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/vscode.git' changed, updating app folders in context. 
+11:30:19 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-30a9a478' changed, updating app folders in context. 
+11:34:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:16 [INFO] - AppFolders: Function setContext() done in 481392.421ms
+11:34:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:16 [INFO] - AppFolders: Function setContext() done in 476616.735ms
+11:34:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:16 [INFO] - AppFolders: Function setContext() done in 474323.696ms
+11:34:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:16 [INFO] - AppFolders: Function setContext() done in 472927.553ms
+11:34:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:16 [INFO] - AppFolders: Function setContext() done in 473042.534ms
+11:34:16 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:16 [INFO] - AppFolders: Function setContext() done in 471619.383ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 471618.570ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 471684.298ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 468308.749ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 467276.419ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 463152.903ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 459690.264ms
+11:34:17 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:17 [INFO] - AppFolders: Function setContext() done in 456618.104ms
+11:34:18 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:18 [INFO] - AppFolders: Function setContext() done in 449984.808ms
+11:34:18 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:18 [INFO] - AppFolders: Function setContext() done in 447209.545ms
+11:34:28 [INFO] - AppFolders:
+	projectRoots: 10
+	appRoots: 10
+	webappRoots: 10
+	subWebappRoots: 116
+	localServiceRoots: 1
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 3
+	EDMXLocalServiceRoots: 1
+11:34:28 [INFO] - AppFolders: Function setContext() done in 248691.412ms

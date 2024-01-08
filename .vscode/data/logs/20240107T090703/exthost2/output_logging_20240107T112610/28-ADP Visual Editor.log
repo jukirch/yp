@@ -1,0 +1,54 @@
+AppFolders: starting processing setAppFoldersContext()
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAP.vscode-wing-welcome-screen' changed, updating app folders in context. 
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPOSS.guided-development' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2868.062ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3258.653ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3179.531ms
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-wing-storyboard' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2299.919ms
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-wing-ui5-run' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3207.910ms
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.vscode-mta-tools' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3725.331ms
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/SAPSE.cicd-extension' changed, updating app folders in context. 
+AppFolders: Directory 'file:///home/user/.vscode/data/logs/20240107T090703/exthost2/vscode.git' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 4157.414ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 4088.796ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-30a9a478' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 6623.950ms

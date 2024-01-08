@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="workPageCellDeleteDialog"
+        state="Warning"
+        type="Message"
+        title="{i18n>WorkPage.Cell.DeleteDialog.Title}">
+        <Text
+            id="confirmationText"
+            text="{i18n>WorkPage.Cell.DeleteDialog.ConfirmText}" />
+        <beginButton>
+            <Button
+                id="confirm"
+                type="Emphasized"
+                text="{i18n>WorkPage.Cell.DeleteDialog.Button.Confirm}" />
+        </beginButton>
+        <endButton>
+            <Button
+                id="cancel"
+                text="{i18n>WorkPage.Cell.DeleteDialog.Button.Cancel}"
+                press=".onCellDeleteCancel" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

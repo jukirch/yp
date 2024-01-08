@@ -1,0 +1,44 @@
+   create ../../../home/user/projects/s330601/.gitignore
+   create ../../../home/user/projects/s330601/package.json
+   create ../../../home/user/projects/s330601/ui5-local.yaml
+   create ../../../home/user/projects/s330601/ui5.yaml
+   create ../../../home/user/projects/s330601/webapp/Component.js
+   create ../../../home/user/projects/s330601/webapp/index.html
+   create ../../../home/user/projects/s330601/webapp/manifest.json
+   create ../../../home/user/projects/s330601/webapp/i18n/i18n.properties
+   create ../../../home/user/projects/s330601/webapp/test/locate-reuse-libs.js
+   create ../../../home/user/projects/s330601/webapp/model/models.js
+   create ../../../home/user/projects/s330601/webapp/test/flpSandbox.html
+   create ../../../home/user/projects/s330601/webapp/controller/App.controller.js
+   create ../../../home/user/projects/s330601/webapp/css/style.css
+   create ../../../home/user/projects/s330601/webapp/view/App.view.xml
+   create ../../../home/user/projects/s330601/webapp/view/Main.view.xml
+   create ../../../home/user/projects/s330601/webapp/controller/Main.controller.js
+   create ../../../home/user/projects/s330601/webapp/test/flpSandbox.js
+   create ../../../home/user/projects/s330601/webapp/test/initFlpSandbox.js
+   create ../../../home/user/projects/s330601/webapp/test/integration/AllJourneys.js
+   create ../../../home/user/projects/s330601/webapp/test/integration/NavigationJourney.js
+   create ../../../home/user/projects/s330601/webapp/test/integration/arrangements/Startup.js
+   create ../../../home/user/projects/s330601/webapp/test/integration/opaTests.qunit.html
+   create ../../../home/user/projects/s330601/webapp/test/integration/opaTests.qunit.js
+   create ../../../home/user/projects/s330601/webapp/test/integration/pages/App.js
+   create ../../../home/user/projects/s330601/webapp/test/integration/pages/Main.js
+   create ../../../home/user/projects/s330601/webapp/test/testsuite.qunit.html
+   create ../../../home/user/projects/s330601/webapp/test/testsuite.qunit.js
+   create ../../../home/user/projects/s330601/webapp/test/unit/AllTests.js
+   create ../../../home/user/projects/s330601/webapp/test/unit/controller/Main.controller.js
+   create ../../../home/user/projects/s330601/webapp/test/unit/unitTests.qunit.html
+   create ../../../home/user/projects/s330601/webapp/test/unit/unitTests.qunit.js
+   create ../../../home/user/projects/s330601/README.md
+          
+No change to package.json was detected. No package manager install will be executed.
+          Installing dependencies...
+          Running: `npm install`
+          npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+          added 924 packages, and audited 925 packages in 14s
+
+155 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+          Project dependencies installed in 14 seconds

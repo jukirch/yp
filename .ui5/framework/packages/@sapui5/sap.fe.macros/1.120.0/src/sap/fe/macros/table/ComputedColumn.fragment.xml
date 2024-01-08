@@ -1,0 +1,42 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:unittest="http://schemas.sap.com/sapui5/preprocessorextension/sap.fe.unittesting/1"
+	xmlns:mdcTable="sap.ui.mdc.table"
+	xmlns:core="sap.ui.core"
+	template:require="{
+		ID: 'sap/fe/core/helpers/StableIdHelper'
+	}"
+>
+	<template:if test="{= ${column>isDraftIndicator} === true}">
+		<mdcTable:Column
+			unittest:id="MDCTableColumn"
+			id="{= ID.generate([${this>id}, 'C', 'computedColumns', 'draftStatus']) }"
+			propertyKey="{column>name}"
+			header="{column>label}"
+			headerVisible="false"
+			tooltip="{column>tooltip}"
+			width="3em"
+		>
+			<macro:DraftIndicator
+				xmlns:macro="sap.fe.macros"
+				draftIndicatorType="IconOnly"
+				entitySet="{collection>}"
+				propertyKey="{column>propertyKey}"
+				usedInTable="true"
+			/>
+		</mdcTable:Column>
+	</template:if>
+	<template:if test="{= ${column>isSituationsIndicator} === true}">
+		<mdcTable:Column
+			unittest:id="MDCTableColumn"
+			id="{= ID.generate([${this>id}, 'C', 'computedColumns', 'situationsIndicator']) }"
+			propertyKey="{column>name}"
+			header="{column>label}"
+			headerVisible="false"
+			tooltip="{column>tooltip}"
+			width="4em"
+		>
+			<situations:SituationsIndicator xmlns:situations="sap.fe.macros.internal.situations" entitySet="{collection>}" />
+		</mdcTable:Column>
+	</template:if>
+</core:FragmentDefinition>

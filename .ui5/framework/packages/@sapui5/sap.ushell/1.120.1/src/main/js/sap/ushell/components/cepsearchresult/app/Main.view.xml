@@ -1,0 +1,32 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  xmlns:wp="sap.ushell.components.workPageBuilder.controls"
+  width="100%"
+  height="100%"
+  controllerName="sap.ushell.components.cepsearchresult.app.Main"
+  class="sapUiCEPSRApp"
+  visible="false">
+  <VBox id="searchResultHeader" class="sapUiCEPSRHeader">
+    <f:DynamicPageTitle>
+      <f:heading>
+        <Title id="titleText"/>
+      </f:heading>
+      <f:navigationActions>
+        <Button id="titleButton" icon="sap-icon://overflow" type="Transparent" press="openTitleMenu"/>
+      </f:navigationActions>
+    </f:DynamicPageTitle>
+    <IconTabHeader id="searchCategoriesTabs" mode="Inline" select=".tabSelectionChange" class="sapUiCEPSRTabs">
+    </IconTabHeader>
+  </VBox>
+  <VBox class="sapUiCEPSRAppScroll">
+    <wp:WorkPage>
+      <wp:WorkPageRow>
+        <wp:WorkPageColumn columnWidth="24">
+          <wp:WorkPageCell id="contentCell">
+          </wp:WorkPageCell>
+        </wp:WorkPageColumn>
+      </wp:WorkPageRow>
+    </wp:WorkPage>
+  </VBox>
+</mvc:View>

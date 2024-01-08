@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:alrControls="sap.suite.ui.generic.template.AnalyticalListPage.control"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{ALPHelper: 'sap/suite/ui/generic/template/AnalyticalListPage/util/AnnotationHelper'}">
+
+	<template:repeat list="{kpis>}" var="kpi">
+		<template:if test="{kpi>filterable}">
+			<template:then>
+				<alrControls:SmartKpiTag id="{path: 'kpi>', formatter: 'ALPHelper.generateKPITagID'}" entitySet="{kpi>entitySet}" qualifier="{kpi>qualifier}"  groupId="{kpi>groupId}" modelName="{kpi>model}" shortDescription="{kpi>shortDescription}" smartFilterId="template::SmartFilterBar" />
+			</template:then>
+			<template:else>
+				<alrControls:SmartKpiTag id="{path: 'kpi>', formatter: 'ALPHelper.generateKPITagID'}" entitySet="{kpi>entitySet}" qualifier="{kpi>qualifier}" groupId="{kpi>groupId}" modelName="{kpi>model}" shortDescription="{kpi>shortDescription}"/>
+			</template:else>
+		</template:if>
+	</template:repeat>
+</core:FragmentDefinition>

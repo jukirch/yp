@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# asdf-plugin: java sapmachine-17.0.7
+exec /home/user/.asdf/bin/asdf exec "jinfo" "$@" # asdf_allow: ' asdf '

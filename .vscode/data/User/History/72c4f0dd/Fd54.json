@@ -1,0 +1,10 @@
+{   
+    "oscarJSON": {
+        "movYear" :"1943", 
+        "movName":"For Whom the Bell Tolls", 
+        "movDirector":"Sam Woods", 
+        "movMaleLead":"Gary Cooper", 
+        "movFemaleLead":"Ingrid Bergmann", 
+        "movOscarWone": false
+    }
+}

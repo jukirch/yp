@@ -1,0 +1,987 @@
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="lt-lp-1"] {
+  .workPageRow {
+    & + .workPageRow {
+      .workPageRowSectionTitle {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+.workPage.workPageHasTitle {
+  .workPageRow.workPageRowFirst {
+    padding-top: 0;
+  }
+}
+
+.workPageRow {
+  position: relative;
+  margin-top: -2px;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  box-sizing: content-box;
+  background-clip: padding-box;
+  padding-top: 1rem;
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+
+  .workPageRowMessageStrip {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .workPageRowToolbar {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: @sapUiShellBackgroundPatternColor;
+    border-bottom: none;
+  }
+
+  .workPageRowSectionTitle {
+    font-weight: bold;
+    font-family: @sapUiFontFamily;
+    font-size: @sapMFontHeader4Size;
+    color: @sapUiShellGroupTitleTextColor;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  & + .workPageRow {
+    padding-top: 0;
+
+    .workPageRowSectionTitle {
+      padding-top: 2rem;
+    }
+  }
+
+  .workPageRowLimiter {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .workPageRowInner {
+    position: static;
+    display: grid;
+  }
+
+  .workPageRowButton {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .workPageRowButtonBottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(~'calc(50% + 1px)');
+  }
+
+  .workPageRowButtonTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(~'calc(-50% - 1px)');
+  }
+
+  .workPageRowButtonLeft {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translateX(-50%);
+  }
+
+  .workPageRowButtonRight {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translateX(50%);
+  }
+
+  .workPageRowControlButtons {
+    /* use opacity here to focus the button when the control is shown by tabbing into the WorkPageRow via keyboard navigation */
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transform: translateY(-2.5rem);
+    padding-right: 2rem;
+  }
+}
+
+.sapUiSizeCompact .workPageRow .workPageRowControlButtons {
+  transform: translateY(-2rem);
+}
+
+.workPageRowToolbar > .sapMLabel .sapMLabelColonAndRequired::before {
+  content: attr(data-colon);
+  white-space: pre;
+}
+
+
+[data-wp-breakpoint="lt-lp-4"],
+[data-wp-breakpoint="lt-sp-4"],
+[data-wp-breakpoint="st-lp-4"],
+[data-wp-breakpoint="st-sp-4"] {
+  .workPageRow {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+}
+[data-wp-breakpoint="lt-lp-3"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="st-sp-3"],
+[data-wp-breakpoint="lt-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="st-sp-2"] {
+  .workPageRow {
+    margin-left: 1.375rem;
+    margin-right: 1.375rem;
+  }
+}
+
+[data-wp-breakpoint="lt-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="st-sp-1"] {
+  .workPageRow {
+    margin-left: 1.625rem;
+    margin-right: 1.625rem;
+  }
+}
+
+[data-wp-breakpoint="st-sp-0"] {
+  .workPageRow {
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* EDIT MODE */
+.workPageEditMode {
+  &.workPage {
+    .workPageRow,
+    .workPageRow.workPageRowFirst {
+      padding-top: 1rem;
+    }
+  }
+  .workPageRow {
+
+    &:hover,
+    &.workPageRowFocused {
+      border-color: @sapUiNeutralBorder;
+
+      .workPageRowControlButtons {
+        opacity: 1;
+      }
+    }
+
+    .workPageRowInner {
+      user-select: none;
+    }
+
+    &:hover + .workPageRow {
+      border-top: none;
+      margin-top: 0;
+    }
+
+    &:last-of-type:hover {
+      border-bottom: 2px solid @sapUiNeutralBorder;
+    }
+  }
+}
+
+/* 1 Column */
+[data-wp-cols="1"] {
+  grid-template-columns: 1fr;
+}
+
+
+/* 2 Columns */
+[data-wp-cols="2"] {
+  grid-template-columns: 1fr 1fr;
+}
+
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="lt-lp-1"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="2"] {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+[data-wp-cols="2"] {
+  &[data-wp-col-min-flex="1"],
+  &[data-wp-col-min-flex="2"] {
+    &[data-wp-grid-layout="2-22"] { grid-template-columns: 2fr 22fr; }
+    &[data-wp-grid-layout="4-20"] { grid-template-columns: 4fr 20fr; }
+    &[data-wp-grid-layout="6-18"] { grid-template-columns: 6fr 18fr; }
+    &[data-wp-grid-layout="8-16"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="10-14"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="12-12"] { grid-template-columns: 12fr 12fr; }
+    &[data-wp-grid-layout="14-10"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="16-8"] { grid-template-columns: 16fr 8fr; }
+    &[data-wp-grid-layout="18-6"] { grid-template-columns: 18fr 6fr; }
+    &[data-wp-grid-layout="20-4"] { grid-template-columns: 20fr 4fr; }
+    &[data-wp-grid-layout="22-2"] { grid-template-columns: 22fr 2fr; }
+  }
+
+  &[data-wp-col-min-flex="3"],
+  &[data-wp-col-min-flex="4"] {
+    &[data-wp-grid-layout="2-22"] { grid-template-columns: 4fr 20fr; }
+    &[data-wp-grid-layout="4-20"] { grid-template-columns: 4fr 20fr; }
+    &[data-wp-grid-layout="6-18"] { grid-template-columns: 6fr 18fr; }
+    &[data-wp-grid-layout="8-16"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="10-14"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="12-12"] { grid-template-columns: 12fr 12fr; }
+    &[data-wp-grid-layout="14-10"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="16-8"] { grid-template-columns: 16fr 8fr; }
+    &[data-wp-grid-layout="18-6"] { grid-template-columns: 18fr 6fr; }
+    &[data-wp-grid-layout="20-4"] { grid-template-columns: 20fr 4fr; }
+    &[data-wp-grid-layout="22-2"] { grid-template-columns: 20fr 4fr; }
+  }
+
+  &[data-wp-col-min-flex="5"],
+  &[data-wp-col-min-flex="6"] {
+    &[data-wp-grid-layout="2-22"] { grid-template-columns: 6fr 18fr; }
+    &[data-wp-grid-layout="4-20"] { grid-template-columns: 6fr 18fr; }
+    &[data-wp-grid-layout="6-18"] { grid-template-columns: 6fr 18fr; }
+    &[data-wp-grid-layout="8-16"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="10-14"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="12-12"] { grid-template-columns: 12fr 12fr; }
+    &[data-wp-grid-layout="14-10"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="16-8"] { grid-template-columns: 16fr 8fr; }
+    &[data-wp-grid-layout="18-6"] { grid-template-columns: 18fr 6fr; }
+    &[data-wp-grid-layout="20-4"] { grid-template-columns: 18fr 6fr; }
+    &[data-wp-grid-layout="22-2"] { grid-template-columns: 18fr 6fr; }
+  }
+
+  &[data-wp-col-min-flex="7"],
+  &[data-wp-col-min-flex="8"] {
+    &[data-wp-grid-layout="2-22"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="4-20"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="6-18"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="8-16"] { grid-template-columns: 8fr 16fr; }
+    &[data-wp-grid-layout="10-14"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="12-12"] { grid-template-columns: 12fr 12fr; }
+    &[data-wp-grid-layout="14-10"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="16-8"] { grid-template-columns: 16fr 8fr; }
+    &[data-wp-grid-layout="18-6"] { grid-template-columns: 16fr 8fr; }
+    &[data-wp-grid-layout="20-4"] { grid-template-columns: 16fr 8fr; }
+    &[data-wp-grid-layout="22-2"] { grid-template-columns: 16fr 8fr; }
+  }
+
+  &[data-wp-col-min-flex="9"],
+  &[data-wp-col-min-flex="10"] {
+    &[data-wp-grid-layout="2-22"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="4-20"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="6-18"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="8-16"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="10-14"] { grid-template-columns: 10fr 14fr; }
+    &[data-wp-grid-layout="12-12"] { grid-template-columns: 12fr 12fr; }
+    &[data-wp-grid-layout="14-10"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="16-8"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="18-6"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="20-4"] { grid-template-columns: 14fr 10fr; }
+    &[data-wp-grid-layout="22-2"] { grid-template-columns: 14fr 10fr; }
+  }
+}
+
+
+/* 3 Columns */
+[data-wp-cols="3"] {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="lt-lp-1"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="3"] {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="lt-lp-2"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="3"] {
+      grid-template-columns: 1fr 1fr;
+
+      .workPageColumnLast {
+        grid-column: ~"1 / -1";
+      }
+    }
+  }
+}
+
+
+[data-wp-cols="3"] {
+  &[data-wp-col-min-flex="1"],
+  &[data-wp-col-min-flex="2"] {
+    &[data-wp-grid-layout="2-2-20"] { grid-template-columns: 2fr 2fr 20fr; }
+    &[data-wp-grid-layout="2-4-18"] { grid-template-columns: 2fr 4fr 18fr; }
+    &[data-wp-grid-layout="2-6-16"] { grid-template-columns: 2fr 6fr 16fr; }
+    &[data-wp-grid-layout="2-8-14"] { grid-template-columns: 2fr 8fr 14fr; }
+    &[data-wp-grid-layout="2-10-12"] { grid-template-columns: 2fr 10fr 12fr; }
+    &[data-wp-grid-layout="2-12-10"] { grid-template-columns: 2fr 12fr 10fr; }
+    &[data-wp-grid-layout="2-14-8"] { grid-template-columns: 2fr 14fr 8fr; }
+    &[data-wp-grid-layout="2-16-6"] { grid-template-columns: 2fr 16fr 6fr; }
+    &[data-wp-grid-layout="2-18-4"] { grid-template-columns: 2fr 18fr 4fr; }
+    &[data-wp-grid-layout="2-20-2"] { grid-template-columns: 2fr 20fr 2fr; }
+    &[data-wp-grid-layout="4-2-18"] { grid-template-columns: 4fr 2fr 18fr; }
+    &[data-wp-grid-layout="4-4-16"] { grid-template-columns: 4fr 4fr 16fr; }
+    &[data-wp-grid-layout="4-6-14"] { grid-template-columns: 4fr 6fr 14fr; }
+    &[data-wp-grid-layout="4-8-12"] { grid-template-columns: 4fr 8fr 12fr; }
+    &[data-wp-grid-layout="4-10-10"] { grid-template-columns: 4fr 10fr 10fr; }
+    &[data-wp-grid-layout="4-12-8"] { grid-template-columns: 4fr 12fr 8fr; }
+    &[data-wp-grid-layout="4-14-6"] { grid-template-columns: 4fr 14fr 6fr; }
+    &[data-wp-grid-layout="4-16-4"] { grid-template-columns: 4fr 16fr 4fr; }
+    &[data-wp-grid-layout="4-18-2"] { grid-template-columns: 4fr 18fr 2fr; }
+    &[data-wp-grid-layout="6-2-16"] { grid-template-columns: 6fr 2fr 16fr; }
+    &[data-wp-grid-layout="6-4-14"] { grid-template-columns: 6fr 4fr 14fr; }
+    &[data-wp-grid-layout="6-6-12"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="6-8-10"] { grid-template-columns: 6fr 8fr 10fr; }
+    &[data-wp-grid-layout="6-10-8"] { grid-template-columns: 6fr 10fr 8fr; }
+    &[data-wp-grid-layout="6-12-6"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="6-14-4"] { grid-template-columns: 6fr 14fr 4fr; }
+    &[data-wp-grid-layout="6-16-2"] { grid-template-columns: 6fr 16fr 2fr; }
+    &[data-wp-grid-layout="8-2-14"] { grid-template-columns: 8fr 2fr 14fr; }
+    &[data-wp-grid-layout="8-4-12"] { grid-template-columns: 8fr 4fr 12fr; }
+    &[data-wp-grid-layout="8-6-10"] { grid-template-columns: 8fr 6fr 10fr; }
+    &[data-wp-grid-layout="8-8-8"] { grid-template-columns: 8fr 8fr 8fr; }
+    &[data-wp-grid-layout="8-10-6"] { grid-template-columns: 8fr 10fr 6fr; }
+    &[data-wp-grid-layout="8-12-4"] { grid-template-columns: 8fr 12fr 4fr; }
+    &[data-wp-grid-layout="8-14-2"] { grid-template-columns: 8fr 14fr 2fr; }
+    &[data-wp-grid-layout="10-2-12"] { grid-template-columns: 10fr 2fr 12fr; }
+    &[data-wp-grid-layout="10-4-10"] { grid-template-columns: 10fr 4fr 10fr; }
+    &[data-wp-grid-layout="10-6-8"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="10-8-6"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="10-10-4"] { grid-template-columns: 10fr 10fr 4fr; }
+    &[data-wp-grid-layout="10-12-2"] { grid-template-columns: 10fr 12fr 2fr; }
+    &[data-wp-grid-layout="12-2-10"] { grid-template-columns: 12fr 2fr 10fr; }
+    &[data-wp-grid-layout="12-4-8"] { grid-template-columns: 12fr 4fr 8fr; }
+    &[data-wp-grid-layout="12-6-6"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="12-8-4"] { grid-template-columns: 12fr 8fr 4fr; }
+    &[data-wp-grid-layout="12-10-2"] { grid-template-columns: 12fr 10fr 2fr; }
+    &[data-wp-grid-layout="14-2-8"] { grid-template-columns: 14fr 2fr 8fr; }
+    &[data-wp-grid-layout="14-4-6"] { grid-template-columns: 14fr 4fr 6fr; }
+    &[data-wp-grid-layout="14-6-4"] { grid-template-columns: 14fr 6fr 4fr; }
+    &[data-wp-grid-layout="14-8-2"] { grid-template-columns: 14fr 8fr 2fr; }
+    &[data-wp-grid-layout="16-2-6"] { grid-template-columns: 16fr 2fr 6fr; }
+    &[data-wp-grid-layout="16-4-4"] { grid-template-columns: 16fr 4fr 4fr; }
+    &[data-wp-grid-layout="16-6-2"] { grid-template-columns: 16fr 6fr 2fr; }
+    &[data-wp-grid-layout="18-2-4"] { grid-template-columns: 18fr 2fr 4fr; }
+    &[data-wp-grid-layout="18-4-2"] { grid-template-columns: 18fr 4fr 2fr; }
+    &[data-wp-grid-layout="20-2-2"] { grid-template-columns: 20fr 2fr 2fr; }
+  }
+
+  &[data-wp-col-min-flex="3"],
+  &[data-wp-col-min-flex="4"] {
+    &[data-wp-grid-layout="2-2-20"] { grid-template-columns: 4fr 4fr 16fr; }
+    &[data-wp-grid-layout="2-4-18"] { grid-template-columns: 4fr 4fr 16fr; }
+    &[data-wp-grid-layout="2-6-16"] { grid-template-columns: 4fr 6fr 14fr; }
+    &[data-wp-grid-layout="2-8-14"] { grid-template-columns: 4fr 8fr 12fr; }
+    &[data-wp-grid-layout="2-10-12"] { grid-template-columns: 4fr 10fr 10fr; }
+    &[data-wp-grid-layout="2-12-10"] { grid-template-columns: 4fr 10fr 10fr; }
+    &[data-wp-grid-layout="2-14-8"] { grid-template-columns: 4fr 12fr 8fr; }
+    &[data-wp-grid-layout="2-16-6"] { grid-template-columns: 4fr 14fr 6fr; }
+    &[data-wp-grid-layout="2-18-4"] { grid-template-columns: 4fr 16fr 4fr; }
+    &[data-wp-grid-layout="2-20-2"] { grid-template-columns: 4fr 16fr 4fr; }
+    &[data-wp-grid-layout="4-2-18"] { grid-template-columns: 4fr 4fr 16fr; }
+    &[data-wp-grid-layout="4-4-16"] { grid-template-columns: 4fr 4fr 16fr; }
+    &[data-wp-grid-layout="4-6-14"] { grid-template-columns: 4fr 6fr 14fr; }
+    &[data-wp-grid-layout="4-8-12"] { grid-template-columns: 4fr 8fr 12fr; }
+    &[data-wp-grid-layout="4-10-10"] { grid-template-columns: 4fr 10fr 10fr; }
+    &[data-wp-grid-layout="4-12-8"] { grid-template-columns: 4fr 12fr 8fr; }
+    &[data-wp-grid-layout="4-14-6"] { grid-template-columns: 4fr 14fr 6fr; }
+    &[data-wp-grid-layout="4-16-4"] { grid-template-columns: 4fr 16fr 4fr; }
+    &[data-wp-grid-layout="4-18-2"] { grid-template-columns: 4fr 16fr 4fr; }
+    &[data-wp-grid-layout="6-2-16"] { grid-template-columns: 6fr 4fr 14fr; }
+    &[data-wp-grid-layout="6-4-14"] { grid-template-columns: 6fr 4fr 14fr; }
+    &[data-wp-grid-layout="6-6-12"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="6-8-10"] { grid-template-columns: 6fr 8fr 10fr; }
+    &[data-wp-grid-layout="6-10-8"] { grid-template-columns: 6fr 10fr 8fr; }
+    &[data-wp-grid-layout="6-12-6"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="6-14-4"] { grid-template-columns: 6fr 14fr 4fr; }
+    &[data-wp-grid-layout="6-16-2"] { grid-template-columns: 6fr 14fr 4fr; }
+    &[data-wp-grid-layout="8-2-14"] { grid-template-columns: 8fr 4fr 12fr; }
+    &[data-wp-grid-layout="8-4-12"] { grid-template-columns: 8fr 4fr 12fr; }
+    &[data-wp-grid-layout="8-6-10"] { grid-template-columns: 8fr 6fr 10fr; }
+    &[data-wp-grid-layout="8-8-8"] { grid-template-columns: 8fr 8fr 8fr; }
+    &[data-wp-grid-layout="8-10-6"] { grid-template-columns: 8fr 10fr 6fr; }
+    &[data-wp-grid-layout="8-12-4"] { grid-template-columns: 8fr 12fr 4fr; }
+    &[data-wp-grid-layout="8-14-2"] { grid-template-columns: 8fr 12fr 4fr; }
+    &[data-wp-grid-layout="10-2-12"] { grid-template-columns: 10fr 4fr 10fr; }
+    &[data-wp-grid-layout="10-4-10"] { grid-template-columns: 10fr 4fr 10fr; }
+    &[data-wp-grid-layout="10-6-8"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="10-8-6"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="10-10-4"] { grid-template-columns: 10fr 10fr 4fr; }
+    &[data-wp-grid-layout="10-12-2"] { grid-template-columns: 10fr 10fr 4fr; }
+    &[data-wp-grid-layout="12-2-10"] { grid-template-columns: 10fr 4fr 10fr; }
+    &[data-wp-grid-layout="12-4-8"] { grid-template-columns: 12fr 4fr 8fr; }
+    &[data-wp-grid-layout="12-6-6"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="12-8-4"] { grid-template-columns: 12fr 8fr 4fr; }
+    &[data-wp-grid-layout="12-10-2"] { grid-template-columns: 10fr 10fr 4fr; }
+    &[data-wp-grid-layout="14-2-8"] { grid-template-columns: 12fr 4fr 8fr; }
+    &[data-wp-grid-layout="14-4-6"] { grid-template-columns: 14fr 4fr 6fr; }
+    &[data-wp-grid-layout="14-6-4"] { grid-template-columns: 14fr 6fr 4fr; }
+    &[data-wp-grid-layout="14-8-2"] { grid-template-columns: 12fr 8fr 4fr; }
+    &[data-wp-grid-layout="16-2-6"] { grid-template-columns: 14fr 4fr 6fr; }
+    &[data-wp-grid-layout="16-4-4"] { grid-template-columns: 16fr 4fr 4fr; }
+    &[data-wp-grid-layout="16-6-2"] { grid-template-columns: 14fr 6fr 4fr; }
+    &[data-wp-grid-layout="18-2-4"] { grid-template-columns: 16fr 4fr 4fr; }
+    &[data-wp-grid-layout="18-4-2"] { grid-template-columns: 16fr 4fr 4fr; }
+    &[data-wp-grid-layout="20-2-2"] { grid-template-columns: 16fr 4fr 4fr; }
+  }
+
+  &[data-wp-col-min-flex="5"],
+  &[data-wp-col-min-flex="6"] {
+    &[data-wp-grid-layout="2-2-20"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="2-4-18"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="2-6-16"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="2-8-14"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="2-10-12"] { grid-template-columns: 6fr 8fr 10fr; }
+    &[data-wp-grid-layout="2-12-10"] { grid-template-columns: 6fr 10fr 8fr; }
+    &[data-wp-grid-layout="2-14-8"] { grid-template-columns: 6fr 10fr 8fr; }
+    &[data-wp-grid-layout="2-16-6"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="2-18-4"] { grid-template-columns: 6fr 12fr 4fr; }
+    &[data-wp-grid-layout="2-20-2"] { grid-template-columns: 6fr 10fr 6fr; }
+    &[data-wp-grid-layout="4-2-18"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="4-4-16"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="4-6-14"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="4-8-12"] { grid-template-columns: 6fr 8fr 10fr; }
+    &[data-wp-grid-layout="4-10-10"] { grid-template-columns: 6fr 8fr 10fr; }
+    &[data-wp-grid-layout="4-12-8"] { grid-template-columns: 6fr 10fr 8fr; }
+    &[data-wp-grid-layout="4-14-6"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="4-16-4"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="4-18-2"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="6-2-16"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="6-4-14"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="6-6-12"] { grid-template-columns: 6fr 6fr 12fr; }
+    &[data-wp-grid-layout="6-8-10"] { grid-template-columns: 6fr 8fr 10fr; }
+    &[data-wp-grid-layout="6-10-8"] { grid-template-columns: 6fr 10fr 8fr; }
+    &[data-wp-grid-layout="6-12-6"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="6-14-4"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="6-16-2"] { grid-template-columns: 6fr 12fr 6fr; }
+    &[data-wp-grid-layout="8-2-14"] { grid-template-columns: 8fr 6fr 10fr; }
+    &[data-wp-grid-layout="8-4-12"] { grid-template-columns: 8fr 6fr 10fr; }
+    &[data-wp-grid-layout="8-6-10"] { grid-template-columns: 8fr 6fr 10fr; }
+    &[data-wp-grid-layout="8-8-8"] { grid-template-columns: 8fr 8fr 8fr; }
+    &[data-wp-grid-layout="8-10-6"] { grid-template-columns: 8fr 10fr 6fr; }
+    &[data-wp-grid-layout="8-12-4"] { grid-template-columns: 8fr 10fr 6fr; }
+    &[data-wp-grid-layout="8-14-2"] { grid-template-columns: 8fr 10fr 6fr; }
+    &[data-wp-grid-layout="10-2-12"] { grid-template-columns: 8fr 6fr 10fr; }
+    &[data-wp-grid-layout="10-4-10"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="10-6-8"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="10-8-6"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="10-10-4"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="10-12-2"] { grid-template-columns: 8fr 10fr 6fr; }
+    &[data-wp-grid-layout="12-2-10"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="12-4-8"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="12-6-6"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="12-8-4"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="12-10-2"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="14-2-8"] { grid-template-columns: 10fr 6fr 8fr; }
+    &[data-wp-grid-layout="14-4-6"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="14-6-4"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="14-8-2"] { grid-template-columns: 10fr 8fr 6fr; }
+    &[data-wp-grid-layout="16-2-6"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="16-4-4"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="16-6-2"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="18-2-4"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="18-4-2"] { grid-template-columns: 12fr 6fr 6fr; }
+    &[data-wp-grid-layout="20-2-2"] { grid-template-columns: 12fr 6fr 6fr; }
+  }
+}
+
+
+/* 4 Columns */
+[data-wp-cols="4"] {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="lt-lp-1"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="4"] {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="lt-lp-2"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="4"] {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="lt-lp-3"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="4"] {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .workPageColumnLast {
+        grid-column: ~"1 / -1";
+      }
+    }
+  }
+}
+
+[data-wp-cols="4"] {
+  &[data-wp-col-min-flex="1"],
+  &[data-wp-col-min-flex="2"] {
+    &[data-wp-grid-layout="2-2-2-18"] { grid-template-columns: 2fr 2fr 2fr 18fr; }
+    &[data-wp-grid-layout="2-2-4-16"] { grid-template-columns: 2fr 2fr 4fr 16fr; }
+    &[data-wp-grid-layout="2-2-6-14"] { grid-template-columns: 2fr 2fr 6fr 14fr; }
+    &[data-wp-grid-layout="2-2-8-12"] { grid-template-columns: 2fr 2fr 8fr 12fr; }
+    &[data-wp-grid-layout="2-2-10-10"] { grid-template-columns: 2fr 2fr 10fr 10fr; }
+    &[data-wp-grid-layout="2-2-12-8"] { grid-template-columns: 2fr 2fr 12fr 8fr; }
+    &[data-wp-grid-layout="2-2-14-6"] { grid-template-columns: 2fr 2fr 14fr 6fr; }
+    &[data-wp-grid-layout="2-2-16-4"] { grid-template-columns: 2fr 2fr 16fr 4fr; }
+    &[data-wp-grid-layout="2-2-18-2"] { grid-template-columns: 2fr 2fr 18fr 2fr; }
+    &[data-wp-grid-layout="2-4-2-16"] { grid-template-columns: 2fr 4fr 2fr 16fr; }
+    &[data-wp-grid-layout="2-4-4-14"] { grid-template-columns: 2fr 4fr 4fr 14fr; }
+    &[data-wp-grid-layout="2-4-6-12"] { grid-template-columns: 2fr 4fr 6fr 12fr; }
+    &[data-wp-grid-layout="2-4-8-10"] { grid-template-columns: 2fr 4fr 8fr 10fr; }
+    &[data-wp-grid-layout="2-4-10-8"] { grid-template-columns: 2fr 4fr 10fr 8fr; }
+    &[data-wp-grid-layout="2-4-12-6"] { grid-template-columns: 2fr 4fr 12fr 6fr; }
+    &[data-wp-grid-layout="2-4-14-4"] { grid-template-columns: 2fr 4fr 14fr 4fr; }
+    &[data-wp-grid-layout="2-4-16-2"] { grid-template-columns: 2fr 4fr 16fr 2fr; }
+    &[data-wp-grid-layout="2-6-2-14"] { grid-template-columns: 2fr 6fr 2fr 14fr; }
+    &[data-wp-grid-layout="2-6-4-12"] { grid-template-columns: 2fr 6fr 4fr 12fr; }
+    &[data-wp-grid-layout="2-6-6-10"] { grid-template-columns: 2fr 6fr 6fr 10fr; }
+    &[data-wp-grid-layout="2-6-8-8"] { grid-template-columns: 2fr 6fr 8fr 8fr; }
+    &[data-wp-grid-layout="2-6-10-6"] { grid-template-columns: 2fr 6fr 10fr 6fr; }
+    &[data-wp-grid-layout="2-6-12-4"] { grid-template-columns: 2fr 6fr 12fr 4fr; }
+    &[data-wp-grid-layout="2-6-14-2"] { grid-template-columns: 2fr 6fr 14fr 2fr; }
+    &[data-wp-grid-layout="2-8-2-12"] { grid-template-columns: 2fr 8fr 2fr 12fr; }
+    &[data-wp-grid-layout="2-8-4-10"] { grid-template-columns: 2fr 8fr 4fr 10fr; }
+    &[data-wp-grid-layout="2-8-6-8"] { grid-template-columns: 2fr 8fr 6fr 8fr; }
+    &[data-wp-grid-layout="2-8-8-6"] { grid-template-columns: 2fr 8fr 8fr 6fr; }
+    &[data-wp-grid-layout="2-8-10-4"] { grid-template-columns: 2fr 8fr 10fr 4fr; }
+    &[data-wp-grid-layout="2-8-12-2"] { grid-template-columns: 2fr 8fr 12fr 2fr; }
+    &[data-wp-grid-layout="2-10-2-10"] { grid-template-columns: 2fr 10fr 2fr 10fr; }
+    &[data-wp-grid-layout="2-10-4-8"] { grid-template-columns: 2fr 10fr 4fr 8fr; }
+    &[data-wp-grid-layout="2-10-6-6"] { grid-template-columns: 2fr 10fr 6fr 6fr; }
+    &[data-wp-grid-layout="2-10-8-4"] { grid-template-columns: 2fr 10fr 8fr 4fr; }
+    &[data-wp-grid-layout="2-10-10-2"] { grid-template-columns: 2fr 10fr 10fr 2fr; }
+    &[data-wp-grid-layout="2-12-2-8"] { grid-template-columns: 2fr 12fr 2fr 8fr; }
+    &[data-wp-grid-layout="2-12-4-6"] { grid-template-columns: 2fr 12fr 4fr 6fr; }
+    &[data-wp-grid-layout="2-12-6-4"] { grid-template-columns: 2fr 12fr 6fr 4fr; }
+    &[data-wp-grid-layout="2-12-8-2"] { grid-template-columns: 2fr 12fr 8fr 2fr; }
+    &[data-wp-grid-layout="2-14-2-6"] { grid-template-columns: 2fr 14fr 2fr 6fr; }
+    &[data-wp-grid-layout="2-14-4-4"] { grid-template-columns: 2fr 14fr 4fr 4fr; }
+    &[data-wp-grid-layout="2-14-6-2"] { grid-template-columns: 2fr 14fr 6fr 2fr; }
+    &[data-wp-grid-layout="2-16-2-4"] { grid-template-columns: 2fr 16fr 2fr 4fr; }
+    &[data-wp-grid-layout="2-16-4-2"] { grid-template-columns: 2fr 16fr 4fr 2fr; }
+    &[data-wp-grid-layout="2-18-2-2"] { grid-template-columns: 2fr 18fr 2fr 2fr; }
+    &[data-wp-grid-layout="4-2-2-16"] { grid-template-columns: 4fr 2fr 2fr 16fr; }
+    &[data-wp-grid-layout="4-2-4-14"] { grid-template-columns: 4fr 2fr 4fr 14fr; }
+    &[data-wp-grid-layout="4-2-6-12"] { grid-template-columns: 4fr 2fr 6fr 12fr; }
+    &[data-wp-grid-layout="4-2-8-10"] { grid-template-columns: 4fr 2fr 8fr 10fr; }
+    &[data-wp-grid-layout="4-2-10-8"] { grid-template-columns: 4fr 2fr 10fr 8fr; }
+    &[data-wp-grid-layout="4-2-12-6"] { grid-template-columns: 4fr 2fr 12fr 6fr; }
+    &[data-wp-grid-layout="4-2-14-4"] { grid-template-columns: 4fr 2fr 14fr 4fr; }
+    &[data-wp-grid-layout="4-2-16-2"] { grid-template-columns: 4fr 2fr 16fr 2fr; }
+    &[data-wp-grid-layout="4-4-2-14"] { grid-template-columns: 4fr 4fr 2fr 14fr; }
+    &[data-wp-grid-layout="4-4-4-12"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="4-4-6-10"] { grid-template-columns: 4fr 4fr 6fr 10fr; }
+    &[data-wp-grid-layout="4-4-8-8"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="4-4-10-6"] { grid-template-columns: 4fr 4fr 10fr 6fr; }
+    &[data-wp-grid-layout="4-4-12-4"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="4-4-14-2"] { grid-template-columns: 4fr 4fr 14fr 2fr; }
+    &[data-wp-grid-layout="4-6-2-12"] { grid-template-columns: 4fr 6fr 2fr 12fr; }
+    &[data-wp-grid-layout="4-6-4-10"] { grid-template-columns: 4fr 6fr 4fr 10fr; }
+    &[data-wp-grid-layout="4-6-6-8"] { grid-template-columns: 4fr 6fr 6fr 8fr; }
+    &[data-wp-grid-layout="4-6-8-6"] { grid-template-columns: 4fr 6fr 8fr 6fr; }
+    &[data-wp-grid-layout="4-6-10-4"] { grid-template-columns: 4fr 6fr 10fr 4fr; }
+    &[data-wp-grid-layout="4-6-12-2"] { grid-template-columns: 4fr 6fr 12fr 2fr; }
+    &[data-wp-grid-layout="4-8-2-10"] { grid-template-columns: 4fr 8fr 2fr 10fr; }
+    &[data-wp-grid-layout="4-8-4-8"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="4-8-6-6"] { grid-template-columns: 4fr 8fr 6fr 6fr; }
+    &[data-wp-grid-layout="4-8-8-4"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="4-8-10-2"] { grid-template-columns: 4fr 8fr 10fr 2fr; }
+    &[data-wp-grid-layout="4-10-2-8"] { grid-template-columns: 4fr 10fr 2fr 8fr; }
+    &[data-wp-grid-layout="4-10-4-6"] { grid-template-columns: 4fr 10fr 4fr 6fr; }
+    &[data-wp-grid-layout="4-10-6-4"] { grid-template-columns: 4fr 10fr 6fr 4fr; }
+    &[data-wp-grid-layout="4-10-8-2"] { grid-template-columns: 4fr 10fr 8fr 2fr; }
+    &[data-wp-grid-layout="4-12-2-6"] { grid-template-columns: 4fr 12fr 2fr 6fr; }
+    &[data-wp-grid-layout="4-12-4-4"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="4-12-6-2"] { grid-template-columns: 4fr 12fr 6fr 2fr; }
+    &[data-wp-grid-layout="4-14-2-4"] { grid-template-columns: 4fr 14fr 2fr 4fr; }
+    &[data-wp-grid-layout="4-14-4-2"] { grid-template-columns: 4fr 14fr 4fr 2fr; }
+    &[data-wp-grid-layout="4-16-2-2"] { grid-template-columns: 4fr 16fr 2fr 2fr; }
+    &[data-wp-grid-layout="6-2-2-14"] { grid-template-columns: 6fr 2fr 2fr 14fr; }
+    &[data-wp-grid-layout="6-2-4-12"] { grid-template-columns: 6fr 2fr 4fr 12fr; }
+    &[data-wp-grid-layout="6-2-6-10"] { grid-template-columns: 6fr 2fr 6fr 10fr; }
+    &[data-wp-grid-layout="6-2-8-8"] { grid-template-columns: 6fr 2fr 8fr 8fr; }
+    &[data-wp-grid-layout="6-2-10-6"] { grid-template-columns: 6fr 2fr 10fr 6fr; }
+    &[data-wp-grid-layout="6-2-12-4"] { grid-template-columns: 6fr 2fr 12fr 4fr; }
+    &[data-wp-grid-layout="6-2-14-2"] { grid-template-columns: 6fr 2fr 14fr 2fr; }
+    &[data-wp-grid-layout="6-4-2-12"] { grid-template-columns: 6fr 4fr 2fr 12fr; }
+    &[data-wp-grid-layout="6-4-4-10"] { grid-template-columns: 6fr 4fr 4fr 10fr; }
+    &[data-wp-grid-layout="6-4-6-8"] { grid-template-columns: 6fr 4fr 6fr 8fr; }
+    &[data-wp-grid-layout="6-4-8-6"] { grid-template-columns: 6fr 4fr 8fr 6fr; }
+    &[data-wp-grid-layout="6-4-10-4"] { grid-template-columns: 6fr 4fr 10fr 4fr; }
+    &[data-wp-grid-layout="6-4-12-2"] { grid-template-columns: 6fr 4fr 12fr 2fr; }
+    &[data-wp-grid-layout="6-6-2-10"] { grid-template-columns: 6fr 6fr 2fr 10fr; }
+    &[data-wp-grid-layout="6-6-4-8"] { grid-template-columns: 6fr 6fr 4fr 8fr; }
+    &[data-wp-grid-layout="6-6-6-6"] { grid-template-columns: 6fr 6fr 6fr 6fr; }
+    &[data-wp-grid-layout="6-6-8-4"] { grid-template-columns: 6fr 6fr 8fr 4fr; }
+    &[data-wp-grid-layout="6-6-10-2"] { grid-template-columns: 6fr 6fr 10fr 2fr; }
+    &[data-wp-grid-layout="6-8-2-8"] { grid-template-columns: 6fr 8fr 2fr 8fr; }
+    &[data-wp-grid-layout="6-8-4-6"] { grid-template-columns: 6fr 8fr 4fr 6fr; }
+    &[data-wp-grid-layout="6-8-6-4"] { grid-template-columns: 6fr 8fr 6fr 4fr; }
+    &[data-wp-grid-layout="6-8-8-2"] { grid-template-columns: 6fr 8fr 8fr 2fr; }
+    &[data-wp-grid-layout="6-10-2-6"] { grid-template-columns: 6fr 10fr 2fr 6fr; }
+    &[data-wp-grid-layout="6-10-4-4"] { grid-template-columns: 6fr 10fr 4fr 4fr; }
+    &[data-wp-grid-layout="6-10-6-2"] { grid-template-columns: 6fr 10fr 6fr 2fr; }
+    &[data-wp-grid-layout="6-12-2-4"] { grid-template-columns: 6fr 12fr 2fr 4fr; }
+    &[data-wp-grid-layout="6-12-4-2"] { grid-template-columns: 6fr 12fr 4fr 2fr; }
+    &[data-wp-grid-layout="6-14-2-2"] { grid-template-columns: 6fr 14fr 2fr 2fr; }
+    &[data-wp-grid-layout="8-2-2-12"] { grid-template-columns: 8fr 2fr 2fr 12fr; }
+    &[data-wp-grid-layout="8-2-4-10"] { grid-template-columns: 8fr 2fr 4fr 10fr; }
+    &[data-wp-grid-layout="8-2-6-8"] { grid-template-columns: 8fr 2fr 6fr 8fr; }
+    &[data-wp-grid-layout="8-2-8-6"] { grid-template-columns: 8fr 2fr 8fr 6fr; }
+    &[data-wp-grid-layout="8-2-10-4"] { grid-template-columns: 8fr 2fr 10fr 4fr; }
+    &[data-wp-grid-layout="8-2-12-2"] { grid-template-columns: 8fr 2fr 12fr 2fr; }
+    &[data-wp-grid-layout="8-4-2-10"] { grid-template-columns: 8fr 4fr 2fr 10fr; }
+    &[data-wp-grid-layout="8-4-4-8"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="8-4-6-6"] { grid-template-columns: 8fr 4fr 6fr 6fr; }
+    &[data-wp-grid-layout="8-4-8-4"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="8-4-10-2"] { grid-template-columns: 8fr 4fr 10fr 2fr; }
+    &[data-wp-grid-layout="8-6-2-8"] { grid-template-columns: 8fr 6fr 2fr 8fr; }
+    &[data-wp-grid-layout="8-6-4-6"] { grid-template-columns: 8fr 6fr 4fr 6fr; }
+    &[data-wp-grid-layout="8-6-6-4"] { grid-template-columns: 8fr 6fr 6fr 4fr; }
+    &[data-wp-grid-layout="8-6-8-2"] { grid-template-columns: 8fr 6fr 8fr 2fr; }
+    &[data-wp-grid-layout="8-8-2-6"] { grid-template-columns: 8fr 8fr 2fr 6fr; }
+    &[data-wp-grid-layout="8-8-4-4"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="8-8-6-2"] { grid-template-columns: 8fr 8fr 6fr 2fr; }
+    &[data-wp-grid-layout="8-10-2-4"] { grid-template-columns: 8fr 10fr 2fr 4fr; }
+    &[data-wp-grid-layout="8-10-4-2"] { grid-template-columns: 8fr 10fr 4fr 2fr; }
+    &[data-wp-grid-layout="8-12-2-2"] { grid-template-columns: 8fr 12fr 2fr 2fr; }
+    &[data-wp-grid-layout="10-2-2-10"] { grid-template-columns: 10fr 2fr 2fr 10fr; }
+    &[data-wp-grid-layout="10-2-4-8"] { grid-template-columns: 10fr 2fr 4fr 8fr; }
+    &[data-wp-grid-layout="10-2-6-6"] { grid-template-columns: 10fr 2fr 6fr 6fr; }
+    &[data-wp-grid-layout="10-2-8-4"] { grid-template-columns: 10fr 2fr 8fr 4fr; }
+    &[data-wp-grid-layout="10-2-10-2"] { grid-template-columns: 10fr 2fr 10fr 2fr; }
+    &[data-wp-grid-layout="10-4-2-8"] { grid-template-columns: 10fr 4fr 2fr 8fr; }
+    &[data-wp-grid-layout="10-4-4-6"] { grid-template-columns: 10fr 4fr 4fr 6fr; }
+    &[data-wp-grid-layout="10-4-6-4"] { grid-template-columns: 10fr 4fr 6fr 4fr; }
+    &[data-wp-grid-layout="10-4-8-2"] { grid-template-columns: 10fr 4fr 8fr 2fr; }
+    &[data-wp-grid-layout="10-6-2-6"] { grid-template-columns: 10fr 6fr 2fr 6fr; }
+    &[data-wp-grid-layout="10-6-4-4"] { grid-template-columns: 10fr 6fr 4fr 4fr; }
+    &[data-wp-grid-layout="10-6-6-2"] { grid-template-columns: 10fr 6fr 6fr 2fr; }
+    &[data-wp-grid-layout="10-8-2-4"] { grid-template-columns: 10fr 8fr 2fr 4fr; }
+    &[data-wp-grid-layout="10-8-4-2"] { grid-template-columns: 10fr 8fr 4fr 2fr; }
+    &[data-wp-grid-layout="10-10-2-2"] { grid-template-columns: 10fr 10fr 2fr 2fr; }
+    &[data-wp-grid-layout="12-2-2-8"] { grid-template-columns: 12fr 2fr 2fr 8fr; }
+    &[data-wp-grid-layout="12-2-4-6"] { grid-template-columns: 12fr 2fr 4fr 6fr; }
+    &[data-wp-grid-layout="12-2-6-4"] { grid-template-columns: 12fr 2fr 6fr 4fr; }
+    &[data-wp-grid-layout="12-2-8-2"] { grid-template-columns: 12fr 2fr 8fr 2fr; }
+    &[data-wp-grid-layout="12-4-2-6"] { grid-template-columns: 12fr 4fr 2fr 6fr; }
+    &[data-wp-grid-layout="12-4-4-4"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="12-4-6-2"] { grid-template-columns: 12fr 4fr 6fr 2fr; }
+    &[data-wp-grid-layout="12-6-2-4"] { grid-template-columns: 12fr 6fr 2fr 4fr; }
+    &[data-wp-grid-layout="12-6-4-2"] { grid-template-columns: 12fr 6fr 4fr 2fr; }
+    &[data-wp-grid-layout="12-8-2-2"] { grid-template-columns: 12fr 8fr 2fr 2fr; }
+    &[data-wp-grid-layout="14-2-2-6"] { grid-template-columns: 14fr 2fr 2fr 6fr; }
+    &[data-wp-grid-layout="14-2-4-4"] { grid-template-columns: 14fr 2fr 4fr 4fr; }
+    &[data-wp-grid-layout="14-2-6-2"] { grid-template-columns: 14fr 2fr 6fr 2fr; }
+    &[data-wp-grid-layout="14-4-2-4"] { grid-template-columns: 14fr 4fr 2fr 4fr; }
+    &[data-wp-grid-layout="14-4-4-2"] { grid-template-columns: 14fr 4fr 4fr 2fr; }
+    &[data-wp-grid-layout="14-6-2-2"] { grid-template-columns: 14fr 6fr 2fr 2fr; }
+    &[data-wp-grid-layout="16-2-2-4"] { grid-template-columns: 16fr 2fr 2fr 4fr; }
+    &[data-wp-grid-layout="16-2-4-2"] { grid-template-columns: 16fr 2fr 4fr 2fr; }
+    &[data-wp-grid-layout="16-4-2-2"] { grid-template-columns: 16fr 4fr 2fr 2fr; }
+    &[data-wp-grid-layout="18-2-2-2"] { grid-template-columns: 18fr 2fr 2fr 2fr; }
+  }
+
+
+  /* 4 Columns - min size 3fr */
+  &[data-wp-col-min-flex="3"],
+  &[data-wp-col-min-flex="4"] {
+    &[data-wp-grid-layout="2-2-2-18"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="2-2-4-16"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="2-2-6-14"] { grid-template-columns: 4fr 4fr 6fr 10fr; }
+    &[data-wp-grid-layout="2-2-8-12"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="2-2-10-10"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="2-2-12-8"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="2-2-14-6"] { grid-template-columns: 4fr 4fr 10fr 6fr; }
+    &[data-wp-grid-layout="2-2-16-4"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="2-2-18-2"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="2-4-2-16"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="2-4-4-14"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="2-4-6-12"] { grid-template-columns: 4fr 4fr 6fr 10fr; }
+    &[data-wp-grid-layout="2-4-8-10"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="2-4-10-8"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="2-4-12-6"] { grid-template-columns: 4fr 4fr 10fr 6fr; }
+    &[data-wp-grid-layout="2-4-14-4"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="2-4-16-2"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="2-6-2-14"] { grid-template-columns: 4fr 6fr 4fr 10fr; }
+    &[data-wp-grid-layout="2-6-4-12"] { grid-template-columns: 4fr 6fr 4fr 10fr; }
+    &[data-wp-grid-layout="2-6-6-10"] { grid-template-columns: 4fr 6fr 6fr 8fr; }
+    &[data-wp-grid-layout="2-6-8-8"] { grid-template-columns: 4fr 6fr 6fr 8fr; }
+    &[data-wp-grid-layout="2-6-10-6"] { grid-template-columns: 4fr 6fr 8fr 6fr; }
+    &[data-wp-grid-layout="2-6-12-4"] { grid-template-columns: 4fr 6fr 10fr 4fr; }
+    &[data-wp-grid-layout="2-6-14-2"] { grid-template-columns: 4fr 6fr 10fr 4fr; }
+    &[data-wp-grid-layout="2-8-2-12"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="2-8-4-10"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="2-8-6-8"] { grid-template-columns: 4fr 6fr 6fr 8fr; }
+    &[data-wp-grid-layout="2-8-8-6"] { grid-template-columns: 4fr 8fr 6fr 6fr; }
+    &[data-wp-grid-layout="2-8-10-4"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="2-8-12-2"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="2-10-2-10"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="2-10-4-8"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="2-10-6-6"] { grid-template-columns: 4fr 8fr 6fr 6fr; }
+    &[data-wp-grid-layout="2-10-8-4"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="2-10-10-2"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="2-12-2-8"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="2-12-4-6"] { grid-template-columns: 4fr 10fr 4fr 6fr; }
+    &[data-wp-grid-layout="2-12-6-4"] { grid-template-columns: 4fr 10fr 6fr 4fr; }
+    &[data-wp-grid-layout="2-12-8-2"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="2-14-2-6"] { grid-template-columns: 4fr 10fr 4fr 6fr; }
+    &[data-wp-grid-layout="2-14-4-4"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="2-14-6-2"] { grid-template-columns: 4fr 10fr 6fr 4fr; }
+    &[data-wp-grid-layout="2-16-2-4"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="2-16-4-2"] { grid-template-columns: 4fr 10fr 4fr 4fr; }
+    &[data-wp-grid-layout="2-18-2-2"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="4-2-2-16"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="4-2-4-14"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="4-2-6-12"] { grid-template-columns: 4fr 4fr 6fr 10fr; }
+    &[data-wp-grid-layout="4-2-8-10"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="4-2-10-8"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="4-2-12-6"] { grid-template-columns: 4fr 4fr 10fr 6fr; }
+    &[data-wp-grid-layout="4-2-14-4"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="4-2-16-2"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="4-4-2-14"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="4-4-4-12"] { grid-template-columns: 4fr 4fr 4fr 12fr; }
+    &[data-wp-grid-layout="4-4-6-10"] { grid-template-columns: 4fr 4fr 6fr 10fr; }
+    &[data-wp-grid-layout="4-4-8-8"] { grid-template-columns: 4fr 4fr 8fr 8fr; }
+    &[data-wp-grid-layout="4-4-10-6"] { grid-template-columns: 4fr 4fr 10fr 6fr; }
+    &[data-wp-grid-layout="4-4-12-4"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="4-4-14-2"] { grid-template-columns: 4fr 4fr 12fr 4fr; }
+    &[data-wp-grid-layout="4-6-2-12"] { grid-template-columns: 4fr 6fr 4fr 10fr; }
+    &[data-wp-grid-layout="4-6-4-10"] { grid-template-columns: 4fr 6fr 4fr 10fr; }
+    &[data-wp-grid-layout="4-6-6-8"] { grid-template-columns: 4fr 6fr 6fr 8fr; }
+    &[data-wp-grid-layout="4-6-8-6"] { grid-template-columns: 4fr 6fr 8fr 6fr; }
+    &[data-wp-grid-layout="4-6-10-4"] { grid-template-columns: 4fr 6fr 10fr 4fr; }
+    &[data-wp-grid-layout="4-6-12-2"] { grid-template-columns: 4fr 6fr 10fr 4fr; }
+    &[data-wp-grid-layout="4-8-2-10"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="4-8-4-8"] { grid-template-columns: 4fr 8fr 4fr 8fr; }
+    &[data-wp-grid-layout="4-8-6-6"] { grid-template-columns: 4fr 8fr 6fr 6fr; }
+    &[data-wp-grid-layout="4-8-8-4"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="4-8-10-2"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="4-10-2-8"] { grid-template-columns: 4fr 10fr 4fr 8fr; }
+    &[data-wp-grid-layout="4-10-4-6"] { grid-template-columns: 4fr 10fr 4fr 6fr; }
+    &[data-wp-grid-layout="4-10-6-4"] { grid-template-columns: 4fr 10fr 6fr 4fr; }
+    &[data-wp-grid-layout="4-10-8-2"] { grid-template-columns: 4fr 8fr 8fr 4fr; }
+    &[data-wp-grid-layout="4-12-2-6"] { grid-template-columns: 4fr 10fr 4fr 6fr; }
+    &[data-wp-grid-layout="4-12-4-4"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="4-12-6-2"] { grid-template-columns: 4fr 10fr 6fr 4fr; }
+    &[data-wp-grid-layout="4-14-2-4"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="4-14-4-2"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="4-16-2-2"] { grid-template-columns: 4fr 12fr 4fr 4fr; }
+    &[data-wp-grid-layout="6-2-2-14"] { grid-template-columns: 6fr 4fr 4fr 10fr; }
+    &[data-wp-grid-layout="6-2-4-12"] { grid-template-columns: 6fr 4fr 4fr 10fr; }
+    &[data-wp-grid-layout="6-2-6-10"] { grid-template-columns: 6fr 4fr 6fr 8fr; }
+    &[data-wp-grid-layout="6-2-8-8"] { grid-template-columns: 6fr 4fr 8fr 6fr; }
+    &[data-wp-grid-layout="6-2-10-6"] { grid-template-columns: 6fr 4fr 8fr 6fr; }
+    &[data-wp-grid-layout="6-2-12-4"] { grid-template-columns: 6fr 4fr 10fr 4fr; }
+    &[data-wp-grid-layout="6-2-14-2"] { grid-template-columns: 6fr 4fr 10fr 4fr; }
+    &[data-wp-grid-layout="6-4-2-12"] { grid-template-columns: 6fr 4fr 4fr 10fr; }
+    &[data-wp-grid-layout="6-4-4-10"] { grid-template-columns: 6fr 4fr 4fr 10fr; }
+    &[data-wp-grid-layout="6-4-6-8"] { grid-template-columns: 6fr 4fr 6fr 8fr; }
+    &[data-wp-grid-layout="6-4-8-6"] { grid-template-columns: 6fr 4fr 8fr 6fr; }
+    &[data-wp-grid-layout="6-4-10-4"] { grid-template-columns: 6fr 4fr 10fr 4fr; }
+    &[data-wp-grid-layout="6-4-12-2"] { grid-template-columns: 6fr 4fr 10fr 4fr; }
+    &[data-wp-grid-layout="6-6-2-10"] { grid-template-columns: 6fr 6fr 4fr 8fr; }
+    &[data-wp-grid-layout="6-6-4-8"] { grid-template-columns: 6fr 6fr 4fr 8fr; }
+    &[data-wp-grid-layout="6-6-6-6"] { grid-template-columns: 6fr 6fr 6fr 6fr; }
+    &[data-wp-grid-layout="6-6-8-4"] { grid-template-columns: 6fr 6fr 8fr 4fr; }
+    &[data-wp-grid-layout="6-6-10-2"] { grid-template-columns: 6fr 6fr 8fr 4fr; }
+    &[data-wp-grid-layout="6-8-2-8"] { grid-template-columns: 6fr 8fr 4fr 6fr; }
+    &[data-wp-grid-layout="6-8-4-6"] { grid-template-columns: 6fr 8fr 4fr 6fr; }
+    &[data-wp-grid-layout="6-8-6-4"] { grid-template-columns: 6fr 8fr 6fr 4fr; }
+    &[data-wp-grid-layout="6-8-8-2"] { grid-template-columns: 6fr 8fr 6fr 4fr; }
+    &[data-wp-grid-layout="6-10-2-6"] { grid-template-columns: 6fr 8fr 4fr 6fr; }
+    &[data-wp-grid-layout="6-10-4-4"] { grid-template-columns: 6fr 10fr 4fr 4fr; }
+    &[data-wp-grid-layout="6-10-6-2"] { grid-template-columns: 6fr 8fr 6fr 4fr; }
+    &[data-wp-grid-layout="6-12-2-4"] { grid-template-columns: 6fr 10fr 4fr 4fr; }
+    &[data-wp-grid-layout="6-12-4-2"] { grid-template-columns: 6fr 10fr 4fr 4fr; }
+    &[data-wp-grid-layout="6-14-2-2"] { grid-template-columns: 6fr 10fr 4fr 4fr; }
+    &[data-wp-grid-layout="8-2-2-12"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="8-2-4-10"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="8-2-6-8"] { grid-template-columns: 8fr 4fr 6fr 6fr; }
+    &[data-wp-grid-layout="8-2-8-6"] { grid-template-columns: 8fr 4fr 6fr 6fr; }
+    &[data-wp-grid-layout="8-2-10-4"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="8-2-12-2"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="8-4-2-10"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="8-4-4-8"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="8-4-6-6"] { grid-template-columns: 8fr 4fr 6fr 6fr; }
+    &[data-wp-grid-layout="8-4-8-4"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="8-4-10-2"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="8-6-2-8"] { grid-template-columns: 8fr 6fr 4fr 6fr; }
+    &[data-wp-grid-layout="8-6-4-6"] { grid-template-columns: 8fr 6fr 4fr 6fr; }
+    &[data-wp-grid-layout="8-6-6-4"] { grid-template-columns: 8fr 6fr 6fr 4fr; }
+    &[data-wp-grid-layout="8-6-8-2"] { grid-template-columns: 8fr 6fr 6fr 4fr; }
+    &[data-wp-grid-layout="8-8-2-6"] { grid-template-columns: 8fr 6fr 4fr 6fr; }
+    &[data-wp-grid-layout="8-8-2-6"] { grid-template-columns: 8fr 8fr 2fr 6fr; }
+    &[data-wp-grid-layout="8-8-4-4"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="8-8-6-2"] { grid-template-columns: 8fr 6fr 6fr 4fr; }
+    &[data-wp-grid-layout="8-10-2-4"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="8-10-4-2"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="8-12-2-2"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="10-2-2-10"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="10-2-4-8"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="10-2-6-6"] { grid-template-columns: 8fr 4fr 6fr 6fr; }
+    &[data-wp-grid-layout="10-2-8-4"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="10-2-10-2"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="10-4-2-8"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="10-4-4-6"] { grid-template-columns: 10fr 4fr 4fr 6fr; }
+    &[data-wp-grid-layout="10-4-6-4"] { grid-template-columns: 10fr 4fr 6fr 4fr; }
+    &[data-wp-grid-layout="10-4-8-2"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="10-6-2-6"] { grid-template-columns: 8fr 6fr 4fr 6fr; }
+    &[data-wp-grid-layout="10-6-4-4"] { grid-template-columns: 10fr 6fr 4fr 4fr; }
+    &[data-wp-grid-layout="10-6-6-2"] { grid-template-columns: 8fr 6fr 6fr 4fr; }
+    &[data-wp-grid-layout="10-8-2-4"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="10-8-4-2"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="10-10-2-2"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="12-2-2-8"] { grid-template-columns: 8fr 4fr 4fr 8fr; }
+    &[data-wp-grid-layout="12-2-4-6"] { grid-template-columns: 10fr 4fr 4fr 6fr; }
+    &[data-wp-grid-layout="12-2-6-4"] { grid-template-columns: 10fr 4fr 6fr 4fr; }
+    &[data-wp-grid-layout="12-2-8-2"] { grid-template-columns: 8fr 4fr 8fr 4fr; }
+    &[data-wp-grid-layout="12-4-2-6"] { grid-template-columns: 10fr 4fr 4fr 6fr; }
+    &[data-wp-grid-layout="12-4-4-4"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="12-4-6-2"] { grid-template-columns: 10fr 4fr 6fr 4fr; }
+    &[data-wp-grid-layout="12-6-2-4"] { grid-template-columns: 10fr 6fr 4fr 4fr; }
+    &[data-wp-grid-layout="12-6-4-2"] { grid-template-columns: 10fr 6fr 4fr 4fr; }
+    &[data-wp-grid-layout="12-8-2-2"] { grid-template-columns: 8fr 8fr 4fr 4fr; }
+    &[data-wp-grid-layout="14-2-2-6"] { grid-template-columns: 10fr 4fr 4fr 6fr; }
+    &[data-wp-grid-layout="14-2-4-4"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="14-2-6-2"] { grid-template-columns: 10fr 4fr 6fr 4fr; }
+    &[data-wp-grid-layout="14-4-2-4"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="14-4-4-2"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="14-6-2-2"] { grid-template-columns: 10fr 6fr 4fr 4fr; }
+    &[data-wp-grid-layout="16-2-2-4"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="16-2-4-2"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="16-4-2-2"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+    &[data-wp-grid-layout="18-2-2-2"] { grid-template-columns: 12fr 4fr 4fr 4fr; }
+  }
+}
+
+
+[data-wp-cols="5"] {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="lt-lp-1"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="5"] {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="lt-lp-2"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="5"] {
+      grid-template-columns: 1fr 1fr;
+
+      .workPageColumnLast {
+        grid-column: ~"1 / -1";
+      }
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="lt-lp-3"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="5"] {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+[data-wp-cols="6"] {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="lt-lp-1"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="6"] {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="lt-lp-2"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="6"] {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+[data-wp-breakpoint="st-sp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="lt-lp-3"] {
+  .workPageRow {
+    .workPageRowInner[data-wp-cols="6"] {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

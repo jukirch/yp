@@ -1,0 +1,64 @@
+{
+    "oscar": [
+        {
+            "movYear": "2022",
+            "movName": "Everything Everywhere All at Once",
+            "movDirector": "Daniel Kwan, Daniel Scheinert",
+            "movMaleLead": "Ke Huy Quan",
+            "movFemaleLead": "Michelle Yeoh",
+            "movLength": "139 Min.",
+            "oscarWon": true,
+            "pic": "https://tse4.mm.bing.net/th?id=OIP.F409NVW92apW7F6N0DtRYwHaKe"
+        },
+        {
+            "movYear": "2022",
+            "movName": "Die Aussprache",
+            "movDirector": "Sarah Polley",
+            "movMaleLead": "",
+            "movFemaleLead": "Rooney Mara",
+            "movLength": "104 Min.",
+            "oscarWon": false,
+            "pic": "https://de.web.img3.acsta.net/c_310_420/pictures/23/01/11/11/42/4387389.jpg"
+        },
+        {
+            "movYear": "2022",
+            "movName": "Avatar: The Way of Water",
+            "movDirector": "James Cameron",
+            "movMaleLead": "Sam Worthington",
+            "movFemaleLead": "Zoe Saldana",
+            "movLength": "193 Min.",
+            "oscarWon": false,
+            "pic": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/12/coral_1sht_digital_4dx_srgb_v2.jpg"
+        },
+        {
+            "movYear": "2022",
+            "movName": "The Banshees of Inisherin",
+            "movDirector": "Martin McDonagh",
+            "movMaleLead": "Colin Farrell",
+            "movFemaleLead": "Kerry Condon",
+            "movLength": "114 Min.",
+            "oscarWon": false,
+            "pic": "https://images.justwatch.com/poster/302113900/s718/the-banshees-of-inisherin.%7Bformat%7D"
+        },
+        {
+            "movYear": "2022",
+            "movName": "Elvis",
+            "movDirector": "Baz Luhrmann",
+            "movMaleLead": "Austin Butler",
+            "movFemaleLead": "Olivia DeJonge",
+            "movLength": "159 Min.",
+            "oscarWon": false,
+            "pic": "https://tse4.mm.bing.net/th?id=OIP.F409NVW92apW7F6N0DtRYwHaKe"
+        },
+        {
+            "movYear": "2023",
+            "movName": "Die Fabelmans",
+            "movDirector": "Steven Spielberg",
+            "movMaleLead": "Gabriel LeBelle",
+            "movFemaleLead": "Michelle Williams",
+            "movLength": "151 Min.",
+            "oscarWon": false,
+            "pic": "https://tse2.mm.bing.net/th?id=OIP.R22KsXZoaNtFMu0rgH5VgAHaKe&pid=Api"
+        }
+    ]
+}

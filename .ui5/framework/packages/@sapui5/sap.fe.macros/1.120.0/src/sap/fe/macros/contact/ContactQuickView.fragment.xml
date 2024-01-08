@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:macros="sap.fe.macros"
+	template:require="{
+				MODEL: 'sap/ui/model/odata/v4/AnnotationHelper'
+				}"
+>
+	<template:if test="{contact>}">
+		<VBox class="sapUiSmallMarginTop">
+			<HBox class="sapUiSmallMarginBottom">
+				<Avatar
+					src="{= ${contact>photo@@MODEL.format} ? ${contact>photo@@MODEL.format} : 'sap-icon://person-placeholder' }"
+					displaySize="S"
+					displayShape="Square"
+					class="sapUiTinyMarginEnd"
+				/>
+				<VBox class="sapUiTinyMarginBegin">
+					<Title text="{contact>fn@@MODEL.format}" level="H3" wrapping="true" />
+					<Text text="{contact>role@@MODEL.format}" />
+				</VBox>
+			</HBox>
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" maxContainerCols="1" class="sapMQuickViewPage">
+				<macros:TeamContactOptions mail="{payload>/mail}" />
+				<core:Fragment fragmentName="sap.fe.macros.contact.ContactQuickViewGroup" type="XML" />
+			</f:SimpleForm>
+		</VBox>
+	</template:if>
+</core:FragmentDefinition>

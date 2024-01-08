@@ -1,0 +1,220 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:sfi="sap.ui.comp.smartfield" xmlns:smartlink="sap.ui.comp.navpopover" xmlns:u="sap.ui.unified"
+	xmlns:sfo="sap.ui.comp.smartform" xmlns:smartMultiInput="sap.ui.comp.smartmultiinput" xmlns:layoutData="sap.ui.layout" xmlns:fe="sap.suite.ui.generic.template.genericUtilities"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<!-- @classdesc @name: Name: sap.suite.ui.generic.template.fragments.SmartFormDataField.fragment.xml
+		@description: This fragment contains label value pairs for the smart form
+		derived from UI.DataFields @param {Collection(UI.DataField)} [dataField] -->
+
+	<!-- Prepare facetId for stableId creation
+		Note: currently only used for AddressFacet, but intentionally placed here to be used by all other stable ids in future
+	-->
+	<template:with path="parameter>/" helper="sap.suite.ui.generic.template.js.StableIdHelper.preparePathForStableId" var="facetId">
+		<template:if test="{= ${facetId>}.buildStableId({ type:'ObjectPage', subType:'StandardFacet', sRecordType: ${facet>RecordType}, sAnnotationPath: ${facet>Target/AnnotationPath} , sAnnotationId: ${facet>ID/String} }) }"/>
+
+		<template:with path="groupFacet>Target" helper="AHModel.gotoEntitySet" var="targetEntitySet">
+			<template:if test="{= ${facet>Target/AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.DataPoint') > -1 }">
+			<template:then>
+				<sfo:GroupElement>
+					<sfi:SmartField value="{path: 'target>Value', formatter: 'AHModel.simplePath'}"
+						fetchValueListReadOnly="{parts:[{path: 'parameter>/entityType'},{path: 'target>'}], formatter: 'AH.getValueListReadOnly'}" 
+						visible="{path: 'target>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}">
+					</sfi:SmartField >
+				</sfo:GroupElement>
+			</template:then>
+			<template:elseif test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation' &amp;&amp; ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') > -1}">
+				<sfo:GroupElement id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement"
+								  binding="{parts: [{path: 'dataField>Target'}, {path: 'entitySet>'}], formatter: 'AH.getNavigationPathWithExpand'}"
+								  label="{= ${dataField>Label} ? ${path: 'dataField>Label', formatter: 'AHModel.simplePath'} : ''}">
+					<template:with path="dataField>Target" helper="AHModel.resolvePath" var="contact">
+						<fe:Link
+							text="{path: 'contact>fn', formatter: 'AHModel.format'}"
+							press="._templateEventHandlers.onContactDetails"
+							visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}"
+							binding="{path: 'dataField>Target'}, formatter: 'AH.getNavigationPathWithExpand'}">
+							<fe:customData>
+								<core:CustomData key="Location" value="Section" />
+								<core:CustomData key="contactDetails" value="{= ${path: 'contact>', formatter: 'AH.getCustomDataForContactPopup'}}"/>
+							</fe:customData>
+						</fe:Link>
+					</template:with>
+				</sfo:GroupElement>
+			</template:elseif>
+			<template:elseif
+                test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation' &amp;&amp; ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.ConnectedFields') > -1}">
+                <template:with path="dataField>Target" helper="AHModel.resolvePath"
+                    var="connectedFields">
+					<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+						<sfo:SemanticGroupElement
+						id="{:= ${parameter>/stableId}.getStableId({ type:'ObjectPageSection', subType:'SemanticConnectedField', sFacet: ${facetId>id}, sAnnotationPath: ${dataField>Target/AnnotationPath}}) }"
+							label="{path: 'connectedFields>Label', formatter: 'AHModel.simplePath'}"
+							visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}"
+							delimiter="{path: 'connectedFields>Template', formatter: 'AH.getConnectedFieldsDelimiter'}">
+							<template:with path="connectedFields>"
+								helper="AH.rearrangeConnectedFields"
+								var="reArrangedData">
+								<template:repeat list="{connectedFields>Data}" var="connectedFieldElement">	
+									<sfi:SmartField clientSideMandatoryCheck="false"
+										fetchValueListReadOnly="{parts:[{path: 'parameter>/entityType'},{path: 'connectedFieldElement>'}], formatter: 'AH.getValueListReadOnly'}"
+										modeToggled="._templateEventHandlers.onSmartFieldModeToggled($event, '{entitySet>name}')"
+										value="{path: 'connectedFieldElement>Value', formatter: 'AHModel.simplePath'}"
+										changeModelValue="._templateEventHandlers.onSmartFieldModelValueChanged">
+										<sfi:customData>
+											<core:CustomData key="defaultTextInEditModeSource" value="{path: 'dataFieldValue>', formatter: 'AH.setValidationForValueList'}" />
+										</sfi:customData>
+										<template:if test="{= ${connectedFieldElement>Criticality} }">
+											<sfi:controlProposal>
+												<sfi:ControlProposal>
+													<sfi:objectStatus>
+														<sfi:ObjectStatus
+															criticality="{path: 'connectedFieldElement>Criticality', formatter: 'AHModel.simplePath'}"
+															criticalityRepresentationType="{= (${connectedFieldElement>CriticalityRepresentation/EnumMember} === 'com.sap.vocabularies.UI.v1.CriticalityRepresentationType/WithoutIcon') ? 'WithoutIcon' : 'WithIcon'}" />
+													</sfi:objectStatus>
+												</sfi:ControlProposal>
+											</sfi:controlProposal>
+										</template:if>
+										<sfi:customData>
+											<template:with path="connectedFieldElement>Value" helper="AHModel.resolvePath" var="connectedFieldElementValue">
+												<core:CustomData key="SideEffectSourcePropertyType"
+													value="{parts: [{path: 'connectedFieldElementValue>name'}, {path: 'parameter>/isDraftEnabled'}, {path: 'parameter>/metaModel'}, {path: 'parameter>/entityType'}], formatter: 'AH.getSideEffectSourcePropertyType'}" />
+											</template:with>
+										</sfi:customData>
+									</sfi:SmartField>
+								</template:repeat>
+							</template:with>
+						</sfo:SemanticGroupElement>
+					</template:with>
+                </template:with>
+            </template:elseif>
+
+				<template:elseif test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation' &amp;&amp; ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Address') > -1}">
+					<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+						<sfo:GroupElement id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement"
+								binding="{parts: [{path: 'dataField>Target'}, {path: 'entitySet>'}], formatter: 'AH.getNavigationPathWithExpand'}"
+								label="{= ${dataField>Label} ? ${path: 'dataField>Label', formatter: 'AHModel.simplePath'} : ''}">
+							<template:with path="dataField>Target" helper="AHModel.resolvePath" var="address">
+								<!-- same coding for SmartField is used in AddressFacet.fragment.xml -->
+								<sfi:SmartField id="{:= ${parameter>/stableId}.getStableId({ type:'ObjectPageSection', subType:'AddressDataField', sFacet: ${facetId>id}, sAnnotationPath: ${dataField>Target/AnnotationPath}}) }"
+												visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportance'}"
+												value="{path: 'address>label', formatter: 'AHModel.simplePath'}">
+									<sfi:customData>
+										<core:CustomData key="defaultTextInEditModeSource" value="{path: 'dataFieldValue>', formatter: 'AH.setValidationForValueList'}" />
+									</sfi:customData>
+								</sfi:SmartField>
+							</template:with>
+						</sfo:GroupElement>
+					</template:with>
+				</template:elseif>
+			<template:elseif
+				test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldWithIntentBasedNavigation' }">
+				<sfo:GroupElement
+					id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement"
+					label="{parts: [{path: 'dataField>'}, {path: 'entitySet>'}, {path: 'groupFacet>'}], formatter: 'AH.getLabelForDFwithIBN'}">
+						<fe:Link
+							text="{parts: [{path: 'dataField>'}, {path: 'entitySet>'}, {path: 'groupFacet>'}], formatter: 'AH.getLinkTextForDFwithIBN'}"
+							visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}"
+							press="._templateEventHandlers.onDataFieldWithIntentBasedNavigation"
+							wrapping="true">
+							<fe:customData>
+								<core:CustomData key="SemanticObject" value="{path: 'dataField>SemanticObject', formatter: 'AHModel.format'}" />
+								<core:CustomData key="Action" value="{path: 'dataField>Action', formatter: 'AHModel.format'}" />
+							</fe:customData>
+						</fe:Link>
+				</sfo:GroupElement>
+			</template:elseif>
+			<template:elseif test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldWithNavigationPath' }">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<sfo:GroupElement
+						id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement"
+						label="{parts: [{path: 'dataField>'}, {path: 'entitySet>'}, {path: 'groupFacet>'}], formatter: 'AH.getLabelForDFwithIBN'}">
+						<sfi:SmartField
+							value="{path: 'dataField>Value', formatter: 'AH.getDataFieldValueSimplePath'}"
+							visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}"
+							editable="{ui>/editable}" press="._templateEventHandlers.onDataFieldWithNavigationPath">
+							<sfi:customData>
+								<core:CustomData key="defaultTextInEditModeSource" value="{path: 'dataFieldValue>', formatter: 'AH.setValidationForValueList'}" />
+								<core:CustomData key="Target" value="{dataField>Target/NavigationPropertyPath}" />
+							</sfi:customData>
+						</sfi:SmartField>
+					</sfo:GroupElement>
+				</template:with>
+			</template:elseif>
+			<template:elseif test="{= ${dataField>IconUrl}}">
+				<sfo:GroupElement id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement"
+					label="{parts: [{path: 'dataField>'}, {path: 'entitySet>'}, {path: 'groupFacet>'}], formatter: 'AH.getLabelForDFwithIBN'}">
+					<core:Icon
+						src="{= ${dataField>IconUrl} &amp;&amp; (${dataField>IconUrl/String} !== '' || ${dataField>IconUrl/Path} !== '')  ? ${path: 'dataField>IconUrl', formatter: 'AHModel.format'} : '' }" 
+						visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}" 
+						width="1rem" height="1rem" color="{path: 'dataField>Criticality', formatter: 'AH.getIconSemanticColor'}"
+						ariaLabelledBy="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement"
+						decorative="false">
+					</core:Icon>
+				</sfo:GroupElement>
+			</template:elseif>
+			<template:else>
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<template:if test="{parts: [{path: 'dataField>'}], formatter: 'AH.checkIfDataFieldIsNotForStream'}">
+						<template:if test="{path: 'dataField>Value', formatter: 'AH.isDataFieldRenderable'}">
+							<sfo:GroupElement
+								id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::GroupElement">
+								<template:if test="{parts: [{path: 'entitySet>'}, {path: 'dataField>'}], formatter: 'AH.checkMultiplicityForDataFieldAssociation'}">
+									<template:then>
+										<smartMultiInput:SmartMultiInput id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::MultiInput"
+											visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}"
+											enableODataSelect="true"
+											clientSideMandatoryCheck="false"
+											tokenUpdate="._templateEventHandlers.submitChangesForSmartMultiInput"
+											selectionFinish="._templateEventHandlers.submitChangesForSmartMultiInput"
+											modeToggled="._templateEventHandlers.onSmartFieldModeToggled($event, '{entitySet>name}')"
+											value="{path: 'dataField>Value', formatter: 'AHModel.simplePath'}"
+											textLabel="{path: 'dataField>', formatter: 'AH.getDataFieldLabel'}"
+											fetchValueListReadOnly="false"/>
+									</template:then>
+									<template:else>
+										<sfi:SmartField id="{path: 'groupFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::Field"
+											value="{path: 'dataField>Value', formatter: 'AH.getDataFieldValueSimplePath'}"
+											visible="{path: 'dataField>', formatter: 'AH.getVisibiltyBasedOnImportanceAndHidden'}"
+											url="{= ${dataField>Url} ? ${path: 'dataField>Url', formatter: 'AHModel.format'} : ''}"
+											custom:multiLineSettings="{width: '100%', rows: 4}"
+											clientSideMandatoryCheck="false"
+											textLabel="{path: 'dataField>', formatter: 'AH.getDataFieldLabel'}"
+											fetchValueListReadOnly="{parts:[{path: 'parameter>/entityType'},{path: 'dataField>'}], formatter: 'AH.getValueListReadOnly'}"
+											modeToggled="._templateEventHandlers.onSmartFieldModeToggled"
+											press="{parts:[{path: 'parameter>/entityType'},{path: 'dataField>'}], formatter: 'AH.checkIsEmailAddress'}"
+											changeModelValue="._templateEventHandlers.onSmartFieldModelValueChanged">
+											<sfi:customData>
+												<core:CustomData key="defaultTextInEditModeSource" value="{path: 'dataFieldValue>', formatter: 'AH.setValidationForValueList'}" />
+											</sfi:customData>
+											<template:if test="${quickView>/} }">
+												<sfi:semanticObjectController>
+													<smartlink:SemanticObjectController ignoredFields="{parts: [{path: 'quickView>/'}, {path: 'dataField>'}], formatter: 'AH.disableSemanticObjectLinksOnPopups'}" />
+												</sfi:semanticObjectController>
+											</template:if>
+											<template:if test="{= ${dataField>Criticality} }">
+												<sfi:controlProposal>
+													<sfi:ControlProposal>
+														<sfi:objectStatus>
+															<sfi:ObjectStatus criticality="{path: 'dataField>Criticality', formatter: 'AHModel.simplePath'}"
+																criticalityRepresentationType="{= (${dataField>CriticalityRepresentation/EnumMember} === 'com.sap.vocabularies.UI.v1.CriticalityRepresentationType/WithoutIcon') ? 'WithoutIcon' : 'WithIcon'}"/>
+														</sfi:objectStatus>
+													</sfi:ControlProposal>
+												</sfi:controlProposal>
+											</template:if>
+											<sfi:customData>
+												<core:CustomData key="SideEffectSourcePropertyType"
+													value="{parts: [{path: 'dataFieldValue>name'}, {path: 'parameter>/isDraftEnabled'}, {path: 'parameter>/metaModel'}, {path: 'parameter>/entityType'}], formatter: 'AH.getSideEffectSourcePropertyType'}" />
+											</sfi:customData>
+										</sfi:SmartField>
+									</template:else>
+								</template:if>
+							</sfo:GroupElement>
+						</template:if>	
+					</template:if>
+				</template:with>
+			</template:else>
+		</template:if>
+		</template:with>
+	</template:with>
+</core:FragmentDefinition>

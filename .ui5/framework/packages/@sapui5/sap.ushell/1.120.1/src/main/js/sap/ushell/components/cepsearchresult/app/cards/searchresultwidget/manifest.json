@@ -1,0 +1,157 @@
+{
+    "sap.app": {
+        "id": "sap.ushell.components.cepsearchresult.app.cards.searchresultwidget",
+        "type": "card",
+        "title": "{{CARD.Widget.Title}}",
+        "subTitle": "{{CARD.Widget.SubTitle}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "i18n": {
+            "bundleUrl": "i18n/i18n.properties",
+            "supportedLocales": [
+                "",
+                "ar",
+                "bg",
+                "ca",
+                "cs",
+                "da",
+                "de",
+                "el",
+                "en",
+                "en_US",
+                "en_US_sappsd",
+                "en_US_saptrc",
+                "es",
+                "et",
+                "fi",
+                "fr",
+                "hi",
+                "hr",
+                "hu",
+                "it",
+                "iw",
+                "ja",
+                "kk",
+                "ko",
+                "lt",
+                "lv",
+                "ms",
+                "nl",
+                "no",
+                "pl",
+                "pt",
+                "ro",
+                "ru",
+                "sh",
+                "sk",
+                "sl",
+                "sv",
+                "th",
+                "tr",
+                "uk",
+                "vi",
+                "zh_CN",
+                "zh_TW"
+            ],
+            "fallbackLocale": "en"
+        },
+        "shortTitle": "{{CARD.Widget.SubTitle}}",
+        "info": "{{CARD.Widget.SubTitle}}",
+        "description": "{{CARD.Widget.SubTitle}}",
+        "tags": {
+            "keywords": [ ]
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "sap-icon://search"
+        }
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.106",
+            "libs": {
+                "sap.m": { },
+                "sap.f": { },
+                "sap.ui.integration": { }
+            },
+            "components": {
+                "sap.ushell.components.cepsearchresult.app": {
+                    "minVersion": "1.100.0",
+                    "lazy": true
+                }
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        }
+    },
+    "sap.card": {
+        "type": "Component",
+        "extension": "./Extension",
+        "configuration": {
+            "editor": "Config",
+            "parameters": {
+                "init": {
+                    "value": false
+                },
+                "category": {
+                    "value": "app"
+                },
+                "searchTerm": {
+                    "value": ""
+                },
+                "header": {
+                    "value": "default"
+                },
+                "headerNavigation": {
+                    "value": true
+                },
+                "view": {
+                    "value": "list"
+                },
+                "pageSize": {
+                    "value": 5
+                },
+                "footer": {
+                    "value": "paginator"
+                },
+                "highlightResult": {
+                    "value": false
+                }
+            }
+        },
+        "header": {
+            "title": "Custom Title (($count))",
+            "subtitle": "Custom Subtitle '($searchText)'",
+            "visible": "{= ${parameters>/header/value} !== 'none' && ${parameters>/init/value}}",
+            "icon": {
+                "src": "sap-icon://search",
+                "shape": "Square",
+                "backgroundColor": "Accent10"
+            },
+            "actions": [
+                {
+                    "type": "Navigation",
+                    "enabled": "{parameters>/headerNavigation/value}",
+                    "parameters": {
+                        "ibnTarget": {
+                            "semanticObject": "WorkZoneSearchResult",
+                            "action": "display"
+                        },
+                        "ibnParams": {
+                            "searchTerm": "{parameters>/searchTerm/value}",
+                            "category": "{parameters>/category/value}",
+                            "filter": ""
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

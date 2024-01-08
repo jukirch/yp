@@ -1,0 +1,10 @@
+<oscarXML>
+
+    <movName>Casablanca</movName>
+    <movDirector>Hans Wurst</movDirector>
+    <movMaleLead>Jürgen</movMaleLead>
+    <movFemaleLead>Monika</movFemaleLead>
+    <movYear>1943</movYear>
+    <movOscarWon>false</movOscarWon>
+
+</oscarXML>

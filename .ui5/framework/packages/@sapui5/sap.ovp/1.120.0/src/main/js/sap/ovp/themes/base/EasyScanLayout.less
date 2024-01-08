@@ -1,0 +1,83 @@
+.sapUshellEasyScanLayout {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    height: 100%;
+    overflow-y: auto;
+    .sapUshellEasyScanLayoutInner {
+        position: relative;
+    }
+    .sapUshellEasyScanLayoutInner:focus {
+        outline: none;
+    }
+    .easyScanLayoutColumn {
+        display: inline-block;
+        vertical-align: top;
+        padding-bottom: 1.25rem;
+        padding-top: 0.5rem;
+        margin-right: 1rem;
+        transition: width 0.5s ease-out;
+        -webkit-transition: width 0.5s ease-out;
+    }
+    .easyScanLayoutColumn:first-child {
+        margin-left: 0.5rem;
+    }
+    .easyScanLayoutColumn:last-child {
+        margin-right: 0.5rem;
+    }
+    .easyScanLayoutItemWrapper {
+        margin-bottom: 1rem;
+        transition: top 0.3s, left 0.3s;
+    }
+    .easyScanLayoutItemWrapper:focus {
+        outline: @sapContent_FocusColor dotted 0.125rem;
+    }
+    .easyScanLayoutItemWrapper-placeHolder {
+        border: 2px dashed @sapUiShellTextColor;
+        opacity: 0.5;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        .sapUiComponentContainer {
+            opacity: 0;
+        }
+    }
+
+    .easyScanLayoutItemWrapper-placeHolder .sapMCrslActive {
+        visibility: hidden;
+    }
+
+    &.columns-blank .easyScanLayoutColumn {
+        display: none;
+    }
+    &.columns-block .easyScanLayoutColumn:first-child {
+        margin-left: 1rem;
+    }
+    &.columns-block .easyScanLayoutColumn:last-child {
+        margin-right: 1rem;
+    }
+    &.columns-block .easyScanLayoutColumn {
+        display: block;
+    }
+    &.columns-narrow .easyScanLayoutColumn {
+        width: 20rem;
+    }
+    &.columns-wide .easyScanLayoutColumn {
+        width: 25rem;
+    }
+
+    &.dragAndDropMode {
+        .easyScanLayoutItemWrapper {
+            &.dragHovered {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+#mainView--ovpFilterNotFulfilledIcon {
+    color: fade(@sapUiContentNonInteractiveIconColor, 50);
+}

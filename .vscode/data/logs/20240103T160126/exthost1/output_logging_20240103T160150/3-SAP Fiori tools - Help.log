@@ -1,0 +1,74 @@
+16:01:53 [INFO] - AppFolders: starting processing setAppFoldersContext()
+16:02:38 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+16:02:38 [INFO] - AppFolders: Function setContext() done in 44420.196ms
+16:20:27 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-151c6edc' changed, updating app folders in context. 
+16:21:09 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+16:21:09 [INFO] - AppFolders: Function setContext() done in 42621.620ms
+16:29:20 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/1AVz.xml'
+16:30:00 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-1455ac61' changed, updating app folders in context. 
+16:30:38 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+16:30:38 [INFO] - AppFolders: Function setContext() done in 38321.373ms
+16:38:57 [INFO] - AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-678da794' changed, updating app folders in context. 
+16:39:36 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 103
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+16:39:36 [INFO] - AppFolders: Function setContext() done in 38996.672ms
+16:41:04 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/gYTN.xml'
+16:41:55 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/FH0r.xml'
+16:42:31 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/uPNa.xml'
+16:42:44 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/T3vh.xml'
+16:44:07 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/sc4w.xml'
+16:44:58 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/tLvO.xml'
+17:10:19 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/tflm.xml'
+17:10:40 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/SD6M.xml'
+17:13:14 [ERROR] - AppFolders: Error when handling file system event for 'file:///home/user/.vscode/data/User/History/43e972d3/qohP.xml'

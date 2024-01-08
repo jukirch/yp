@@ -1,0 +1,16 @@
+<mvc:View controllerName="s330601.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:cust="s330601.containers"
+    xml
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <cust:FlightConnections width="50%" height= "50%">
+                <cust:content>
+                    <icon:Icon src="https://1.bp.blogspot.com/-TFinHDyM56g/WNo_hsI3kPI/AAAAAAAAAS0/pJMARHDIACQuKrDUUHPBrHaVsHLYJwa_QCLcB/s1600/lufthansa_airlines_logo.png" />
+                    <Text text="LH0400" />
+                </cust:content>
+            </cust:FlightConnections> 
+        </content>
+    </Page>
+</mvc:View>

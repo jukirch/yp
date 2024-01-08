@@ -1,0 +1,6 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define([],function(){"use strict";var i={};let n=function(){function n(i,n){this.dataProvider=i;this.dimensionMapping=n}i.AbstractContextMenuHandler=n;var e=n.prototype;e.create=function i(n){return{isActionVisible:async(i,n)=>this.isActionVisible(this.findCell(n)),isActionEnabled:async(i,n)=>this.isActionEnabled(this.findCell(n)),getActionDescription:async(i,e)=>Promise.resolve(n),triggerAction:async(i,n)=>this.triggerAction(this.findCell(n))}};e.findCell=function i(n){var e,t,l;if(n.Grid.SelectedCells.length!==1){return{cell:undefined,dimensionMapping:undefined}}const s=n.Grid.SelectedCells[0].columnIndex;const o=n.Grid.SelectedCells[0].rowIndex;const d=(e=this.dataProvider)===null||e===void 0?void 0:(t=e.Grid)===null||t===void 0?void 0:(l=t.Cells)===null||l===void 0?void 0:l.find(i=>i.Row===o&&i.Column===s);const r=d!==null&&d!==void 0&&d.Dimension?this.dimensionMapping[d.Dimension]:undefined;return{cell:d,dimensionMapping:r}};return n}();i.AbstractContextMenuHandler=n;return i},false);
+//# sourceMappingURL=AbstractContextMenuHandler.js.map

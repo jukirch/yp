@@ -1,0 +1,8 @@
+<core:FragmentDefinition
+    xmlns="sap.ushell.ui.shell"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:ui="sap.ushell.ui"
+>
+    <ui:AppContainer id="viewPortContainer" beforeNavigate=".onBeforeNavigate" afterNavigate=".onAfterNavigate"/>
+</core:FragmentDefinition>

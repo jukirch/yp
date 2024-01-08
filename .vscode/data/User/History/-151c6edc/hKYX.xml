@@ -1,0 +1,11 @@
+<c:FragmentDefinition xmlns:layout="sap.ui.layout" 
+    xmlns:c = "sap.ui.core"
+    xmlns = "sap.m"
+    x
+>
+<layout:VerticalLayout >
+    <Text text="Text aus der Fragmentdefinition" />
+    <Button text="du weißt wo der Button her kommt.." />
+    <Input width="200px" value="auch hier.."/>
+</layout:VerticalLayout>
+</c:FragmentDefinition>

@@ -1,0 +1,114 @@
+/* ===================================================== */
+/* CSS for control "sap.ushell.ui.shell.SysInfoBar" (base) */
+/* ======================================================*/
+
+.sapUiSizeCompact .sapUshellSysInfoBar {
+  height: 1.625rem;
+
+  .sapMBar {
+    box-shadow: none;
+  }
+
+  .sapMBarLeft, .sapMBarRight, .sapMBarPH {
+    height: 1.625rem;
+  }
+}
+
+.sapUshellSysInfoBar {
+  height: 2.25rem;
+
+  .sapMBar {
+    box-shadow: none;
+  }
+
+  .sapMBar:not(.sapUshellSysInfoBarOrange, .sapUshellSysInfoBarRed, .sapUshellSysInfoBarPink, .sapUshellSysInfoBarPink, .sapUshellSysInfoBarViolet, .sapUshellSysInfoBarViolet, .sapUshellSysInfoBarBlue, .sapUshellSysInfoBarGreen, .sapUshellSysInfoBarGrey) {
+    background-color: transparent;
+  }
+
+  .sapUshellSysInfoBarText:not(.sapUshellSysInfoBarOrange, .sapUshellSysInfoBarRed, .sapUshellSysInfoBarPink, .sapUshellSysInfoBarPink, .sapUshellSysInfoBarViolet, .sapUshellSysInfoBarViolet, .sapUshellSysInfoBarBlue, .sapUshellSysInfoBarGreen, .sapUshellSysInfoBarGrey), .sapMLabelTextWrapper {
+    text-shadow: none;
+  }
+
+  .sapMBarLeft, .sapMBarRight, .sapMBarPH {
+    height: 2.25rem;
+  }
+}
+
+/*
+  If a custom color is used, the labels should have the same color as the icon.
+ */
+.sapUshellSysInfoBarCustom {
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiContentIconColor;
+  }
+}
+
+.sapUshellSysInfoBarOrange {
+  background-color: @sapUiShellCategory31Background;
+  border-color: @sapUiShellCategory3BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory3TextColor;
+    text-shadow: @sapUiShellCategory3TextShadow;
+  }
+}
+
+.sapUshellSysInfoBarRed {
+  background-color: @sapUiShellCategory11Background;
+  border-color: @sapUiShellCategory11BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory11TextColor;
+    text-shadow: @sapUiShellCategory11TextShadow;
+  }
+}
+
+.sapUshellSysInfoBarPink {
+  background-color: @sapUiShellCategory13Background;
+  border-color: @sapUiShellCategory13BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory13TextColor;
+    text-shadow: @sapUiShellCategory13TextShadow;
+  }
+}
+
+.sapUshellSysInfoBarViolet {
+  background-color: @sapUiShellCategory12Background;
+  border-color: @sapUiShellCategory12BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory12TextColor;
+    text-shadow: @sapUiShellCategory12TextShadow;
+  }
+}
+
+.sapUshellSysInfoBarBlue {
+  background-color: @sapUiShellCategory9Background;
+  border-color: @sapUiShellCategory9BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory9TextColor;
+    text-shadow: @sapUiShellCategory9TextShadow;
+  }
+}
+
+.sapUshellSysInfoBarGreen {
+  background-color: @sapUiShellCategory16Background;
+  border-color: @sapUiShellCategory16BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory16TextColor;
+    text-shadow: @sapUiShellCategory16TextShadow;
+  }
+}
+
+.sapUshellSysInfoBarGrey {
+  background-color: @sapUiShellCategory15Background;
+  border-color: @sapUiShellCategory15BorderColor;
+
+  .sapUshellSysInfoBarText, .sapMLabelTextWrapper {
+    color: @sapUiShellCategory15TextColor;
+    text-shadow: @sapUiShellCategory15TextShadow;
+  }
+}

@@ -1,0 +1,24 @@
+AppFolders: starting processing setAppFoldersContext()
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1311.457ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/globalStorage/saposs.vscode-ui5-language-assistant/ui5-resources-cache/SAPUI5/1.120.4' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 4838.720ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-50a84752' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1521.590ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/260766e4' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1636.647ms

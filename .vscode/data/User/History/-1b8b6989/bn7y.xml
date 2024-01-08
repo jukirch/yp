@@ -1,0 +1,18 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="s32module.controller.Main" displayBlock="true"><Page id="page" title="{i18n>title}">
+        <content>
+         <VBox id="Box" alignItems="Center" width="100%" justifyContent="Center">
+            <Image src="https://quicksted.com/wp-content/uploads/2018/05/qst_logo_450.png"  id="image0" width="350px" />
+            <FlexBox id="box3" height="15px" visible="true"></FlexBox>
+            <Link xmlns="sap.m" href="https://www.quicksted.com" text="Zur Quicksted Webseite gehts hier lang!" id="link2" textAlign="Center" emphasized="true" busyIndicatorSize="Auto" target="blank"/>
+            <FlexBox id="box1" height="15px" visible="true"></FlexBox>
+            <Text xmlns="sap.m" text="{i18n>appDescription}" id="AppBeschreibungstext"/>
+            <FlexBox id="box2" height="15px" visible="true"></FlexBox>
+            <DatePicker xmlns="sap.m" id="picker0" valueFormat="" initialFocusedDateValue="1994.25.08"/>
+
+            <Button xmlns="sap.m" text="Speichern" id="button2" width="150px"/>
+        </VBox>
+        </content>
+    <headerContent>
+    </headerContent>
+    </Page>
+</mvc:View>

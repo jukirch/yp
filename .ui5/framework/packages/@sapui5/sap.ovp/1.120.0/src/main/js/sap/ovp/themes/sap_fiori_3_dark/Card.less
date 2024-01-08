@@ -1,0 +1,87 @@
+.sapOvpBaseCard {
+    background-color: @sapUiTileBackground;
+    box-shadow: @sapUiShadowLevel0;
+    border-radius: @sapUiElementBorderCornerRadius;
+    border: 0.0625rem solid @sapUiTileBorderColor;
+}
+
+.sapOvpCardHeader {
+    &:hover {
+        background: @sapUiTileHoverBackground;
+    }
+    &:active {
+        background: @sapUiTileActiveBackground;
+    }
+    .sapOvpCardTitle,
+    & > div:only-child .sapOvpCardSubtitle,
+    & > div:only-child .sapOvpCardCategory {
+        color: @sapUiTileTitleTextColor;
+    }
+    .sapOvpCardCategory,
+    .sapOvpCardSubtitle {
+        color: @sapUiTileTextColor;
+    }
+    color: @sapUiTileTitleTextColor;
+}
+
+.sapOvpCardContentContainer {
+    border-top-color: @sapUiGroupContentBorderColor;
+}
+
+.KpiTargetText,
+.KpiDeviationText {
+    color: @sapUiTileTextColor;
+}
+
+.sapOvpKPIHeaderTrendPercentStyle {
+    color: @sapUiTileTitleTextColor;
+}
+
+.UOMFlexbox {
+    color: @sapUiTileTextColor;
+}
+
+// to remove the navigation effect from the line items when the navigation is not available
+.ovpNonNavigableItem {
+    .sapOvpCardHeader {
+        background: @sapUiTileBackground;
+    }
+    .sapOvpBaseCard tr.sapMLIBTypeInactive {
+        background: @sapUiTileBackground;
+    }
+}
+
+.sapOvpStackCardSize {
+    color: @sapUiHighlight;
+}
+
+.sapOvpStackCardIcon {
+    color: @sapUiHighlight;
+}
+
+.sapOvpCardContentContainer {
+    background-color: @sapUiTileBackground;
+    &.sapOvpCardNavigable {
+        background-color: @sapUiTileBackground;
+        &:hover {
+            background-color: @sapUiSegmentedButtonHoverBackground;
+            border-color: @sapUiSegmentedButtonHoverBackground;
+        }
+        &:active {
+            background-color: @sapUiSegmentedButtonActiveBackground;
+            border-color: @sapUiSegmentedButtonActiveBackground;
+        }
+        &:active .sapOvpStackCardIcon,
+        &:active label,
+        &:active .sapMText,
+        &:active .sapMLabel {
+            color: @sapUiSegmentedButtonActiveTextColor;
+        }
+    }
+}
+
+.sapOvpCardContentRightHeader {
+    &:hover {
+        background-color: fade(@sapUiShellHoverBackground, 4);
+    }
+}

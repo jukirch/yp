@@ -1,0 +1,91 @@
+<mvc:View controllerName="s330503.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:t="sap.ui.table"
+	xmlns:f="sap.ui.layout.form" 
+	displayBlock="true" 
+	xmlns:c="sap.ui.core" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m">
+	<SplitApp id="splapp0">
+		<masterPages>
+			<Page title="{i18n>title}" id="master">
+				<content>
+					<t:TreeTable id="ttab1" rows="{artMod>/artRoot}" selectionBehavior="Row" rowSelectionChange="onRowSelectionChange" selectionMode="Single"
+						enableSelectAll="false">
+						<t:extension>
+							<OverflowToolbar>
+								<Title id="title" text="Artists"/>
+								<ToolbarSpacer/>
+								<Button text="Collapse all" press="onCollapseAll"/>
+								<!--<Button text="Collapse selection" press="onCollapseSelection"/>-->
+								<Button text="Expand first level" press="onExpandFirstLevel"/>
+								<!--<Button text="Expand selection" press="onExpandSelection"/>-->
+							</OverflowToolbar>
+						</t:extension>
+						<t:columns>
+							<t:Column width="18rem">
+								<Label text="Movies"/>
+								<t:template>
+									<Text text="{artMod>name}" wrapping="false"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="10rem">
+								<Label text="ReleaseDate"/>
+								<t:template>
+									<Text text="{artMod>movRelDat}"/>
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:TreeTable>
+				</content>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page id="detail">
+				<content>
+					<f:SimpleForm editable="true" id="__form1" >
+						<f:content>
+							<c:Title text="Artist" id="idTitNam"/>
+							<Label text="Name" id="idLblNamFull"></Label>
+							<Input value="{movSng>/artist/name}" id="idInpNamLast"/>
+							<Input value="{movSng>/artist/name}" id="idInpNamFirst"/>
+							<Label text="Dates" id="idLblDateBir"></Label>
+							<Text text="Birthdate" id="idTxtDateBir"></Text>
+							<DatePicker id="idDatPickBir" value="{movSng>/artist/artDatBirth}"></DatePicker>
+							<Text text="Deathdate" id="idTxtDateDea"></Text>
+							<DatePicker id="idDatPickDea" value="{movSng>/artist/artDatDeath}"></DatePicker>
+							<Label text="Pictures" id="idLblPhoto">
+								<layoutData>
+									<l:ResponsiveFlowLayoutData weight="2"/>
+								</layoutData>
+							</Label>
+							<Image width="140px" height="140px" id="idImg1"
+								src="{movSng>/artist/artPortrait}">
+								<layoutData>
+									<l:ResponsiveFlowLayoutData weight="2"/>
+								</layoutData>
+							</Image>
+						</f:content>
+					</f:SimpleForm>
+					<html:hr/>
+					<f:SimpleForm editable="true" id="__form2">
+						<f:content>
+							<c:Title text="Movie" id="idMovTitNam"/>
+							<Label text="Name" id="idMovNam"></Label>
+							<Text text="{movSng>/movie/name}"/>
+							<Text text="{movSng>/movie/movDistributor}"/>
+							<DatePicker value="{movSng>/movie/movRelDat}"/>
+							<Label text="Staff" id="idMovStaff"></Label>
+							<Text text="Director"/>
+							<Text text="{movSng>/movie/movDirector}"/>
+							<Text text="Producer"/>
+							<Text text="{movSng>/movie/movProducer}"/>
+						</f:content>
+					</f:SimpleForm>
+					<Image src="{movSng>/movie/movPoster}" width="200px"/>
+				</content>
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>

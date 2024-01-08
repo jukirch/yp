@@ -1,0 +1,327 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartField="sap.ui.comp.smartfield" xmlns:smc="sap.ui.comp.smartmicrochart" xmlns:navpopover="sap.ui.comp.navpopover"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper', AHStream:'sap/suite/ui/generic/template/js/AnnotationHelperStreamSupport'}">
+	<!-- @classdesc @name: Name: sap.suite.ui.generic.template.ListReport.view.fragments.TableColumns.fragment.xml
+		@description: Visualizes columns (header) of a responsive table,
+		as part of a LR, OP or ALP.
+		@param {UI.LineItem} [collection]
+		@param {Edm.EntitySet} [listEntitySet] -->
+
+		<!-- Default Column width for FE rendered columns based on UX's suggestions
+		For SmartFields, SmartMultiInputs, IBN, Contact Popups and Semantic Key Fields default width is calculated based on MaxLength of the Property (eg. 30rem)
+		For Images default width is 5rem
+		For Rating and Progress Indicators default width is 6.875rem
+		For Charts Default width is 21rem
+		-->
+
+	<columns>
+		<template:repeat list="{collection>}" var="dataField">
+			<!-- handle data field with Stream Support -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<template:if test="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}], formatter: 'AHStream.checkIfEntityOrAssociationHasStreamEnabled'}">
+						<Column
+							width="{parts: [{path: 'dataField>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthBasedOnAnnotation'}"
+							visible="true"
+							importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+							<customData>
+								<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}], formatter: 'AH.createP13NFileUploader'}" />
+							</customData>
+							<Text text="{path: 'dataField>Label', formatter: 'AHModel.format'}" />
+							</Column>
+					</template:if>	
+				</template:with>
+			</template:if>
+			<!-- handle data field with 1:n -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<template:if test="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}], formatter: 'AH.checkMultiplicityForDataFieldAssociation'}">
+						<Column 
+								id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataField', sSmartTableId: ${smartControlId>id}, sProperty: ${dataField>Value/Path}})}"
+								width="{parts: [{path: 'dataField>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthBasedOnAnnotation'}"
+								visible="true"
+								importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+							<customData>
+								<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataFieldValue>'}, {path: 'dataField>'}], formatter: 'AH.createP13N'}" />
+								<core:CustomData key="addCardtoInsightsConfig" value="{'isMultiValueColumn':true}"/>
+							</customData>
+							<template:if test="{dataField>Label}">
+								<template:then>
+									<Text text="{path: 'dataField>Label', formatter: 'AHModel.format'}" />
+								</template:then>
+								<template:elseif test="{dataFieldValue>com.sap.vocabularies.Common.v1.Label}">
+									<Text text="{path: 'dataFieldValue>com.sap.vocabularies.Common.v1.Label', formatter: 'AHModel.format'}" />
+								</template:elseif>
+							</template:if>
+						</Column>
+					</template:if>
+				</template:with>
+			</template:if>
+			<!--  handle data field which is either semantic key, title or description -->
+ 			<template:if test="{= ${parameter>/isDraftEnabled} &amp;&amp;  ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField' &amp;&amp; (${dataField>Value/Path} === ${targetColumn>} )}">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<Column 
+							id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataField', sSmartTableId: ${smartControlId>id}, sProperty: ${dataField>Value/Path}})}"
+							width="{parts: [{path: 'dataField>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthBasedOnAnnotation'}"
+							hAlign="{= ${dataField>EdmType} === 'Edm.Decimal' || ${dataField>EdmType} === 'Edm.Double' ||  ${dataField>EdmType} === 'Edm.Float' ||  ${dataField>EdmType} === 'Edm.Int16' ||  ${dataField>EdmType} === 'Edm.Int32' || ${dataField>EdmType} === 'Edm.Int64' ||  ${dataField>EdmType} === 'Edm.Single' ||  ${dataField>EdmType} === 'Edm.Date' ||  ${dataField>EdmType} === 'Edm.DateTime' ||  ${dataField>EdmType} === 'Edm.DateTimeOffset' ||  ${dataField>EdmType} === 'Edm.Time' ? 'End' : 'Begin'}"
+							visible="{= ( ${dataField>com.sap.vocabularies.UI.v1.Hidden} || ( ${dataField>com.sap.vocabularies.Common.v1.FieldControl/EnumMember} === 'com.sap.vocabularies.Common.v1.FieldControlType/Hidden')) ? 'false' : 'true'}"
+							importance="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}], formatter: 'AH.getImportanceForTableColumnsWithSemanticKeyTitleAndDescription'}">
+						<customData>
+							<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataFieldValue>'}, {path: 'dataField>'}], formatter: 'AH.createP13N'}" />
+						</customData>
+						<Text
+							text="{parts: [{path: 'dataFieldValue>'}, {path: 'dataField>'}], formatter: 'AH.getColumnHeaderText'}" wrappingType="Hyphenated">
+						</Text>
+					</Column>
+				</template:with>
+			</template:if>
+			<!-- handle data field with Email -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<template:if test="{parts: [{path: 'listEntitySet>'}, {path: 'dataFieldValue>'}, {path: 'dataField>'}], formatter: 'AH.isEmailAddressAndMuliplicity' }">
+						<Column 
+								id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataField', sSmartTableId: ${smartControlId>id}, sProperty: ${dataField>Value/Path}})}"
+								width="{parts: [{path: 'dataFieldValue>'}, {path: 'dataField>'}, {path: 'listEntitySet>'}, {value: ''}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthForTableColumn'}"
+								visible="true"
+								importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+							<customData>
+								<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataFieldValue>'}, {path: 'dataField>'}], formatter: 'AH.createP13N'}" />
+							</customData>
+							<template:if test="{dataField>Label}">
+								<template:then>
+									<Text text="{path: 'dataField>Label', formatter: 'AHModel.format'}" />
+								</template:then>
+								<template:elseif test="{dataFieldValue>com.sap.vocabularies.Common.v1.Label}">
+									<Text text="{path: 'dataFieldValue>com.sap.vocabularies.Common.v1.Label', formatter: 'AHModel.format'}" />
+								</template:elseif>
+							</template:if>
+						</Column>
+					</template:if>
+				</template:with>
+			</template:if>
+			<!-- handle data field with images -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<template:if test="{path: 'dataFieldValue>', formatter: 'AH.isImageUrl'}">
+						<Column 
+								id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataField', sSmartTableId: ${smartControlId>id}, sProperty: ${dataField>Value/Path}})}"
+								width="{parts: [{path: 'dataFieldValue>'}, {path: 'dataField>'}, {path: 'listEntitySet>'}, {value: ''}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthForTableColumn'}"
+								visible="true"
+								importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+							<customData>
+								<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataFieldValue>'}, {path: 'dataField>'}], formatter: 'AH.createP13N'}" />
+							</customData>
+							<template:if test="{dataField>Label}">
+								<template:then>
+									<Text text="{path: 'dataField>Label', formatter: 'AHModel.format'}" />
+								</template:then>
+								<template:elseif test="{dataFieldValue>com.sap.vocabularies.Common.v1.Label}">
+									<Text text="{path: 'dataFieldValue>com.sap.vocabularies.Common.v1.Label', formatter: 'AHModel.format'}" />
+								</template:elseif>
+							</template:if>
+						</Column>
+					</template:if>
+				</template:with>
+			</template:if>
+			<!-- Object Page Self-Linking -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldWithNavigationPath' }">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<Column 
+							id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataFieldWithNavigationPath', sSmartTableId: ${smartControlId>id}, sProperty: ${dataField>Value/Path}, sTarget: ${dataField>Target/NavigationPropertyPath}})}"
+							width="{parts: [{path: 'dataField>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthBasedOnAnnotation'}"
+							visible="true"
+							importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+						<customData>
+							<core:CustomData key="p13nData" value="{path: 'dataField>', formatter: 'AH.createP13NColumnForAction'}" />
+						</customData>
+						<Text text="{parts: [{path: 'dataField>'}, {path: 'listEntitySet>'}], formatter: 'AH.getLabelForDFwithIBN'}" />
+					</Column>
+				</template:with>
+			</template:if>
+			<!-- handle inline actions -->
+			<template:if test="{= (${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAction' || ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation') &amp;&amp; ${dataField>Inline/Bool} === 'true'}">
+				<template:with path="parameter>/" helper="sap.suite.ui.generic.template.js.StableIdHelper.preparePathForStableId" var="columnId">
+					<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+						<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAction' }">
+							<template:then>
+								<template:if test="{= ${columnId>}.buildStableId({type: 'TableColumn', subType: 'DataFieldForAction', sSmartTableId: ${smartControlId>id}, sAction: ${dataField>Action/String}})}" />
+							</template:then>
+							<template:else>
+								<template:if test="{= ${columnId>}.buildStableId({type: 'TableColumn', subType: 'DataFieldForIntentBasedNavigation', sSmartTableId: ${smartControlId>id}, sSemanticObject: ${dataField>SemanticObject/String}, sAction: ${dataField>Action/String}})}" />
+							</template:else>
+						</template:if>
+						<Column 
+								id="{columnId>id}"
+								width="{parts: [{path: 'dataFieldValue>'}, {path: 'dataField>'}, {path: 'listEntitySet>'}, {value: ''}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthForTableColumn'}"
+								visible="true"
+								importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+							<customData>
+								<core:CustomData key="p13nData" value="{path: 'dataField>', formatter: 'AH.createP13NColumnForAction'}" />
+							</customData>
+							<template:if test="{dataField>Label}">
+								<template:then>
+									<core:InvisibleText text="{path: 'dataField>Label', formatter: 'AHModel.format'}"/>
+								</template:then>
+							</template:if>
+						</Column>
+					</template:with>
+				</template:with>
+			</template:if>
+            <!-- handle DataFieldWithIntentBasedNavigation -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldWithIntentBasedNavigation' }">
+				<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue">
+					<Column id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataFieldWithIntentBasedNavigation', sSmartTableId: ${smartControlId>id}, sProperty: ${dataField>Value/Path}, sSemanticObject: ${dataField>SemanticObject/String}, sAction: ${dataField>Action/String}})}"
+						visible="true"
+						width="{parts: [{path: 'dataField>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthBasedOnAnnotation'}"
+						importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+						<customData>
+							<core:CustomData key="p13nData"
+								value="{path: 'dataField>', formatter: 'AH.createP13NColumnForAction'}" />
+						</customData>
+						<Text	text="{parts: [{path: 'dataField>'}, {path: 'listEntitySet>'}], formatter: 'AH.getLabelForDFwithIBN'}" />
+					</Column>
+				</template:with>
+			</template:if>
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+				<template:then>
+					<!-- Handle ContactPopUp Over -->
+					<template:if test="{= ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+						<template:then>
+							<template:with path="dataField>Target" helper="AHModel.resolvePath" var="dataFieldTarget">
+								<Column 
+										id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataFieldForAnnotation', sSmartTableId: ${smartControlId>id}, sTarget: ${dataField>Target/AnnotationPath}})}"
+										width="{parts: [{path: 'dataField>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthBasedOnAnnotation'}"
+										visible="true"
+										importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+									<customData>
+										<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}, {path: 'dataFieldTarget>'}, {path: 'dataField>Target/AnnotationPath'}], formatter: 'AH.createP13NColumnForContactPopUp'}" />
+									</customData>
+									<template:if test="{dataField>Label}">
+										<template:then>
+											<Text
+												text="{path: 'dataField>Label', formatter: 'AHModel.format'}"
+												visible="true" />
+										</template:then>
+									</template:if>
+								</Column>
+							</template:with>
+						</template:then>
+					</template:if>
+
+					<!-- Semantically connected column -->
+					<template:if test="{= ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.FieldGroup') >= 0}">
+						<template:then>
+							<template:with path="dataField>Target" helper="AHModel.resolvePath" var="dataFieldTarget">
+								<template:if test="{parts: [{path: 'dataFieldTarget>Data'}], formatter: 'AH.renderColumnForConnectedFields' }">
+									<Column 
+											id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataFieldForAnnotation', sSmartTableId: ${smartControlId>id}, sTarget: ${dataField>Target/AnnotationPath}})}"
+											width="{parts: [{path: 'dataFieldTarget>Data'}, {path: 'listEntitySet>'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getColumnWidthForConnectedFields'}"
+											visible="true"
+											importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+										<template:if test="{parts: [{path: 'dataFieldTarget>Data'}], formatter: 'AH.renderColumnHeader' }">
+											<template:then>
+												<template:if test="{dataField>Label}">
+													<template:then>
+														<core:InvisibleText text="{path: 'dataField>Label', formatter: 'AHModel.format'}"/>
+													</template:then>
+												</template:if>
+											</template:then>
+											<template:else>
+												<template:if test="{dataField>Label}">
+													<template:then>
+														<Text text="{path: 'dataField>Label', formatter: 'AHModel.format'}" visible="true"/>
+													</template:then>
+												</template:if>
+											</template:else>
+										</template:if>
+										<customData>
+											<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}, {path: 'dataFieldTarget>'} ], formatter: 'AH.createP13NColumnForConnectedFields'}"/>
+										</customData>
+									</Column>
+								</template:if>
+							</template:with>
+						</template:then>
+					</template:if>
+
+					<!-- handle smart micro chart -->
+					<template:if test="{= ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.Chart') >= 0}">
+						<template:then>
+							<Column 
+									id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataFieldForAnnotation', sSmartTableId: ${smartControlId>id}, sTarget: ${dataField>Target/AnnotationPath}})}"
+									width="{parts: [{path: 'dataField>Target'}, {path: 'dataField>'}, {path: 'listEntitySet>'}, {path: 'dataField>Target/AnnotationPath'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthForTableColumn'}"
+									visible="true"
+									importance="{= ${path: 'dataField>', formatter: 'AH.getImportanceForTableColumns'}}">
+								<template:with path="dataField>Target" helper="AHModel.resolvePath" var="dataFieldTarget">
+									<customData>
+										<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}, {path: 'dataFieldTarget>'}, {path: 'dataField>Target/AnnotationPath'}], formatter: 'AH.createP13NColumnForChart'}" />
+									</customData>
+								</template:with>
+								<template:if test="{dataField>Label}">
+									<template:then>
+										<Text
+											text="{path: 'dataField>Label', formatter: 'AHModel.format'}"/>
+									</template:then>
+								</template:if>
+							</Column>
+						</template:then>
+					<template:else>
+						<!-- handle rating and progress indicators -->
+						<template:with path="dataField>Target" helper="AHModel.resolvePath" var="dataFieldTarget">
+							<template:if test="{= ${dataFieldTarget>Visualization}}">
+								<template:then>
+									<template:with path="dataField>Value" helper="AHModel.resolvePath" var="dataFieldValue"> <!-- only needed to pass to p13n to be able to switch to old implementation (DataFieldForAnnotation does not contain Value) -->
+										<template:with path="dataFieldTarget>Value" helper="AHModel.resolvePath" var="dataFieldTargetValue">
+											<Column 
+													id="{:= ${parameter>/stableId}.getStableId({type: 'TableColumn', subType: 'DataFieldForAnnotation', sSmartTableId: ${smartControlId>id}, sTarget: ${dataField>Target/AnnotationPath}})}"
+													width="{parts: [{path: 'dataFieldTarget>'}, {path: 'dataField>'}, {path: 'listEntitySet>'},  {path: 'dataField>Target/AnnotationPath'}, {path: 'appSettings>/enableAutoColumnWidthForSmartTable'}], formatter: 'AH.getDefaultWidthForTableColumn'}"
+													visible="true"
+													importance="{= ${path: 'dataField>', formatter: 'AHgetImportanceForTableColumns'}}">
+												<customData>
+													<core:CustomData key="p13nData" value="{parts: [{path: 'listEntitySet>'}, {path: 'dataField>'}, {path: 'dataFieldTarget>'}, {path: 'dataFieldTargetValue>'}, {path: 'dataField>Target/AnnotationPath'}], formatter: 'AH.createP13NColumnForIndicator'}" />
+												</customData>
+												<template:if test="{dataField>Label}">
+													<template:then>
+														<Text
+															text="{path: 'dataField>Label', formatter: 'AHModel.format'}"
+															visible="true" />
+													</template:then>
+													<template:elseif test="{dataFieldTarget>Title}">
+														<Text
+															text="{path: 'dataFieldTarget>Title', formatter: 'AHModel.format'}" />
+													</template:elseif>
+													<template:elseif
+														test="{dataFieldTargetValue>com.sap.vocabularies.Common.v1.Label}">
+														<Text
+															text="{path: 'dataFieldTargetValue>com.sap.vocabularies.Common.v1.Label', formatter: 'AHModel.format'}" />
+													</template:elseif>
+												</template:if>
+											</Column>
+										</template:with>
+									</template:with>
+								</template:then>
+							</template:if>
+						</template:with>
+					</template:else>
+					</template:if>
+
+				</template:then>
+			</template:if>
+		</template:repeat>
+ 		<!--  add break-out columns -->
+		<template:if test="{= ${facet>Target/AnnotationPath} }">
+			<template:then>
+				<core:ExtensionPoint
+					name="ResponsiveTableColumnsExtension|{listEntitySet>name}|{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}" />
+			</template:then>
+			<template:else>
+		 		<!--  ListReport: In case of multiple views, extension points have to be separated to allow providing stable ids in extensions - but for compatibility, also keep old extension point -->
+				<core:ExtensionPoint
+					name="ResponsiveTableColumnsExtension|{parameter>/entitySet}" />
+				<template:if test="{= ${tabItem>} }">
+					<core:ExtensionPoint
+						name="ResponsiveTableColumnsExtension|{parameter>/entitySet}|{path: 'tabItem>', formatter: 'AH.getIconTabFilterKey'}" />
+				</template:if>
+			</template:else>
+		</template:if>
+	</columns>
+</core:FragmentDefinition>

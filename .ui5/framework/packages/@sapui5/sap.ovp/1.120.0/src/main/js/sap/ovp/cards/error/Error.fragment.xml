@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <IllustratedMessage
+        id="sapOvpErrorCard"  
+        illustrationType="{ovpCardProperties>/sMessageIcon}"
+        title="{ovpCardProperties>/errorStatusText}"
+        description=""
+        enableDefaultTitleAndDescription="false"
+        class="{= ${ovpCardProperties>/oldTemplate} === 'sap.ovp.cards.stack' ? 'stackContentOfError' : 'contentOfError' }" />
+</core:FragmentDefinition>

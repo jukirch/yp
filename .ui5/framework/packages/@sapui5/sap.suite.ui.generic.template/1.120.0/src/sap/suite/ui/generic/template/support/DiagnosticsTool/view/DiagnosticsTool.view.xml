@@ -1,0 +1,42 @@
+<mvc:View
+		xmlns="sap.m"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel expandable="false" class="sapUiNoContentPadding">
+		<content>
+			<!-- Custom layout for grouping headers -->
+			<html:style>
+				.diagnosticPropertiesGroupHeader {
+					background-color: #EFF4F9;
+					height: 70%;
+				}
+
+				.diagnosticPropertiesGroupHeaderContent {
+					color: #2C4E6C !important;
+				}
+				#CopyDataTextArea {
+					display: none;
+					height: 0;
+					width: 0;
+					padding: 0;
+					color: transparent;
+					background: transparent;
+					border-color: transparent;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			</html:style>
+
+			<!-- Display hint when status of application is unknown -->
+			<MessageStrip
+				text="The diagnostics tool for SAP Fiori elements is now deprecated."
+				type="Error"
+				showIcon="true"
+				visible="true"
+				class="sapUiTinyMarginBegin sapUiTinyMarginEnd sapUiSmallMarginTop sapUiNoContentPadding">
+			</MessageStrip>
+		</content>
+	</Panel>
+</mvc:View>

@@ -1,0 +1,78 @@
+AppFolders: starting processing setAppFoldersContext()
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 943.866ms
+AppFolders: Directory 'file:///home/user/projects/s330601' changed, updating app folders in context. 
+AppFolders: Directory 'file:///home/user/projects/s330601/webapp/view' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2598.351ms
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2858.903ms
+AppFolders: Directory 'file:///home/user/projects/s330601/node_modules/yaml' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2288.125ms
+AppFolders: Directory 'file:///home/user/projects/s330601/node_modules/.bin' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1627.968ms
+AppFolders: Directory 'file:///home/user/projects/s330601/webapp/cot' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2159.079ms
+AppFolders: Directory 'file:///home/user/projects/s330601/webapp/containers' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3078.178ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-76692dab' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3875.937ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-70399f3' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 1869.418ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/43e972d3' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2043.864ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-6d7af000' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2626.833ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-250cd712' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 2319.071ms
+AppFolders: Directory 'file:///home/user/.vscode/data/User/History/-1cd82066' changed, updating app folders in context. 
+AppFolders:
+	projectRoots: 0
+	subWebappRoots: 0
+	manifestAppDescRoots: 0
+AppFolders: Function setContext() done in 3096.938ms

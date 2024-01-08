@@ -1,0 +1,16 @@
+<c:FragmentDefinition xmlns:layout="sap.ui.layout" 
+    xmlns:c = "sap.ui.core"
+    xmlns = "sap.m"
+    xmlns:l ="sap.ui.layout"
+>
+
+    <l:VerticalLayout >
+        <l:content>
+            <Text text="{/output}" />
+            <Button text="du weißt wo der Button her kommt.." press="onPress" />
+            <Input width="200px" value="auch hier.."/>
+        </l:content>
+    </l:VerticalLayout>
+
+
+</c:FragmentDefinition>

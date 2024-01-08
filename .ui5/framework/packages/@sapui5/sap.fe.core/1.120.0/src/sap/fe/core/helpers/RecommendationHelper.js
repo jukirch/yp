@@ -1,0 +1,6 @@
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *      (c) Copyright 2009-2023 SAP SE. All rights reserved
+ */
+sap.ui.define([],function(){"use strict";var t={};const e={sortRecommendationsData(t){const e=t.recommendations;e.sort((t,e)=>{if(t.probability&&e.probability){if(t.probability<e.probability){return 1}else if(t.probability>e.probability){return-1}}return 0});const o=t;delete o["recommendations"];o.additionalValues=e},transformRecommendationsForInternalStorage(t){if(t.hasOwnProperty("recommendations")){this.sortRecommendationsData(t);return}else if(Array.isArray(t)){t.forEach(t=>{Object.values(t).forEach(t=>{if(typeof t==="object"){this.transformRecommendationsForInternalStorage(t)}})})}else{Object.values(t).forEach(t=>{if(typeof t==="object"){this.transformRecommendationsForInternalStorage(t)}})}},clearRecommendations:(t,e)=>{const o=t.getModel("internal");const r=o.getProperty("/currentCtxt");const n=t.getBindingContext("ui").getProperty("createMode");if((r===null||r===void 0?void 0:r.getPath())!==(e===null||e===void 0?void 0:e.getPath())||n){o.setProperty("/recommendationsData",{})}}};t.recommendationHelper=e;return t},false);
+//# sourceMappingURL=RecommendationHelper.js.map

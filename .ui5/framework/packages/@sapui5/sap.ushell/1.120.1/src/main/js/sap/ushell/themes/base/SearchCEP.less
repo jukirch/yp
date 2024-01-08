@@ -1,0 +1,112 @@
+/* ======================================= */
+/* CSS for control sap.ushell/SearchCEP*/
+/* Base theme                           */
+/* ======================================= */
+#PlaceHolderSearchField>.sapMSFF {
+  height: 1.8rem !important;
+}
+
+#CEPSearchField>.sapMSFF {
+  height: 2.25rem !important;
+}
+
+#CEPSearchField-reset,
+#PlaceHolderSearchField-reset {
+  line-height: 1.87;
+}
+
+#searchFieldPopover #Lists {
+  padding-bottom: 0.42rem;
+  max-height: 65vh;
+  overflow: hidden scroll;
+}
+
+.sapUiTheme-sap_fiori_3 .searchCEPlistItemIcon {
+  color: #6a6d70 !important;
+}
+
+.sapUiTheme-sap_belize .searchCEPlistItemIcon {
+  color: #878787 !important;
+}
+
+.sapUshellCEPSearchCenter {
+  margin: auto;
+}
+
+.searchCEPList.sapUshellCEPListDivider:not(.topCEPlist):before {
+  content : "";
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  height: 1px;
+  width: 94%;
+  border-bottom: 1px solid @sapUiListBorderColor;
+}
+
+.sapUshellCEPListCenter {
+  top: 0.1rem !important;
+  padding: 0.3rem 0 0 0 !important;
+  margin: auto auto 0.75rem;
+}
+
+.sapUshellCEPSearchFieldPopover {
+  top: 0.1rem !important;
+  box-shadow: 0 0 0 0.0625rem @sapContent_Shadow1 !important;
+}
+
+.sapUshellCEPSearchFieldMargin {
+  margin-top: 0.15rem;
+  margin-right: 0.425rem !important;
+  margin-left: 0.46rem !important;
+}
+
+.searchCEPList div[id$="-trigger"] {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.searchCEPList div[id$="-trigger"]:focus {
+  outline: @sapUiContentFocusWidth @sapUiContentFocusStyle @sapUiContentFocusColor;
+  outline-offset: calc(-0.125rem - 0.0625rem);
+}
+
+.searchCEPList div[id$="-trigger-content"]>.sapMGrowingListTrigger {
+  border-color: transparent;
+}
+
+.searchCEPList>.sapMGrowingList {
+  border-bottom: none;
+}
+
+.searchCEPList span[id$="-triggerText"] {
+  font-weight: normal;
+  text-align: left;
+  font-size: .9rem;
+  color: @sapLinkColor;
+  margin: 0.3rem 0 0.6rem 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.searchCEPList div[id$="-trigger-content"]>.sapMGrowingListTrigger>.sapMGrowingListDescription {
+  display: none !important;
+}
+
+.searchCEPList>.sapMListHdrText {
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  height: 1rem;
+  line-height: 0.6rem;
+  padding: 1rem;
+  border-color: transparent;
+  color: @sapContent_LabelColor;
+  background-color: transparent !important;
+}
+
+#CEPSearchField-search,
+#PlaceHolderSearchField-search {
+  line-height: 1.87;
+}
+

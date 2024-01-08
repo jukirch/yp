@@ -1,0 +1,16 @@
+08:27:16 [INFO] - AppFolders: starting processing setAppFoldersContext()
+08:27:54 [INFO] - AppFolders:
+	projectRoots: 9
+	appRoots: 9
+	webappRoots: 9
+	subWebappRoots: 104
+	localServiceRoots: 0
+	adaptationAppRoots: 0
+	adaptationWebappRoots: 0
+	extensionAppRoots: 0
+	extensionWebappRoots: 0
+	libraryRoots: 4
+	localAnnotationRoots: 0
+	EDMXWithServiceRoots: 0
+	EDMXLocalServiceRoots: 0
+08:27:54 [INFO] - AppFolders: Function setContext() done in 37382.502ms

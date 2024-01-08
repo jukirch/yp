@@ -1,0 +1,84 @@
+<mvc:View controllerName="sap.ushell.components.shell.Settings.userLanguageRegion.LanguageRegionSelector"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core">
+
+    <VBox class="sapUiSmallMargin" visible="{= !!${/isSettingsLoaded}}">
+        <form:SimpleForm id="languageForm" editable="true" layout="ResponsiveGridLayout" labelSpanS="5" columnsM="7">
+
+                <Label text="{i18n>languageAndRegionTit}" visible="{= !${/languageList}}" labelFor="languageSelectionInput"/>
+                <Text id="languageSelectionInput" text="{/selectedLanguageText}" visible="{= !${/languageList} }"/>
+                <Label text="{i18n>languageAndRegionTit}" visible="{= !!${/languageList}}" labelFor="languageSelectionSelect"/>
+                <ComboBox id="languageSelectionSelect"
+                    visible="{= !!${/languageList} }"
+                    items="{/languageList}"
+                    selectedKey="{/selectedLanguage}"
+                    valueState="{= ${/selectedLanguage} ? 'None' : 'Error'}"
+                    width="100%"
+                    change="._handleLanguageSelectChange">
+                    <core:Item key="{key}" text="{text}" />
+                </ComboBox>
+
+                <Label text="{i18n>dateFormatFld}" visible="{= !${/DateFormatList}}" labelFor="dateFormatCombo"/>
+                <Text id="dateFormatCombo" visible="{= !${/DateFormatList}}" text="{/selectedDatePattern}" />
+                <Label text="{i18n>dateFormatFld}" visible="{= !!${/DateFormatList}}" labelFor="DateFormatSelectionSelect"/>
+                <Select id="DateFormatSelectionSelect" visible="{= !!${/DateFormatList}}" items="{/DateFormatList}" width="100%" selectedKey="{/selectedDatePattern}">
+                    <core:Item key="{value}" text="{description}" />
+                </Select>
+
+                <Label text="{i18n>timeFormatFld}" visible="{= !${/TimeFormatList}}" labelFor="hoursSegmentedButton"/>
+                <SegmentedButton id="hoursSegmentedButton" visible="{= !${/TimeFormatList}}" enabled="false" selectedKey="{/selectedTimeFormat}">
+                    <items>
+                        <SegmentedButtonItem key="12h" text="{i18n>btn12h}" />
+                        <SegmentedButtonItem key="24h" text="{i18n>btn24h}" />
+                    </items>
+                </SegmentedButton>
+                <Label text="{i18n>timeFormatFld}" visible="{= !!${/TimeFormatList}}" labelFor="TimeFormatSelectionSelect"/>
+                <Select id="TimeFormatSelectionSelect" visible="{= !!${/TimeFormatList}}" items="{/TimeFormatList}" width="100%" selectedKey="{/selectedTimeFormat}">
+                    <core:Item key="{value}" text="{description}" />
+                </Select>
+
+                <Label text="{i18n>timeZoneFld}" visible="{= ${/isEnableUserProfileSetting}}" labelFor="TimeZoneSelectionSelect" />
+                <ComboBox
+                    id="TimeZoneSelectionSelect"
+                    visible="{= !!${/TimeZoneList}}"
+                    items="{
+                        path: '/TimeZoneList',
+                        sorter: { path: 'description' }
+                    }"
+                    width="100%"
+                    selectedKey="{/selectedTimeZone}"
+                    valueState="{= ${/selectedTimeZone} ? 'None' : 'Error'}"
+                >
+                    <core:Item key="{value}" text="{description}" />
+                </ComboBox>
+                <Label visible="{= !${/isTimeZoneFromServerInUI5}}"/>
+                <Text text="{i18n>TimeZoneHelpingText}" class="sapUshellFlpSettingsHint" visible="{= !${/isTimeZoneFromServerInUI5}}" width="100%"/>
+
+                <Label text="{i18n>numberFormatFld}" visible="{= ${/isEnableUserProfileSetting}}" labelFor="NumberFormatSelectionSelect" />
+                <Select id="NumberFormatSelectionSelect" visible="{= !!${/NumberFormatList}}" items="{/NumberFormatList}" width="100%" selectedKey="{/selectedNumberFormat}">
+                    <core:Item key="{value}" text="{description}" />
+                </Select>
+
+                <Label text="{i18n>weekNumberingFld}" visible="{= !!${/CalendarWeekNumberingList}}" labelFor="WeekNumberingRadioButtonList" />
+                <List
+                    id="WeekNumberingRadioButtonList"
+                    visible="{= !!${/CalendarWeekNumberingList}}"
+                    mode="SingleSelectLeft"
+                    items="{/CalendarWeekNumberingList}"
+                    showSeparators="None"
+                    selectionChange="._handleCalendarWeekNumberingChange"
+                    includeItemInSelection="true"
+                >
+                    <StandardListItem class="sapUshellCalendarWeek" title="{title}" description="{description}" selected="{selected}" wrapping="true">
+                        <customData>
+                            <core:CustomData value="{value}"/>
+                        </customData>
+                    </StandardListItem>
+                </List>
+
+       </form:SimpleForm>
+        <Text text="{i18n>LanguageAndRegionHelpingText}" class="sapUshellFlpSettingsWideDescription" visible="{= !!${/languageList}}" width="100%"/>
+    </VBox>
+</mvc:View>

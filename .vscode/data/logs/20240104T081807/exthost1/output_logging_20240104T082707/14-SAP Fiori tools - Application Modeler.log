@@ -1,0 +1,41 @@
+08:27:17 [INFO] - Running activation sequence for Fiori tools - Application Modeler
+08:27:17 [INFO] - Configurations: 'sap.ux.applicationModeler.showJsonSchemas': false; isTheia(): false; isAppStudio(): true
+08:27:17 [INFO] - isBASVEExtInstalled(): true
+08:27:17 [INFO] - AppFolders: setAppFoldersContext() is processing, leaving
+08:27:17 [INFO] - Register Fiori tools file system for configurations...
+08:27:17 [INFO] - ...Fiori tools file system registered in 0.618ms
+08:27:17 [INFO] - Register views for configurations...
+08:27:17 [INFO] - ...views for configurations registered in 0.932ms
+08:27:17 [INFO] - Register commands...
+08:27:17 [INFO] - ...commands registered in 3.569ms
+08:27:17 [INFO] - Activating sync module...
+08:27:17 [INFO] - Virtual file system ftfs initialized in 0.143ms
+08:27:17 [INFO] - Searching for projects in these workspace folders: 
+[ '/home/user' ]
+08:27:25 [INFO] - SAP UX projects found and added in 7898.321ms
+08:27:25 [INFO] - Start watching **/package.json
+08:27:25 [INFO] - package.json watched in 0.881ms
+08:27:25 [INFO] - Start watching for workspace folder changes
+08:27:25 [INFO] - Workspace folders watched in 0.420ms
+08:27:25 [INFO] - Configs watched in 0.111ms
+08:27:25 [INFO] - ...sync module activated in 7901.851ms
+08:27:25 [INFO] - Register serializers...
+08:27:25 [INFO] - ...serializers registered in 0.552ms
+08:27:25 [INFO] - Activating launch config integration
+08:27:25 [INFO] - Handler for Fiori launch configuration registered
+08:27:25 [INFO] - ...launch config integration activated in 0.701ms
+08:27:25 [INFO] - Activating migration module...
+08:27:25 [INFO] - Migration start watching for workspace folder changes
+08:27:25 [INFO] - Workspace folders watched in 0.469ms
+08:27:25 [INFO] - Migration start watching **/package.json
+08:27:25 [INFO] - package.json watched in 0.332ms
+08:27:25 [INFO] - Migration start watching **/pom.xml
+08:27:25 [INFO] - pom.xml watched in 0.327ms
+08:27:25 [INFO] - Migration start watching **/neo-app.json
+08:27:25 [INFO] - neo-app.json watched in 0.255ms
+08:27:25 [INFO] - Migration start watching **/manifest.json
+08:27:25 [INFO] - manifest.json watched in 0.362ms
+08:27:25 [INFO] - ...migration module activated in 3.725ms
+08:27:25 [INFO] - Register uri handler...
+08:27:25 [INFO] - ...uri handler registered in 0.203ms
+08:27:25 [INFO] - activation sequence for Fiori tools - Application Modeler done in 8137.215ms

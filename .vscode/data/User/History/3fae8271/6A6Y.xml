@@ -1,0 +1,226 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:c="sap.ui.webc.main"
+    controllerName="s321502.controller.Main"
+    displayBlock="true"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <c:Carousel
+            class="sapUiContentPadding"
+            cyclic="true"
+            models="/data/data.json"
+
+        >
+            <c:Card width="70%" height="550px" >
+                <l:HorizontalLayout>
+                    <Image
+                        src="https://tse4.mm.bing.net/th?id=OIP.F409NVW92apW7F6N0DtRYwHaKe"
+                        height="450px"
+                    />
+
+                    <List
+                    headerText="{movName}"
+                    
+            "movLength": ,
+                    >
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                                />
+                            <StandardListItem 
+                                title="Erscheinungsjahr"
+                                description="movYear}"
+                            />
+                            <StandardListItem 
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            />
+                            <StandardListItem 
+                                title="{= ${oscarWon} ? 'Gewann den Oscar!' : 'Hat den Oscar nicht gewonnen.' }"
+                                icon="{= ${/oscar/0/oscarWon} === true ? 'sap-icon://study-leave' : 'sap-icon://decline' }" 
+                            />
+                        </items>
+                    
+                    </List>
+                </l:HorizontalLayout>
+            </c:Card>
+            
+
+            <c:Card width="70%" height="550px" >
+                <l:HorizontalLayout>
+                    <Image
+                        src="https://www.kino-zeit.de/sites/default/files/styles/plakat/public/2022-12/die_aussprache_2022_pl.jpg?itok=ChMjzr--"
+                        height="450px"
+                    />
+                    <List
+                    headerText="{movName}"
+                    items="{/oscar}"
+                    >
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                                />
+                            <!-- <StandardListItem 
+                                title="Erscheinungsjahr"
+                                description="movYear}"
+                            />
+                            <StandardListItem 
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            /> -->
+                        </items>
+                    
+                    </List>
+
+                </l:HorizontalLayout>
+            </c:Card>
+
+            <c:Card width="70%" height="550px" >
+                <l:HorizontalLayout>
+                    <Image
+                        src="https://tse4.mm.bing.net/th?id=OIP.tQJ1EAOl_KfyB-he93SfNgHaLH"
+                        height="450px"
+                    />
+                    <List
+                    headerText="{movName}"
+                    items="{/oscar}"
+                    >
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                                />
+                            <!-- <StandardListItem 
+                                title="Erscheinungsjahr"
+                                description="movYear}"
+                            />
+                            <StandardListItem 
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            /> -->
+                        </items>
+                    
+                    </List>
+                </l:HorizontalLayout>
+            </c:Card>
+
+            <c:Card width="70%" height="550px" >
+                <l:HorizontalLayout>
+                    <Image
+                        src="https://tse1.mm.bing.net/th?id=OIP.-X2-LwcKU1iKn4-_Yk7XXQHaLH"
+                        height="450px"
+                    />
+                    <List
+                    headerText="{movName}"
+                    items="{/oscar}"
+                    >
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                                />
+                            <!-- <StandardListItem 
+                                title="Erscheinungsjahr"
+                                description="movYear}"
+                            />
+                            <StandardListItem 
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            /> -->
+                        </items>
+                    
+                    </List>
+                </l:HorizontalLayout>
+            </c:Card>
+
+            <c:Card width="70%" height="550px" >
+                <l:HorizontalLayout>
+                    <Image
+                        src="https://tse1.mm.bing.net/th?id=OIP._wzdYNWi1rLSGZ59VKD_RwHaLH"
+                        height="450px"
+                    />
+                    <List
+                    headerText="{movName}"
+                    items="{/oscar}"
+                    >
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                                />
+                            <!-- <StandardListItem 
+                                title="Erscheinungsjahr"
+                                description="movYear}"
+                            />
+                            <StandardListItem 
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            /> -->
+                        </items>
+                    
+                    </List>
+                </l:HorizontalLayout>
+            </c:Card>
+
+            <c:Card width="70%" height="550px" >
+                <l:HorizontalLayout>
+                    <Image
+                        src="https://tse2.mm.bing.net/th?id=OIP.R22KsXZoaNtFMu0rgH5VgAHaKe"
+                        height="450px"
+                    />
+                    <List
+                    headerText="{movName}"
+                    items="{/oscar}"
+                    >
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                                />
+                            <!-- <StandardListItem 
+                                title="Erscheinungsjahr"
+                                description="movYear}"
+                            />
+                            <StandardListItem 
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            /> -->
+                        </items>
+                    
+                    </List>
+                </l:HorizontalLayout>
+            </c:Card>
+        </c:Carousel>
+    </Page>
+</mvc:View>

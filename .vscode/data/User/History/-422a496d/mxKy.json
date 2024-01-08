@@ -1,0 +1,43 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "files.autoSave": "onWindowChange",
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Dark+]": {
+            "rules": {
+                "property.mandatory:xml": {
+                    "bold": true
+                },
+                "string.i18n:xml": {
+                    "italic": true
+                }
+            }
+        },
+        "[Default Light+]": {
+            "rules": {
+                "property.mandatory:xml": {
+                    "bold": true
+                },
+                "string.i18n:xml": {
+                    "italic": true
+                }
+            }
+        },
+        "[Default High Contrast]": {
+            "rules": {
+                "property.mandatory:xml": {
+                    "bold": true
+                },
+                "string.i18n:xml": {
+                    "italic": true
+                }
+            }
+        }
+    },
+    "workbench.editorAssociations": {
+        "*.xml": "default"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "SAPOSS.vscode-ui5-language-assistant"
+    },
+    "explorer.confirmDragAndDrop": false
+}

@@ -1,0 +1,170 @@
+/* clearing the header's inherited Dark background, so we will benefit the light text from the header's dark design
+and in addition see our background and not the original dark design header background image*/
+.ovpApplication .ovpPageHeader,
+.ovpApplication .sapUxAPObjectPageHeader {
+    background-size: 0 !important;
+    background-color: transparent;
+}
+
+.ovpDescription {
+    display: block;
+}
+
+.ovpWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.ovpOverlay {
+    opacity: 0.4 !important;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.ovpIntPreviewOverflowLayer {
+    height: 32px;
+    width: 312px;
+    top: -48px;
+    background: -moz-linear-gradient(top, @sapList_Background 0%,rgba(255,255,58,0) 150%);
+    background: -webkit-linear-gradient(top, @sapList_Background 0%,rgba(255,255,58,0) 150%);
+    background: linear-gradient(to top, @sapList_Background 0%,rgba(255,255,58,0) 150%);
+    background-repeat: repeat-x;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ovpApplication {
+    position: relative;
+    .sapFDynamicPageContent {
+        background: transparent !important;
+        overflow: initial;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    .sapFDynamicPageTitle {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-shadow: none;
+        .sapFDynamicPageTitleMainActionsHasContent {
+                visibility: hidden;
+            }
+    }
+
+    .sapUiSizeCompact .sapFDynamicPageHeader,
+    .sapFDynamicPage-Std-Tablet .sapFDynamicPageHeader {
+        padding-left: 16px !important;
+    }
+
+    .sapFDynamicPageTitleWrapper.sapFDynamicPageTitleSnapped {
+        > .sapFDynamicPageTitle {
+            box-shadow: inset 0 -0.125rem @sapUiPageHeaderBorderColor !important;
+        }
+    }
+    .sapFDynamicPageTitleWrapper.sapFDynamicPageTitleSnapped > .sapFDynamicPageTitle,
+    .sapFDynamicPageTitleWrapper.sapFDynamicPageTitleOnly > .sapFDynamicPageTitle {
+        box-shadow: inset 0 -0.125rem @sapUiPageHeaderBorderColor !important;
+    }
+
+    .sapFDynamicPageHeader {
+        overflow: visible;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-shadow: inset 0 -0.125rem @sapUiPageHeaderBorderColor !important;
+    }
+
+    & > .sapUiFixFlexFixed > .sapMVBox,
+    & > .sapUiFixFlexFlexible {
+        transition: transform 25ms linear;
+        -webkit-transition: -webkit-transform 25ms linear;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+    & > .sapUiFixFlexFlexible {
+        overflow: visible;
+    }
+
+    /* It's just temporary till bug with white background will be fixed */
+    .showFilterButton .sapMBtnDefault {
+        background: transparent;
+        border: none;
+    }
+
+    .sapFDynamicPageContentFitContainer {
+        padding: 2rem 0 0 0;
+    }
+}
+
+.sapOVPBusyDialog {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    .sapMDialogSection {
+        background: transparent;
+        .sapMBusyDialogLabel {
+            color: @sapUiWhite;
+        }
+    }
+}
+
+.ovpApplication {
+    .ovpGlobalFilterWrapper {
+        border-bottom: 1px solid;
+        transition: height 0.25s linear;
+        overflow: hidden;
+    }
+    .sapUiCompFilterBar {
+        background-color: unset;
+        position: relative;
+        transition: top 0.25s linear;
+    }
+}
+
+.ovpApplication .ovpSmartFilterBar label,
+.ovpApplication .ovpSmartFilterBar button span.sapMBtnContent,
+.ovpApplication .ovpSmartFilterBar button .sapMBtnIcon {
+    text-shadow: none !important;
+}
+
+.ovpApplication .ovpSmartFilterBar {
+    background-color: transparent;
+}
+
+/* Object Page Header - remove background color and mimic dark font color - since the dark loads an unnecessary image  */
+.ovpPageHeader {
+    .sapUxAPObjectPageHeaderIdentifier {
+        background-color: unset;
+        background-color: transparent;
+    }
+}
+
+/* Object Page Header - make sure that image visible*/
+.sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderObjectImageContainer .sapMImg {
+    opacity: 1;
+}
+
+.sapOVPDisableUserSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sapOVPDisableImageDrag img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.ovpLayoutElement {
+    transition: opacity 250ms;
+    opacity: 0;
+    overflow-y: visible;
+    &.ovpLayoutElementShow {
+        opacity: 1;
+    }
+}
+
+.hideOvpCardPage {
+    display: none;
+}

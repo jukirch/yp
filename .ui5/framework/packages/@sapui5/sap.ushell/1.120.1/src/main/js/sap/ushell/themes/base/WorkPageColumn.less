@@ -1,0 +1,39 @@
+.workPageColumn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-width: 0;
+
+  [data-wp-breakpoint="st-sp-1"] &,
+  [data-wp-breakpoint="st-sp-0"] & {
+    min-width: 100%;
+  }
+
+  .workPageColumnDeleteButton {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.25rem;
+  }
+
+  .workPageColumnToolbar {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &.workPageColumnEmpty .workPageAddWidgetButton {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}

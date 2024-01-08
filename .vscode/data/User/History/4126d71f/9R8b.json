@@ -1,0 +1,37 @@
+{
+
+    "oscar": 
+    [ 
+        {
+        "movYear":"2023", 
+        "movName":"Everything Everywhere All at Once", 
+        "movDirector":"Daniel Kwan, Daniel Scheinert", 
+        "movMaleLead":"Brendan Fraser", 
+        "movFemaleLead":"Michelle Yeoh",
+        "oscarWon": true           
+        },
+
+        {
+        "movYear":"2023", 
+        "movName":"", 
+        "movDirector":"", 
+        "movMaleLead":"", 
+        "movFemaleLead":"",
+        "oscarWon": false
+        },
+
+        {
+        "movYear":"2023", 
+        "movName":"", 
+        "movDirector":"", 
+        "movMaleLead":"", 
+        "movFemaleLead":"",
+        "oscarWon": false
+        },
+        {
+            }
+    ]
+
+
+
+}

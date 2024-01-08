@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH:'sap/suite/ui/generic/template/js/AnnotationHelper'}">
+
+	<uxap:ObjectPageSection
+			id="{section>id}"
+			title="{parts: [{path: 'section>extensionPointName'}, {path: 'manifestViewExtensions>'}, {path: 'section>annotations/Facet/annotation/Label'}], formatter: 'AH.getExtensionPointFacetTitle'}"
+			titleLevel="H3"
+			titleUppercase="false">
+		<uxap:subSections>
+			<template:repeat list="{section>subSections}" var="subSection">
+				<uxap:ObjectPageSubSection id="{subSection>id}" title=" " class="sapSmartTemplatesObjectPageSubSection" titleLevel="H4">
+					<core:ExtensionPoint name="{section>extensionPointName}"/>
+				</uxap:ObjectPageSubSection>
+			</template:repeat>
+		</uxap:subSections>
+	</uxap:ObjectPageSection>
+</core:FragmentDefinition>

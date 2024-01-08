@@ -1,0 +1,188 @@
+<mvc:View
+    controllerName="unit15.controller.Main"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:t="sap.ui.table"
+    xmlns="sap.m"
+>
+
+    <App id="idAppControl">
+        <pages>
+            <Page title="{i18n>title}">
+                <content>
+                    <Button
+                        text="Zeige nur ab Jahr: "
+                        id="button0"
+                        press="onFilter"
+                        width="200px"
+                    />
+
+                    <Input
+                        placeholder="JJJJ"
+                        width="110px"
+                        id="input0"
+                    />
+
+                    <Button
+                        text="Nach Film sortieren"
+                        id="button5"
+                        press="onFilmSort"
+                        width="250px"
+                    />
+
+                    <Button
+                        text="Nach Regie sortieren"
+                        id="button4"
+                        press="onRSort"
+                        width="200px"
+                    />
+
+                    <Button
+                        text="Nach Preisträgern sortieren"
+                        id="button2"
+                        press="onMSort"
+                        width="200px"
+                    />
+
+                    <Button
+                        text="Nach Preisträgerinnenn sortieren"
+                        id="button3"
+                        press="onFSort"
+                        width="200px"
+                    />
+
+                    <Button
+                        text="Alle Filter zurücksetzen"
+                        id="button1"
+                        press="onReset"
+                        icon="sap-icon://decline"
+                        width="150px"
+                    />
+
+                    <t:Table
+                        selectionBehavior="RowOnly"
+                        width="1150px"
+                        id="table0"
+                        rows="{     
+                                    path: '/oscar',
+                                    filters: [ { } ],
+                                    sorter: [ { path: 'oscFemaleLead', descending: false} ]
+                        }"
+                    >
+                        <items>
+                            <ColumnListItem
+                                type="Active"
+                                id="item0"
+                            >
+                                <cells>
+                                    <Text
+                                        text="{oscYear}"
+                                        id="text0"
+                                        width="100px"
+                                    />
+                                    <Text
+                                        text="{oscDate}"
+                                        id="text1"
+                                        width="200px"
+                                    />
+                                    <Text
+                                        text="{oscBestFilm}"
+                                        id="text5"
+                                        width="250px"
+                                    />
+                                    <Text
+                                        text="{oscBestDir}"
+                                        id="text2"
+                                        width="200px"
+                                    />
+                                    <Text
+                                        text="{oscMaleLead}"
+                                        id="text3"
+                                        width="200px"
+                                    />
+                                    <Text
+                                        text="{oscFemaleLead}"
+                                        id="text4"
+                                        width="200px"
+                                    />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+
+                        <columns>
+                            <Column
+                                id="Column0"
+                                width="100px"
+                            >
+                                <t:label>
+                                    <Label
+                                        text="Jahr"
+                                    />
+                                </t:label>
+                                <t:template>
+                                    <m:Text text="{oscYear}"/>
+                                </t:template>
+                                    
+                            </Column>
+
+                            <Column
+                                id="column1"
+                            >
+                                <header>
+                                    <Label
+                                        text="Datum"
+                                    />
+                                </header>
+                            </Column>
+
+                            <Column
+                                id="column5">
+                                <header>
+                                    <Label
+                                        text="Bester Film"
+                                    />
+                                </header>
+                            </Column>
+
+                            <Column
+                                id="column2"
+                                width="200px"
+                            >
+                                <header>
+                                    <Label
+                                        text="Regisseur"
+                                    />
+                                </header>
+                            </Column>
+
+                            <Column
+                                id="column3"
+                                width="200px"
+                            >
+                                <header>
+                                    <Label
+                                        text="Bester Schauspieler"
+                                        id="label3"
+                                    />
+                                </header>
+                            </Column>
+
+                            <Column
+                                id="column4"
+                                width="200px"
+                            >
+                                <header>
+                                    <Label
+                                        text="Beste Schauspielerin"
+                                        id="label4"
+                                    />
+                                </header>
+                            </Column>
+                        </columns>
+                    </t:Table>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

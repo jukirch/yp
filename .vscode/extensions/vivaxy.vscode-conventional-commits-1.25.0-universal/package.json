@@ -1,0 +1,203 @@
+{
+	"name": "vscode-conventional-commits",
+	"displayName": "%extension.name%",
+	"description": "💬Conventional Commits for VSCode.",
+	"icon": "assets/icon.png",
+	"publisher": "vivaxy",
+	"version": "1.25.0",
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"categories": [
+		"Snippets",
+		"SCM Providers"
+	],
+	"keywords": [
+		"git",
+		"commit",
+		"conventional-commits",
+		"gacp",
+		"conventional-changelog",
+		"commitizen",
+		"cz"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vivaxy/vscode-conventional-commits.git"
+	},
+	"author": "vivaxy",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/vivaxy/vscode-conventional-commits/issues"
+	},
+	"homepage": "https://github.com/vivaxy/vscode-conventional-commits",
+	"activationEvents": [
+		"onCommand:extension.conventionalCommits",
+		"onCommand:extension.conventionalCommits.resetGlobalState",
+		"onCommand:extension.conventionalCommits.showNewVersionNotes"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.conventionalCommits",
+				"title": "%extension.name%",
+				"icon": {
+					"dark": "./assets/menu-icon-dark.svg",
+					"light": "./assets/menu-icon-light.svg"
+				}
+			},
+			{
+				"command": "extension.conventionalCommits.resetGlobalState",
+				"title": "%extension.commands.resetGlobalState%"
+			},
+			{
+				"command": "extension.conventionalCommits.showNewVersionNotes",
+				"title": "%extension.commands.showNewVersionNotes%"
+			}
+		],
+		"menus": {
+			"scm/title": [
+				{
+					"when": "scmProvider == git",
+					"command": "extension.conventionalCommits",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": {
+			"title": "%extension.name%",
+			"properties": {
+				"conventionalCommits.autoCommit": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%extension.configuration.autoCommit.markdownDescription%"
+				},
+				"conventionalCommits.silentAutoCommit": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%extension.configuration.silentAutoCommit.markdownDescription%"
+				},
+				"conventionalCommits.emojiFormat": {
+					"type": "string",
+					"default": "code",
+					"markdownDescription": "%extension.configuration.emojiFormat.markdownDescription%",
+					"enum": [
+						"code",
+						"emoji"
+					],
+					"markdownEnumDescriptions": [
+						"%extension.configuration.emojiFormat.markdownEnumDescriptions.code%",
+						"%extension.configuration.emojiFormat.markdownEnumDescriptions.emoji%"
+					]
+				},
+				"conventionalCommits.gitmoji": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%extension.configuration.gitmoji.markdownDescription%"
+				},
+				"conventionalCommits.lineBreak": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "%extension.configuration.lineBreak.markdownDescription%"
+				},
+				"conventionalCommits.promptBody": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%extension.configuration.promptBody.markdownDescription%"
+				},
+				"conventionalCommits.promptCI": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%extension.configuration.promptCI.markdownDescription%"
+				},
+				"conventionalCommits.promptFooter": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%extension.configuration.promptFooter.markdownDescription%"
+				},
+				"conventionalCommits.promptScopes": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%extension.configuration.promptScopes.markdownDescription%"
+				},
+				"conventionalCommits.scopes": {
+					"type": "array",
+					"default": [],
+					"markdownDescription": "%extension.configuration.scopes.markdownDescription%"
+				},
+				"conventionalCommits.showEditor": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%extension.configuration.showEditor.markdownDescription%"
+				},
+				"conventionalCommits.showNewVersionNotes": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%extension.configuration.showNewVersionNotes.markdownDescription%"
+				},
+				"conventionalCommits.editor.keepAfterSave": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%extension.configuration.editor.keepAfterSave.markdownDescription%"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"deploy": "vsce publish --yarn",
+		"build": "node prepare.js && vsce package",
+		"_build": "vsce package",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@types/node": "^16.0.0",
+		"@types/vscode": "^1.44.0",
+		"@vscode/vsce": "^2.16.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"husky": "8",
+		"lint-staged": "^13.0.0",
+		"ovsx": "^0.5.0",
+		"pinst": "^3.0.0",
+		"prettier": "^2.0.2",
+		"standard-version": "^9.0.0",
+		"string-replace-loader": "^3.0.1",
+		"ts-loader": "^9.0.0",
+		"typescript": "^4.0.0",
+		"warnings-to-errors-webpack-plugin": "^2.0.1",
+		"webpack": "^5.25.0",
+		"webpack-cli": "^4.5.0"
+	},
+	"lint-staged": {
+		"*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
+			"prettier --write"
+		]
+	},
+	"dependencies": {
+		"@commitlint/cli": "^13.0.0",
+		"@commitlint/config-conventional": "^13.0.0",
+		"@commitlint/load": "^13.0.0",
+		"@commitlint/rules": "^13.0.0",
+		"@yi-xu-0100/conventional-commit-types-i18n": "1.6.0"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"__metadata": {
+		"id": "b6b26bce-33f4-4bce-bf92-89812388ed0a",
+		"publisherId": "cd0bc23b-0195-4718-a6dd-c6611ee1c8bf",
+		"publisherDisplayName": "vivaxy",
+		"targetPlatform": "universal",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1704706108371,
+		"preRelease": false
+	}
+}

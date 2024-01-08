@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" 
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" >
+
+	<!--all break out actions which are neither determining nor global-->
+	<template:repeat list="{customActions>}" var="customAction">
+		<!-- Breakout action -->
+		<template:if test="{= !(${customAction>determining} || ${customAction>global}) }">
+			<!-- Breakout button which is neither determining nor global -->
+			<Button id="{customAction>id}"
+				enabled="{customAction>enabled}"
+				text="{customAction>text}"
+				press="{customAction>press}"
+				type="Transparent">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="{customAction>importance}"/>
+				</layoutData>
+			</Button>
+		</template:if>
+	</template:repeat>
+</core:FragmentDefinition>

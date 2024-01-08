@@ -1,0 +1,101 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:dnd="sap.ui.core.dnd"
+    xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:launchpad="sap.ushell.ui.launchpad"
+    controllerName="sap.ushell.components.pages.controller.PageRuntime"
+    height="100%"
+    core:require="{
+        IllustratedMessageType: 'sap/m/IllustratedMessageType'
+    }">
+    <NavContainer id="pagesRuntimeNavContainer">
+        <NavContainer id="pagesNavContainer" pages="{/pages}">
+            <pages>
+                <Page
+                    data:pageId="{id}"
+                    showHeader="false"
+                    backgroundDesign="Transparent"
+                    floatingFooter="true">
+                    <content>
+                        <launchpad:Page
+                            edit="{viewSettings>/actionModeEditActive}"
+                            dataHelpId="Page-{id}"
+                            sections="{
+                                path: 'sections',
+                                factory: '._sectionFactory',
+                                key: 'id'
+                            }"
+                            addSectionButtonPressed=".handleEditModeAction('addSection', $event, ${$source>/}, ${$parameters>/})"
+                            enableSectionReordering="{viewSettings>/actionModeEditActive}"
+                            sectionDrop=".handleEditModeAction('moveSection', $event, ${$source>/}, ${$parameters>/})">
+                            <launchpad:dragDropConfig>
+                                <dnd:DropInfo
+                                    groupName="Section"
+                                    targetAggregation="sections"
+                                    dragEnter=".onDragEnter"
+                                    drop=".moveVisualization($event, ${$source>/}, ${$parameters>/})"/>
+                            </launchpad:dragDropConfig>
+                        </launchpad:Page>
+                    </content>
+                    <footer>
+                        <Bar class="sapUshellDashboardFooter" visible="{viewSettings>/actionModeActive}">
+                            <contentRight>
+                                <Button
+                                    text="{i18n>closeEditMode}"
+                                    type="Emphasized"
+                                    press=".handleEditModeAction('save', $event, ${$source>/}, ${$parameters>/})"/>
+                            </contentRight>
+                            <customData>
+                                <core:CustomData
+                                    key="sap-ui-fastnavgroup"
+                                    value="true"
+                                    writeToDom="true"/>
+                            </customData>
+                        </Bar>
+                    </footer>
+                    <landmarkInfo>
+                        <PageAccessibleLandmarkInfo
+                            rootRole="Region"
+                            rootLabel="{i18n>PageSectionRegion}"
+                            headerRole="None"
+                            contentRole="None"
+                            footerRole="None"/>
+                    </landmarkInfo>
+                </Page>
+            </pages>
+            <customData>
+                <core:CustomData
+                    key="help-id"
+                    value="{= ${viewSettings>/personalizationEnabled} ? 'general-page-id-pers-allowed' : 'general-page-id-no-pers-allowed'}"
+                    writeToDom="true"/>
+            </customData>
+        </NavContainer>
+
+        <Page
+            showHeader="false"
+            id="errorPage">
+            <IllustratedMessage
+                title="{errorPage>/title}"
+                illustrationType="{= IllustratedMessageType.PageNotFound }"
+                enableDefaultTitleAndDescription="false"
+                description="{errorPage>/description}">
+                <additionalContent>
+                    <Button
+                        class="sapUiTinyMarginEnd"
+                        text="{i18n>PageRuntime.CannotLoadPage.DetailsButton}"
+                        visible="{= !!${errorPage>/details} &amp;&amp; !${errorPage>/description}}"
+                        press="._pressViewDetailsButton"/>
+                    <Button
+                        text="{i18n>PageRuntime.CannotLoadPage.CopyButton}"
+                        visible="{= !!${errorPage>/details}}"
+                        press="._copyToClipboard"/>
+                </additionalContent>
+            </IllustratedMessage>
+        </Page>
+        <Page
+            id="emptyPage"
+            showHeader="false"/>
+    </NavContainer>
+</mvc:View>

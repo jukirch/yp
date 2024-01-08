@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<VBox id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ProgressIndicatorVBox"
+		  visible="{path: 'headerFacet>', formatter: 'AH.getBindingForHiddenPath'}"
+		  binding="{parts: [{path: 'headerFacet>Target'}, {path: 'entitySet>'}], formatter: 'AH.getNavigationPathWithExpand'}">
+		<Title
+			id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ProgressIndicatorTitle"
+			class="sapSmartTemplatesObjectPageHeaderProgressIndicatorTitle"
+			text="{path:'dataPoint>Title', formatter: 'AHModel.format'}"
+			visible="{= !!${dataPoint>Title}}"/>
+		<Label
+			id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ProgressIndicatorSubTitle"
+			text="{path:'dataPoint>Description', formatter: 'AHModel.format'}"
+			visible="{= !!${dataPoint>Description}}"/>
+		<template:with path="dataPoint>Value" helper="AHModel.resolvePath" var="valueProperty">
+			<ProgressIndicator
+				id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ProgressIndicator"
+				class="sapSmartTemplatesObjectPageHeaderProgressIndicatorControl"
+				percentValue="{ parts: [{path:'dataPoint>'}, {path:'valueProperty>'}], formatter: 'AH.buildExpressionForProgressIndicatorPercentValue' }"
+				displayValue="{ parts: [{path:'dataPoint>'}, {path:'valueProperty>Org.OData.Measures.V1.Unit'}], formatter: 'AH.buildExpressionForProgressIndicatorDisplayValue'}"
+				state="{path:'dataPoint>', formatter: 'AH.buildExpressionForProgressIndicatorCriticality'}"
+				tooltip="{ path:'valueProperty>', formatter: 'AH.getProgressIndicatorTooltip'}"
+				ariaLabelledBy="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ProgressIndicatorTitle">
+				<customData>
+                    <core:CustomData key="Target" value="{= ${path: 'dataPoint>TargetValue', formatter: 'AHModel.format'} }" />
+                    <core:CustomData key="UoM" value="{= ${path: 'valueProperty>Org.OData.Measures.V1.Unit', formatter: 'AHModel.format'} }" />
+                </customData>
+			</ProgressIndicator>
+			<Label
+				id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::ProgressIndicatorFooter"
+				class="sapSmartTemplatesObjectPageHeaderProgressIndicatorFooter"
+				text="{path:'valueProperty>com.sap.vocabularies.Common.v1.Label', formatter: 'AHModel.format'}"
+				visible="{= !!${valueProperty>com.sap.vocabularies.Common.v1.Label} }"/>
+		</template:with>
+	</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,145 @@
+.workPageCell {
+  flex: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: @sapUiElementBorderCornerRadius;
+  background: @sapUiBaseBG;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  [data-wp-breakpoint="st-sp-0"] &,
+  [data-wp-breakpoint="st-sp-1"] &,
+  [data-wp-breakpoint="st-lp-1"] &,
+  [data-wp-breakpoint="lt-sp-1"] & {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &.workPageCellEmpty {
+    background-color: transparent;
+    flex: 1;
+  }
+
+  &+.workPageCell {
+    margin-top: 1rem;
+  }
+
+  .workPageEditMode .workpageCellWidget {
+    pointer-events: none;
+  }
+
+  .workpageCellWidget {
+    flex: 1 1 auto;
+  }
+
+  .workpageCellWidgetToolbar {
+    position: relative;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    border-radius: 1rem;
+    z-index: 1;
+  }
+
+  .workPageGridContainer {
+    z-index: 0;
+  }
+
+  .sapUshellVizInstance {
+    position: relative;
+
+    .sapMGT {
+      max-width: 100%;
+    }
+  }
+
+  .workPageCellControlButtons {
+    opacity: 0;
+  }
+
+  .workPageCellOverflowToolbar {
+    border-radius: 1rem 1rem 0 0;
+    padding-right: 1rem;
+  }
+
+  &.workPageCellCardMode {
+    .workPageCellOverflowToolbar {
+      background: transparent;
+      border-bottom: none;
+    }
+  }
+}
+
+.workPageCell.workPageCellTileMode {
+  box-shadow: @sapUiContentShadow0;
+
+  .workPageGridContainer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.workPageCell.workPageCellTileMode {
+  .workPageGridContainer {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
+[data-wp-breakpoint="lt-lp-1"],
+[data-wp-breakpoint="st-lp-1"],
+[data-wp-breakpoint="lt-lp-2"],
+[data-wp-breakpoint="st-lp-2"],
+[data-wp-breakpoint="lt-lp-3"],
+[data-wp-breakpoint="st-lp-3"],
+[data-wp-breakpoint="lt-lp-4"],
+[data-wp-breakpoint="st-lp-4"] {
+  .workPageCell.workPageCellTileMode {
+    .workPageGridContainer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+[data-wp-breakpoint="lt-sp-1"],
+[data-wp-breakpoint="st-sp-1"],
+[data-wp-breakpoint="st-sp-0"],
+[data-wp-breakpoint="lt-sp-2"],
+[data-wp-breakpoint="st-sp-2"],
+[data-wp-breakpoint="lt-sp-3"],
+[data-wp-breakpoint="st-sp-3"],
+[data-wp-breakpoint="lt-sp-4"],
+[data-wp-breakpoint="st-sp-4"] {
+  .workPageCell.workPageCellTileMode {
+    .workPageGridContainer {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+/* EDIT MODE */
+.workPageEditMode {
+
+  .workPageCell {
+    &.workPageCellEmpty {
+      background-color: @sapUiShellContainerBackground;
+      min-height: 14rem;
+    }
+
+    &.workPageCellTileMode {
+
+      &:hover,
+      &.workPageCellFocused {
+        box-shadow: @sapUiContentShadow2;
+      }
+    }
+
+    &:hover,
+    &.workPageCellFocused {
+      .workPageCellControlButtons {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+specVersion: '1.0'
+type: library
+metadata:
+  name: sap.collaboration
+resources:
+  configuration:
+    paths:
+      src: src/main/uilib
+      test: src/test/uilib
+framework:
+  name: SAPUI5
+  libraries:
+    - name: sap.ui.core
+    - name: sap.suite.ui.commons
+    - name: themelib_sap_horizon
+      optional: true
+    - name: themelib_sap_fiori_3
+      optional: true
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_bluecrystal
+      optional: true

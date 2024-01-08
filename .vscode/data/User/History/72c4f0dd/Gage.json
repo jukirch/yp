@@ -1,0 +1,10 @@
+{   
+    "oscarJSON": {
+        "movYear" :"2023", 
+        "movName":"Everything Everywhere All at Once", 
+        "movDirector":"Daniel Kwan, Daniel Scheinert", 
+        "movMaleLead":"Gary Cooper", 
+        "movFemaleLead":"Ingrid Bergmann", 
+        "movOscarWone": false
+    }
+}

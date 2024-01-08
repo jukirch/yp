@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper'}">
+
+	<template:with path="objectPageTableSettings>value" var="tableSettings">
+		<template:with path="listEntityType>" var="entityType">
+			<template:with path="listEntitySet>" var="entitySet">
+				<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.SmartTableUiTableCommons" type="XML"/>
+			</template:with>	
+		</template:with>
+	</template:with>
+	<table:rowActionTemplate>
+		<table:RowAction
+			id="{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}::rowAction{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'AH.getSuffixFromIconTabFilterKey'} : ''}"
+			visible="{parts: [{path: 'listEntitySet>'}, {path: 'parameter>/settings/subPages/'}], formatter: 'AH.hasSubObjectPage'}">
+			<table:items>
+				<table:RowActionItem
+					type="Navigation"
+					visible="{= !${@$ui5.context.isInactive}}"
+					press="._templateEventHandlers.onListNavigate">
+					<template:if
+						test="{parts: [{path: 'listEntitySet>name'}, {path: 'parameter>/settings/subPages/'}, {path: 'facet>Target/AnnotationPath'}], formatter: 'AH.getDisplayNavigationIntent'}">
+						<table:customData>
+							<core:CustomData key="CrossNavigation"
+								value="{parts: [{path: 'listEntitySet>name'}, {path: 'parameter>/settings/subPages/'}, {path: 'facet>Target/AnnotationPath'}], formatter: 'AH.getDisplayNavigationIntent'}" />
+						</table:customData>
+					</template:if>
+				</table:RowActionItem>
+			</table:items>
+		</table:RowAction>
+	</table:rowActionTemplate>
+</core:FragmentDefinition>

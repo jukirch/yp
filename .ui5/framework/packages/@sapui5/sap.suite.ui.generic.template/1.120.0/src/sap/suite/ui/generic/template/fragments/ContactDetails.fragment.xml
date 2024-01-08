@@ -1,0 +1,98 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:fesr="http://schemas.sap.com/sapui5/extension/sap.ui.core.FESR/1"
+	xmlns:macrodata="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Popover
+		id="quickView-popover"
+		class="sapUiContentPadding"
+		placement="Auto"
+		initialFocus="action"
+		showHeader="false"
+		contentWidth="20rem"
+		afterClose="afterClose">
+        <VBox>
+            <HBox class="sapUiSmallMarginBottom">
+                <Avatar
+                    src="{= ${contact>/photo} ? ${contact>/photo} : 'sap-icon://person-placeholder'}"
+					displaySize="S"
+					displayShape="Square"
+					class="sapUiTinyMarginEnd"
+                />
+                <VBox class="sapUiTinyMarginBegin">
+                    <Title text="{contact>/fn}" level="H3" wrapping="true"/>
+                    <Text text="{contact>/role}"/>
+                </VBox>
+            </HBox>
+
+			<!-- render options for teams contact collaboration -->
+			<VBox visible="{= ${contact>/teamsCollabOptions} !== undefined &amp;&amp; ${contact>/teamsCollabOptions}.length > 0 }" class="sapUiSmallMarginBottom">
+				<HBox>
+					<Button
+						icon="{contact>/teamsCollabOptions/0/icon}"
+						macrodata:type="{contact>/teamsCollabOptions/0/key}"
+						macrodata:email="{contact>/email}"
+						press=".onTeamsCollabOptionPress"
+						class="sapUiSmallMarginEnd"
+						type="Transparent"
+						fesr:press="{contact>/teamsCollabOptions/0/fesrStepName}">
+					</Button>
+					<Button
+						icon="{contact>/teamsCollabOptions/1/icon}"
+						macrodata:type="{contact>/teamsCollabOptions/1/key}"
+						macrodata:email="{contact>/email}"
+						press=".onTeamsCollabOptionPress"
+						class="sapUiSmallMarginEnd"
+						type="Transparent"
+						fesr:press="{contact>/teamsCollabOptions/1/fesrStepName}">
+					</Button>
+					<Button
+						icon="{contact>/teamsCollabOptions/2/icon}"
+						macrodata:type="{contact>/teamsCollabOptions/2/key}"
+						macrodata:email="{contact>/email}"
+						press=".onTeamsCollabOptionPress"
+						class="sapUiSmallMarginEnd"
+						type="Transparent"
+						fesr:press="{contact>/teamsCollabOptions/2/fesrStepName}">
+					</Button>
+				</HBox>
+			</VBox>
+
+			<VBox visible="{= !!${contact>/title}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_JOB_TITLE}:"/>
+				<Text text="{contact>/title}" class="sapUiTinyMarginBottom" />
+			</VBox>
+
+			<VBox visible="{= !!${contact>/org}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_DEPARTMENT}:"/>
+				<Text text="{contact>/org}" class="sapUiTinyMarginBottom" />
+			</VBox>
+
+			<VBox visible="{= !!${contact>/email}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_EMAIL}:" />
+				<Link text="{contact>/email}" href="{path: 'contact>/email', formatter: '.formatUri'}" class="sapUiTinyMarginBottom" wrapping="true"/>
+			</VBox>
+
+			<VBox visible="{= !!${contact>/work}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_PHONE}:"/>
+				<Link text="{contact>/work}" href="{path: 'contact>/work', formatter: '.formatUri'}" class="sapUiTinyMarginBottom" wrapping="true"/>
+			</VBox>
+			
+			<VBox visible="{= !!${contact>/cell}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_MOBILE}:"/>
+				<Link text="{contact>/cell}" href="{path: 'contact>/cell', formatter: '.formatUri'}" class="sapUiTinyMarginBottom" wrapping="true"/>
+			</VBox>
+			
+			<VBox visible="{= !!${contact>/fax}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_FAX}:"/>
+				<Text text="{contact>/fax}" class="sapUiTinyMarginBottom" />
+			</VBox>
+
+			<VBox visible="{= !!${contact>/adr}}" class="sapUiTinyMarginBottom">
+				<Label text="{i18n>CONTACT_ADDRESS}:"/>
+				<Text text="{contact>/adr}" class="sapUiTinyMarginBottom" />
+			</VBox>
+
+        </VBox>
+	</Popover>
+</core:FragmentDefinition>

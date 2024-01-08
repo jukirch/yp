@@ -1,0 +1,37 @@
+/* ================================== */
+/* CSS for control sap.ovp/OVPApp     */
+/* Horizon High Contrast White theme  */
+/* ================================== */
+
+.ovpApplication {
+    .ovpGlobalFilterWrapper {
+        border-bottom-color: @sapUiHcStandardForeground;
+    }
+}
+
+.ovpApplication .ovpSmartFilterBar label,
+.ovpApplication .ovpSmartFilterBar button span.sapMBtnContent,
+.ovpApplication .ovpSmartFilterBar button .sapMBtnIcon {
+    color: @sapUiHcStandardForeground !important;
+}
+
+/* Object Page Header - remove background color and mimic dark font color - since the dark loads an unnecessary image  */
+.ovpPageHeader {
+    .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierContainer {
+        .sapUxAPObjectPageHeaderIdentifierTitle,
+        .sapUxAPObjectPageHeaderIdentifierDescription {
+            color: @sapUiHcStandardForeground;
+        }
+    }
+
+    .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierActions {
+        .sapMBtnIcon,
+        .sapMBtnTransparent,
+        .sapMBtnTransparent > .sapMBtnIcon,
+        .sapMBtnIcon,
+        .sapMBtnTransparent,
+        .sapMBtnTransparent > .sapMBtnIcon {
+            color: @sapUiHcStandardForeground;
+        }
+    }
+}

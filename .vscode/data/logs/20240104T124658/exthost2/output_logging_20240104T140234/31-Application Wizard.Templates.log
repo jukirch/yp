@@ -1,0 +1,48 @@
+          [2024-01-04 14:04:25] ERROR: An error occurred: Request failed with status code 404
+   create ../../../home/user/projects/s331102/.gitignore
+   create ../../../home/user/projects/s331102/package.json
+   create ../../../home/user/projects/s331102/ui5-local.yaml
+   create ../../../home/user/projects/s331102/ui5.yaml
+   create ../../../home/user/projects/s331102/webapp/Component.js
+   create ../../../home/user/projects/s331102/webapp/index.html
+   create ../../../home/user/projects/s331102/webapp/manifest.json
+   create ../../../home/user/projects/s331102/webapp/i18n/i18n.properties
+   create ../../../home/user/projects/s331102/webapp/test/locate-reuse-libs.js
+   create ../../../home/user/projects/s331102/webapp/model/models.js
+   create ../../../home/user/projects/s331102/webapp/test/flpSandbox.html
+   create ../../../home/user/projects/s331102/webapp/controller/App.controller.js
+   create ../../../home/user/projects/s331102/webapp/css/style.css
+   create ../../../home/user/projects/s331102/webapp/view/App.view.xml
+   create ../../../home/user/projects/s331102/webapp/view/Main.view.xml
+   create ../../../home/user/projects/s331102/webapp/controller/Main.controller.js
+   create ../../../home/user/projects/s331102/ui5-mock.yaml
+   create ../../../home/user/projects/s331102/webapp/localService/metadata.xml
+   create ../../../home/user/projects/s331102/webapp/test/flpSandbox.js
+   create ../../../home/user/projects/s331102/webapp/test/initFlpSandbox.js
+   create ../../../home/user/projects/s331102/webapp/test/integration/AllJourneys.js
+   create ../../../home/user/projects/s331102/webapp/test/integration/NavigationJourney.js
+   create ../../../home/user/projects/s331102/webapp/test/integration/arrangements/Startup.js
+   create ../../../home/user/projects/s331102/webapp/test/integration/opaTests.qunit.html
+   create ../../../home/user/projects/s331102/webapp/test/integration/opaTests.qunit.js
+   create ../../../home/user/projects/s331102/webapp/test/integration/pages/App.js
+   create ../../../home/user/projects/s331102/webapp/test/integration/pages/Main.js
+   create ../../../home/user/projects/s331102/webapp/test/testsuite.qunit.html
+   create ../../../home/user/projects/s331102/webapp/test/testsuite.qunit.js
+   create ../../../home/user/projects/s331102/webapp/test/unit/AllTests.js
+   create ../../../home/user/projects/s331102/webapp/test/unit/controller/Main.controller.js
+   create ../../../home/user/projects/s331102/webapp/test/unit/unitTests.qunit.html
+   create ../../../home/user/projects/s331102/webapp/test/unit/unitTests.qunit.js
+   create ../../../home/user/projects/s331102/README.md
+          
+No change to package.json was detected. No package manager install will be executed.
+          Installing dependencies...
+          Running: `npm install`
+          npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+          npm WARN deprecated @ui5/logger@2.0.1: UI5 Tooling version 2 is out of maintenance. Migrate your project to the latest version: https://sap.github.io/ui5-tooling/stable/
+          added 1002 packages, and audited 1003 packages in 16s
+
+156 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+          Project dependencies installed in 16 seconds

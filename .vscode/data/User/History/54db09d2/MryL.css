@@ -1,0 +1,64 @@
+/* hier kommt dann mal der relevante Klassentext */
+.calculator-frame-groß {
+
+    width: 50%;
+    height: 40%;
+    border: 5px;
+    border-color: #000000;
+    border-style: solid;
+
+}
+
+.calculator-frame-input {
+
+    width: 100%;
+    height: 30%;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+
+}
+
+.calculator-spalte {
+    width: 50%;
+    border: 3px;
+    border-color: aqua;
+    border-style: solid;
+}
+
+.calculator-button{
+    height: 50px;
+    width: 130px;
+    border-color: pink;
+    border-style: solid;
+    border-width: 3px;
+}
+.calculator-button-box {
+    width: 100%;
+    margin: auto; 
+    border-color: purple;
+    border-width: 3px;
+    border-style: solid;
+    }
+
+.calculator-cell-label {
+        height: 40px;
+        width: 120px;
+        text-align: center;
+        margin: auto;
+        position: center;
+        border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+}
+.calculator-cell-input {
+        height: 40px;
+        width: 120px;
+        align-items: left;
+        text-align: center;
+        margin: auto;
+        position: center;
+        border-color: grey;
+        border-width: 1px;
+    border-style: solid;
+}

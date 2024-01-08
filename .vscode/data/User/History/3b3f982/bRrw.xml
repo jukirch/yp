@@ -1,0 +1,10 @@
+<root>
+
+    <movName>Casablanca</movName>
+    <movDirector>Hans Wurst</movDirector>
+    <movMaleLead>Jürgen</movMaleActor>
+    <movFemaleLead>Monika</movFemaleActor>
+    <movYear>1943</movYear>
+    <movOscarWon>false</movOscarWon>
+
+</root>

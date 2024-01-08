@@ -1,0 +1,154 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    controllerName="s321502.controller.Main"
+    displayBlock="true"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <Carousel
+            height="500px"
+            class="sapUiContentPadding"
+        >
+            <!-- <customLayout>
+                <CarouselLayout visiblePagesCount="1" />
+            </customLayout> -->
+
+            <l:HorizontalLayout>
+                <Image
+                    src="https://tse4.mm.bing.net/th?id=OIP.F409NVW92apW7F6N0DtRYwHaKe"
+                    height="450px"
+                />
+                <List
+				headerText="{movName}"
+                items="{/oscar}"
+                >
+                    <items>
+                        <StandardListItem
+                            title="Regie: "
+                            description="{movDirector}"
+                            />
+                        <!-- <StandardListItem 
+                            title="Erscheinungsjahr"
+                            description="movYear}"
+                        />
+                        <StandardListItem 
+                            title="Beste Hauptdarstellerin"
+                            description="{movFemaleLead}"
+                        />
+                        <StandardListItem 
+                            title="Bester Hauptdarsteller"
+                            description="{movMaleLead}"
+                        /> -->
+                    </items>
+				
+			    </List>
+            </l:HorizontalLayout>
+
+
+            <l:HorizontalLayout>
+                <Image
+                    src="https://www.kino-zeit.de/sites/default/files/styles/plakat/public/2022-12/die_aussprache_2022_pl.jpg?itok=ChMjzr--"
+                    height="450px"
+                />
+                <List
+				headerText="Some List Content 1"
+				items="{
+					path: '/ProductCollection'
+				}">
+				<StandardListItem
+					title="{Name}"
+					description="{ProductId}"
+					icon="{ProductPicUrl}"
+					iconDensityAware="false"
+					iconInset="false" />
+			    </List>
+
+            </l:HorizontalLayout>
+
+
+            <l:HorizontalLayout>
+                <Image
+                    src="https://tse4.mm.bing.net/th?id=OIP.tQJ1EAOl_KfyB-he93SfNgHaLH"
+                    height="450px"
+                />
+                <List
+				headerText="Some List Content 1"
+				items="{
+					path: '/ProductCollection'
+				}">
+				<StandardListItem
+					title="{Name}"
+					description="{ProductId}"
+					icon="{ProductPicUrl}"
+					iconDensityAware="false"
+					iconInset="false" />
+			    </List>
+            </l:HorizontalLayout>
+
+
+            <l:HorizontalLayout>
+                <Image
+                    src="https://tse1.mm.bing.net/th?id=OIP.-X2-LwcKU1iKn4-_Yk7XXQHaLH"
+                    height="450px"
+                />
+                <List
+				headerText="Some List Content 1"
+				items="{
+					path: '/ProductCollection'
+				}">
+				<StandardListItem
+					title="{Name}"
+					description="{ProductId}"
+					icon="{ProductPicUrl}"
+					iconDensityAware="false"
+					iconInset="false" />
+			    </List>
+            </l:HorizontalLayout>
+
+
+            <l:HorizontalLayout>
+                <Image
+                    src="https://tse1.mm.bing.net/th?id=OIP._wzdYNWi1rLSGZ59VKD_RwHaLH"
+                    height="450px"
+                />
+                <List
+				headerText="Some List Content 1"
+				items="{
+					path: '/ProductCollection'
+				}">
+				<StandardListItem
+					title="{Name}"
+					description="{ProductId}"
+					icon="{ProductPicUrl}"
+					iconDensityAware="false"
+					iconInset="false" />
+			    </List>
+            </l:HorizontalLayout>
+
+
+            <l:HorizontalLayout>
+                <Image
+                    src="https://tse2.mm.bing.net/th?id=OIP.R22KsXZoaNtFMu0rgH5VgAHaKe"
+                    height="450px"
+                />
+                <List
+				headerText="Some List Content 1"
+				items="{
+					path: '/ProductCollection'
+				}">
+				<StandardListItem
+					title="{Name}"
+					description="{ProductId}"
+					icon="{ProductPicUrl}"
+					iconDensityAware="false"
+					iconInset="false" />
+			    </List>
+            </l:HorizontalLayout>
+
+        </Carousel>
+    </Page>
+</mvc:View>

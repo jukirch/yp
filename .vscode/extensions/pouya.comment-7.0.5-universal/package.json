@@ -1,0 +1,90 @@
+{
+	"name": "comment",
+	"displayName": "Comment V",
+	"description": "The easiest way to to decorate your codes with Kary Comments in Visual Studio Code.",
+	"version": "7.0.5",
+	"publisher": "pouya",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pmkary/comment-vscode"
+	},
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./comment",
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "comment.makeFlagComment",
+				"key": "alt+shift+y",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "comment.makeSectionComment",
+				"key": "alt+y",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "comment.makeReverseSectionComment",
+				"key": "alt+m",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "comment.makeLineComment",
+				"key": "alt+l",
+				"when": "editorTextFocus"
+			}
+		],
+		"commands": [
+			{
+				"command": "comment.makeLineComment",
+				"title": "Make a Kary Spacer Comment"
+			},
+			{
+				"command": "comment.makeSectionComment",
+				"title": "Make a Kary Header Comment"
+			},
+			{
+				"command": "comment.makeReverseSectionComment",
+				"title": "Make a Kary Reverse Header Comment"
+			},
+			{
+				"command": "comment.makeFlagComment",
+				"title": "Make a Kary Comment"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "comment.makeSectionComment"
+				},
+				{
+					"command": "comment.makeLineComment"
+				},
+				{
+					"command": "comment.makeReverseSectionComment"
+				}
+			]
+		}
+	},
+	"devDependencies": {
+		"vscode": "0.10.x"
+	},
+	"__metadata": {
+		"id": "5806583d-234c-481d-ba3e-272c85084db0",
+		"publisherId": "ef84fc94-80a3-4063-8356-73ba051dd70a",
+		"publisherDisplayName": "pouya",
+		"installedTimestamp": 1701765233793,
+		"targetPlatform": "universal",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false
+	}
+}

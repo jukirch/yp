@@ -1,0 +1,52 @@
+{
+    "_version": "1.48.0",
+    "sap.app": {
+        "id": "sap.ushell.components.shell.NavigationBarMenu",
+        "applicationVersion": {
+            "version": "1.120.1"
+        },
+        "i18n": {
+            "bundleUrl": "../../../renderer/resources/resources.properties",
+            "fallbackLocale": "en"
+        },
+        "type": "component",
+        "ach": "CA-FLP-FE-COR",
+        "title": "",
+        "resources": "resources.json"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        }
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "sap.ushell.components.shell.NavigationBarMenu.view.NavigationBarMenu",
+            "type": "XML",
+            "async": true
+        },
+        "dependencies": {
+            "minUI5Version": "1.114",
+            "libs": {
+                "sap.m": {},
+                "sap.tnt": {},
+                "sap.ui.core": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.ushell.renderer.resources.resources"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+    }
+}

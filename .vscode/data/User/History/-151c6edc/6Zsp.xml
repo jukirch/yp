@@ -1,0 +1,16 @@
+<c:FragmentDefinition xmlns:layout="sap.ui.layout" 
+    xmlns:c = "sap.ui.core"
+    xmlns = "sap.m"
+    xmlns:l ="sap.ui.layout"
+>
+
+    <l:VerticalLayout >
+        <l:content>
+            <Text text="{/output}" />
+            <Button text="Butteon aus DemoFragment, der DemoDialog öffnet" press="onPress" />
+            <Input width="200px" value="hier passiert nix.."/>
+        </l:content>
+    </l:VerticalLayout>
+
+
+</c:FragmentDefinition>

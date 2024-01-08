@@ -1,0 +1,16 @@
+<Dialog xmlns:layout="sap.ui.layout" 
+    xmlns:c = "sap.ui.core"
+    xmlns = "sap.m"
+    xmlns:l ="sap.ui.layout"
+>
+    <content>
+        <Text text="Hello World."/>
+    </content>
+    <buttons>
+        <Button text="Button 1"></Button>
+        <Button text="Button 2"></Button>
+        <Button text="Close Dialog" press= "onClose"></Button>
+    </buttons>
+
+
+</Dialog>

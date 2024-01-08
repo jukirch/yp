@@ -1,0 +1,260 @@
+.listCardType {
+    white-space: normal;
+}
+.sapOvpObjectListItem {
+    &.sapOvpListFragment {
+        .sapMObjectNumberText {
+            font-size: 0.875rem;
+        }
+    }
+    .sapMObjLTopRow {
+        & > .sapMObjLNumberDiv {
+            & > .sapMObjLNumber {
+                padding-top: 0;
+            }
+            padding-left: 2rem;
+            max-width: 50%;
+            box-sizing: border-box;
+        }
+        .sapMTextLineClamp {
+            -webkit-line-clamp: 1 !important;
+        }
+        .sapMObjLTitle {
+            display: block;
+        }
+        .sapMTextMaxLine {
+            line-height: 1.125rem;
+            word-break: break-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+        }
+    }
+    .sapMObjLBottomRow {
+        margin-top: 0.5rem;
+        .sapMObjLAttrRow {
+            display: flex;
+            padding-top: 0;
+            &:not(:first-child) {
+                margin-top: 0.5rem;
+            }
+            .sapMText,
+            .sapMObjStatusNone .sapMObjStatusText {
+                color: @sapUiContentLabelColor;
+            }
+            .sapMObjLAttrDiv {
+                width: auto;
+                flex: auto;
+                overflow: hidden;
+            }
+            .sapMObjLStatusDiv {
+                padding-left: 2rem;
+                width: auto;
+                flex: none;
+                max-width: 50%;
+            }
+            .sapMObjLStatusDiv:only-child {
+                margin-left: 50%;
+            }
+        }
+    }
+}
+
+//For IE browser text height is extended to 1.125rem instead of 1rem and
+//the padding is reduced to keep the line height same
+html[data-sap-ui-browser^="ie"] {
+    .sapOvpObjectListItem {
+        &.sapOvpListFragment {
+            padding: 0.75rem 1rem 0.875rem;
+        }
+    }
+}
+
+.sapOvpObjectListItem.sapMLIBTypeActive {
+    &:active {
+        background-color: @sapUiListActiveBackground;
+        color: @sapUiListActiveTextColor;
+        & .sapMLIBContent {
+            & .sapMText {
+                color: @sapUiListActiveTextColor;
+            }
+            & .sapMObjStatusText {
+                color: @sapUiListActiveTextColor;
+            }
+            & .sapMObjectNumberText {
+                color: @sapUiListActiveTextColor;
+            }
+            & .sapMObjectNumberUnit {
+                color: @sapUiListActiveTextColor;
+            }
+        }
+    }
+}
+
+.sapOvpListWithImageNoDescCompact {
+    height: 3rem !important;
+}
+
+.sapOvpListWithImageNoDescCozy {
+    height: 4.5rem !important;
+}
+
+.sapOvpListWithIconNoDescCompact {
+    height: 2.5rem !important;
+}
+
+.sapOvpListWithIconNoDescCozy {
+    height: 3rem !important;
+}
+
+.sapOvpListWithImageIconCompact {
+    height: 3.75rem !important;
+}
+
+.sapOvpListWithImageIconCozy {
+    height: 4.5rem !important;
+}
+
+.sapOvpIconPlaceHolder {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    background-color: @sapUiAccent7;
+    font-size: 0.75rem;
+    color: @sapUiContentContrastTextColor;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.sapOvpImagePlaceHolder {
+    min-height: 2.25rem;
+    min-width: 2.25rem;
+    background-color: @sapUiAccent7;
+    font-size: 1rem;
+    color: @sapUiContentContrastTextColor;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-left: 1rem;
+}
+
+.sapOvpListImageCompact {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.sapOvpListImageCozy {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.sapOvpImageCozy {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+}
+
+.sapOvpImagePlaceHolder > .sapMLIBContent {
+    padding: 0;
+}
+
+.sapOvpStandardListItem.sapOvpStandardListItemImagesIcons {
+    padding: 0;
+
+    .sapMLIBContent {
+        padding: 0.625rem 0rem 0.625rem 0rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .sapOvpPaddingBottom {
+        padding-bottom: 0.5rem !important;
+    }
+    .sapMSLIImgThumb {
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 1rem;
+    }
+    .sapMSLIImgThumbIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        padding-right: 0.25rem;
+        font-size: 1.375rem;
+        color: @sapUiContentNonInteractiveIconColor;
+    }
+
+    .sapOvpImageListItem {
+        .sapMSLITitleOnly {
+            font-size: @sapMFontLargeSize;
+            line-height: 1.4rem;
+            padding-right: 1rem;
+        }
+
+        .sapMSLIInfo {
+            line-height: 1.4rem;
+        }
+
+        .sapMSLITitle {
+            line-height: 1.4rem;
+        }
+
+        .sapMSLIDescription {
+            line-height: 1.4rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .sapOvpIconListItem {
+        .sapMSLITitleOnly {
+            font-size: @sapMFontLargeSize;
+            line-height: 1.25rem;
+            padding-right: 1rem;
+        }
+
+        .sapMSLIInfo {
+            line-height: 1.25rem;
+        }
+
+        .sapMSLITitle {
+            line-height: 1.25rem;
+        }
+
+        .sapMSLIDescription {
+            line-height: 1.25rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .sapMSLIInfo {
+        max-width: 50%;
+    }
+
+    .sapMSLIDescriptionDiv {
+        & > .sapMSLIInfo {
+            margin-left: 0;
+            padding-left: 1rem;
+            box-sizing: border-box;
+        }
+    }
+
+    .sapMSLIDescriptionDiv {
+        margin-top: 0rem;
+    }
+}
+
+.sapOvpStandardListItem {
+    padding: 0.625rem 1rem 0.75rem;
+    .sapMSLITitleDiv {
+        & > .sapMSLITitle {
+            padding-bottom: 0;
+        }
+    }
+    .sapMSLIDescriptionDiv {
+        margin-top: 0.5rem;
+        & > .sapMSLIInfo {
+            max-width: 50%;
+            margin-left: 0;
+            padding-left: 2rem;
+            box-sizing: border-box;
+        }
+    }
+}

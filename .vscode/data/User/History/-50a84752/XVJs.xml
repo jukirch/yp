@@ -1,0 +1,39 @@
+<mvc:View controllerName="s331102.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox>
+                <Table items="{northWind>/Products}"> 
+                    <columns>
+                        <Column>
+                            <header>
+                                <Label text="Produkt"></Label>
+                            </header>
+                        </Column> 
+                        <Column>
+                            <header>
+                                <Label text="Preis"></Label>
+                            </header>
+                        </Column>
+                        <Column>
+                            <header>
+                                <Label text="Kategorie"></Label>
+                            </header>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem >
+                            <cells>
+                                <Text text="{northWind>Name}"/>
+                                <Text text="{northWind>Price}"/>
+                                <Text text="{northWind>/Category/Name}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+            
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<VBox id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::PlainTextVBox"
+		  displayInline="true" class="sapSmartTemplatesObjectPageHeaderPlainText"
+		  binding="{parts: [{path: 'headerFacet>Target'}, {path: 'entitySet>'}], formatter: 'AH.getNavigationPathWithExpand'}"
+          visible="{path: 'headerFacet>', formatter: 'AH.getBindingForHiddenPath'}">
+		<template:if test="{headerFacet>Label}">
+			<Title id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::PlainTextLabel"
+				  text="{path: 'headerFacet>Label', formatter: 'AHModel.format'}" class="sapSmartTemplatesObjectPageHeaderPlainTextTitle"/>
+		</template:if>
+		<template:with path="form>Data/0/" var="dataField"> <!-- There should only be 1 datafield -->
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+				<Text id="header::{path: 'headerFacet>', formatter: 'AH.getStableIdPartFromFacet'}::{path: 'dataField>', formatter: 'AH.getStableIdPartFromDataField'}::PlainTextDataField"
+					  renderWhitespace="true"
+					  text="{path: 'dataField>Value', formatter: 'AHModel.format'}"
+					  class="sapSmartTemplatesObjectPageHeaderPlainTextField sapUiTinyMarginEnd"/>
+			</template:if>
+		</template:with>
+	</VBox>
+</core:FragmentDefinition>

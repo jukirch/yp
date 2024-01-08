@@ -1,0 +1,33 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+ 	template:require="{AH: 'sap/suite/ui/generic/template/js/AnnotationHelper', AHModel: 'sap/ui/model/odata/AnnotationHelper'}">
+
+	<template:with path="dataPoint>SampleSize" helper="AHModel.resolvePath" var="sampleSize">
+		<VBox id="{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}::RatingIndicatorVBox"
+			visible="{= !${path: 'facet>com.sap.vocabularies.UI.v1.Hidden'} || ${path: 'facet>', formatter: 'AH.getBindingForHiddenPath'} }"
+			binding="{parts: [{path: 'facet>Target'}, {path: 'entitySet>'}], formatter: 'AH.getNavigationPathWithExpand'}"
+			class="sapSmartTemplatesObjectPageHeaderForm sapUiSmallMarginBegin">
+			<items>
+				<Label id="{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}::RatingIndicatorLabel"
+					text="{path: 'dataPoint>Title', formatter: 'AHModel.format'}"
+					labelFor="{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}::RatingIndicator"/>
+				<HBox alignItems="Center">
+					<items>
+						<RatingIndicator id="{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}::RatingIndicator"
+							enabled="true" editable="false"
+							maxValue="{path: 'dataPoint>TargetValue', formatter: 'AHModel.format'}"
+							value="{path: 'dataPoint>Value', formatter: 'AHModel.format'}"
+							iconSize="1rem" />
+						<Text id="{path: 'facet>', formatter: 'AH.getStableIdPartFromFacet'}::RatingIndicatorTotalRatings"
+							text="{path: 'dataPoint>SampleSize', formatter: 'AH.buildRatingIndicatorAggregateCountExpression'}"
+							visible="{= !!${dataPoint>SampleSize} }">
+							<customData>
+								<core:CustomData key="AggregateCount" value="{path: 'dataPoint>SampleSize', formatter: 'AHModel.format'}"/>
+							</customData>
+						</Text>
+					</items>
+				</HBox>
+			</items>
+		</VBox>
+	</template:with>
+</core:FragmentDefinition>

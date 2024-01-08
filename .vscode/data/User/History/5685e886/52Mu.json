@@ -1,0 +1,66 @@
+{
+	"artRoot": [
+			{
+				"name": "Faye, Alice",
+				"artGender": "f",
+				"artDatBirth": "19150505",
+				"artDatDeath": "19980509",
+				"artPortrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Alice_Faye_-_1941.jpg/99px-Alice_Faye_-_1941.jpg",
+				"artWiki": "https://en.wikipedia.org/wiki/Alice_Faye",
+				"artMovies": [
+						{ "name": "George White's Scandals", "movRelDat": "March 16, 1934", "movDirector": "George White", "movProducer": "George White", "movLength": "80", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xljG9q1bLJPo6nHpNa55G6fsN0n.jpg" },
+						{ "name": "Now I'll Tell", "movRelDat": "June 8, 1934", "movDirector": "Edwin J. Burke", "movProducer": "Winfield R. Sheehan", "movLength": "72", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ftyfiYa9gRQwGAmh0KJ6saWrwVn.jpg" },
+						{ "name": "She Learned About Sailors", "movRelDat": "June 29, 1934", "movDirector": "George Marshall", "movProducer": "John Stone", "movLength": "78", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dx5vYcq5JoF9PudaAsxZ1QXx8Ms.jpg" },
+						{ "name": "365 Nights in Hollywood", "movRelDat": "December 10, 1934", "movDirector": "George Marshall", "movProducer": "Sol M. Wurtzel", "movLength": "77", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Qy7mOMW4mG1AtP8L2ZlaXNnoVN.jpg" },
+						{ "name": "George White's 1935 Scandals", "movRelDat": "March 29, 1935", "movDirector": "George White", "movProducer": "Winfield R. Sheehan", "movLength": "84", "movDistributor": "20CF", "movPoster": "" },
+						{ "name": "Every Night at Eight ", "movRelDat": "August 2, 1935", "movDirector": "Raoul Walsh", "movProducer": "Walter Wanger", "movLength": "80", "movDistributor": "20CF", "movPoster": "" },
+						{ "name": "Music Is Magic", "movRelDat": "November 1, 1935", "movDirector": "George Marshall", "movProducer": "John Stone", "movLength": "66", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cPi8M4JRgIjLprCVcFl7PDI9OMX.jpg" },
+						{ "name": "King of Burlesque", "movRelDat": "January 3, 1936", "movDirector": "Sidney Lanfield", "movProducer": "Kenneth Macgowan", "movLength": "90", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/5qdGozrcDe6P2QcB4ff4yaqEFk8.jpg" },
+						{ "name": "Poor Little Rich Girl", "movRelDat": "July 24, 1936", "movDirector": "Irving Cummings", "movProducer": "Darryl F. Zanuck", "movLength": "79", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/rHHCZ03xfE9fSqp9WoeoGGU0I2X.jpg" },
+						{ "name": "Sing, Baby, Sing", "movRelDat": "August 21, 1936", "movDirector": "Sidney Lanfield", "movProducer": "Darryl F. Zanuck", "movLength": "90", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aiRqXnO4hxwSNE2w3Bsa0uOjwtb.jpg" },
+						{ "name": "Stowaway", "movRelDat": "December 25, 1936", "movDirector": "William A. Seiter", "movProducer": "Buddy G. DeSylva", "movLength": "87", "movDistributor": "20CF", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4Ey26v89s1mxqFfLoyZZs2Ii02p.jpg" }
+				]
+			}, {
+				"name": "Durbin, Deanna",
+				"artGender": "f",
+				"artDatBirth": "19211204",
+				"artDatDeath": "20130417",
+				"artPortrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Deanna_Durbin_in_Yank_Magazine.jpg/220px-Deanna_Durbin_in_Yank_Magazine.jpg",
+				"artWiki": "https://en.wikipedia.org/wiki/Deanna_Durbin",
+				"artMovies": [
+						{ "name": "Every Sunday", "movRelDat": "November 28, 1936", "movDirector": "Felix E. Feist", "movProducer": "George Sidney", "movLength": "11", "movDistributor": "MGM", "movPoster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ofTvbSdyeyUdZPEEdSyMuYKnOiZ.jpg" },
+						{ "name": "Three Smart Girls", "movRelDat": "December 20, 1936", "movDirector": "Henry Koster", "movProducer": "Joe Pasternak", "movLength": "84", "movDistributor": "UNI", "movPoster": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Three_Smart_Girls_Poster.jpg/220px-Three_Smart_Girls_Poster.jpg" }
+				]
+			}, {
+				"name": "Gable, Clark",
+				"artGender": "m",
+				"artDatBirth": "19010201",
+				"artDatDeath": "19601116",
+				"artPortrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Clark_Gable_as_Rhett_Butler_in_Gone_With_the_Wind_trailer_cropped.jpg/116px-Clark_Gable_as_Rhett_Butler_in_Gone_With_the_Wind_trailer_cropped.jpg",
+				"artWiki": "https://en.wikipedia.org/wiki/Clark_Gable",
+				"artMovies": [
+						{ "name": "Wife vs. Secretary", "movRelDat": "February 28, 1936", "movDirector": "Clarence Brown", "movProducer": "Clarence Brown", "movLength": "88", "movDistributor": "MGM" },
+						{ "name": "San Francisco", "movRelDat": "June 26, 1936", "movDirector": "W. S. Van Dyke", "movProducer": "John Emerson", "movLength": "115", "movDistributor": "MGM" },
+						{ "name": "Cain and Mabel", "movRelDat": "September 26, 1936", "movDirector": "Lloyd Bacon", "movProducer": "Hal B. Wallis", "movLength": "90", "movDistributor": "MGM" },						
+						{ "name": "Love on the Run", "movRelDat": "November 20, 1936", "movDirector": "W.S. Van Dyke", "movProducer": "Joseph L. Mankiewicz", "movLength": "80", "movDistributor": "MGM" },
+						{ "name": "Parnell", "movRelDat": "June 4, 1937", "movDirector": "John M. Stahl", "movProducer": "John M. Stahl", "movLength": "118", "movDistributor": "MGM" },
+						{ "name": "Saratoga", "movRelDat": "July 23, 1937", "movDirector": "Jack Conway", "movProducer": "Bernard H. Hyman", "movLength": "92", "movDistributor": "MGM" }
+				]
+			}, {
+				"name": "Astaire, Fred",
+				"artGender": "m",
+				"artDatBirth": "18990510",
+				"artDatDeath": "19870622",
+				"artPortrait": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Fred_Astaire_in_Royal_Wedding.jpg/92px-Fred_Astaire_in_Royal_Wedding.jpg",
+				"artWiki": "https://en.wikipedia.org/wiki/Fred_Astaire",
+				"artMovies": [
+						{ "name": "Roberta", "movRelDat": "March 8, 1935", "movDirector": "William A. Seiter", "movProducer": "Pandro S. Berman", "movLength": "106", "movDistributor": "RKO" },
+						{ "name": "Top Hat", "movRelDat": "August 29, 1935", "movDirector": "Mark Sandrich", "movProducer": "Pandro S. Berman", "movLength": "101", "movDistributor": "RKO" },
+						{ "name": "Follow the Fleet", "movRelDat": "February 20, 1936", "movDirector": "Mark Sandrich", "movProducer": "Pandro S. Berman", "movLength": "110", "movDistributor": "RKO" },
+						{ "name": "Swing Time", "movRelDat": "September 4, 1936 ", "movDirector": "George Stevens", "movProducer": "Pandro S. Berman", "movLength": "103", "movDistributor": "RKO" },
+						{ "name": "Shall We Dance", "movRelDat": "May 7, 1937", "movDirector": "Mark Sandrich", "movProducer": "Pandro S. Berman", "movLength": "109", "movDistributor": "RKO" },
+						{ "name": "A Damsel in Distress", "movRelDat": "November 19, 1937", "movDirector": "George Stevens", "movProducer": "Pandro S. Berman", "movLength": "98", "movDistributor": "RKO" }
+				]
+			}
+	]
+}

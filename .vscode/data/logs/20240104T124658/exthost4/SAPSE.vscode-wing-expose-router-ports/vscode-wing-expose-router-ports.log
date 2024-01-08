@@ -1,0 +1,12 @@
+{
+  "label": "vscode-wing-expose-router-ports",
+  "level": "warn",
+  "message": "The \"vscode-wing-expose-router-ports\" extension is now active.",
+  "time": "2024-01-04T14:10:44.493Z"
+}
+{
+  "label": "vscode-wing-expose-router-ports.ExposePorts",
+  "level": "error",
+  "message": "Canceled",
+  "time": "2024-01-04T14:58:36.094Z"
+}

@@ -1,0 +1,521 @@
+specVersion: '3.0'
+type: library
+metadata:
+  name: sap.ushell
+  copyright: Copyright (c) 2009-2023 SAP SE, All Rights Reserved
+resources:
+  configuration:
+    propertiesFileSourceEncoding: ISO-8859-1
+    paths:
+      src: src/main/js
+      test: src/test/js
+framework:
+  name: SAPUI5
+  # 'version' must not be defined in ui5.yaml (here) but needs to be injected via '--framework-version' param for local builds.
+  # This ensures a consistent central build (where the dependencies' versions are determined by Maven itself).
+  libraries:
+    - name: sap.f
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.ui.layout
+    - name: sap.suite.ui.commons
+    - name: sap.suite.ui.microchart
+    - name: sap.ui.comp
+    - name: sap.ui.export
+    - name: sap.collaboration
+    - name: sap.ui.table
+    - name: sap.ui.integration
+    - name: sap.ui.generic.app
+    - name: sap.esh.search.ui
+    - name: themelib_sap_horizon
+      optional: true
+    - name: themelib_sap_fiori_3
+      optional: true
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_bluecrystal
+      optional: true
+builder:
+  bundles:
+    - bundleDefinition:
+        name: sap/ushell/bootstrap/appruntime-min.js
+        sections:
+          - mode: raw
+            filters:
+              - ui5loader-autoconfig.js
+            declareRawModules: false
+            resolve: true
+            sort: true
+          - mode: preload
+            filters:
+              - sap/ui/core/Core.js
+            renderer: true
+            resolve: true
+            resolveConditional: false
+          - mode: preload
+            name: sap/ushell/core-lib111-preload
+            filters:
+              - sap/ushell/appRuntime/ui5/
+              - sap/ushell/appRuntime/ui5/AppRuntimeDefaultConfiguration.json
+              - sap/ushell/ui5service/_ShellUIService/shelluiservice.class.factory.js
+              - sap/ushell/ui5service/UserStatus.js
+              - sap/ushell/Ui5ServiceFactory.js
+              - sap/ushell/utils.js
+              - sap/ushell/utils/type.js
+              - sap/ushell/utils/objectOperations.js
+              - sap/ushell/EventHub.js
+              - sap/ushell/resources.js
+              - sap/ushell/renderer/search/HashChangeHandler.js
+              - sap/ushell/System.js
+              - sap/ushell/Ui5NativeServiceFactory.js
+              - sap/ushell/shells/demo/cspJSFiles/AppInfoAdapterSample.js
+              - sap/ushell/User.js
+              - sap/ushell/services/AppConfiguration.js
+              - sap/ushell/Container.js
+              - sap/ushell/services/PluginManager.js
+              - sap/ushell/services/_PluginManager/Extensions.js
+              - sap/ushell/services/_PluginManager/HeaderExtensions.js
+              - sap/ushell/services/ShellNavigation.js
+              - sap/ushell/services/ShellNavigationHashChanger.js
+              - sap/ushell/services/URLShortening.js
+              - sap/ushell/services/URLParsing.js
+              - sap/ushell/services/Ui5ComponentLoader.js
+              - sap/ushell/services/Ui5ComponentHandle.js
+              - sap/ushell/services/_Ui5ComponentLoader/utils.js
+              - sap/ushell/TechnicalParameters.js
+              - sap/ushell/Config.js
+              - sap/ushell/bootstrap/common/common.create.configcontract.core.js
+              - sap/ushell/_Config/utils.js
+              - sap/m/
+              - sap/m/manifest.json
+              - sap/ushell/Fiori20AdapterTest.js
+              - sap/ushell/Fiori20Adapter.js
+              - sap/ui/core/Core.js
+              - '!sap/viz/libs/sap-viz.js'
+            resolve: true
+            renderer: true
+          - mode: require
+            filters:
+              - sap/ui/core/Core.js
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: true
+        decorateBootstrapModule: true
+        numberOfParts: 4
+    - bundleDefinition:
+        name: sap/ushell/bootstrap/cdm-dbg.js
+        sections:
+          - mode: raw
+            filters:
+              - sap/ushell/bootstrap/ui5loader-config.js
+              - ui5loader-autoconfig.js
+            declareRawModules: false
+            resolve: true
+            sort: true
+          - mode: raw
+            filters:
+              - sap/ushell/bootstrap/cdm/cdm-def-loader.js
+            declareRawModules: false
+            resolve: false
+      bundleOptions:
+        optimize: false
+        usePredefineCalls: false
+    - bundleDefinition:
+        name: sap/ushell/bootstrap/cdm.js
+        sections:
+          - mode: raw
+            filters:
+              - sap/ushell/bootstrap/ui5loader-config.js
+              - ui5loader-autoconfig.js
+            declareRawModules: false
+            resolve: true
+            sort: true
+          - mode: preload
+            name: sap/ushell/bootstrap/common
+            filters:
+              - sap/ushell/bootstrap/cdm/cdm-def.js
+              - sap/ui/thirdparty/datajs.js
+            resolve: true
+          - mode: raw
+            filters:
+              - sap/ushell/bootstrap/cdm/cdm-def-loader.js
+            declareRawModules: false
+            resolve: false
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: false
+        decorateBootstrapModule: true
+    - bundleDefinition:
+        name: sap/ushell/components/homepage/cards-preload.js
+        sections:
+          - mode: preload
+            name: sap/ui/core/library-preload
+            filters:
+              - sap/f/
+              - sap/ushell/adapters/cdm/v3/StaticGroupsAdapter.js
+              - sap/ushell/adapters/cdm/v3/AdapterBase.js
+              - sap/ushell/adapters/cdm/v3/_LaunchPage/readHome.js
+              - sap/ushell/adapters/cdm/v3/_LaunchPage/readVisualizations.js
+              - sap/ushell/adapters/cdm/_LaunchPage/uri.transform.js
+              - sap/ushell/adapters/cdm/v3/utilsCdm.js
+            resolve: false
+            renderer: false
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: false
+    - bundleDefinition:
+        name: sap/ushell/bootstrap/core-min.js
+        sections:
+          - mode: provided
+            filters: &core-min-provided
+              - ui5loader-autoconfig.js
+              - sap/ushell/bootstrap/cdm/cdm-def.js
+              - sap/ushell/bootstrap/ui5loader-config.js
+            resolve: true
+          - mode: preload
+            name: sap/ushell/core-lib-preload
+            filters: &core-min-preload
+              - sap/f/GridContainer.js
+              - sap/f/GridContainerItemLayoutData.js
+              - sap/m/App.js
+              - sap/m/BusyIndicator.js
+              - sap/m/DynamicDateRange.js
+              - sap/m/GenericTile.js
+              - sap/m/GenericTileRenderer.js
+              - sap/m/IllustratedMessage.js
+              - sap/m/Image.js
+              - sap/m/ImageContent.js
+              - sap/m/ImageContentRenderer.js
+              - sap/m/Input.js
+              - sap/m/InputBase.js
+              - sap/m/Label.js
+              - sap/m/Link.js
+              - sap/m/LinkRenderer.js
+              - sap/m/MessagePage.js
+              - sap/m/MessageStrip.js
+              - sap/m/NumericContent.js
+              - sap/m/NumericContentRenderer.js
+              - sap/m/Page.js
+              - sap/m/ScrollContainer.js
+              - sap/m/ScrollContainerRenderer.js
+              - sap/m/Table.js
+              - sap/m/TextArea.js
+              - sap/m/TextAreaRenderer.js
+              - sap/m/TileContent.js
+              - sap/m/TileContentRenderer.js
+              - sap/m/flexibility/
+              - sap/m/routing/Router.js
+              - sap/ui/core/ComponentContainer.js
+              - sap/ui/core/CustomData.js
+              - sap/ui/core/EventBus.js
+              - sap/ui/core/IntervalTrigger.js
+              - sap/ui/core/InvisibleMessage.js
+              - sap/ui/core/LayoutData.js
+              - sap/ui/core/Renderer.js
+              - sap/ui/core/ValueStateSupport.js
+              - sap/ui/core/XMLComposite.js
+              - sap/ui/core/XMLTemplateProcessor.js
+              - sap/ui/core/date/Gregorian.js
+              - sap/ui/core/delegate/ItemNavigation.js
+              - sap/ui/core/delegate/ScrollEnablement.js
+              - sap/ui/core/dnd/DragDropInfo.js
+              - sap/ui/core/format/NumberFormat.js
+              - sap/ui/core/mvc/Controller.js
+              - sap/ui/core/mvc/JSView.js
+              - sap/ui/core/mvc/XMLView.js
+              - sap/ui/core/routing/Router.js
+              - sap/ui/core/service/Service.js
+              - sap/ui/core/service/ServiceFactory.js
+              - sap/ui/core/service/ServiceFactoryRegistry.js
+              - sap/ui/fl/library.js
+              - sap/ui/fl/util/
+              - sap/ui/layout/AlignedFlowLayout.js
+              - sap/ui/layout/AlignedFlowLayoutRenderer.js
+              - sap/ui/model/json/JSONModel.js
+              - sap/ui/model/odata/v2/ODataModel.js
+              - sap/ui/thirdparty/jquery-mobile-custom.js
+              - sap/ushell/CanvasShapesManager.js
+              - sap/ushell/Container.js
+              - sap/ushell/Fiori20AdapterTest.js
+              - sap/ushell/SessionHandler.js
+              - sap/ushell/System.js
+              - sap/ushell/User.js
+              - sap/ushell/adapters/cdm/ClientSideTargetResolutionAdapter.js
+              - sap/ushell/adapters/cdm/CommonDataModelAdapter.js
+              - sap/ushell/adapters/cdm/ContainerAdapter.js
+              - sap/ushell/adapters/cdm/MenuAdapter.js
+              - sap/ushell/adapters/cdm/PagesCommonDataModelAdapter.js
+              - sap/ushell/adapters/cdm/PersonalizationAdapter.js
+              - sap/ushell/adapters/cdm/PersonalizationV2Adapter.js
+              - sap/ushell/adapters/cdm/Ui5ComponentLoaderAdapter.js
+              - sap/ushell/adapters/cdm/util/AppForInbound.js
+              - sap/ushell/adapters/cdm/util/cdmSiteUtils.js
+              - sap/ushell/adapters/cdm/v3/LaunchPageAdapter.js
+              - sap/ushell/adapters/local/NavTargetResolutionAdapter.js
+              - sap/ushell/adapters/local/UserDefaultParameterPersistenceAdapter.js
+              - sap/ushell/adapters/local/UserInfoAdapter.js
+              - sap/ushell/api/RTA.js
+              - sap/ushell/bootstrap/_SchedulingAgent/*.json                    # json files must be explicitly defined
+              - sap/ushell/components/ComponentKeysHandler.js
+              - sap/ushell/components/container/ApplicationContainer.js
+              - sap/ushell/components/tiles/cdm/applauncher/Component.js
+              - sap/ushell/components/tiles/cdm/applauncher/StaticTile.controller.js
+              - sap/ushell/components/tiles/cdm/applauncher/StaticTile.view.xml
+              - sap/ushell/components/tiles/cdm/applauncher/manifest.json
+              - sap/ushell/components/tiles/cdm/applauncherdynamic/Component.js
+              - sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.controller.js
+              - sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.view.xml
+              - sap/ushell/components/tiles/cdm/applauncherdynamic/manifest.json
+              - sap/ushell/iconfonts.js
+              - sap/ushell/override.js
+              - sap/ushell/renderer/Renderer.js
+              - sap/ushell/renderer/Shell.controller.js
+              - sap/ushell/renderer/Shell.view.js
+              - sap/ushell/renderers/fiori2/Renderer.js
+              - sap/ushell/renderers/fiori2/RendererExtensions.js
+              - sap/ushell/renderers/fiori2/Shell.controller.js
+              - sap/ushell/renderers/fiori2/Shell.view.js
+              - sap/ushell/services/AppLifeCycle.js
+              - sap/ushell/services/AppState.js
+              - sap/ushell/services/ClientSideTargetResolution.js
+              - sap/ushell/services/CommonDataModel.js
+              - sap/ushell/services/CrossApplicationNavigation.js
+              - sap/ushell/services/DarkModeSupport.js
+              - sap/ushell/services/Extension.js
+              - sap/ushell/services/LaunchPage.js
+              - sap/ushell/services/Menu.js
+              - sap/ushell/services/NavTargetResolution.js
+              - sap/ushell/services/PagePersistence.js
+              - sap/ushell/services/Pages.js
+              - sap/ushell/services/Personalization.js
+              - sap/ushell/services/PersonalizationV2.js
+              - sap/ushell/services/PluginManager.js
+              - sap/ushell/services/ReferenceResolver.js
+              - sap/ushell/services/ShellNavigation.js
+              - sap/ushell/services/SupportTicket.js
+              - sap/ushell/services/URLParsing.js
+              - sap/ushell/services/URLShortening.js
+              - sap/ushell/services/Ui5ComponentLoader.js
+              - sap/ushell/services/UITracer.js
+              - sap/ushell/services/UserDefaultParameterPersistence.js
+              - sap/ushell/services/UserDefaultParameters.js
+              - sap/ushell/services/UserInfo.js
+              - sap/ushell/services/UserRecents.js
+              - sap/ushell/services/VisualizationDataProvider.js
+              - sap/ushell/services/VisualizationInstantiation.js
+              - sap/ushell/services/_VisualizationInstantiation/*.control.xml
+              - sap/ushell/ui/RendererRootView.fragment.xml
+              - sap/ushell/ui/ShellHeader.fragment.xml
+              - sap/ushell/ui/cards/FrequentActivitiesExtension.js
+              - sap/ushell/ui/cards/RecentActivitiesExtension.js.js
+              - sap/ushell/ui5service/ShellUIService.js
+              - sap/ushell/utils/HttpClient.js
+              - sap/ushell/utils/utilsCdm.js
+              - '!sap/viz/libs/sap-viz.js'
+              - '!sap/ui/unified/'
+            resolve: true
+            renderer: true
+          - mode: require
+            filters:
+              - sap/ui/core/Core.js
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: true
+        numberOfParts: 4
+    - bundleDefinition:
+        name: sap/ushell/preload-bundles/core-ext-light.js
+        sections:
+          - mode: provided
+            filters: *core-min-preload
+            resolve: true
+          - mode: provided
+            filters: *core-min-provided
+            resolve: true
+            renderer: true
+          - mode: preload
+            filters:
+              - jquery.sap.* # necessary to ensure CSP compliance - as UI5 stubbing layer causes otherwise sync requests
+              - sap/base/
+              - sap/f/
+              - sap/m/
+              - sap/ui/base/
+              - sap/ui/core/
+              - sap/ui/dom/
+              - sap/ui/events/
+              - sap/ui/fl/  # sap/ui/fl/library.js is used in core-min
+              - sap/ui/layout/ # layout's library.js is used in sap.f in core-min
+              - sap/ui/model/
+              - sap/ui/performance/
+              - sap/ui/security/
+              - sap/ui/thirdparty/
+              # sap.m has a dependency to sap.ui.unified, therefore, it must be part of
+              # the core resources complement (core-min might include the library.js)
+              - sap/ui/unified/
+              - sap/ui/util/
+              - sap/ushell/
+              - '!**/*-preload*.js'
+              - '!**/*.support.js'
+              - '!**/designtime/'
+              - '!sap/m/rules/'
+              - '!sap/ui/core/messagebundle*.properties'
+              - '!sap/ui/core/plugin/'
+              - '!sap/ui/core/rules/'
+              - '!sap/ui/core/support/'
+              - '!sap/ui/core/tmpl/'
+              - '!sap/ui/core/util/serializer/'
+              - '!sap/ui/core/util/*MockServer*'
+              - '!sap/ui/thirdparty/blanket.js'
+              - '!sap/ui/thirdparty/qunit*'
+              - '!sap/ui/thirdparty/sinon*'
+              - '!sap/ui/thirdparty/jszip*' # only used in sap.ui.support, sap.ui.documentation.sdk, sap.zen.* and some test resources (BCP: 002075129400001172342023)
+              - '!sap/ushell/adapters/'
+              - '!sap/ushell/applications/'
+              - '!sap/ushell/appRuntime/'
+              - '!sap/ushell/bootstrap/'
+              - '!sap/ushell/components/'
+              - '!sap/ushell/Layout.js'
+              - '!sap/ushell/plugins/'
+              - '!sap/ushell/preload-bundles/'
+              - '!sap/ushell/services/SearchCEP.js'
+              - '!sap/ushell/UIActions.js'
+              - '!sap/ushell/ui/appfinder/'         # part of the homepage-af-dep bundle
+              - '!sap/ushell/ui/launchpad/'
+              - '!sap/ushell/ui/tile/'
+              - '!sap/ushell/ui5service/UserStatus.js'
+              - '!sap/ushell/utils/'
+              # include only the legacy KPI tiles modules from sap/ushell/components
+              # all others should be loaded via individual Component-preload bundles
+              # or be part of the core-min or homepage-af-dep bundle
+              - sap/ushell/components/tiles/indicator*/**
+              - sap/ushell/components/tiles/generic.js
+              - sap/ushell/components/tiles/sbtilecontent.js
+            resolve: false
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: true
+        numberOfParts: 4
+    - bundleDefinition:
+        name: sap/ushell/preload-bundles/homepage-af-dep.js
+        sections:
+          - mode: provided
+            filters: *core-min-preload
+            resolve: true
+          - mode: provided
+            filters: *core-min-provided
+            resolve: true
+          - mode: preload
+            filters:
+              - sap/m/ComboBox.js
+              - sap/m/MultiComboBox.js
+              - sap/m/MultiComboBoxBase.js
+              - sap/m/MessageToast.js
+              - sap/m/SplitApp.js
+              - sap/ui/dom/denormalizeScrollLeftRTL.js
+              - sap/ui/dom/jquery/scrollLeftRTL.js
+              - sap/ushell/Layout.js
+              - sap/ushell/components/CatalogsManager.js
+              - sap/ushell/components/HomepageManager.js
+              - sap/ushell/components/tiles/utils.js
+              - sap/ushell/components/tiles/utilsRT.js
+              - sap/ushell/components/visualizationOrganizer/Component.js
+              - sap/ushell/ui/appfinder/
+              - sap/ushell/ui/launchpad/
+              - sap/ushell/ui/tile/
+              - sap/ushell/utils/DynamicTileRequest.js
+              # exclude sap/ui/layout, missing modules should be loaded with core-ext
+              # FailedTileDialog.fragment.xml has a dependency to sap.ui.layout.form
+              - '!sap/ui/layout/'
+              - '!sap/viz/libs/sap-viz.js'
+            resolve: true
+            renderer: false
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: true
+    - bundleDefinition:
+        name: sap/ushell/preload-bundles/workpage-rt.js
+        sections:
+          - mode: provided
+            filters: *core-min-preload
+            resolve: true
+          - mode: provided
+            filters: *core-min-provided
+            resolve: true
+          - mode: preload
+            name: sap/ushell/workpage-runtime-preload
+            filters:
+              - sap/ui/integration/
+              - sap/f/Card.js
+              - sap/f/cards/
+              - sap/f/flexibility/
+              - sap/f/changeHandler/
+              - sap/ui/core/date/Gregorian.js
+              - sap/ui/core/support/Hotkeys.js
+              - sap/ui/layout/flexibility/                                              # implicit dependency of sap.fl
+              - sap/ui/layout/changeHandler/                                            # implicit dependency of sap.fl
+              - sap/ui/thirdparty/d3.js                                                 # implicit dependency of sap.viz
+              - sap/ui/thirdparty/jqueryui/jquery-ui-core.js                            # implicit dependency of sap.viz
+              - sap/ui/thirdparty/jqueryui/jquery-ui-widget.js                          # implicit dependency of sap.viz
+              - sap/ui/thirdparty/jqueryui/jquery-ui-mouse.js                           # implicit dependency of sap.viz
+              - sap/ui/thirdparty/jqueryui/jquery-ui-draggable.js                       # implicit dependency of sap.viz
+              - sap/ui/thirdparty/jqueryui/jquery-ui-droppable.js                       # implicit dependency of sap.viz
+              - sap/viz/libs/sap-viz-info-framework.js                                  # implicit dependency of sap.viz - does not work
+              - sap/viz/libs/sap-viz-info-charts.js                                     # implicit dependency of sap.viz - does not work
+              - sap/viz/ui5/controls/libs/sap-viz-vizframe/sap-viz-vizframe.js          # implicit dependency of sap.viz - does not work
+              - sap/viz/ui5/controls/libs/sap-viz-vizservices/sap-viz-vizservices.js    # implicit dependency of sap.viz - does not work
+              - sap/ui/thirdparty/require.js                                            # implicit dependency of sap.viz
+              - sap/ui/layout/Grid.js                                                   # implicit dependency of sap.viz
+              - sap/ui/layout/form/SimpleForm.js                                        # implicit dependency of sap.viz
+              - sap/m/ObjectNumber.js                                                   # implicit dependency of sap.viz (chartpopover)
+              - sap/m/ActionListItem.js                                                 # implicit dependency of sap.viz (chartpopover)
+              - sap/ui/layout/form/ResponsiveGridLayout.js                              # implicit dependency of sap.viz (chartpopover)
+              - sap/ui/core/format/FileSizeFormat.js                                    # implicit dependency of sap.viz (chart formatter)
+              - '!sap/ui/core/plugin/'
+              - '!sap/ui/core/support/'
+              - '!sap/ui/core/tmpl/'
+              - '!sap/ui/core/util/serializer/'
+              - '!sap/ui/integration/library-bootstrap.js'
+              - '!sap/ui/integration/sap-ui-integration-config.js'
+              - '!sap/ui/integration/customElements/CustomElementCardEditor.js'
+              - '!sap/ui/integration/customElements/CustomElementEditor.js'
+              - '!sap/ui/integration/thirdparty/'
+              - '!sap/ui/integration/designtime/thirdparty/'
+              - '!sap/ui/integration/sap-ui-integration-define-nojQuery.js'
+              - '!sap/ui/integration/*-preload.js'
+              - '!sap/ui/integration/designtime/'
+              - '!sap/ui/integration/editor/'
+              - '!sap/suite/ui/commons/'
+              - '!sap/viz/'
+            resolve: true
+            renderer: true
+            sort: true
+      bundleOptions:
+        optimize: true
+        usePredefineCalls: true
+        numberOfParts: 4
+  componentPreload:
+    paths:
+      - sap/ushell/components/appfinder/Component.js
+      - sap/ushell/components/cepsearchresult/app/Component.js
+      - sap/ushell/components/cepsearchresult/app/cards/searchresultwidget/Component.js
+      - sap/ushell/components/homepage/Component.js
+      - sap/ushell/components/pages/Component.js
+      - sap/ushell/components/runtimeSwitcher/Component.js
+      - sap/ushell/components/shell/MenuBar/Component.js
+      - sap/ushell/components/shell/NavigationBarMenu/Component.js
+      - sap/ushell/components/shell/UserActionsMenu/Component.js
+      - sap/ushell/components/shell/Notifications/Component.js
+      - sap/ushell/components/shell/PostLoadingHeaderEnhancement/Component.js
+      - sap/ushell/components/shell/ProductSwitch/Component.js
+      - sap/ushell/components/shell/Search/Component.js
+      - sap/ushell/components/shell/SearchCEP/Component.js
+      - sap/ushell/components/shell/Settings/Component.js
+      - sap/ushell/components/shell/UserImage/Component.js
+      - sap/ushell/components/tiles/cdm/applauncher/Component.js
+      - sap/ushell/components/tiles/cdm/applauncherdynamic/Component.js
+      - sap/ushell/components/tiles/applauncher/Component.js
+      - sap/ushell/components/tiles/applauncherdynamic/Component.js
+      - sap/ushell/components/workPageBuilder/Component.js
+      - sap/ushell/components/workPageRuntime/Component.js
+      - sap/ushell/plugins/appwarmup/Component.js
+      - sap/ushell/plugins/ghostapp/Component.js
+      - sap/ushell/plugins/rta/Component.js

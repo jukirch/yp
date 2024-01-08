@@ -1,0 +1,112 @@
+2024-01-04 14:02:34.461 [error] Error: EEXIST: file already exists, open '/home/user/.vscode/data/User/workspaceStorage/-59da3b3/vscode.lock'
+2024-01-04 14:02:34.468 [error] Error: EEXIST: file already exists, open '/home/user/.vscode/data/User/workspaceStorage/-59da3b3-1/vscode.lock'
+2024-01-04 14:02:35.112 [error] No bundle location found for extension vscode.html-language-features
+2024-01-04 14:02:35.206 [error] No bundle location found for extension vscode.emmet
+2024-01-04 14:02:35.920 [error] No bundle location found for extension SAPSE.fs-usage-popup-vscode-extensions
+2024-01-04 14:02:35.920 [error] No bundle location found for extension vscode.git-base
+2024-01-04 14:02:35.980 [error] No bundle location found for extension SAP.vscode-watt-framework-extension
+2024-01-04 14:02:36.115 [error] Error: listen EADDRINUSE: address already in use :::8888
+	at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+	at listenInCluster (node:net:1799:12)
+	at Server.listen (node:net:1887:7)
+	at Function.listen (/extbin/local/openvscode-server/extensions/vscode-watt-framework-extension/dist/extension.js:12086:24)
+	at startWattServer (/extbin/local/openvscode-server/extensions/vscode-watt-framework-extension/dist/extension.js:71042:32)
+	at activate (/extbin/local/openvscode-server/extensions/vscode-watt-framework-extension/dist/extension.js:77503:53)
+	at q.ib (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:136:13170)
+	at q.hb (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:136:12896)
+	at /extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:136:11037
+	at async w.n (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:124:6205)
+	at async w.m (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:124:6168)
+	at async w.l (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:124:5625)
+2024-01-04 14:02:36.131 [error] No bundle location found for extension SAPOSS.code-snippet
+2024-01-04 14:02:36.190 [error] No bundle location found for extension eamodio.gitlens
+2024-01-04 14:02:36.244 [error] No bundle location found for extension SAPOSS.app-studio-toolkit-themes
+2024-01-04 14:02:36.246 [error] No bundle location found for extension SAPSE.npm-task-contrib
+2024-01-04 14:02:36.262 [error] No bundle location found for extension SAPOSS.app-studio-toolkit
+2024-01-04 14:02:36.841 [error] No bundle location found for extension SAPSE.sap-ux-help-extension
+2024-01-04 14:02:38.003 [error] No bundle location found for extension SAPSE.sap-ux-application-modeler-extension
+2024-01-04 14:02:38.003 [error] No bundle location found for extension SAP.vscode-bas-extension
+2024-01-04 14:02:39.585 [error] No bundle location found for extension SAPOSS.vscode-dependencies-validation
+2024-01-04 14:02:39.585 [error] No bundle location found for extension SAPSE.sap-ux-service-modeler-extension
+2024-01-04 14:02:40.540 [error] No bundle location found for extension SAPOSS.vscode-deps-upgrade-tool
+2024-01-04 14:02:40.541 [error] No bundle location found for extension SAPOSS.vscode-ui5-language-assistant
+2024-01-04 14:02:41.369 [error] No bundle location found for extension SAP.vscode-wing-cf-tools
+2024-01-04 14:02:42.249 [error] No bundle location found for extension SAPSE.vscode-tasks-explorer-tasks-panel
+2024-01-04 14:02:42.667 [error] No bundle location found for extension SAP.vscode-wing-gerrit
+2024-01-04 14:02:42.771 [error] No bundle location found for extension SAPSE.vscode-wing-expose-router-ports
+2024-01-04 14:02:42.771 [error] No bundle location found for extension SAP.vscode-wing-run-config
+2024-01-04 14:02:42.771 [error] No bundle location found for extension vscode.git
+2024-01-04 14:02:42.771 [error] No bundle location found for extension SAP.mta-editor-vscode
+2024-01-04 14:02:43.052 [error] Error: listen EADDRINUSE: address already in use :::3001
+	at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+	at listenInCluster (node:net:1799:12)
+	at Server.listen (node:net:1887:7)
+	at y.listen (/extbin/local/openvscode-server/extensions/vscode-wing-expose-router-ports-2.0.3-release/bundle/extension.js:256:4551)
+	at /extbin/local/openvscode-server/extensions/vscode-wing-expose-router-ports-2.0.3-release/bundle/extension.js:169:66794
+	at /extbin/local/openvscode-server/extensions/vscode-wing-expose-router-ports-2.0.3-release/bundle/extension.js:169:66923
+	at t.activate (/extbin/local/openvscode-server/extensions/vscode-wing-expose-router-ports-2.0.3-release/bundle/extension.js:169:66926)
+	at q.ib (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:136:13170)
+	at q.hb (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:136:12896)
+	at /extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:136:11037
+	at async w.n (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:124:6205)
+	at async w.m (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:124:6168)
+	at async w.l (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:124:5625)
+2024-01-04 14:02:43.111 [error] No bundle location found for extension SAP.sap-bas-vscode-w5g
+2024-01-04 14:02:43.219 [error] No bundle location found for extension SAP.vscode-bas-extensibility
+2024-01-04 14:02:43.284 [error] No bundle location found for extension SAPOS.yeoman-ui
+2024-01-04 14:02:44.454 [error] No bundle location found for extension SAPOSS.guided-development
+2024-01-04 14:02:44.454 [error] No bundle location found for extension SAPSE.lcap-task-contrib
+2024-01-04 14:02:44.454 [error] No bundle location found for extension SAPSE.vscode-wing-storyboard
+2024-01-04 14:02:44.454 [error] No bundle location found for extension SAP.vscode-wing-welcome-screen
+2024-01-04 14:02:44.454 [error] No bundle location found for extension SAPSE.vscode-bas-fiori-tools
+2024-01-04 14:02:45.334 [error] No bundle location found for extension SAPSE.vscode-wing-ui5-run
+2024-01-04 14:02:45.528 [error] No bundle location found for extension SAPSE.vscode-mta-tools
+2024-01-04 14:02:45.654 [error] No bundle location found for extension SAP.adp-ve-bas-ext
+2024-01-04 14:02:46.145 [error] No bundle location found for extension SAPSE.cicd-extension
+2024-01-04 14:02:47.152 [error] No bundle location found for extension vscode.debug-auto-launch
+2024-01-04 14:02:47.152 [error] No bundle location found for extension vscode.merge-conflict
+2024-01-04 14:03:03.069 [error] No bundle location found for extension vscode.typescript-language-features
+2024-01-04 14:03:03.616 [error] No bundle location found for extension vscode.extension-editing
+2024-01-04 14:03:03.875 [error] No bundle location found for extension vscode.json-language-features
+2024-01-04 14:03:04.101 [error] No bundle location found for extension vscode.npm
+2024-01-04 14:05:37.398 [error] Error: [UriError]: If a URI contains an authority component, then the path component must either be empty or begin with a slash ("/") character
+	at m (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:89:31653)
+	at new S (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:89:32740)
+	at new l (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:89:34378)
+	at l.with (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:89:33167)
+	at t.$i.D (/extbin/local/openvscode-server/extensions/extension-editing/dist/extensionEditingMain.js:1:286035)
+	at /extbin/local/openvscode-server/extensions/extension-editing/dist/extensionEditingMain.js:1:285953
+	at Array.filter (<anonymous>)
+	at t.$i.C (/extbin/local/openvscode-server/extensions/extension-editing/dist/extensionEditingMain.js:1:285937)
+	at l.value (/extbin/local/openvscode-server/extensions/extension-editing/dist/extensionEditingMain.js:1:277346)
+	at c.y (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at c.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at l.value (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:127:28971)
+	at c.y (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at c.z (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at c.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at P.$onFileEvent (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:127:30520)
+	at i.S (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:134:10836)
+	at i.Q (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:134:10602)
+	at i.M (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:134:9686)
+	at i.L (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:134:8762)
+	at l.value (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:134:7565)
+	at c.y (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at c.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at h.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:96:14047)
+	at l.value (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:153:7918)
+	at c.y (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at c.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at h.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:96:14047)
+	at f.z (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:96:17112)
+	at l.value (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:96:15564)
+	at c.y (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at c.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at l.acceptChunk (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:96:11821)
+	at l.value (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:96:11108)
+	at c.y (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at c.fire (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at c.z (/extbin/local/openvscode-server/out/vs/workbench/api/node/extensionHostProcess.js:150:19388)
+2024-01-04 14:05:53.840 [error] Error: ENOENT: no such file or directory, stat '/home/user/projects/s331102/node_modules/fsevents'
+2024-01-04 14:06:05.288 [error] No bundle location found for extension SAPSE.sap-ux-annotation-modeler-extension
+2024-01-04 14:06:05.674 [error] No bundle location found for extension SAPOSS.xml-toolkit

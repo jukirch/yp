@@ -1,0 +1,94 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:macrodata="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Popover
+		id="ContactPopover"
+		class="sapUiContentPadding"
+		placement="Left"
+		initialFocus="action"
+        showHeader="false"
+        contentWidth="25rem"
+        afterClose="afterClose">
+        <VBox>
+            <HBox>
+                <Avatar
+                    src="{= ${userData>/photo} ? ${userData>/photo} : 'sap-icon://person-placeholder' }"
+                    displaySize="S"
+                    class="sapUiTinyMarginEnd"
+                />
+                <VBox>
+                    <Title text="{userData>/displayName}" level="H3" />
+                    <Text text="{userData>/department}"/>
+                    <!-- <ObjectStatus
+                        class="sapUiSmallMarginBottom"
+                        text="Offline"
+                        icon="sap-icon://error"
+                        active="true"
+                        inverted="true"
+                        state="None"
+                    /> -->
+                </VBox>
+            </HBox>
+            <HBox>
+                <Button
+                    press="handleMSTeamsPress"
+                    macrodata:email="{userData>/mail}"
+                    macrodata:type="chat"
+                    icon="sap-icon://discussion"
+                    type="Transparent"
+                    class="sapUiSmallMarginEnd"
+                />
+                <Button
+                    press="handleMSTeamsPress"
+                    macrodata:email="{userData>/mail}"
+                    macrodata:type="videoCall"
+                    icon="sap-icon://video"
+                    type="Transparent"
+                    class="sapUiSmallMarginEnd"
+                />
+                <Button
+                    press="handleMSTeamsPress"
+                    macrodata:email="{userData>/mail}"
+                    macrodata:type="call"
+                    icon="sap-icon://call"
+                    type="Transparent"
+                />
+            </HBox>
+
+            <FlexBox alignItems="Start">
+                <Input placeholder="{i18n>POPOVER_CONTACT_SEND_MESSAGE}" id="msTeamsQuickChat" width="100%">
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </Input>
+                <Button
+                    type="Transparent"
+                    icon="sap-icon://paper-plane">
+                    <layoutData>
+                        <FlexItemData growFactor="0" />
+                    </layoutData>
+                </Button>
+            </FlexBox>
+
+            <Title text="{i18n>POPOVER_CONTACT_INFORMATION}" level="H5" class="sapUiTinyMarginBottom sapUiTinyMarginTop" />
+
+            <Label text="{i18n>POPOVER_CONTACT_SECTION_EMAIL}:" />
+            <Link text="{userData>/mail}" href="{path: 'userData>/mail', formatter: '.formatUri'}" class="sapUiTinyMarginBottom" />
+
+            <Label text="{i18n>POPOVER_CONTACT_SECTION_PHONE}:" />
+            <Link text="{userData>/businessPhones/0}" href="{path: 'userData>/businessPhones/0', formatter: '.formatUri'}" class="sapUiTinyMarginBottom" />
+
+            <Label text="{i18n>POPOVER_CONTACT_SECTION_MOBILE}:" />
+            <Link text="{userData>/mobilePhone}" href="{path: 'userData>/mobilePhone', formatter: '.formatUri'}" class="sapUiTinyMarginBottom" />
+
+            <Title text="{i18n>POPOVER_CONTACT_SECTION_COMPANY}" level="H5" class="sapUiTinyMarginBottom" />
+
+            <Label text="{i18n>POPOVER_CONTACT_SECTION_JOBTITLE}:" />
+            <Text text="{userData>/jobTitle}" class="sapUiTinyMarginBottom" />
+
+            <Label text="{i18n>POPOVER_CONTACT_SECTION_OFFICE_LOCATION}:" />
+            <Text text="{userData>/officeLocation}" />
+        </VBox>
+	</Popover>
+</core:FragmentDefinition>

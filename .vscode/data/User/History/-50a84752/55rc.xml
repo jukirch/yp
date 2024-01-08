@@ -1,0 +1,19 @@
+<mvc:View controllerName="s331102.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox>
+                <Text text="Drunter"/>
+                <Text text="{northWind>/Products/0/Name}"/>
+                <Text text="Drüber"/>
+                <List items="{northWind>/Products}"> 
+                    <items>
+                        <StandardListItem title="{northWind>Name}" description="{northWind>Description}"></StandardListItem>
+                    </items>
+                </List>
+            </VBox>
+            
+        </content>
+    </Page>
+</mvc:View>

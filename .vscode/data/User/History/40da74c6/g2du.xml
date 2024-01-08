@@ -1,0 +1,152 @@
+<mvc:View
+    controllerName="s321401.controller.Main_1401"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+>
+    <App>
+        <pages>
+            <Page
+                id="page"
+                title="{i18n>title}"
+            >
+                <content>
+                    <f:Form
+                        editable="true"
+                        id="form0"
+                    >
+                        <f:layout>
+                            <f:ColumnLayout
+                                id="layout0"
+                                columnsXL="3"
+                                columnsL="2"
+                                columnsM="1"
+                            />
+                        </f:layout>
+                        <f:formContainers>
+                            <f:FormContainer
+                                title="Oscars - Jahr"
+                                id="cont0"
+                            >
+                                <f:layoutData>
+                                    <f:ColumnContainerData
+                                        columnsXL="1"
+                                        columnsL="2"
+                                        columnsM="1"
+                                    />
+                                </f:layoutData>
+                                <f:formElements>
+                                    <f:FormElement id="el1">
+                                        <f:label>
+                                            <Label
+                                                text="Jahr der Verleihung"
+                                                id="lbl1"
+                                            />
+                                        </f:label>
+                                        <f:fields>
+                                            <Input
+                                                value="{/oscar/0/movYear}"
+                                                width="80px"
+                                                id="inp1"
+                                            />
+                                        </f:fields>
+                                    </f:FormElement>
+                                </f:formElements>
+                            </f:FormContainer>
+                            <f:FormContainer
+                                title="Oscars - Film"
+                                id="cont1"
+                            >
+                                <f:layoutData>
+                                    <f:ColumnContainerData
+                                        columnsXL="2"
+                                        columnsL="1"
+                                        columnsM="1"
+                                    />
+                                </f:layoutData>
+                                <f:formElements>
+                                    <f:FormElement id="elem2">
+                                        <f:label>
+                                            <Label
+                                                text="Bester Film"
+                                                id="lbl2"
+                                            />
+                                        </f:label>
+                                        <f:fields>
+                                            <Input
+                                                value="{/oscar/0/movName}"
+                                                width="250px"
+                                                id="inp2"
+                                            />
+                                        </f:fields>
+                                    </f:FormElement>
+                                </f:formElements>
+                            </f:FormContainer>
+                            <f:FormContainer
+                                title="Oscars - Personen"
+                                id="cont2"
+                            >
+                                <f:layoutData>
+                                    <f:ColumnContainerData
+                                        columnsXL="2"
+                                        columnsL="1"
+                                        columnsM="1"
+                                    />
+                                </f:layoutData>
+                                <f:formElements>
+                                    <f:FormElement id="el3">
+                                        <f:label>
+                                            <Label
+                                                text="Bester männlicher Schauspieler"
+                                                id="lbl3"
+                                            />
+                                        </f:label>
+                                        <f:fields>
+                                            <Input
+                                                value="{/oscar/0/movMaleLead}"
+                                                width="250px"
+                                                id="inp3"
+                                            />
+                                        </f:fields>
+                                    </f:FormElement>
+                                    <f:FormElement id="el4">
+                                        <f:label>
+                                            <Label
+                                                text="Beste weibliche Schauspielerin"
+                                                id="lbl4"
+                                            />
+                                        </f:label>
+                                        <f:fields>
+                                            <Input
+                                                value="{/oscar/0/movFemaleLead}"
+                                                width="250px"
+                                                id="inp4"
+                                            />
+                                        </f:fields>
+                                    </f:FormElement>
+                                    <f:FormElement id="el5">
+                                        <f:label>
+                                            <Label
+                                                text="Beste Regie"
+                                                id="lbl5"
+                                            />
+                                        </f:label>
+                                        <f:fields>
+                                            <Input
+                                                value="{/oscar/0/movDirector}"
+                                                width="250px"
+                                                id="inp5"
+                                            />
+                                        </f:fields>
+                                   </f:FormElement>
+                                </f:formElements>
+                            </f:FormContainer>
+                        </f:formContainers>
+                    </f:Form>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

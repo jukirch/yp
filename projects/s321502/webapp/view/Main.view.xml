@@ -1,0 +1,56 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:c="sap.ui.webc.main"
+    controllerName="s321502.controller.Main"
+    displayBlock="true"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <c:Carousel
+            class="sapUiContentPadding"
+            cyclic="true"
+            content="{/oscarFilm}"
+        >
+            <c:Card
+                width="70%"
+                height="550px"
+            >
+                <l:HorizontalLayout>
+                    <Image
+                        src="{pic}"
+                        height="450px"
+                    />
+
+                    <List headerText="{movName} ({movYear})">
+                        <items>
+                            <StandardListItem
+                                title="Regie: "
+                                description="{movDirector}"
+                            />
+                            <StandardListItem
+                                title="Beste Hauptdarstellerin"
+                                description="{movFemaleLead}"
+                            />
+                            <StandardListItem
+                                title="Bester Hauptdarsteller"
+                                description="{movMaleLead}"
+                            />
+                            <StandardListItem 
+                                title="Spieldauer"
+                                description="{movLength}"
+                            />
+                            <StandardListItem
+                                title="{= ${oscarWon} ? 'Gewann den Oscar!' : 'Hat den Oscar nicht gewonnen.' }"
+                                icon="{= ${oscarWon} === true ? 'sap-icon://study-leave' : 'sap-icon://decline' }"
+                            />
+                        </items>
+                    </List>
+                </l:HorizontalLayout>
+            </c:Card>
+        </c:Carousel>
+    </Page>
+</mvc:View>

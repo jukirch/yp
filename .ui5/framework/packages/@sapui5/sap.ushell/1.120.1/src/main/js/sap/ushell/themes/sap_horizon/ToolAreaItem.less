@@ -1,0 +1,79 @@
+/* ======================================== */
+/* CSS for control sap.ushell/ToolAreaItem  */
+/* Horizon theme                            */
+/* ======================================== */
+
+#toolArea-shellArea {
+  background-color: @sapUiShellColor;
+}
+
+.sapUshellToolArea {
+  background-color: @sapUiShellColor;
+  border-inline-end: 1px solid @sapUiToolbarSeparatorColor;
+  border-top: 1px solid @sapUiToolbarSeparatorColor;
+  box-shadow: @sapContent_Shadow0;
+  position: relative;
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  .sapUshellToolAreaItemIcon {
+    color: @sapUiShellInteractiveTextColor;
+  }
+}
+
+.sapUshellToolAreaItemText {
+  color: @sapUiShellInteractiveTextColor;
+}
+
+.sapUshellToolAreaItemText {
+  color: @sapUiShellInteractiveTextColor;
+}
+
+.sapUshellToolAreaContentSeparator, .sapUshellToolAreaFooterContentSeparator {
+  height: 1px;
+  background-color: @sapUiToolbarSeparatorColor;
+  margin: 0 0.5rem;
+}
+
+.sapUshellToolAreaContent, .sapUshellToolAreaFooterContent {
+  margin: 0.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  outline-offset: -0.2375rem;
+  height: 2.5rem;
+  padding-left: 0.6rem;
+}
+
+.sapUshellToolAreaContent:hover, .sapUshellToolAreaFooterContent:hover {
+  box-shadow: @sapUiContentInteractionShadow;
+}
+
+.sapUshellToolAreaContent:active, .sapUshellToolAreaFooterContent:active {
+  box-shadow: none;
+  border-color: @sapPrimary2;
+}
+
+.sapUshellToolArea .sapUshellToolAreaItemIcon {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.sapUshellToolArea .sapUshellToolAreaItemIcon:hover {
+  cursor: pointer;
+}
+
+.sapUshellToolArea .sapUshellToolAreaItemIcon:active {
+  color: @sapPrimary2;
+}
+
+.sapUshellToolAreaItemExpandable:after {
+  font-size: 1rem;
+  left: 0;
+}
+
+.sapUshellToolAreaItemExpandable:after {
+  color: @sapUiShellInteractiveTextColor;
+}
+
+.sapUshellToolAreaItm {
+  color: @sapUiShellInteractiveTextColor;
+}
